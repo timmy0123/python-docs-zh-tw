@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>http.cookies --- HTTP state management &#8212; Python 3.12.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>http.cookies --- HTTP state management &#8212; Python 3.12.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=aa5eeaf2" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=e8a97c27" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=3221873d"></script>
+    <script src="../_static/documentation_options.js?v=056bc313"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=d9a6981e"></script>
@@ -19,14 +19,14 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.1 說明文件 中搜尋"
+          title="在 Python 3.12.2 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="http.cookiejar --- Cookie handling for HTTP clients" href="http.cookiejar.html" />
-    <link rel="prev" title="http.server --- HTTP servers" href="http.server.html" />
+    <link rel="prev" title="http.server — HTTP 伺服器" href="http.server.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/http.cookies.html" />
     
       
@@ -58,7 +58,7 @@
         </label>
         <span class="nav-items-wrapper">
             <a href="https://www.python.org/" class="nav-logo">
-                <img src="../_static/py.svg" alt="Logo"/>
+                <img src="../_static/py.svg" alt="Python logo"/>
             </a>
             <span class="version_switcher_placeholder"></span>
             <form role="search" class="search" action="../search.html" method="get">
@@ -86,42 +86,8 @@
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookies</span></code> --- HTTP state management</a><ul>
-<li><a class="reference internal" href="#http.cookies.CookieError"><code class="docutils literal notranslate"><span class="pre">CookieError</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.BaseCookie"><code class="docutils literal notranslate"><span class="pre">BaseCookie</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.SimpleCookie"><code class="docutils literal notranslate"><span class="pre">SimpleCookie</span></code></a></li>
-<li><a class="reference internal" href="#cookie-objects">Cookie 物件</a><ul>
-<li><a class="reference internal" href="#http.cookies.BaseCookie.value_decode"><code class="docutils literal notranslate"><span class="pre">BaseCookie.value_decode()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.BaseCookie.value_encode"><code class="docutils literal notranslate"><span class="pre">BaseCookie.value_encode()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.BaseCookie.output"><code class="docutils literal notranslate"><span class="pre">BaseCookie.output()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.BaseCookie.js_output"><code class="docutils literal notranslate"><span class="pre">BaseCookie.js_output()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.BaseCookie.load"><code class="docutils literal notranslate"><span class="pre">BaseCookie.load()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#morsel-objects">Morsel 物件</a><ul>
-<li><a class="reference internal" href="#http.cookies.Morsel"><code class="docutils literal notranslate"><span class="pre">Morsel</span></code></a><ul>
-<li><a class="reference internal" href="#http.cookies.Morsel.expires"><code class="docutils literal notranslate"><span class="pre">Morsel.expires</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.path"><code class="docutils literal notranslate"><span class="pre">Morsel.path</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.comment"><code class="docutils literal notranslate"><span class="pre">Morsel.comment</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.domain"><code class="docutils literal notranslate"><span class="pre">Morsel.domain</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.secure"><code class="docutils literal notranslate"><span class="pre">Morsel.secure</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.version"><code class="docutils literal notranslate"><span class="pre">Morsel.version</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.httponly"><code class="docutils literal notranslate"><span class="pre">Morsel.httponly</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.samesite"><code class="docutils literal notranslate"><span class="pre">Morsel.samesite</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.value"><code class="docutils literal notranslate"><span class="pre">Morsel.value</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.coded_value"><code class="docutils literal notranslate"><span class="pre">Morsel.coded_value</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.key"><code class="docutils literal notranslate"><span class="pre">Morsel.key</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.set"><code class="docutils literal notranslate"><span class="pre">Morsel.set()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.isReservedKey"><code class="docutils literal notranslate"><span class="pre">Morsel.isReservedKey()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.output"><code class="docutils literal notranslate"><span class="pre">Morsel.output()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.js_output"><code class="docutils literal notranslate"><span class="pre">Morsel.js_output()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.OutputString"><code class="docutils literal notranslate"><span class="pre">Morsel.OutputString()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.update"><code class="docutils literal notranslate"><span class="pre">Morsel.update()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.copy"><code class="docutils literal notranslate"><span class="pre">Morsel.copy()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.setdefault"><code class="docutils literal notranslate"><span class="pre">Morsel.setdefault()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#cookie-objects">Cookie 物件</a></li>
+<li><a class="reference internal" href="#morsel-objects">Morsel 物件</a></li>
 <li><a class="reference internal" href="#example">範例</a></li>
 </ul>
 </li>
@@ -131,7 +97,7 @@
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="http.server.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.server</span></code> --- HTTP servers</a></p>
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.server</span></code> — HTTP 伺服器</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -167,10 +133,10 @@
           <a href="http.cookiejar.html" title="http.cookiejar --- Cookie handling for HTTP clients"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="http.server.html" title="http.server --- HTTP servers"
+          <a href="http.server.html" title="http.server — HTTP 伺服器"
              accesskey="P">上一頁</a> |</li>
 
-          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
           <li><a href="https://www.python.org/">Python</a> &#187;</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -180,7 +146,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.1 Documentation</a> &#187;
+      <a href="../index.html">3.12.2 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -526,42 +492,8 @@ behave the same as <a class="reference internal" href="stdtypes.html#dict.setdef
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.cookies</span></code> --- HTTP state management</a><ul>
-<li><a class="reference internal" href="#http.cookies.CookieError"><code class="docutils literal notranslate"><span class="pre">CookieError</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.BaseCookie"><code class="docutils literal notranslate"><span class="pre">BaseCookie</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.SimpleCookie"><code class="docutils literal notranslate"><span class="pre">SimpleCookie</span></code></a></li>
-<li><a class="reference internal" href="#cookie-objects">Cookie 物件</a><ul>
-<li><a class="reference internal" href="#http.cookies.BaseCookie.value_decode"><code class="docutils literal notranslate"><span class="pre">BaseCookie.value_decode()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.BaseCookie.value_encode"><code class="docutils literal notranslate"><span class="pre">BaseCookie.value_encode()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.BaseCookie.output"><code class="docutils literal notranslate"><span class="pre">BaseCookie.output()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.BaseCookie.js_output"><code class="docutils literal notranslate"><span class="pre">BaseCookie.js_output()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.BaseCookie.load"><code class="docutils literal notranslate"><span class="pre">BaseCookie.load()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#morsel-objects">Morsel 物件</a><ul>
-<li><a class="reference internal" href="#http.cookies.Morsel"><code class="docutils literal notranslate"><span class="pre">Morsel</span></code></a><ul>
-<li><a class="reference internal" href="#http.cookies.Morsel.expires"><code class="docutils literal notranslate"><span class="pre">Morsel.expires</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.path"><code class="docutils literal notranslate"><span class="pre">Morsel.path</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.comment"><code class="docutils literal notranslate"><span class="pre">Morsel.comment</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.domain"><code class="docutils literal notranslate"><span class="pre">Morsel.domain</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.secure"><code class="docutils literal notranslate"><span class="pre">Morsel.secure</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.version"><code class="docutils literal notranslate"><span class="pre">Morsel.version</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.httponly"><code class="docutils literal notranslate"><span class="pre">Morsel.httponly</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.samesite"><code class="docutils literal notranslate"><span class="pre">Morsel.samesite</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.value"><code class="docutils literal notranslate"><span class="pre">Morsel.value</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.coded_value"><code class="docutils literal notranslate"><span class="pre">Morsel.coded_value</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.key"><code class="docutils literal notranslate"><span class="pre">Morsel.key</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.set"><code class="docutils literal notranslate"><span class="pre">Morsel.set()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.isReservedKey"><code class="docutils literal notranslate"><span class="pre">Morsel.isReservedKey()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.output"><code class="docutils literal notranslate"><span class="pre">Morsel.output()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.js_output"><code class="docutils literal notranslate"><span class="pre">Morsel.js_output()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.OutputString"><code class="docutils literal notranslate"><span class="pre">Morsel.OutputString()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.update"><code class="docutils literal notranslate"><span class="pre">Morsel.update()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.copy"><code class="docutils literal notranslate"><span class="pre">Morsel.copy()</span></code></a></li>
-<li><a class="reference internal" href="#http.cookies.Morsel.setdefault"><code class="docutils literal notranslate"><span class="pre">Morsel.setdefault()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#cookie-objects">Cookie 物件</a></li>
+<li><a class="reference internal" href="#morsel-objects">Morsel 物件</a></li>
 <li><a class="reference internal" href="#example">範例</a></li>
 </ul>
 </li>
@@ -571,7 +503,7 @@ behave the same as <a class="reference internal" href="stdtypes.html#dict.setdef
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="http.server.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.server</span></code> --- HTTP servers</a></p>
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">http.server</span></code> — HTTP 伺服器</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -610,10 +542,10 @@ behave the same as <a class="reference internal" href="stdtypes.html#dict.setdef
           <a href="http.cookiejar.html" title="http.cookiejar --- Cookie handling for HTTP clients"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="http.server.html" title="http.server --- HTTP servers"
+          <a href="http.server.html" title="http.server — HTTP 伺服器"
              >上一頁</a> |</li>
 
-          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
           <li><a href="https://www.python.org/">Python</a> &#187;</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -623,7 +555,7 @@ behave the same as <a class="reference internal" href="stdtypes.html#dict.setdef
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.1 Documentation</a> &#187;
+      <a href="../index.html">3.12.2 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -660,6 +592,7 @@ behave the same as <a class="reference internal" href="stdtypes.html#dict.setdef
     Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
     <br />
     See <a href="/license.html">History and License</a> for more information.<br />
+    
     <br />
 
     The Python Software Foundation is a non-profit corporation.
@@ -667,7 +600,7 @@ behave the same as <a class="reference internal" href="stdtypes.html#dict.setdef
 <br />
     <br />
 
-    最後更新於 Jan 05, 2024 (01:03 UTC)。
+    最後更新於 Feb 19, 2024 (00:19 UTC)。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

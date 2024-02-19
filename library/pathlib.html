@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>pathlib --- 物件導向檔案系統路徑 &#8212; Python 3.12.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pathlib --- 物件導向檔案系統路徑 &#8212; Python 3.12.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=aa5eeaf2" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=e8a97c27" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=3221873d"></script>
+    <script src="../_static/documentation_options.js?v=056bc313"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=d9a6981e"></script>
@@ -19,7 +19,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.1 說明文件 中搜尋"
+          title="在 Python 3.12.2 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -58,7 +58,7 @@
         </label>
         <span class="nav-items-wrapper">
             <a href="https://www.python.org/" class="nav-logo">
-                <img src="../_static/py.svg" alt="Logo"/>
+                <img src="../_static/py.svg" alt="Python logo"/>
             </a>
             <span class="version_switcher_placeholder"></span>
             <form role="search" class="search" action="../search.html" method="get">
@@ -88,88 +88,14 @@
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pathlib</span></code> --- 物件導向檔案系統路徑</a><ul>
 <li><a class="reference internal" href="#basic-use">基本用法</a></li>
 <li><a class="reference internal" href="#pure-paths">純路徑</a><ul>
-<li><a class="reference internal" href="#pathlib.PurePath"><code class="docutils literal notranslate"><span class="pre">PurePath</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePosixPath"><code class="docutils literal notranslate"><span class="pre">PurePosixPath</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PureWindowsPath"><code class="docutils literal notranslate"><span class="pre">PureWindowsPath</span></code></a></li>
 <li><a class="reference internal" href="#general-properties">通用屬性</a></li>
 <li><a class="reference internal" href="#operators">運算子</a></li>
-<li><a class="reference internal" href="#accessing-individual-parts">對個別組成的存取</a><ul>
-<li><a class="reference internal" href="#pathlib.PurePath.parts"><code class="docutils literal notranslate"><span class="pre">PurePath.parts</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#methods-and-properties">方法與屬性</a><ul>
-<li><a class="reference internal" href="#pathlib.PurePath.drive"><code class="docutils literal notranslate"><span class="pre">PurePath.drive</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.root"><code class="docutils literal notranslate"><span class="pre">PurePath.root</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.anchor"><code class="docutils literal notranslate"><span class="pre">PurePath.anchor</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.parents"><code class="docutils literal notranslate"><span class="pre">PurePath.parents</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.parent"><code class="docutils literal notranslate"><span class="pre">PurePath.parent</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.name"><code class="docutils literal notranslate"><span class="pre">PurePath.name</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.suffix"><code class="docutils literal notranslate"><span class="pre">PurePath.suffix</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.suffixes"><code class="docutils literal notranslate"><span class="pre">PurePath.suffixes</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.stem"><code class="docutils literal notranslate"><span class="pre">PurePath.stem</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.as_posix"><code class="docutils literal notranslate"><span class="pre">PurePath.as_posix()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.as_uri"><code class="docutils literal notranslate"><span class="pre">PurePath.as_uri()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.is_absolute"><code class="docutils literal notranslate"><span class="pre">PurePath.is_absolute()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.is_relative_to"><code class="docutils literal notranslate"><span class="pre">PurePath.is_relative_to()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.is_reserved"><code class="docutils literal notranslate"><span class="pre">PurePath.is_reserved()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.joinpath"><code class="docutils literal notranslate"><span class="pre">PurePath.joinpath()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.match"><code class="docutils literal notranslate"><span class="pre">PurePath.match()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.relative_to"><code class="docutils literal notranslate"><span class="pre">PurePath.relative_to()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.with_name"><code class="docutils literal notranslate"><span class="pre">PurePath.with_name()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.with_stem"><code class="docutils literal notranslate"><span class="pre">PurePath.with_stem()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.with_suffix"><code class="docutils literal notranslate"><span class="pre">PurePath.with_suffix()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.with_segments"><code class="docutils literal notranslate"><span class="pre">PurePath.with_segments()</span></code></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#accessing-individual-parts">對個別組成的存取</a></li>
+<li><a class="reference internal" href="#methods-and-properties">方法與屬性</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#concrete-paths">Concrete paths</a><ul>
-<li><a class="reference internal" href="#pathlib.Path"><code class="docutils literal notranslate"><span class="pre">Path</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PosixPath"><code class="docutils literal notranslate"><span class="pre">PosixPath</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.WindowsPath"><code class="docutils literal notranslate"><span class="pre">WindowsPath</span></code></a></li>
-<li><a class="reference internal" href="#methods">Methods</a><ul>
-<li><a class="reference internal" href="#pathlib.Path.cwd"><code class="docutils literal notranslate"><span class="pre">Path.cwd()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.home"><code class="docutils literal notranslate"><span class="pre">Path.home()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.stat"><code class="docutils literal notranslate"><span class="pre">Path.stat()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.chmod"><code class="docutils literal notranslate"><span class="pre">Path.chmod()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.exists"><code class="docutils literal notranslate"><span class="pre">Path.exists()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.expanduser"><code class="docutils literal notranslate"><span class="pre">Path.expanduser()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.glob"><code class="docutils literal notranslate"><span class="pre">Path.glob()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.group"><code class="docutils literal notranslate"><span class="pre">Path.group()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_dir"><code class="docutils literal notranslate"><span class="pre">Path.is_dir()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_file"><code class="docutils literal notranslate"><span class="pre">Path.is_file()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_junction"><code class="docutils literal notranslate"><span class="pre">Path.is_junction()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_mount"><code class="docutils literal notranslate"><span class="pre">Path.is_mount()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_symlink"><code class="docutils literal notranslate"><span class="pre">Path.is_symlink()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_socket"><code class="docutils literal notranslate"><span class="pre">Path.is_socket()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_fifo"><code class="docutils literal notranslate"><span class="pre">Path.is_fifo()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_block_device"><code class="docutils literal notranslate"><span class="pre">Path.is_block_device()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_char_device"><code class="docutils literal notranslate"><span class="pre">Path.is_char_device()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.iterdir"><code class="docutils literal notranslate"><span class="pre">Path.iterdir()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.walk"><code class="docutils literal notranslate"><span class="pre">Path.walk()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.lchmod"><code class="docutils literal notranslate"><span class="pre">Path.lchmod()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.lstat"><code class="docutils literal notranslate"><span class="pre">Path.lstat()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.mkdir"><code class="docutils literal notranslate"><span class="pre">Path.mkdir()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.open"><code class="docutils literal notranslate"><span class="pre">Path.open()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.owner"><code class="docutils literal notranslate"><span class="pre">Path.owner()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.read_bytes"><code class="docutils literal notranslate"><span class="pre">Path.read_bytes()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.read_text"><code class="docutils literal notranslate"><span class="pre">Path.read_text()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.readlink"><code class="docutils literal notranslate"><span class="pre">Path.readlink()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.rename"><code class="docutils literal notranslate"><span class="pre">Path.rename()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.replace"><code class="docutils literal notranslate"><span class="pre">Path.replace()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.absolute"><code class="docutils literal notranslate"><span class="pre">Path.absolute()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.resolve"><code class="docutils literal notranslate"><span class="pre">Path.resolve()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.rglob"><code class="docutils literal notranslate"><span class="pre">Path.rglob()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.rmdir"><code class="docutils literal notranslate"><span class="pre">Path.rmdir()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.samefile"><code class="docutils literal notranslate"><span class="pre">Path.samefile()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.symlink_to"><code class="docutils literal notranslate"><span class="pre">Path.symlink_to()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.hardlink_to"><code class="docutils literal notranslate"><span class="pre">Path.hardlink_to()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.touch"><code class="docutils literal notranslate"><span class="pre">Path.touch()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.unlink"><code class="docutils literal notranslate"><span class="pre">Path.unlink()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.write_bytes"><code class="docutils literal notranslate"><span class="pre">Path.write_bytes()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.write_text"><code class="docutils literal notranslate"><span class="pre">Path.write_text()</span></code></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#correspondence-to-tools-in-the-os-module">Correspondence to tools in the <code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code> module</a></li>
@@ -220,7 +146,7 @@
           <a href="filesys.html" title="檔案與目錄存取"
              accesskey="P">上一頁</a> |</li>
 
-          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
           <li><a href="https://www.python.org/">Python</a> &#187;</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -230,7 +156,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.1 Documentation</a> &#187;
+      <a href="../index.html">3.12.2 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -732,6 +658,13 @@
 <span class="go">False</span>
 </pre></div>
 </div>
+<p>This method is string-based; it neither accesses the filesystem nor treats
+&quot;<code class="docutils literal notranslate"><span class="pre">..</span></code>&quot; segments specially. The following code is equivalent:</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">=</span> <span class="n">PurePath</span><span class="p">(</span><span class="s1">&#39;/usr&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">u</span> <span class="o">==</span> <span class="n">p</span> <span class="ow">or</span> <span class="n">u</span> <span class="ow">in</span> <span class="n">p</span><span class="o">.</span><span class="n">parents</span>
+<span class="go">False</span>
+</pre></div>
+</div>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.9 版新加入.</span></p>
 </div>
@@ -1135,6 +1068,9 @@ words, it enables recursive globbing:</p>
 <span class="go"> PosixPath(&#39;test_pathlib.py&#39;)]</span>
 </pre></div>
 </div>
+<p>This method calls <a class="reference internal" href="#pathlib.Path.is_dir" title="pathlib.Path.is_dir"><code class="xref py py-meth docutils literal notranslate"><span class="pre">Path.is_dir()</span></code></a> on the top-level directory and
+propagates any <a class="reference internal" href="exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> exception that is raised. Subsequent
+<a class="reference internal" href="exceptions.html#OSError" title="OSError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OSError</span></code></a> exceptions from scanning directories are suppressed.</p>
 <p>By default, or when the <em>case_sensitive</em> keyword-only argument is set to
 <code class="docutils literal notranslate"><span class="pre">None</span></code>, this method matches paths using platform-specific casing rules:
 typically, case-sensitive on POSIX, and case-insensitive on Windows.
@@ -1396,9 +1332,7 @@ as needed; they are created with the default permissions without taking
 <a class="reference internal" href="exceptions.html#FileNotFoundError" title="FileNotFoundError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileNotFoundError</span></code></a>.</p>
 <p>If <em>exist_ok</em> is false (the default), <a class="reference internal" href="exceptions.html#FileExistsError" title="FileExistsError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileExistsError</span></code></a> is
 raised if the target directory already exists.</p>
-<p>If <em>exist_ok</em> is true, <a class="reference internal" href="exceptions.html#FileExistsError" title="FileExistsError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileExistsError</span></code></a> exceptions will be
-ignored (same behavior as the POSIX <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">-p</span></code> command), but only if the
-last path component is not an existing non-directory file.</p>
+<p>如果 <em>exist_ok</em> 為 true，<a class="reference internal" href="exceptions.html#FileExistsError" title="FileExistsError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">FileExistsError</span></code></a> 例外不會被引發，除非給定路徑已在檔案系統中存在且並不是個目錄（行為與 POSIX <code class="docutils literal notranslate"><span class="pre">mkdir</span> <span class="pre">-p</span></code> 指令相同）。</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版的變更: </span>新增 <em>exist_ok</em> 參數。</p>
 </div>
@@ -1592,7 +1526,12 @@ separator (<a class="reference internal" href="os.html#os.sep" title="os.sep"><c
 <dl class="py method">
 <dt class="sig sig-object py" id="pathlib.Path.symlink_to">
 <span class="sig-prename descclassname"><span class="pre">Path.</span></span><span class="sig-name descname"><span class="pre">symlink_to</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_is_directory</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pathlib.Path.symlink_to" title="Link to this definition">¶</a></dt>
-<dd><p>使這個路徑為一個 <em>target</em> 的符號連結。如果在 Windows 的連結目標是資料夾，<em>target_is_directory</em> 應該為 true（預設為 <code class="docutils literal notranslate"><span class="pre">False</span></code>）。如果在 POSIX 的連結目標是資料夾，<em>target_is_directory</em> 的數值會被省略。</p>
+<dd><p>使這個路徑成為一個指向 <em>target</em> 的符號連結。</p>
+<p>On Windows, a symlink represents either a file or a directory, and does not
+morph to the target dynamically.  If the target is present, the type of the
+symlink will be created to match. Otherwise, the symlink will be created
+as a directory if <em>target_is_directory</em> is <code class="docutils literal notranslate"><span class="pre">True</span></code> or a file symlink (the
+default) otherwise.  On non-Windows platforms, <em>target_is_directory</em> is ignored.</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">&#39;mylink&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">symlink_to</span><span class="p">(</span><span class="s1">&#39;setup.py&#39;</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">p</span><span class="o">.</span><span class="n">resolve</span><span class="p">()</span>
@@ -1809,88 +1748,14 @@ include <a class="reference internal" href="os.path.html#os.path.abspath" title=
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pathlib</span></code> --- 物件導向檔案系統路徑</a><ul>
 <li><a class="reference internal" href="#basic-use">基本用法</a></li>
 <li><a class="reference internal" href="#pure-paths">純路徑</a><ul>
-<li><a class="reference internal" href="#pathlib.PurePath"><code class="docutils literal notranslate"><span class="pre">PurePath</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePosixPath"><code class="docutils literal notranslate"><span class="pre">PurePosixPath</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PureWindowsPath"><code class="docutils literal notranslate"><span class="pre">PureWindowsPath</span></code></a></li>
 <li><a class="reference internal" href="#general-properties">通用屬性</a></li>
 <li><a class="reference internal" href="#operators">運算子</a></li>
-<li><a class="reference internal" href="#accessing-individual-parts">對個別組成的存取</a><ul>
-<li><a class="reference internal" href="#pathlib.PurePath.parts"><code class="docutils literal notranslate"><span class="pre">PurePath.parts</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#methods-and-properties">方法與屬性</a><ul>
-<li><a class="reference internal" href="#pathlib.PurePath.drive"><code class="docutils literal notranslate"><span class="pre">PurePath.drive</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.root"><code class="docutils literal notranslate"><span class="pre">PurePath.root</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.anchor"><code class="docutils literal notranslate"><span class="pre">PurePath.anchor</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.parents"><code class="docutils literal notranslate"><span class="pre">PurePath.parents</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.parent"><code class="docutils literal notranslate"><span class="pre">PurePath.parent</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.name"><code class="docutils literal notranslate"><span class="pre">PurePath.name</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.suffix"><code class="docutils literal notranslate"><span class="pre">PurePath.suffix</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.suffixes"><code class="docutils literal notranslate"><span class="pre">PurePath.suffixes</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.stem"><code class="docutils literal notranslate"><span class="pre">PurePath.stem</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.as_posix"><code class="docutils literal notranslate"><span class="pre">PurePath.as_posix()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.as_uri"><code class="docutils literal notranslate"><span class="pre">PurePath.as_uri()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.is_absolute"><code class="docutils literal notranslate"><span class="pre">PurePath.is_absolute()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.is_relative_to"><code class="docutils literal notranslate"><span class="pre">PurePath.is_relative_to()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.is_reserved"><code class="docutils literal notranslate"><span class="pre">PurePath.is_reserved()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.joinpath"><code class="docutils literal notranslate"><span class="pre">PurePath.joinpath()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.match"><code class="docutils literal notranslate"><span class="pre">PurePath.match()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.relative_to"><code class="docutils literal notranslate"><span class="pre">PurePath.relative_to()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.with_name"><code class="docutils literal notranslate"><span class="pre">PurePath.with_name()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.with_stem"><code class="docutils literal notranslate"><span class="pre">PurePath.with_stem()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.with_suffix"><code class="docutils literal notranslate"><span class="pre">PurePath.with_suffix()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PurePath.with_segments"><code class="docutils literal notranslate"><span class="pre">PurePath.with_segments()</span></code></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#accessing-individual-parts">對個別組成的存取</a></li>
+<li><a class="reference internal" href="#methods-and-properties">方法與屬性</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#concrete-paths">Concrete paths</a><ul>
-<li><a class="reference internal" href="#pathlib.Path"><code class="docutils literal notranslate"><span class="pre">Path</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.PosixPath"><code class="docutils literal notranslate"><span class="pre">PosixPath</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.WindowsPath"><code class="docutils literal notranslate"><span class="pre">WindowsPath</span></code></a></li>
-<li><a class="reference internal" href="#methods">Methods</a><ul>
-<li><a class="reference internal" href="#pathlib.Path.cwd"><code class="docutils literal notranslate"><span class="pre">Path.cwd()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.home"><code class="docutils literal notranslate"><span class="pre">Path.home()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.stat"><code class="docutils literal notranslate"><span class="pre">Path.stat()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.chmod"><code class="docutils literal notranslate"><span class="pre">Path.chmod()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.exists"><code class="docutils literal notranslate"><span class="pre">Path.exists()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.expanduser"><code class="docutils literal notranslate"><span class="pre">Path.expanduser()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.glob"><code class="docutils literal notranslate"><span class="pre">Path.glob()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.group"><code class="docutils literal notranslate"><span class="pre">Path.group()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_dir"><code class="docutils literal notranslate"><span class="pre">Path.is_dir()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_file"><code class="docutils literal notranslate"><span class="pre">Path.is_file()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_junction"><code class="docutils literal notranslate"><span class="pre">Path.is_junction()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_mount"><code class="docutils literal notranslate"><span class="pre">Path.is_mount()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_symlink"><code class="docutils literal notranslate"><span class="pre">Path.is_symlink()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_socket"><code class="docutils literal notranslate"><span class="pre">Path.is_socket()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_fifo"><code class="docutils literal notranslate"><span class="pre">Path.is_fifo()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_block_device"><code class="docutils literal notranslate"><span class="pre">Path.is_block_device()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.is_char_device"><code class="docutils literal notranslate"><span class="pre">Path.is_char_device()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.iterdir"><code class="docutils literal notranslate"><span class="pre">Path.iterdir()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.walk"><code class="docutils literal notranslate"><span class="pre">Path.walk()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.lchmod"><code class="docutils literal notranslate"><span class="pre">Path.lchmod()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.lstat"><code class="docutils literal notranslate"><span class="pre">Path.lstat()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.mkdir"><code class="docutils literal notranslate"><span class="pre">Path.mkdir()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.open"><code class="docutils literal notranslate"><span class="pre">Path.open()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.owner"><code class="docutils literal notranslate"><span class="pre">Path.owner()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.read_bytes"><code class="docutils literal notranslate"><span class="pre">Path.read_bytes()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.read_text"><code class="docutils literal notranslate"><span class="pre">Path.read_text()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.readlink"><code class="docutils literal notranslate"><span class="pre">Path.readlink()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.rename"><code class="docutils literal notranslate"><span class="pre">Path.rename()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.replace"><code class="docutils literal notranslate"><span class="pre">Path.replace()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.absolute"><code class="docutils literal notranslate"><span class="pre">Path.absolute()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.resolve"><code class="docutils literal notranslate"><span class="pre">Path.resolve()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.rglob"><code class="docutils literal notranslate"><span class="pre">Path.rglob()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.rmdir"><code class="docutils literal notranslate"><span class="pre">Path.rmdir()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.samefile"><code class="docutils literal notranslate"><span class="pre">Path.samefile()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.symlink_to"><code class="docutils literal notranslate"><span class="pre">Path.symlink_to()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.hardlink_to"><code class="docutils literal notranslate"><span class="pre">Path.hardlink_to()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.touch"><code class="docutils literal notranslate"><span class="pre">Path.touch()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.unlink"><code class="docutils literal notranslate"><span class="pre">Path.unlink()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.write_bytes"><code class="docutils literal notranslate"><span class="pre">Path.write_bytes()</span></code></a></li>
-<li><a class="reference internal" href="#pathlib.Path.write_text"><code class="docutils literal notranslate"><span class="pre">Path.write_text()</span></code></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#methods">Methods</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#correspondence-to-tools-in-the-os-module">Correspondence to tools in the <code class="xref py py-mod docutils literal notranslate"><span class="pre">os</span></code> module</a></li>
@@ -1944,7 +1809,7 @@ include <a class="reference internal" href="os.path.html#os.path.abspath" title=
           <a href="filesys.html" title="檔案與目錄存取"
              >上一頁</a> |</li>
 
-          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
           <li><a href="https://www.python.org/">Python</a> &#187;</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -1954,7 +1819,7 @@ include <a class="reference internal" href="os.path.html#os.path.abspath" title=
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.1 Documentation</a> &#187;
+      <a href="../index.html">3.12.2 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -1991,6 +1856,7 @@ include <a class="reference internal" href="os.path.html#os.path.abspath" title=
     Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
     <br />
     See <a href="/license.html">History and License</a> for more information.<br />
+    
     <br />
 
     The Python Software Foundation is a non-profit corporation.
@@ -1998,7 +1864,7 @@ include <a class="reference internal" href="os.path.html#os.path.abspath" title=
 <br />
     <br />
 
-    最後更新於 Jan 05, 2024 (01:03 UTC)。
+    最後更新於 Feb 19, 2024 (00:19 UTC)。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

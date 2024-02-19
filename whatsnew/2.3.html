@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Python 2.3 有什麼新功能 &#8212; Python 3.12.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 2.3 有什麼新功能 &#8212; Python 3.12.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=aa5eeaf2" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=e8a97c27" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=3221873d"></script>
+    <script src="../_static/documentation_options.js?v=056bc313"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=d9a6981e"></script>
@@ -19,7 +19,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.1 說明文件 中搜尋"
+          title="在 Python 3.12.2 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -58,7 +58,7 @@
         </label>
         <span class="nav-items-wrapper">
             <a href="https://www.python.org/" class="nav-logo">
-                <img src="../_static/py.svg" alt="Logo"/>
+                <img src="../_static/py.svg" alt="Python logo"/>
             </a>
             <span class="version_switcher_placeholder"></span>
             <form role="search" class="search" action="../search.html" method="get">
@@ -166,7 +166,7 @@
           <a href="2.4.html" title="Python 2.4 有什麼新功能"
              accesskey="P">上一頁</a> |</li>
 
-          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
           <li><a href="https://www.python.org/">Python</a> &#187;</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -176,7 +176,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.1 Documentation</a> &#187;
+      <a href="../index.html">3.12.2 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 有什麼新功能？</a> &#187;</li>
@@ -1262,7 +1262,7 @@ now faster than classic classes!</p></li>
 Peters, and the implementation is significantly faster.</p></li>
 <li><p>Multiplication of large long integers is now much faster thanks to an
 implementation of Karatsuba multiplication, an algorithm that scales better than
-the O(n*n) required for the grade-school multiplication algorithm.  (Original
+the <em>O</em>(<em>n</em><sup>2</sup>) required for the grade-school multiplication algorithm.  (Original
 patch by Christopher A. Craig, and significantly reworked by Tim Peters.)</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">SET_LINENO</span></code> opcode is now gone.  This may provide a small speed
 increase, depending on your compiler's idiosyncrasies. See section
@@ -1360,7 +1360,7 @@ algorithm.  A heap is an array-like data structure that keeps items in a
 partially sorted order such that, for every index <em>k</em>, <code class="docutils literal notranslate"><span class="pre">heap[k]</span> <span class="pre">&lt;=</span>
 <span class="pre">heap[2*k+1]</span></code> and <code class="docutils literal notranslate"><span class="pre">heap[k]</span> <span class="pre">&lt;=</span> <span class="pre">heap[2*k+2]</span></code>.  This makes it quick to remove the
 smallest item, and inserting a new item while maintaining the heap property is
-O(lg n).  (See <a class="reference external" href="https://xlinux.nist.gov/dads//HTML/priorityque.html">https://xlinux.nist.gov/dads//HTML/priorityque.html</a> for more
+<em>O</em>(log <em>n</em>).  (See <a class="reference external" href="https://xlinux.nist.gov/dads//HTML/priorityque.html">https://xlinux.nist.gov/dads//HTML/priorityque.html</a> for more
 information about the priority queue data structure.)</p>
 <p>The <a class="reference internal" href="../library/heapq.html#module-heapq" title="heapq: Heap queue algorithm (a.k.a. priority queue)."><code class="xref py py-mod docutils literal notranslate"><span class="pre">heapq</span></code></a> module provides <a class="reference internal" href="../library/heapq.html#heapq.heappush" title="heapq.heappush"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappush()</span></code></a> and <a class="reference internal" href="../library/heapq.html#heapq.heappop" title="heapq.heappop"><code class="xref py py-func docutils literal notranslate"><span class="pre">heappop()</span></code></a> functions
 for adding and removing items while maintaining the heap property on top of some
@@ -2123,7 +2123,7 @@ Suzi, Jason Tishler, Just van Rossum.</p>
           <a href="2.4.html" title="Python 2.4 有什麼新功能"
              >上一頁</a> |</li>
 
-          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
           <li><a href="https://www.python.org/">Python</a> &#187;</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -2133,7 +2133,7 @@ Suzi, Jason Tishler, Just van Rossum.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.1 Documentation</a> &#187;
+      <a href="../index.html">3.12.2 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 有什麼新功能？</a> &#187;</li>
@@ -2169,6 +2169,7 @@ Suzi, Jason Tishler, Just van Rossum.</p>
     Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
     <br />
     See <a href="/license.html">History and License</a> for more information.<br />
+    
     <br />
 
     The Python Software Foundation is a non-profit corporation.
@@ -2176,7 +2177,7 @@ Suzi, Jason Tishler, Just van Rossum.</p>
 <br />
     <br />
 
-    最後更新於 Jan 05, 2024 (01:03 UTC)。
+    最後更新於 Feb 19, 2024 (00:19 UTC)。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

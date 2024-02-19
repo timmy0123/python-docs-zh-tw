@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>test --- Python 的回歸測試 (regression tests) 套件 &#8212; Python 3.12.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test --- Python 的回歸測試 (regression tests) 套件 &#8212; Python 3.12.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=aa5eeaf2" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=e8a97c27" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=3221873d"></script>
+    <script src="../_static/documentation_options.js?v=056bc313"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=d9a6981e"></script>
@@ -19,7 +19,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.1 說明文件 中搜尋"
+          title="在 Python 3.12.2 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -58,7 +58,7 @@
         </label>
         <span class="nav-items-wrapper">
             <a href="https://www.python.org/" class="nav-logo">
-                <img src="../_static/py.svg" alt="Logo"/>
+                <img src="../_static/py.svg" alt="Python logo"/>
             </a>
             <span class="version_switcher_placeholder"></span>
             <form role="search" class="search" action="../search.html" method="get">
@@ -90,205 +90,14 @@
 <li><a class="reference internal" href="#module-test.regrtest">使用命令列介面執行測試</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-test.support"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support</span></code> --- Python 測試套件的工具</a><ul>
-<li><a class="reference internal" href="#test.support.TestFailed"><code class="docutils literal notranslate"><span class="pre">TestFailed</span></code></a></li>
-<li><a class="reference internal" href="#test.support.ResourceDenied"><code class="docutils literal notranslate"><span class="pre">ResourceDenied</span></code></a></li>
-<li><a class="reference internal" href="#test.support.verbose"><code class="docutils literal notranslate"><span class="pre">verbose</span></code></a></li>
-<li><a class="reference internal" href="#test.support.is_jython"><code class="docutils literal notranslate"><span class="pre">is_jython</span></code></a></li>
-<li><a class="reference internal" href="#test.support.is_android"><code class="docutils literal notranslate"><span class="pre">is_android</span></code></a></li>
-<li><a class="reference internal" href="#test.support.unix_shell"><code class="docutils literal notranslate"><span class="pre">unix_shell</span></code></a></li>
-<li><a class="reference internal" href="#test.support.LOOPBACK_TIMEOUT"><code class="docutils literal notranslate"><span class="pre">LOOPBACK_TIMEOUT</span></code></a></li>
-<li><a class="reference internal" href="#test.support.INTERNET_TIMEOUT"><code class="docutils literal notranslate"><span class="pre">INTERNET_TIMEOUT</span></code></a></li>
-<li><a class="reference internal" href="#test.support.SHORT_TIMEOUT"><code class="docutils literal notranslate"><span class="pre">SHORT_TIMEOUT</span></code></a></li>
-<li><a class="reference internal" href="#test.support.LONG_TIMEOUT"><code class="docutils literal notranslate"><span class="pre">LONG_TIMEOUT</span></code></a></li>
-<li><a class="reference internal" href="#test.support.PGO"><code class="docutils literal notranslate"><span class="pre">PGO</span></code></a></li>
-<li><a class="reference internal" href="#test.support.PIPE_MAX_SIZE"><code class="docutils literal notranslate"><span class="pre">PIPE_MAX_SIZE</span></code></a></li>
-<li><a class="reference internal" href="#test.support.Py_DEBUG"><code class="docutils literal notranslate"><span class="pre">Py_DEBUG</span></code></a></li>
-<li><a class="reference internal" href="#test.support.SOCK_MAX_SIZE"><code class="docutils literal notranslate"><span class="pre">SOCK_MAX_SIZE</span></code></a></li>
-<li><a class="reference internal" href="#test.support.TEST_SUPPORT_DIR"><code class="docutils literal notranslate"><span class="pre">TEST_SUPPORT_DIR</span></code></a></li>
-<li><a class="reference internal" href="#test.support.TEST_HOME_DIR"><code class="docutils literal notranslate"><span class="pre">TEST_HOME_DIR</span></code></a></li>
-<li><a class="reference internal" href="#test.support.TEST_DATA_DIR"><code class="docutils literal notranslate"><span class="pre">TEST_DATA_DIR</span></code></a></li>
-<li><a class="reference internal" href="#test.support.MAX_Py_ssize_t"><code class="docutils literal notranslate"><span class="pre">MAX_Py_ssize_t</span></code></a></li>
-<li><a class="reference internal" href="#test.support.max_memuse"><code class="docutils literal notranslate"><span class="pre">max_memuse</span></code></a></li>
-<li><a class="reference internal" href="#test.support.real_max_memuse"><code class="docutils literal notranslate"><span class="pre">real_max_memuse</span></code></a></li>
-<li><a class="reference internal" href="#test.support.MISSING_C_DOCSTRINGS"><code class="docutils literal notranslate"><span class="pre">MISSING_C_DOCSTRINGS</span></code></a></li>
-<li><a class="reference internal" href="#test.support.HAVE_DOCSTRINGS"><code class="docutils literal notranslate"><span class="pre">HAVE_DOCSTRINGS</span></code></a></li>
-<li><a class="reference internal" href="#test.support.TEST_HTTP_URL"><code class="docutils literal notranslate"><span class="pre">TEST_HTTP_URL</span></code></a></li>
-<li><a class="reference internal" href="#test.support.ALWAYS_EQ"><code class="docutils literal notranslate"><span class="pre">ALWAYS_EQ</span></code></a></li>
-<li><a class="reference internal" href="#test.support.NEVER_EQ"><code class="docutils literal notranslate"><span class="pre">NEVER_EQ</span></code></a></li>
-<li><a class="reference internal" href="#test.support.LARGEST"><code class="docutils literal notranslate"><span class="pre">LARGEST</span></code></a></li>
-<li><a class="reference internal" href="#test.support.SMALLEST"><code class="docutils literal notranslate"><span class="pre">SMALLEST</span></code></a></li>
-<li><a class="reference internal" href="#test.support.busy_retry"><code class="docutils literal notranslate"><span class="pre">busy_retry()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.sleeping_retry"><code class="docutils literal notranslate"><span class="pre">sleeping_retry()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.is_resource_enabled"><code class="docutils literal notranslate"><span class="pre">is_resource_enabled()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.python_is_optimized"><code class="docutils literal notranslate"><span class="pre">python_is_optimized()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.with_pymalloc"><code class="docutils literal notranslate"><span class="pre">with_pymalloc()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires"><code class="docutils literal notranslate"><span class="pre">requires()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.sortdict"><code class="docutils literal notranslate"><span class="pre">sortdict()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.findfile"><code class="docutils literal notranslate"><span class="pre">findfile()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.get_pagesize"><code class="docutils literal notranslate"><span class="pre">get_pagesize()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.setswitchinterval"><code class="docutils literal notranslate"><span class="pre">setswitchinterval()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.check_impl_detail"><code class="docutils literal notranslate"><span class="pre">check_impl_detail()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.set_memlimit"><code class="docutils literal notranslate"><span class="pre">set_memlimit()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.record_original_stdout"><code class="docutils literal notranslate"><span class="pre">record_original_stdout()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.get_original_stdout"><code class="docutils literal notranslate"><span class="pre">get_original_stdout()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.args_from_interpreter_flags"><code class="docutils literal notranslate"><span class="pre">args_from_interpreter_flags()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.optim_args_from_interpreter_flags"><code class="docutils literal notranslate"><span class="pre">optim_args_from_interpreter_flags()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.captured_stdin"><code class="docutils literal notranslate"><span class="pre">captured_stdin()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.captured_stdout"><code class="docutils literal notranslate"><span class="pre">captured_stdout()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.captured_stderr"><code class="docutils literal notranslate"><span class="pre">captured_stderr()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.disable_faulthandler"><code class="docutils literal notranslate"><span class="pre">disable_faulthandler()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.gc_collect"><code class="docutils literal notranslate"><span class="pre">gc_collect()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.disable_gc"><code class="docutils literal notranslate"><span class="pre">disable_gc()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.swap_attr"><code class="docutils literal notranslate"><span class="pre">swap_attr()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.swap_item"><code class="docutils literal notranslate"><span class="pre">swap_item()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.flush_std_streams"><code class="docutils literal notranslate"><span class="pre">flush_std_streams()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.print_warning"><code class="docutils literal notranslate"><span class="pre">print_warning()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.wait_process"><code class="docutils literal notranslate"><span class="pre">wait_process()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.calcobjsize"><code class="docutils literal notranslate"><span class="pre">calcobjsize()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.calcvobjsize"><code class="docutils literal notranslate"><span class="pre">calcvobjsize()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.checksizeof"><code class="docutils literal notranslate"><span class="pre">checksizeof()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.anticipate_failure"><code class="docutils literal notranslate"><span class="pre">anticipate_failure()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.system_must_validate_cert"><code class="docutils literal notranslate"><span class="pre">system_must_validate_cert()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.run_with_locale"><code class="docutils literal notranslate"><span class="pre">run_with_locale()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.run_with_tz"><code class="docutils literal notranslate"><span class="pre">run_with_tz()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_freebsd_version"><code class="docutils literal notranslate"><span class="pre">requires_freebsd_version()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_linux_version"><code class="docutils literal notranslate"><span class="pre">requires_linux_version()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_mac_version"><code class="docutils literal notranslate"><span class="pre">requires_mac_version()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_IEEE_754"><code class="docutils literal notranslate"><span class="pre">requires_IEEE_754()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_zlib"><code class="docutils literal notranslate"><span class="pre">requires_zlib()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_gzip"><code class="docutils literal notranslate"><span class="pre">requires_gzip()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_bz2"><code class="docutils literal notranslate"><span class="pre">requires_bz2()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_lzma"><code class="docutils literal notranslate"><span class="pre">requires_lzma()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_resource"><code class="docutils literal notranslate"><span class="pre">requires_resource()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_docstrings"><code class="docutils literal notranslate"><span class="pre">requires_docstrings()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_limited_api"><code class="docutils literal notranslate"><span class="pre">requires_limited_api()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.cpython_only"><code class="docutils literal notranslate"><span class="pre">cpython_only()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.impl_detail"><code class="docutils literal notranslate"><span class="pre">impl_detail()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.no_tracing"><code class="docutils literal notranslate"><span class="pre">no_tracing()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.refcount_test"><code class="docutils literal notranslate"><span class="pre">refcount_test()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.bigmemtest"><code class="docutils literal notranslate"><span class="pre">bigmemtest()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.bigaddrspacetest"><code class="docutils literal notranslate"><span class="pre">bigaddrspacetest()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.check_syntax_error"><code class="docutils literal notranslate"><span class="pre">check_syntax_error()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.open_urlresource"><code class="docutils literal notranslate"><span class="pre">open_urlresource()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.reap_children"><code class="docutils literal notranslate"><span class="pre">reap_children()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.get_attribute"><code class="docutils literal notranslate"><span class="pre">get_attribute()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.catch_unraisable_exception"><code class="docutils literal notranslate"><span class="pre">catch_unraisable_exception()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.load_package_tests"><code class="docutils literal notranslate"><span class="pre">load_package_tests()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.detect_api_mismatch"><code class="docutils literal notranslate"><span class="pre">detect_api_mismatch()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.patch"><code class="docutils literal notranslate"><span class="pre">patch()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.run_in_subinterp"><code class="docutils literal notranslate"><span class="pre">run_in_subinterp()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.check_free_after_iterating"><code class="docutils literal notranslate"><span class="pre">check_free_after_iterating()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.missing_compiler_executable"><code class="docutils literal notranslate"><span class="pre">missing_compiler_executable()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.check__all__"><code class="docutils literal notranslate"><span class="pre">check__all__()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.skip_if_broken_multiprocessing_synchronize"><code class="docutils literal notranslate"><span class="pre">skip_if_broken_multiprocessing_synchronize()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.check_disallow_instantiation"><code class="docutils literal notranslate"><span class="pre">check_disallow_instantiation()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.adjust_int_max_str_digits"><code class="docutils literal notranslate"><span class="pre">adjust_int_max_str_digits()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.SuppressCrashReport"><code class="docutils literal notranslate"><span class="pre">SuppressCrashReport</span></code></a></li>
-<li><a class="reference internal" href="#test.support.SaveSignals"><code class="docutils literal notranslate"><span class="pre">SaveSignals</span></code></a><ul>
-<li><a class="reference internal" href="#test.support.SaveSignals.save"><code class="docutils literal notranslate"><span class="pre">SaveSignals.save()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.SaveSignals.restore"><code class="docutils literal notranslate"><span class="pre">SaveSignals.restore()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#test.support.Matcher"><code class="docutils literal notranslate"><span class="pre">Matcher</span></code></a><ul>
-<li><a class="reference internal" href="#test.support.Matcher.matches"><code class="docutils literal notranslate"><span class="pre">Matcher.matches()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.Matcher.match_value"><code class="docutils literal notranslate"><span class="pre">Matcher.match_value()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.socket_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.socket_helper</span></code> --- 用於 socket 測試的工具</a><ul>
-<li><a class="reference internal" href="#test.support.socket_helper.IPV6_ENABLED"><code class="docutils literal notranslate"><span class="pre">IPV6_ENABLED</span></code></a></li>
-<li><a class="reference internal" href="#test.support.socket_helper.find_unused_port"><code class="docutils literal notranslate"><span class="pre">find_unused_port()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.socket_helper.bind_port"><code class="docutils literal notranslate"><span class="pre">bind_port()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.socket_helper.bind_unix_socket"><code class="docutils literal notranslate"><span class="pre">bind_unix_socket()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.socket_helper.skip_unless_bind_unix_socket"><code class="docutils literal notranslate"><span class="pre">skip_unless_bind_unix_socket()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.socket_helper.transient_internet"><code class="docutils literal notranslate"><span class="pre">transient_internet()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.script_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.script_helper</span></code> --- 用於 Python 執行測試的工具</a><ul>
-<li><a class="reference internal" href="#test.support.script_helper.interpreter_requires_environment"><code class="docutils literal notranslate"><span class="pre">interpreter_requires_environment()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.run_python_until_end"><code class="docutils literal notranslate"><span class="pre">run_python_until_end()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.assert_python_ok"><code class="docutils literal notranslate"><span class="pre">assert_python_ok()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.assert_python_failure"><code class="docutils literal notranslate"><span class="pre">assert_python_failure()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.spawn_python"><code class="docutils literal notranslate"><span class="pre">spawn_python()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.kill_python"><code class="docutils literal notranslate"><span class="pre">kill_python()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.make_script"><code class="docutils literal notranslate"><span class="pre">make_script()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.make_zip_script"><code class="docutils literal notranslate"><span class="pre">make_zip_script()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.make_pkg"><code class="docutils literal notranslate"><span class="pre">make_pkg()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.make_zip_pkg"><code class="docutils literal notranslate"><span class="pre">make_zip_pkg()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.bytecode_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.bytecode_helper</span></code> --- 用於測試位元組碼能正確產生的支援工具</a><ul>
-<li><a class="reference internal" href="#test.support.bytecode_helper.BytecodeTestCase"><code class="docutils literal notranslate"><span class="pre">BytecodeTestCase</span></code></a><ul>
-<li><a class="reference internal" href="#test.support.bytecode_helper.BytecodeTestCase.get_disassembly_as_string"><code class="docutils literal notranslate"><span class="pre">BytecodeTestCase.get_disassembly_as_string()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.bytecode_helper.BytecodeTestCase.assertInBytecode"><code class="docutils literal notranslate"><span class="pre">BytecodeTestCase.assertInBytecode()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.bytecode_helper.BytecodeTestCase.assertNotInBytecode"><code class="docutils literal notranslate"><span class="pre">BytecodeTestCase.assertNotInBytecode()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.threading_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.threading_helper</span></code> --- Utilities for threading tests</a><ul>
-<li><a class="reference internal" href="#test.support.threading_helper.join_thread"><code class="docutils literal notranslate"><span class="pre">join_thread()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.threading_helper.reap_threads"><code class="docutils literal notranslate"><span class="pre">reap_threads()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.threading_helper.start_threads"><code class="docutils literal notranslate"><span class="pre">start_threads()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.threading_helper.threading_cleanup"><code class="docutils literal notranslate"><span class="pre">threading_cleanup()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.threading_helper.threading_setup"><code class="docutils literal notranslate"><span class="pre">threading_setup()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.threading_helper.wait_threads_exit"><code class="docutils literal notranslate"><span class="pre">wait_threads_exit()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.threading_helper.catch_threading_exception"><code class="docutils literal notranslate"><span class="pre">catch_threading_exception()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.os_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.os_helper</span></code> --- 用於 os 測試的工具</a><ul>
-<li><a class="reference internal" href="#test.support.os_helper.FS_NONASCII"><code class="docutils literal notranslate"><span class="pre">FS_NONASCII</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.SAVEDCWD"><code class="docutils literal notranslate"><span class="pre">SAVEDCWD</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.TESTFN"><code class="docutils literal notranslate"><span class="pre">TESTFN</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.TESTFN_NONASCII"><code class="docutils literal notranslate"><span class="pre">TESTFN_NONASCII</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.TESTFN_UNENCODABLE"><code class="docutils literal notranslate"><span class="pre">TESTFN_UNENCODABLE</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.TESTFN_UNDECODABLE"><code class="docutils literal notranslate"><span class="pre">TESTFN_UNDECODABLE</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.TESTFN_UNICODE"><code class="docutils literal notranslate"><span class="pre">TESTFN_UNICODE</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.EnvironmentVarGuard"><code class="docutils literal notranslate"><span class="pre">EnvironmentVarGuard</span></code></a><ul>
-<li><a class="reference internal" href="#test.support.os_helper.EnvironmentVarGuard.set"><code class="docutils literal notranslate"><span class="pre">EnvironmentVarGuard.set()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.EnvironmentVarGuard.unset"><code class="docutils literal notranslate"><span class="pre">EnvironmentVarGuard.unset()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#test.support.os_helper.FakePath"><code class="docutils literal notranslate"><span class="pre">FakePath</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.can_symlink"><code class="docutils literal notranslate"><span class="pre">can_symlink()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.can_xattr"><code class="docutils literal notranslate"><span class="pre">can_xattr()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.change_cwd"><code class="docutils literal notranslate"><span class="pre">change_cwd()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.create_empty_file"><code class="docutils literal notranslate"><span class="pre">create_empty_file()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.fd_count"><code class="docutils literal notranslate"><span class="pre">fd_count()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.fs_is_case_insensitive"><code class="docutils literal notranslate"><span class="pre">fs_is_case_insensitive()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.make_bad_fd"><code class="docutils literal notranslate"><span class="pre">make_bad_fd()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.rmdir"><code class="docutils literal notranslate"><span class="pre">rmdir()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.rmtree"><code class="docutils literal notranslate"><span class="pre">rmtree()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.skip_unless_symlink"><code class="docutils literal notranslate"><span class="pre">skip_unless_symlink()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.skip_unless_xattr"><code class="docutils literal notranslate"><span class="pre">skip_unless_xattr()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.temp_cwd"><code class="docutils literal notranslate"><span class="pre">temp_cwd()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.temp_dir"><code class="docutils literal notranslate"><span class="pre">temp_dir()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.temp_umask"><code class="docutils literal notranslate"><span class="pre">temp_umask()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.unlink"><code class="docutils literal notranslate"><span class="pre">unlink()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.import_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.import_helper</span></code> --- 用於 import 測試的工具</a><ul>
-<li><a class="reference internal" href="#test.support.import_helper.forget"><code class="docutils literal notranslate"><span class="pre">forget()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.import_fresh_module"><code class="docutils literal notranslate"><span class="pre">import_fresh_module()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.import_module"><code class="docutils literal notranslate"><span class="pre">import_module()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.modules_setup"><code class="docutils literal notranslate"><span class="pre">modules_setup()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.modules_cleanup"><code class="docutils literal notranslate"><span class="pre">modules_cleanup()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.unload"><code class="docutils literal notranslate"><span class="pre">unload()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.make_legacy_pyc"><code class="docutils literal notranslate"><span class="pre">make_legacy_pyc()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.CleanImport"><code class="docutils literal notranslate"><span class="pre">CleanImport</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.DirsOnSysPath"><code class="docutils literal notranslate"><span class="pre">DirsOnSysPath</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.warnings_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.warnings_helper</span></code> --- 用於 warnings 測試的工具</a><ul>
-<li><a class="reference internal" href="#test.support.warnings_helper.ignore_warnings"><code class="docutils literal notranslate"><span class="pre">ignore_warnings()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.warnings_helper.check_no_resource_warning"><code class="docutils literal notranslate"><span class="pre">check_no_resource_warning()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.warnings_helper.check_syntax_warning"><code class="docutils literal notranslate"><span class="pre">check_syntax_warning()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.warnings_helper.check_warnings"><code class="docutils literal notranslate"><span class="pre">check_warnings()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.warnings_helper.WarningsRecorder"><code class="docutils literal notranslate"><span class="pre">WarningsRecorder</span></code></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#module-test.support"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support</span></code> --- Python 測試套件的工具</a></li>
+<li><a class="reference internal" href="#module-test.support.socket_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.socket_helper</span></code> --- 用於 socket 測試的工具</a></li>
+<li><a class="reference internal" href="#module-test.support.script_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.script_helper</span></code> --- 用於 Python 執行測試的工具</a></li>
+<li><a class="reference internal" href="#module-test.support.bytecode_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.bytecode_helper</span></code> --- 用於測試位元組碼能正確產生的支援工具</a></li>
+<li><a class="reference internal" href="#module-test.support.threading_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.threading_helper</span></code> --- Utilities for threading tests</a></li>
+<li><a class="reference internal" href="#module-test.support.os_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.os_helper</span></code> --- 用於 os 測試的工具</a></li>
+<li><a class="reference internal" href="#module-test.support.import_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.import_helper</span></code> --- 用於 import 測試的工具</a></li>
+<li><a class="reference internal" href="#module-test.support.warnings_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.warnings_helper</span></code> --- 用於 warnings 測試的工具</a></li>
 </ul>
 
   </div>
@@ -334,7 +143,7 @@
           <a href="2to3.html" title="2to3 --- 自動將 Python 2的程式碼轉成 Python 3"
              accesskey="P">上一頁</a> |</li>
 
-          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
           <li><a href="https://www.python.org/">Python</a> &#187;</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -344,7 +153,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.1 Documentation</a> &#187;
+      <a href="../index.html">3.12.2 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -502,7 +311,7 @@ basic test class with a class that specifies the input:</p>
 </pre></div>
 </div>
 <p>When using this pattern, remember that all classes that inherit from
-<a class="reference internal" href="unittest.html#unittest.TestCase" title="unittest.TestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.TestCase</span></code></a> are run as tests.  The <code class="xref py py-class docutils literal notranslate"><span class="pre">Mixin</span></code> class in the example above
+<a class="reference internal" href="unittest.html#unittest.TestCase" title="unittest.TestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.TestCase</span></code></a> are run as tests.  The <code class="xref py py-class docutils literal notranslate"><span class="pre">TestFuncAcceptsSequencesMixin</span></code> class in the example above
 does not have any data and so can't be run by itself, thus it does not
 inherit from <a class="reference internal" href="unittest.html#unittest.TestCase" title="unittest.TestCase"><code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.TestCase</span></code></a>.</p>
 </li>
@@ -665,9 +474,9 @@ to make writes blocking.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="test.support.Py_DEBUG">
 <span class="sig-prename descclassname"><span class="pre">test.support.</span></span><span class="sig-name descname"><span class="pre">Py_DEBUG</span></span><a class="headerlink" href="#test.support.Py_DEBUG" title="Link to this definition">¶</a></dt>
-<dd><p>True if Python is built with the <code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_DEBUG</span></code> macro defined: if
-Python is <a class="reference internal" href="../using/configure.html#debug-build"><span class="std std-ref">built in debug mode</span></a>
-(<a class="reference internal" href="../using/configure.html#cmdoption-with-pydebug"><code class="xref std std-option docutils literal notranslate"><span class="pre">./configure</span> <span class="pre">--with-pydebug</span></code></a>).</p>
+<dd><p>True if Python was built with the <a class="reference internal" href="../c-api/intro.html#c.Py_DEBUG" title="Py_DEBUG"><code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_DEBUG</span></code></a> macro
+defined, that is, if
+Python was <a class="reference internal" href="../using/configure.html#debug-build"><span class="std std-ref">built in debug mode</span></a>.</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.12 版新加入.</span></p>
 </div>
@@ -2210,205 +2019,14 @@ warnings directly.</p>
 <li><a class="reference internal" href="#module-test.regrtest">使用命令列介面執行測試</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-test.support"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support</span></code> --- Python 測試套件的工具</a><ul>
-<li><a class="reference internal" href="#test.support.TestFailed"><code class="docutils literal notranslate"><span class="pre">TestFailed</span></code></a></li>
-<li><a class="reference internal" href="#test.support.ResourceDenied"><code class="docutils literal notranslate"><span class="pre">ResourceDenied</span></code></a></li>
-<li><a class="reference internal" href="#test.support.verbose"><code class="docutils literal notranslate"><span class="pre">verbose</span></code></a></li>
-<li><a class="reference internal" href="#test.support.is_jython"><code class="docutils literal notranslate"><span class="pre">is_jython</span></code></a></li>
-<li><a class="reference internal" href="#test.support.is_android"><code class="docutils literal notranslate"><span class="pre">is_android</span></code></a></li>
-<li><a class="reference internal" href="#test.support.unix_shell"><code class="docutils literal notranslate"><span class="pre">unix_shell</span></code></a></li>
-<li><a class="reference internal" href="#test.support.LOOPBACK_TIMEOUT"><code class="docutils literal notranslate"><span class="pre">LOOPBACK_TIMEOUT</span></code></a></li>
-<li><a class="reference internal" href="#test.support.INTERNET_TIMEOUT"><code class="docutils literal notranslate"><span class="pre">INTERNET_TIMEOUT</span></code></a></li>
-<li><a class="reference internal" href="#test.support.SHORT_TIMEOUT"><code class="docutils literal notranslate"><span class="pre">SHORT_TIMEOUT</span></code></a></li>
-<li><a class="reference internal" href="#test.support.LONG_TIMEOUT"><code class="docutils literal notranslate"><span class="pre">LONG_TIMEOUT</span></code></a></li>
-<li><a class="reference internal" href="#test.support.PGO"><code class="docutils literal notranslate"><span class="pre">PGO</span></code></a></li>
-<li><a class="reference internal" href="#test.support.PIPE_MAX_SIZE"><code class="docutils literal notranslate"><span class="pre">PIPE_MAX_SIZE</span></code></a></li>
-<li><a class="reference internal" href="#test.support.Py_DEBUG"><code class="docutils literal notranslate"><span class="pre">Py_DEBUG</span></code></a></li>
-<li><a class="reference internal" href="#test.support.SOCK_MAX_SIZE"><code class="docutils literal notranslate"><span class="pre">SOCK_MAX_SIZE</span></code></a></li>
-<li><a class="reference internal" href="#test.support.TEST_SUPPORT_DIR"><code class="docutils literal notranslate"><span class="pre">TEST_SUPPORT_DIR</span></code></a></li>
-<li><a class="reference internal" href="#test.support.TEST_HOME_DIR"><code class="docutils literal notranslate"><span class="pre">TEST_HOME_DIR</span></code></a></li>
-<li><a class="reference internal" href="#test.support.TEST_DATA_DIR"><code class="docutils literal notranslate"><span class="pre">TEST_DATA_DIR</span></code></a></li>
-<li><a class="reference internal" href="#test.support.MAX_Py_ssize_t"><code class="docutils literal notranslate"><span class="pre">MAX_Py_ssize_t</span></code></a></li>
-<li><a class="reference internal" href="#test.support.max_memuse"><code class="docutils literal notranslate"><span class="pre">max_memuse</span></code></a></li>
-<li><a class="reference internal" href="#test.support.real_max_memuse"><code class="docutils literal notranslate"><span class="pre">real_max_memuse</span></code></a></li>
-<li><a class="reference internal" href="#test.support.MISSING_C_DOCSTRINGS"><code class="docutils literal notranslate"><span class="pre">MISSING_C_DOCSTRINGS</span></code></a></li>
-<li><a class="reference internal" href="#test.support.HAVE_DOCSTRINGS"><code class="docutils literal notranslate"><span class="pre">HAVE_DOCSTRINGS</span></code></a></li>
-<li><a class="reference internal" href="#test.support.TEST_HTTP_URL"><code class="docutils literal notranslate"><span class="pre">TEST_HTTP_URL</span></code></a></li>
-<li><a class="reference internal" href="#test.support.ALWAYS_EQ"><code class="docutils literal notranslate"><span class="pre">ALWAYS_EQ</span></code></a></li>
-<li><a class="reference internal" href="#test.support.NEVER_EQ"><code class="docutils literal notranslate"><span class="pre">NEVER_EQ</span></code></a></li>
-<li><a class="reference internal" href="#test.support.LARGEST"><code class="docutils literal notranslate"><span class="pre">LARGEST</span></code></a></li>
-<li><a class="reference internal" href="#test.support.SMALLEST"><code class="docutils literal notranslate"><span class="pre">SMALLEST</span></code></a></li>
-<li><a class="reference internal" href="#test.support.busy_retry"><code class="docutils literal notranslate"><span class="pre">busy_retry()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.sleeping_retry"><code class="docutils literal notranslate"><span class="pre">sleeping_retry()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.is_resource_enabled"><code class="docutils literal notranslate"><span class="pre">is_resource_enabled()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.python_is_optimized"><code class="docutils literal notranslate"><span class="pre">python_is_optimized()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.with_pymalloc"><code class="docutils literal notranslate"><span class="pre">with_pymalloc()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires"><code class="docutils literal notranslate"><span class="pre">requires()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.sortdict"><code class="docutils literal notranslate"><span class="pre">sortdict()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.findfile"><code class="docutils literal notranslate"><span class="pre">findfile()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.get_pagesize"><code class="docutils literal notranslate"><span class="pre">get_pagesize()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.setswitchinterval"><code class="docutils literal notranslate"><span class="pre">setswitchinterval()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.check_impl_detail"><code class="docutils literal notranslate"><span class="pre">check_impl_detail()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.set_memlimit"><code class="docutils literal notranslate"><span class="pre">set_memlimit()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.record_original_stdout"><code class="docutils literal notranslate"><span class="pre">record_original_stdout()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.get_original_stdout"><code class="docutils literal notranslate"><span class="pre">get_original_stdout()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.args_from_interpreter_flags"><code class="docutils literal notranslate"><span class="pre">args_from_interpreter_flags()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.optim_args_from_interpreter_flags"><code class="docutils literal notranslate"><span class="pre">optim_args_from_interpreter_flags()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.captured_stdin"><code class="docutils literal notranslate"><span class="pre">captured_stdin()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.captured_stdout"><code class="docutils literal notranslate"><span class="pre">captured_stdout()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.captured_stderr"><code class="docutils literal notranslate"><span class="pre">captured_stderr()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.disable_faulthandler"><code class="docutils literal notranslate"><span class="pre">disable_faulthandler()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.gc_collect"><code class="docutils literal notranslate"><span class="pre">gc_collect()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.disable_gc"><code class="docutils literal notranslate"><span class="pre">disable_gc()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.swap_attr"><code class="docutils literal notranslate"><span class="pre">swap_attr()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.swap_item"><code class="docutils literal notranslate"><span class="pre">swap_item()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.flush_std_streams"><code class="docutils literal notranslate"><span class="pre">flush_std_streams()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.print_warning"><code class="docutils literal notranslate"><span class="pre">print_warning()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.wait_process"><code class="docutils literal notranslate"><span class="pre">wait_process()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.calcobjsize"><code class="docutils literal notranslate"><span class="pre">calcobjsize()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.calcvobjsize"><code class="docutils literal notranslate"><span class="pre">calcvobjsize()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.checksizeof"><code class="docutils literal notranslate"><span class="pre">checksizeof()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.anticipate_failure"><code class="docutils literal notranslate"><span class="pre">anticipate_failure()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.system_must_validate_cert"><code class="docutils literal notranslate"><span class="pre">system_must_validate_cert()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.run_with_locale"><code class="docutils literal notranslate"><span class="pre">run_with_locale()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.run_with_tz"><code class="docutils literal notranslate"><span class="pre">run_with_tz()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_freebsd_version"><code class="docutils literal notranslate"><span class="pre">requires_freebsd_version()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_linux_version"><code class="docutils literal notranslate"><span class="pre">requires_linux_version()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_mac_version"><code class="docutils literal notranslate"><span class="pre">requires_mac_version()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_IEEE_754"><code class="docutils literal notranslate"><span class="pre">requires_IEEE_754()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_zlib"><code class="docutils literal notranslate"><span class="pre">requires_zlib()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_gzip"><code class="docutils literal notranslate"><span class="pre">requires_gzip()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_bz2"><code class="docutils literal notranslate"><span class="pre">requires_bz2()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_lzma"><code class="docutils literal notranslate"><span class="pre">requires_lzma()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_resource"><code class="docutils literal notranslate"><span class="pre">requires_resource()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_docstrings"><code class="docutils literal notranslate"><span class="pre">requires_docstrings()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.requires_limited_api"><code class="docutils literal notranslate"><span class="pre">requires_limited_api()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.cpython_only"><code class="docutils literal notranslate"><span class="pre">cpython_only()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.impl_detail"><code class="docutils literal notranslate"><span class="pre">impl_detail()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.no_tracing"><code class="docutils literal notranslate"><span class="pre">no_tracing()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.refcount_test"><code class="docutils literal notranslate"><span class="pre">refcount_test()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.bigmemtest"><code class="docutils literal notranslate"><span class="pre">bigmemtest()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.bigaddrspacetest"><code class="docutils literal notranslate"><span class="pre">bigaddrspacetest()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.check_syntax_error"><code class="docutils literal notranslate"><span class="pre">check_syntax_error()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.open_urlresource"><code class="docutils literal notranslate"><span class="pre">open_urlresource()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.reap_children"><code class="docutils literal notranslate"><span class="pre">reap_children()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.get_attribute"><code class="docutils literal notranslate"><span class="pre">get_attribute()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.catch_unraisable_exception"><code class="docutils literal notranslate"><span class="pre">catch_unraisable_exception()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.load_package_tests"><code class="docutils literal notranslate"><span class="pre">load_package_tests()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.detect_api_mismatch"><code class="docutils literal notranslate"><span class="pre">detect_api_mismatch()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.patch"><code class="docutils literal notranslate"><span class="pre">patch()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.run_in_subinterp"><code class="docutils literal notranslate"><span class="pre">run_in_subinterp()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.check_free_after_iterating"><code class="docutils literal notranslate"><span class="pre">check_free_after_iterating()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.missing_compiler_executable"><code class="docutils literal notranslate"><span class="pre">missing_compiler_executable()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.check__all__"><code class="docutils literal notranslate"><span class="pre">check__all__()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.skip_if_broken_multiprocessing_synchronize"><code class="docutils literal notranslate"><span class="pre">skip_if_broken_multiprocessing_synchronize()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.check_disallow_instantiation"><code class="docutils literal notranslate"><span class="pre">check_disallow_instantiation()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.adjust_int_max_str_digits"><code class="docutils literal notranslate"><span class="pre">adjust_int_max_str_digits()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.SuppressCrashReport"><code class="docutils literal notranslate"><span class="pre">SuppressCrashReport</span></code></a></li>
-<li><a class="reference internal" href="#test.support.SaveSignals"><code class="docutils literal notranslate"><span class="pre">SaveSignals</span></code></a><ul>
-<li><a class="reference internal" href="#test.support.SaveSignals.save"><code class="docutils literal notranslate"><span class="pre">SaveSignals.save()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.SaveSignals.restore"><code class="docutils literal notranslate"><span class="pre">SaveSignals.restore()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#test.support.Matcher"><code class="docutils literal notranslate"><span class="pre">Matcher</span></code></a><ul>
-<li><a class="reference internal" href="#test.support.Matcher.matches"><code class="docutils literal notranslate"><span class="pre">Matcher.matches()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.Matcher.match_value"><code class="docutils literal notranslate"><span class="pre">Matcher.match_value()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.socket_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.socket_helper</span></code> --- 用於 socket 測試的工具</a><ul>
-<li><a class="reference internal" href="#test.support.socket_helper.IPV6_ENABLED"><code class="docutils literal notranslate"><span class="pre">IPV6_ENABLED</span></code></a></li>
-<li><a class="reference internal" href="#test.support.socket_helper.find_unused_port"><code class="docutils literal notranslate"><span class="pre">find_unused_port()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.socket_helper.bind_port"><code class="docutils literal notranslate"><span class="pre">bind_port()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.socket_helper.bind_unix_socket"><code class="docutils literal notranslate"><span class="pre">bind_unix_socket()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.socket_helper.skip_unless_bind_unix_socket"><code class="docutils literal notranslate"><span class="pre">skip_unless_bind_unix_socket()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.socket_helper.transient_internet"><code class="docutils literal notranslate"><span class="pre">transient_internet()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.script_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.script_helper</span></code> --- 用於 Python 執行測試的工具</a><ul>
-<li><a class="reference internal" href="#test.support.script_helper.interpreter_requires_environment"><code class="docutils literal notranslate"><span class="pre">interpreter_requires_environment()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.run_python_until_end"><code class="docutils literal notranslate"><span class="pre">run_python_until_end()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.assert_python_ok"><code class="docutils literal notranslate"><span class="pre">assert_python_ok()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.assert_python_failure"><code class="docutils literal notranslate"><span class="pre">assert_python_failure()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.spawn_python"><code class="docutils literal notranslate"><span class="pre">spawn_python()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.kill_python"><code class="docutils literal notranslate"><span class="pre">kill_python()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.make_script"><code class="docutils literal notranslate"><span class="pre">make_script()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.make_zip_script"><code class="docutils literal notranslate"><span class="pre">make_zip_script()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.make_pkg"><code class="docutils literal notranslate"><span class="pre">make_pkg()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.script_helper.make_zip_pkg"><code class="docutils literal notranslate"><span class="pre">make_zip_pkg()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.bytecode_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.bytecode_helper</span></code> --- 用於測試位元組碼能正確產生的支援工具</a><ul>
-<li><a class="reference internal" href="#test.support.bytecode_helper.BytecodeTestCase"><code class="docutils literal notranslate"><span class="pre">BytecodeTestCase</span></code></a><ul>
-<li><a class="reference internal" href="#test.support.bytecode_helper.BytecodeTestCase.get_disassembly_as_string"><code class="docutils literal notranslate"><span class="pre">BytecodeTestCase.get_disassembly_as_string()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.bytecode_helper.BytecodeTestCase.assertInBytecode"><code class="docutils literal notranslate"><span class="pre">BytecodeTestCase.assertInBytecode()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.bytecode_helper.BytecodeTestCase.assertNotInBytecode"><code class="docutils literal notranslate"><span class="pre">BytecodeTestCase.assertNotInBytecode()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.threading_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.threading_helper</span></code> --- Utilities for threading tests</a><ul>
-<li><a class="reference internal" href="#test.support.threading_helper.join_thread"><code class="docutils literal notranslate"><span class="pre">join_thread()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.threading_helper.reap_threads"><code class="docutils literal notranslate"><span class="pre">reap_threads()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.threading_helper.start_threads"><code class="docutils literal notranslate"><span class="pre">start_threads()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.threading_helper.threading_cleanup"><code class="docutils literal notranslate"><span class="pre">threading_cleanup()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.threading_helper.threading_setup"><code class="docutils literal notranslate"><span class="pre">threading_setup()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.threading_helper.wait_threads_exit"><code class="docutils literal notranslate"><span class="pre">wait_threads_exit()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.threading_helper.catch_threading_exception"><code class="docutils literal notranslate"><span class="pre">catch_threading_exception()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.os_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.os_helper</span></code> --- 用於 os 測試的工具</a><ul>
-<li><a class="reference internal" href="#test.support.os_helper.FS_NONASCII"><code class="docutils literal notranslate"><span class="pre">FS_NONASCII</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.SAVEDCWD"><code class="docutils literal notranslate"><span class="pre">SAVEDCWD</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.TESTFN"><code class="docutils literal notranslate"><span class="pre">TESTFN</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.TESTFN_NONASCII"><code class="docutils literal notranslate"><span class="pre">TESTFN_NONASCII</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.TESTFN_UNENCODABLE"><code class="docutils literal notranslate"><span class="pre">TESTFN_UNENCODABLE</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.TESTFN_UNDECODABLE"><code class="docutils literal notranslate"><span class="pre">TESTFN_UNDECODABLE</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.TESTFN_UNICODE"><code class="docutils literal notranslate"><span class="pre">TESTFN_UNICODE</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.EnvironmentVarGuard"><code class="docutils literal notranslate"><span class="pre">EnvironmentVarGuard</span></code></a><ul>
-<li><a class="reference internal" href="#test.support.os_helper.EnvironmentVarGuard.set"><code class="docutils literal notranslate"><span class="pre">EnvironmentVarGuard.set()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.EnvironmentVarGuard.unset"><code class="docutils literal notranslate"><span class="pre">EnvironmentVarGuard.unset()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#test.support.os_helper.FakePath"><code class="docutils literal notranslate"><span class="pre">FakePath</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.can_symlink"><code class="docutils literal notranslate"><span class="pre">can_symlink()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.can_xattr"><code class="docutils literal notranslate"><span class="pre">can_xattr()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.change_cwd"><code class="docutils literal notranslate"><span class="pre">change_cwd()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.create_empty_file"><code class="docutils literal notranslate"><span class="pre">create_empty_file()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.fd_count"><code class="docutils literal notranslate"><span class="pre">fd_count()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.fs_is_case_insensitive"><code class="docutils literal notranslate"><span class="pre">fs_is_case_insensitive()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.make_bad_fd"><code class="docutils literal notranslate"><span class="pre">make_bad_fd()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.rmdir"><code class="docutils literal notranslate"><span class="pre">rmdir()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.rmtree"><code class="docutils literal notranslate"><span class="pre">rmtree()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.skip_unless_symlink"><code class="docutils literal notranslate"><span class="pre">skip_unless_symlink()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.skip_unless_xattr"><code class="docutils literal notranslate"><span class="pre">skip_unless_xattr()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.temp_cwd"><code class="docutils literal notranslate"><span class="pre">temp_cwd()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.temp_dir"><code class="docutils literal notranslate"><span class="pre">temp_dir()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.temp_umask"><code class="docutils literal notranslate"><span class="pre">temp_umask()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.os_helper.unlink"><code class="docutils literal notranslate"><span class="pre">unlink()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.import_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.import_helper</span></code> --- 用於 import 測試的工具</a><ul>
-<li><a class="reference internal" href="#test.support.import_helper.forget"><code class="docutils literal notranslate"><span class="pre">forget()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.import_fresh_module"><code class="docutils literal notranslate"><span class="pre">import_fresh_module()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.import_module"><code class="docutils literal notranslate"><span class="pre">import_module()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.modules_setup"><code class="docutils literal notranslate"><span class="pre">modules_setup()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.modules_cleanup"><code class="docutils literal notranslate"><span class="pre">modules_cleanup()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.unload"><code class="docutils literal notranslate"><span class="pre">unload()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.make_legacy_pyc"><code class="docutils literal notranslate"><span class="pre">make_legacy_pyc()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.CleanImport"><code class="docutils literal notranslate"><span class="pre">CleanImport</span></code></a></li>
-<li><a class="reference internal" href="#test.support.import_helper.DirsOnSysPath"><code class="docutils literal notranslate"><span class="pre">DirsOnSysPath</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#module-test.support.warnings_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.warnings_helper</span></code> --- 用於 warnings 測試的工具</a><ul>
-<li><a class="reference internal" href="#test.support.warnings_helper.ignore_warnings"><code class="docutils literal notranslate"><span class="pre">ignore_warnings()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.warnings_helper.check_no_resource_warning"><code class="docutils literal notranslate"><span class="pre">check_no_resource_warning()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.warnings_helper.check_syntax_warning"><code class="docutils literal notranslate"><span class="pre">check_syntax_warning()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.warnings_helper.check_warnings"><code class="docutils literal notranslate"><span class="pre">check_warnings()</span></code></a></li>
-<li><a class="reference internal" href="#test.support.warnings_helper.WarningsRecorder"><code class="docutils literal notranslate"><span class="pre">WarningsRecorder</span></code></a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#module-test.support"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support</span></code> --- Python 測試套件的工具</a></li>
+<li><a class="reference internal" href="#module-test.support.socket_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.socket_helper</span></code> --- 用於 socket 測試的工具</a></li>
+<li><a class="reference internal" href="#module-test.support.script_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.script_helper</span></code> --- 用於 Python 執行測試的工具</a></li>
+<li><a class="reference internal" href="#module-test.support.bytecode_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.bytecode_helper</span></code> --- 用於測試位元組碼能正確產生的支援工具</a></li>
+<li><a class="reference internal" href="#module-test.support.threading_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.threading_helper</span></code> --- Utilities for threading tests</a></li>
+<li><a class="reference internal" href="#module-test.support.os_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.os_helper</span></code> --- 用於 os 測試的工具</a></li>
+<li><a class="reference internal" href="#module-test.support.import_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.import_helper</span></code> --- 用於 import 測試的工具</a></li>
+<li><a class="reference internal" href="#module-test.support.warnings_helper"><code class="xref py py-mod docutils literal notranslate"><span class="pre">test.support.warnings_helper</span></code> --- 用於 warnings 測試的工具</a></li>
 </ul>
 
   </div>
@@ -2457,7 +2075,7 @@ warnings directly.</p>
           <a href="2to3.html" title="2to3 --- 自動將 Python 2的程式碼轉成 Python 3"
              >上一頁</a> |</li>
 
-          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
           <li><a href="https://www.python.org/">Python</a> &#187;</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -2467,7 +2085,7 @@ warnings directly.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.1 Documentation</a> &#187;
+      <a href="../index.html">3.12.2 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -2504,6 +2122,7 @@ warnings directly.</p>
     Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
     <br />
     See <a href="/license.html">History and License</a> for more information.<br />
+    
     <br />
 
     The Python Software Foundation is a non-profit corporation.
@@ -2511,7 +2130,7 @@ warnings directly.</p>
 <br />
     <br />
 
-    最後更新於 Jan 05, 2024 (01:03 UTC)。
+    最後更新於 Feb 19, 2024 (00:19 UTC)。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

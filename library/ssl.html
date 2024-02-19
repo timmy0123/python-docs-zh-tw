@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ssl --- socket 物件的 TLS/SSL 包裝器 &#8212; Python 3.12.1 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ssl --- socket 物件的 TLS/SSL 包裝器 &#8212; Python 3.12.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=aa5eeaf2" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=e8a97c27" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=3221873d"></script>
+    <script src="../_static/documentation_options.js?v=056bc313"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=d9a6981e"></script>
@@ -19,7 +19,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.1 說明文件 中搜尋"
+          title="在 Python 3.12.2 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -58,7 +58,7 @@
         </label>
         <span class="nav-items-wrapper">
             <a href="https://www.python.org/" class="nav-logo">
-                <img src="../_static/py.svg" alt="Logo"/>
+                <img src="../_static/py.svg" alt="Python logo"/>
             </a>
             <span class="version_switcher_placeholder"></span>
             <form role="search" class="search" action="../search.html" method="get">
@@ -88,181 +88,15 @@
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code> --- socket 物件的 TLS/SSL 包裝器</a><ul>
 <li><a class="reference internal" href="#functions-constants-and-exceptions">函式、常數與例外</a><ul>
 <li><a class="reference internal" href="#socket-creation">Socket 建立</a></li>
-<li><a class="reference internal" href="#context-creation">語境建立</a><ul>
-<li><a class="reference internal" href="#ssl.create_default_context"><code class="docutils literal notranslate"><span class="pre">create_default_context()</span></code></a></li>
+<li><a class="reference internal" href="#context-creation">語境建立</a></li>
+<li><a class="reference internal" href="#exceptions">例外</a></li>
+<li><a class="reference internal" href="#random-generation">隨機產生</a></li>
+<li><a class="reference internal" href="#certificate-handling">認證處理</a></li>
+<li><a class="reference internal" href="#constants">常數</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#exceptions">例外</a><ul>
-<li><a class="reference internal" href="#ssl.SSLError"><code class="docutils literal notranslate"><span class="pre">SSLError</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.SSLError.library"><code class="docutils literal notranslate"><span class="pre">SSLError.library</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLError.reason"><code class="docutils literal notranslate"><span class="pre">SSLError.reason</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ssl.SSLZeroReturnError"><code class="docutils literal notranslate"><span class="pre">SSLZeroReturnError</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLWantReadError"><code class="docutils literal notranslate"><span class="pre">SSLWantReadError</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLWantWriteError"><code class="docutils literal notranslate"><span class="pre">SSLWantWriteError</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSyscallError"><code class="docutils literal notranslate"><span class="pre">SSLSyscallError</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLEOFError"><code class="docutils literal notranslate"><span class="pre">SSLEOFError</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLCertVerificationError"><code class="docutils literal notranslate"><span class="pre">SSLCertVerificationError</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.SSLCertVerificationError.verify_code"><code class="docutils literal notranslate"><span class="pre">SSLCertVerificationError.verify_code</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLCertVerificationError.verify_message"><code class="docutils literal notranslate"><span class="pre">SSLCertVerificationError.verify_message</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ssl.CertificateError"><code class="docutils literal notranslate"><span class="pre">CertificateError</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#random-generation">隨機產生</a><ul>
-<li><a class="reference internal" href="#ssl.RAND_bytes"><code class="docutils literal notranslate"><span class="pre">RAND_bytes()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.RAND_status"><code class="docutils literal notranslate"><span class="pre">RAND_status()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.RAND_add"><code class="docutils literal notranslate"><span class="pre">RAND_add()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#certificate-handling">認證處理</a><ul>
-<li><a class="reference internal" href="#ssl.cert_time_to_seconds"><code class="docutils literal notranslate"><span class="pre">cert_time_to_seconds()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.get_server_certificate"><code class="docutils literal notranslate"><span class="pre">get_server_certificate()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.DER_cert_to_PEM_cert"><code class="docutils literal notranslate"><span class="pre">DER_cert_to_PEM_cert()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PEM_cert_to_DER_cert"><code class="docutils literal notranslate"><span class="pre">PEM_cert_to_DER_cert()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.get_default_verify_paths"><code class="docutils literal notranslate"><span class="pre">get_default_verify_paths()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.enum_certificates"><code class="docutils literal notranslate"><span class="pre">enum_certificates()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.enum_crls"><code class="docutils literal notranslate"><span class="pre">enum_crls()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#constants">常數</a><ul>
-<li><a class="reference internal" href="#ssl.CERT_NONE"><code class="docutils literal notranslate"><span class="pre">CERT_NONE</span></code></a></li>
-<li><a class="reference internal" href="#ssl.CERT_OPTIONAL"><code class="docutils literal notranslate"><span class="pre">CERT_OPTIONAL</span></code></a></li>
-<li><a class="reference internal" href="#ssl.CERT_REQUIRED"><code class="docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VerifyMode"><code class="docutils literal notranslate"><span class="pre">VerifyMode</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_DEFAULT"><code class="docutils literal notranslate"><span class="pre">VERIFY_DEFAULT</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_CRL_CHECK_LEAF"><code class="docutils literal notranslate"><span class="pre">VERIFY_CRL_CHECK_LEAF</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_CRL_CHECK_CHAIN"><code class="docutils literal notranslate"><span class="pre">VERIFY_CRL_CHECK_CHAIN</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_X509_STRICT"><code class="docutils literal notranslate"><span class="pre">VERIFY_X509_STRICT</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_ALLOW_PROXY_CERTS"><code class="docutils literal notranslate"><span class="pre">VERIFY_ALLOW_PROXY_CERTS</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_X509_TRUSTED_FIRST"><code class="docutils literal notranslate"><span class="pre">VERIFY_X509_TRUSTED_FIRST</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_X509_PARTIAL_CHAIN"><code class="docutils literal notranslate"><span class="pre">VERIFY_X509_PARTIAL_CHAIN</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VerifyFlags"><code class="docutils literal notranslate"><span class="pre">VerifyFlags</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_TLS"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_TLS</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_TLS_SERVER"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_TLS_SERVER</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_SSLv23"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_SSLv23</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_SSLv3"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_SSLv3</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_TLSv1"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_TLSv1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_TLSv1_1"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_TLSv1_1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_TLSv1_2"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_TLSv1_2</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_ALL"><code class="docutils literal notranslate"><span class="pre">OP_ALL</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_SSLv2"><code class="docutils literal notranslate"><span class="pre">OP_NO_SSLv2</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_SSLv3"><code class="docutils literal notranslate"><span class="pre">OP_NO_SSLv3</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_TLSv1"><code class="docutils literal notranslate"><span class="pre">OP_NO_TLSv1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_TLSv1_1"><code class="docutils literal notranslate"><span class="pre">OP_NO_TLSv1_1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_TLSv1_2"><code class="docutils literal notranslate"><span class="pre">OP_NO_TLSv1_2</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_TLSv1_3"><code class="docutils literal notranslate"><span class="pre">OP_NO_TLSv1_3</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_RENEGOTIATION"><code class="docutils literal notranslate"><span class="pre">OP_NO_RENEGOTIATION</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_CIPHER_SERVER_PREFERENCE"><code class="docutils literal notranslate"><span class="pre">OP_CIPHER_SERVER_PREFERENCE</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_SINGLE_DH_USE"><code class="docutils literal notranslate"><span class="pre">OP_SINGLE_DH_USE</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_SINGLE_ECDH_USE"><code class="docutils literal notranslate"><span class="pre">OP_SINGLE_ECDH_USE</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_ENABLE_MIDDLEBOX_COMPAT"><code class="docutils literal notranslate"><span class="pre">OP_ENABLE_MIDDLEBOX_COMPAT</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_COMPRESSION"><code class="docutils literal notranslate"><span class="pre">OP_NO_COMPRESSION</span></code></a></li>
-<li><a class="reference internal" href="#ssl.Options"><code class="docutils literal notranslate"><span class="pre">Options</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_TICKET"><code class="docutils literal notranslate"><span class="pre">OP_NO_TICKET</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_IGNORE_UNEXPECTED_EOF"><code class="docutils literal notranslate"><span class="pre">OP_IGNORE_UNEXPECTED_EOF</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_ENABLE_KTLS"><code class="docutils literal notranslate"><span class="pre">OP_ENABLE_KTLS</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_LEGACY_SERVER_CONNECT"><code class="docutils literal notranslate"><span class="pre">OP_LEGACY_SERVER_CONNECT</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_ALPN"><code class="docutils literal notranslate"><span class="pre">HAS_ALPN</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_NEVER_CHECK_COMMON_NAME"><code class="docutils literal notranslate"><span class="pre">HAS_NEVER_CHECK_COMMON_NAME</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_ECDH"><code class="docutils literal notranslate"><span class="pre">HAS_ECDH</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_SNI"><code class="docutils literal notranslate"><span class="pre">HAS_SNI</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_NPN"><code class="docutils literal notranslate"><span class="pre">HAS_NPN</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_SSLv2"><code class="docutils literal notranslate"><span class="pre">HAS_SSLv2</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_SSLv3"><code class="docutils literal notranslate"><span class="pre">HAS_SSLv3</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_TLSv1"><code class="docutils literal notranslate"><span class="pre">HAS_TLSv1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_TLSv1_1"><code class="docutils literal notranslate"><span class="pre">HAS_TLSv1_1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_TLSv1_2"><code class="docutils literal notranslate"><span class="pre">HAS_TLSv1_2</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_TLSv1_3"><code class="docutils literal notranslate"><span class="pre">HAS_TLSv1_3</span></code></a></li>
-<li><a class="reference internal" href="#ssl.CHANNEL_BINDING_TYPES"><code class="docutils literal notranslate"><span class="pre">CHANNEL_BINDING_TYPES</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OPENSSL_VERSION"><code class="docutils literal notranslate"><span class="pre">OPENSSL_VERSION</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OPENSSL_VERSION_INFO"><code class="docutils literal notranslate"><span class="pre">OPENSSL_VERSION_INFO</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OPENSSL_VERSION_NUMBER"><code class="docutils literal notranslate"><span class="pre">OPENSSL_VERSION_NUMBER</span></code></a></li>
-<li><a class="reference internal" href="#ssl.ALERT_DESCRIPTION_HANDSHAKE_FAILURE"><code class="docutils literal notranslate"><span class="pre">ALERT_DESCRIPTION_HANDSHAKE_FAILURE</span></code></a></li>
-<li><a class="reference internal" href="#ssl.ALERT_DESCRIPTION_INTERNAL_ERROR"><code class="docutils literal notranslate"><span class="pre">ALERT_DESCRIPTION_INTERNAL_ERROR</span></code></a></li>
-<li><a class="reference internal" href="#ssl.AlertDescription"><code class="docutils literal notranslate"><span class="pre">AlertDescription</span></code></a></li>
-<li><a class="reference internal" href="#ssl.Purpose.SERVER_AUTH"><code class="docutils literal notranslate"><span class="pre">Purpose.SERVER_AUTH</span></code></a></li>
-<li><a class="reference internal" href="#ssl.Purpose.CLIENT_AUTH"><code class="docutils literal notranslate"><span class="pre">Purpose.CLIENT_AUTH</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLErrorNumber"><code class="docutils literal notranslate"><span class="pre">SSLErrorNumber</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion"><code class="docutils literal notranslate"><span class="pre">TLSVersion</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.TLSVersion.MINIMUM_SUPPORTED"><code class="docutils literal notranslate"><span class="pre">TLSVersion.MINIMUM_SUPPORTED</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion.MAXIMUM_SUPPORTED"><code class="docutils literal notranslate"><span class="pre">TLSVersion.MAXIMUM_SUPPORTED</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion.SSLv3"><code class="docutils literal notranslate"><span class="pre">TLSVersion.SSLv3</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion.TLSv1"><code class="docutils literal notranslate"><span class="pre">TLSVersion.TLSv1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion.TLSv1_1"><code class="docutils literal notranslate"><span class="pre">TLSVersion.TLSv1_1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion.TLSv1_2"><code class="docutils literal notranslate"><span class="pre">TLSVersion.TLSv1_2</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion.TLSv1_3"><code class="docutils literal notranslate"><span class="pre">TLSVersion.TLSv1_3</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ssl-sockets">SSL Sockets</a><ul>
-<li><a class="reference internal" href="#ssl.SSLSocket"><code class="docutils literal notranslate"><span class="pre">SSLSocket</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.SSLSocket.read"><code class="docutils literal notranslate"><span class="pre">SSLSocket.read()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.write"><code class="docutils literal notranslate"><span class="pre">SSLSocket.write()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.do_handshake"><code class="docutils literal notranslate"><span class="pre">SSLSocket.do_handshake()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.getpeercert"><code class="docutils literal notranslate"><span class="pre">SSLSocket.getpeercert()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.cipher"><code class="docutils literal notranslate"><span class="pre">SSLSocket.cipher()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.shared_ciphers"><code class="docutils literal notranslate"><span class="pre">SSLSocket.shared_ciphers()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.compression"><code class="docutils literal notranslate"><span class="pre">SSLSocket.compression()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.get_channel_binding"><code class="docutils literal notranslate"><span class="pre">SSLSocket.get_channel_binding()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.selected_alpn_protocol"><code class="docutils literal notranslate"><span class="pre">SSLSocket.selected_alpn_protocol()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.selected_npn_protocol"><code class="docutils literal notranslate"><span class="pre">SSLSocket.selected_npn_protocol()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.unwrap"><code class="docutils literal notranslate"><span class="pre">SSLSocket.unwrap()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.verify_client_post_handshake"><code class="docutils literal notranslate"><span class="pre">SSLSocket.verify_client_post_handshake()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.version"><code class="docutils literal notranslate"><span class="pre">SSLSocket.version()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.pending"><code class="docutils literal notranslate"><span class="pre">SSLSocket.pending()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.context"><code class="docutils literal notranslate"><span class="pre">SSLSocket.context</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.server_side"><code class="docutils literal notranslate"><span class="pre">SSLSocket.server_side</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.server_hostname"><code class="docutils literal notranslate"><span class="pre">SSLSocket.server_hostname</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.session"><code class="docutils literal notranslate"><span class="pre">SSLSocket.session</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.session_reused"><code class="docutils literal notranslate"><span class="pre">SSLSocket.session_reused</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ssl-contexts">SSL Contexts</a><ul>
-<li><a class="reference internal" href="#ssl.SSLContext"><code class="docutils literal notranslate"><span class="pre">SSLContext</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.SSLContext.cert_store_stats"><code class="docutils literal notranslate"><span class="pre">SSLContext.cert_store_stats()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.load_cert_chain"><code class="docutils literal notranslate"><span class="pre">SSLContext.load_cert_chain()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.load_default_certs"><code class="docutils literal notranslate"><span class="pre">SSLContext.load_default_certs()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.load_verify_locations"><code class="docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.get_ca_certs"><code class="docutils literal notranslate"><span class="pre">SSLContext.get_ca_certs()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.get_ciphers"><code class="docutils literal notranslate"><span class="pre">SSLContext.get_ciphers()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.set_default_verify_paths"><code class="docutils literal notranslate"><span class="pre">SSLContext.set_default_verify_paths()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.set_ciphers"><code class="docutils literal notranslate"><span class="pre">SSLContext.set_ciphers()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.set_alpn_protocols"><code class="docutils literal notranslate"><span class="pre">SSLContext.set_alpn_protocols()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.set_npn_protocols"><code class="docutils literal notranslate"><span class="pre">SSLContext.set_npn_protocols()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.sni_callback"><code class="docutils literal notranslate"><span class="pre">SSLContext.sni_callback</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.set_servername_callback"><code class="docutils literal notranslate"><span class="pre">SSLContext.set_servername_callback</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.load_dh_params"><code class="docutils literal notranslate"><span class="pre">SSLContext.load_dh_params()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.set_ecdh_curve"><code class="docutils literal notranslate"><span class="pre">SSLContext.set_ecdh_curve()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.wrap_socket"><code class="docutils literal notranslate"><span class="pre">SSLContext.wrap_socket()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.sslsocket_class"><code class="docutils literal notranslate"><span class="pre">SSLContext.sslsocket_class</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.wrap_bio"><code class="docutils literal notranslate"><span class="pre">SSLContext.wrap_bio()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.sslobject_class"><code class="docutils literal notranslate"><span class="pre">SSLContext.sslobject_class</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.session_stats"><code class="docutils literal notranslate"><span class="pre">SSLContext.session_stats()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.check_hostname"><code class="docutils literal notranslate"><span class="pre">SSLContext.check_hostname</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.keylog_filename"><code class="docutils literal notranslate"><span class="pre">SSLContext.keylog_filename</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.maximum_version"><code class="docutils literal notranslate"><span class="pre">SSLContext.maximum_version</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.minimum_version"><code class="docutils literal notranslate"><span class="pre">SSLContext.minimum_version</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.num_tickets"><code class="docutils literal notranslate"><span class="pre">SSLContext.num_tickets</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.options"><code class="docutils literal notranslate"><span class="pre">SSLContext.options</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.post_handshake_auth"><code class="docutils literal notranslate"><span class="pre">SSLContext.post_handshake_auth</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.protocol"><code class="docutils literal notranslate"><span class="pre">SSLContext.protocol</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.hostname_checks_common_name"><code class="docutils literal notranslate"><span class="pre">SSLContext.hostname_checks_common_name</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.security_level"><code class="docutils literal notranslate"><span class="pre">SSLContext.security_level</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.verify_flags"><code class="docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.verify_mode"><code class="docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#ssl-sockets">SSL Sockets</a></li>
+<li><a class="reference internal" href="#ssl-contexts">SSL Contexts</a></li>
 <li><a class="reference internal" href="#certificates">Certificates</a><ul>
 <li><a class="reference internal" href="#certificate-chains">Certificate chains</a></li>
 <li><a class="reference internal" href="#ca-certificates">CA certificates</a></li>
@@ -277,29 +111,8 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#notes-on-non-blocking-sockets">Notes on non-blocking sockets</a></li>
-<li><a class="reference internal" href="#memory-bio-support">Memory BIO Support</a><ul>
-<li><a class="reference internal" href="#ssl.SSLObject"><code class="docutils literal notranslate"><span class="pre">SSLObject</span></code></a></li>
-<li><a class="reference internal" href="#ssl.MemoryBIO"><code class="docutils literal notranslate"><span class="pre">MemoryBIO</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.MemoryBIO.pending"><code class="docutils literal notranslate"><span class="pre">MemoryBIO.pending</span></code></a></li>
-<li><a class="reference internal" href="#ssl.MemoryBIO.eof"><code class="docutils literal notranslate"><span class="pre">MemoryBIO.eof</span></code></a></li>
-<li><a class="reference internal" href="#ssl.MemoryBIO.read"><code class="docutils literal notranslate"><span class="pre">MemoryBIO.read()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.MemoryBIO.write"><code class="docutils literal notranslate"><span class="pre">MemoryBIO.write()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.MemoryBIO.write_eof"><code class="docutils literal notranslate"><span class="pre">MemoryBIO.write_eof()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ssl-session">SSL session</a><ul>
-<li><a class="reference internal" href="#ssl.SSLSession"><code class="docutils literal notranslate"><span class="pre">SSLSession</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.SSLSession.id"><code class="docutils literal notranslate"><span class="pre">SSLSession.id</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSession.time"><code class="docutils literal notranslate"><span class="pre">SSLSession.time</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSession.timeout"><code class="docutils literal notranslate"><span class="pre">SSLSession.timeout</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSession.ticket_lifetime_hint"><code class="docutils literal notranslate"><span class="pre">SSLSession.ticket_lifetime_hint</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSession.has_ticket"><code class="docutils literal notranslate"><span class="pre">SSLSession.has_ticket</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#memory-bio-support">Memory BIO Support</a></li>
+<li><a class="reference internal" href="#ssl-session">SSL session</a></li>
 <li><a class="reference internal" href="#security-considerations">Security considerations</a><ul>
 <li><a class="reference internal" href="#best-defaults">Best defaults</a></li>
 <li><a class="reference internal" href="#manual-settings">手動設定</a><ul>
@@ -359,7 +172,7 @@
           <a href="socket.html" title="socket --- Low-level networking interface"
              accesskey="P">上一頁</a> |</li>
 
-          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
           <li><a href="https://www.python.org/">Python</a> &#187;</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -369,7 +182,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.1 Documentation</a> &#187;
+      <a href="../index.html">3.12.2 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -676,7 +489,7 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.get_server_certificate">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">get_server_certificate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">addr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ssl_version=PROTOCOL_TLS_CLIENT</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ca_certs=None</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#ssl.get_server_certificate" title="Link to this definition">¶</a></dt>
-<dd><p>輸入使用 SSL 保護的伺服器的地址 <code class="docutils literal notranslate"><span class="pre">addr</span></code>，輸入形式為一個 pair (<em>hostname</em>, <em>port-number</em>)，獲取該伺服器的憑證，並以 PEM 編碼字串的形式回傳。如果指定了``ssl_version``，則使用指定的 SSL 協議來嘗試與伺服器連線。如果指定 <em>ca_certs</em>，則它應該是一個包含根憑證列表的檔案，並與 <a class="reference internal" href="#ssl.SSLContext.load_verify_locations" title="ssl.SSLContext.load_verify_locations"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations()</span></code></a> 中的參數 <em>cafile</em> 所使用的格式相同。此呼叫將嘗試使用該組根憑證對伺服器憑證進行驗證，如果驗證失敗，呼叫將失敗。可以使用 <code class="docutils literal notranslate"><span class="pre">timeout</span></code> 參數指定超時時間。</p>
+<dd><p>輸入使用 SSL 保護的伺服器的地址 <code class="docutils literal notranslate"><span class="pre">addr</span></code>，輸入形式為一個 pair (<em>hostname</em>, <em>port-number</em>)，獲取該伺服器的憑證，並以 PEM 編碼字串的形式回傳。如果指定了 <code class="docutils literal notranslate"><span class="pre">ssl_version</span></code>，則使用指定的 SSL 協議來嘗試與伺服器連線。如果指定 <em>ca_certs</em>，則它應該是一個包含根憑證列表的檔案，並與 <a class="reference internal" href="#ssl.SSLContext.load_verify_locations" title="ssl.SSLContext.load_verify_locations"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations()</span></code></a> 中的參數 <em>cafile</em> 所使用的格式相同。此呼叫將嘗試使用該組根憑證對伺服器憑證進行驗證，如果驗證失敗，呼叫將失敗。可以使用 <code class="docutils literal notranslate"><span class="pre">timeout</span></code> 參數指定超時時間。</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.3 版的變更: </span>此函式現在是與 IPv6 相容的。</p>
 </div>
@@ -720,15 +533,8 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.enum_certificates">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">enum_certificates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">store_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ssl.enum_certificates" title="Link to this definition">¶</a></dt>
-<dd><p>Retrieve certificates from Windows' system cert store. <em>store_name</em> may be
-one of <code class="docutils literal notranslate"><span class="pre">CA</span></code>, <code class="docutils literal notranslate"><span class="pre">ROOT</span></code> or <code class="docutils literal notranslate"><span class="pre">MY</span></code>. Windows may provide additional cert
-stores, too.</p>
-<p>The function returns a list of (cert_bytes, encoding_type, trust) tuples.
-The encoding_type specifies the encoding of cert_bytes. It is either
-<code class="xref py py-const docutils literal notranslate"><span class="pre">x509_asn</span></code> for X.509 ASN.1 data or <code class="xref py py-const docutils literal notranslate"><span class="pre">pkcs_7_asn</span></code> for
-PKCS#7 ASN.1 data. Trust specifies the purpose of the certificate as a set
-of OIDS or exactly <code class="docutils literal notranslate"><span class="pre">True</span></code> if the certificate is trustworthy for all
-purposes.</p>
+<dd><p>從 Windows 的系統憑證儲存庫中搜尋憑證。<em>store_name</em> 可以是 <code class="docutils literal notranslate"><span class="pre">CA</span></code>、<code class="docutils literal notranslate"><span class="pre">ROOT</span></code> 或 <code class="docutils literal notranslate"><span class="pre">MY</span></code> 的其中一個。Windows 也可能會提供額外的憑證儲存庫。</p>
+<p>此函式會回傳一個元組 (cert_bytes, encoding_type, trust) 串列。encoding_type 指定了 cert_bytes 的編碼格式。它可以是用來表示 X.509 ASN.1 資料的 <code class="xref py py-const docutils literal notranslate"><span class="pre">x509_asn</span></code> 或是用來表示 PKCS#7 ASN.1 資料的 <code class="xref py py-const docutils literal notranslate"><span class="pre">pkcs_7_asn</span></code>。Trust 通過一組 OIDS 來指定憑證的用途，或是如果憑證對所有用途都可以使用則回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。</p>
 <p>範例：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ssl</span><span class="o">.</span><span class="n">enum_certificates</span><span class="p">(</span><span class="s2">&quot;CA&quot;</span><span class="p">)</span>
 <span class="go">[(b&#39;data...&#39;, &#39;x509_asn&#39;, {&#39;1.3.6.1.5.5.7.3.1&#39;, &#39;1.3.6.1.5.5.7.3.2&#39;}),</span>
@@ -746,13 +552,8 @@ purposes.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="ssl.enum_crls">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">enum_crls</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">store_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ssl.enum_crls" title="Link to this definition">¶</a></dt>
-<dd><p>Retrieve CRLs from Windows' system cert store. <em>store_name</em> may be
-one of <code class="docutils literal notranslate"><span class="pre">CA</span></code>, <code class="docutils literal notranslate"><span class="pre">ROOT</span></code> or <code class="docutils literal notranslate"><span class="pre">MY</span></code>. Windows may provide additional cert
-stores, too.</p>
-<p>The function returns a list of (cert_bytes, encoding_type, trust) tuples.
-The encoding_type specifies the encoding of cert_bytes. It is either
-<code class="xref py py-const docutils literal notranslate"><span class="pre">x509_asn</span></code> for X.509 ASN.1 data or <code class="xref py py-const docutils literal notranslate"><span class="pre">pkcs_7_asn</span></code> for
-PKCS#7 ASN.1 data.</p>
+<dd><p>從 Windows 的系統憑證儲存庫中搜尋 CRLs。<em>store_name</em> 可以是 <code class="docutils literal notranslate"><span class="pre">CA</span></code>、<code class="docutils literal notranslate"><span class="pre">ROOT</span></code> 或 <code class="docutils literal notranslate"><span class="pre">MY</span></code> 的其中一個。Windows 也可能會提供額外的憑證儲存庫。</p>
+<p>此函式會回傳一個元組 (cert_bytes, encoding_type, trust) 串列。encoding_type 指定了 cert_bytes 的編碼格式。它可以是用來表示 X.509 ASN.1 資料的 <code class="xref py py-const docutils literal notranslate"><span class="pre">x509_asn</span></code> 或是用來表示 PKCS#7 ASN.1 資料的 <code class="xref py py-const docutils literal notranslate"><span class="pre">pkcs_7_asn</span></code>。</p>
 <div class="availability docutils container">
 <p><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：只有 Windows。</p>
 </div>
@@ -765,7 +566,7 @@ PKCS#7 ASN.1 data.</p>
 <section id="constants">
 <h3>常數<a class="headerlink" href="#constants" title="Link to this heading">¶</a></h3>
 <blockquote>
-<div><p>All constants are now <a class="reference internal" href="enum.html#enum.IntEnum" title="enum.IntEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></a> or <a class="reference internal" href="enum.html#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntFlag</span></code></a> collections.</p>
+<div><p>所有的常數現在都是 <a class="reference internal" href="enum.html#enum.IntEnum" title="enum.IntEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></a> 或 <a class="reference internal" href="enum.html#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntFlag</span></code></a> 的集合。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.6 版新加入.</span></p>
 </div>
@@ -773,55 +574,31 @@ PKCS#7 ASN.1 data.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.CERT_NONE">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">CERT_NONE</span></span><a class="headerlink" href="#ssl.CERT_NONE" title="Link to this definition">¶</a></dt>
-<dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_mode" title="ssl.SSLContext.verify_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a>.
-Except for <a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT" title="ssl.PROTOCOL_TLS_CLIENT"><code class="xref py py-const docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a>,
-it is the default mode.  With client-side sockets, just about any
-cert is accepted.  Validation errors, such as untrusted or expired cert,
-are ignored and do not abort the TLS/SSL handshake.</p>
-<p>In server mode, no certificate is requested from the client, so the client
-does not send any for client cert authentication.</p>
+<dd><p><a class="reference internal" href="#ssl.SSLContext.verify_mode" title="ssl.SSLContext.verify_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a> 可能的值。除了 <a class="reference internal" href="#ssl.SSLContext.verify_mode" title="ssl.SSLContext.verify_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a> 外，這是預設的模式。對於客戶端的 sockets，幾乎任何憑證都能被允許。驗證錯誤，像是不被信任或是過期的憑證，會被忽略並不會中止 TLS/SSL 握手。</p>
+<p>在伺服器模式下，不會從客戶端請求任何憑證，所以客戶端不用發送任何用於客戶端憑證身分驗證的憑證。</p>
 <p>參閱下方 <a class="reference internal" href="#ssl-security"><span class="std std-ref">Security considerations</span></a> 的討論。</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.CERT_OPTIONAL">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">CERT_OPTIONAL</span></span><a class="headerlink" href="#ssl.CERT_OPTIONAL" title="Link to this definition">¶</a></dt>
-<dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_mode" title="ssl.SSLContext.verify_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a>.
-In client mode, <a class="reference internal" href="#ssl.CERT_OPTIONAL" title="ssl.CERT_OPTIONAL"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_OPTIONAL</span></code></a>
-has the same meaning as <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a>. It is recommended to
-use <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a> for client-side sockets instead.</p>
-<p>In server mode, a client certificate request is sent to the client.  The
-client may either ignore the request or send a certificate in order
-perform TLS client cert authentication.  If the client chooses to send
-a certificate, it is verified.  Any verification error immediately aborts
-the TLS handshake.</p>
-<p>Use of this setting requires a valid set of CA certificates to
-be passed to <a class="reference internal" href="#ssl.SSLContext.load_verify_locations" title="ssl.SSLContext.load_verify_locations"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations()</span></code></a>.</p>
+<dd><p><a class="reference internal" href="#ssl.SSLContext.verify_mode" title="ssl.SSLContext.verify_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a> 可能的值。在客戶端模式下，<a class="reference internal" href="#ssl.CERT_OPTIONAL" title="ssl.CERT_OPTIONAL"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_OPTIONAL</span></code></a> 具有與 <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a> 相同的含意。對於客戶端 sockets 推薦改用  <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a>。</p>
+<p>在伺服器模式下，客戶憑證請求會被發送給客戶端。客戶端可以選擇忽略請求或是選擇發送憑證來執行 TLS 客戶端憑證身分驗證。如果客戶端選擇發送憑證，則會對其進行驗證。任何驗證錯誤都會立刻終止 TLS 握手。</p>
+<p>使用此設定需要將一組有效的 CA 憑證傳送給 <a class="reference internal" href="#ssl.SSLContext.load_verify_locations" title="ssl.SSLContext.load_verify_locations"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations()</span></code></a>。</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.CERT_REQUIRED">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">CERT_REQUIRED</span></span><a class="headerlink" href="#ssl.CERT_REQUIRED" title="Link to this definition">¶</a></dt>
-<dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_mode" title="ssl.SSLContext.verify_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a>.
-In this mode, certificates are
-required from the other side of the socket connection; an <a class="reference internal" href="#ssl.SSLError" title="ssl.SSLError"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLError</span></code></a>
-will be raised if no certificate is provided, or if its validation fails.
-This mode is <strong>not</strong> sufficient to verify a certificate in client mode as
-it does not match hostnames.  <a class="reference internal" href="#ssl.SSLContext.check_hostname" title="ssl.SSLContext.check_hostname"><code class="xref py py-attr docutils literal notranslate"><span class="pre">check_hostname</span></code></a> must be
-enabled as well to verify the authenticity of a cert.
-<a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT" title="ssl.PROTOCOL_TLS_CLIENT"><code class="xref py py-const docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a> uses <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a> and
-enables <a class="reference internal" href="#ssl.SSLContext.check_hostname" title="ssl.SSLContext.check_hostname"><code class="xref py py-attr docutils literal notranslate"><span class="pre">check_hostname</span></code></a> by default.</p>
-<p>With server socket, this mode provides mandatory TLS client cert
-authentication.  A client certificate request is sent to the client and
-the client must provide a valid and trusted certificate.</p>
-<p>Use of this setting requires a valid set of CA certificates to
-be passed to <a class="reference internal" href="#ssl.SSLContext.load_verify_locations" title="ssl.SSLContext.load_verify_locations"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations()</span></code></a>.</p>
+<dd><p><a class="reference internal" href="#ssl.SSLContext.verify_mode" title="ssl.SSLContext.verify_mode"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a> 可能的值。在這個模式下，需要從 socket 連線的另一端獲取憑證；如果未提供憑證或是驗證失敗，則將會導致 <a class="reference internal" href="#ssl.SSLError" title="ssl.SSLError"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLError</span></code></a>。此模式 <strong>不能</strong> 在客戶端模式下對憑證進行驗證，因為它無法去配對主機名稱。<a class="reference internal" href="#ssl.SSLContext.check_hostname" title="ssl.SSLContext.check_hostname"><code class="xref py py-attr docutils literal notranslate"><span class="pre">check_hostname</span></code></a> 也必須被開起來來驗證憑證的真實性。<a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT" title="ssl.PROTOCOL_TLS_CLIENT"><code class="xref py py-const docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a> 會使用  <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-const docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a> 並預設開啟 <a class="reference internal" href="#ssl.SSLContext.check_hostname" title="ssl.SSLContext.check_hostname"><code class="xref py py-attr docutils literal notranslate"><span class="pre">check_hostname</span></code></a>。</p>
+<p>對於 socket 伺服器，此模式會提供強制的 TLS 客戶端憑證驗證。客戶端憑證請求會被發送給客戶端並且客戶端必須提供有效且被信任的憑證。</p>
+<p>使用此設定需要將一組有效的 CA 憑證傳送給 <a class="reference internal" href="#ssl.SSLContext.load_verify_locations" title="ssl.SSLContext.load_verify_locations"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations()</span></code></a>。</p>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="ssl.VerifyMode">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">VerifyMode</span></span><a class="headerlink" href="#ssl.VerifyMode" title="Link to this definition">¶</a></dt>
-<dd><p><a class="reference internal" href="enum.html#enum.IntEnum" title="enum.IntEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></a> collection of CERT_* constants.</p>
+<dd><p><a class="reference internal" href="enum.html#enum.IntEnum" title="enum.IntEnum"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntEnum</span></code></a> 為 CERT_* 常數的一個集合。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.6 版新加入.</span></p>
 </div>
@@ -830,9 +607,7 @@ be passed to <a class="reference internal" href="#ssl.SSLContext.load_verify_loc
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_DEFAULT">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">VERIFY_DEFAULT</span></span><a class="headerlink" href="#ssl.VERIFY_DEFAULT" title="Link to this definition">¶</a></dt>
-<dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a>. In this mode, certificate
-revocation lists (CRLs) are not checked. By default OpenSSL does neither
-require nor verify CRLs.</p>
+<dd><p><a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a> 可能的值。在此模式下，不會檢查憑證吊銷列表 (CRLs)。預設的 OpenSSL 並不會請求及驗證 CRLs。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版新加入.</span></p>
 </div>
@@ -841,11 +616,7 @@ require nor verify CRLs.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_CRL_CHECK_LEAF">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">VERIFY_CRL_CHECK_LEAF</span></span><a class="headerlink" href="#ssl.VERIFY_CRL_CHECK_LEAF" title="Link to this definition">¶</a></dt>
-<dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a>. In this mode, only the
-peer cert is checked but none of the intermediate CA certificates. The mode
-requires a valid CRL that is signed by the peer cert's issuer (its direct
-ancestor CA). If no proper CRL has been loaded with
-<a class="reference internal" href="#ssl.SSLContext.load_verify_locations" title="ssl.SSLContext.load_verify_locations"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations</span></code></a>, validation will fail.</p>
+<dd><p><a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a> 可能的值。在此模式下，只會檢查同等的憑證而不會去檢查中間的 CA 憑證。此模式需要提供由對等憑證發行者 (它的直接上級 CA) 的有效的 CRL 簽名。如果沒有用 <a class="reference internal" href="#ssl.SSLContext.load_verify_locations" title="ssl.SSLContext.load_verify_locations"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations</span></code></a> 載入適當的 CRL，則會驗證失敗。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版新加入.</span></p>
 </div>
@@ -854,8 +625,7 @@ ancestor CA). If no proper CRL has been loaded with
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_CRL_CHECK_CHAIN">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">VERIFY_CRL_CHECK_CHAIN</span></span><a class="headerlink" href="#ssl.VERIFY_CRL_CHECK_CHAIN" title="Link to this definition">¶</a></dt>
-<dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a>. In this mode, CRLs of
-all certificates in the peer cert chain are checked.</p>
+<dd><p><a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a> 可能的值。在此模式下，會檢查對等憑證鍊中所有憑證的 CRLs。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版新加入.</span></p>
 </div>
@@ -864,8 +634,7 @@ all certificates in the peer cert chain are checked.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_X509_STRICT">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">VERIFY_X509_STRICT</span></span><a class="headerlink" href="#ssl.VERIFY_X509_STRICT" title="Link to this definition">¶</a></dt>
-<dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a> to disable workarounds
-for broken X.509 certificates.</p>
+<dd><p><a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a> 可能的值，用來禁用已損壞的 X.509 憑證的解決方法。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4 版新加入.</span></p>
 </div>
@@ -874,8 +643,7 @@ for broken X.509 certificates.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_ALLOW_PROXY_CERTS">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">VERIFY_ALLOW_PROXY_CERTS</span></span><a class="headerlink" href="#ssl.VERIFY_ALLOW_PROXY_CERTS" title="Link to this definition">¶</a></dt>
-<dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a> to enables proxy
-certificate verification.</p>
+<dd><p><a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a> 可能的值，用來啟用憑證代理驗證。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.10 版新加入.</span></p>
 </div>
@@ -884,9 +652,7 @@ certificate verification.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_X509_TRUSTED_FIRST">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">VERIFY_X509_TRUSTED_FIRST</span></span><a class="headerlink" href="#ssl.VERIFY_X509_TRUSTED_FIRST" title="Link to this definition">¶</a></dt>
-<dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a>. It instructs OpenSSL to
-prefer trusted certificates when building the trust chain to validate a
-certificate. This flag is enabled by default.</p>
+<dd><p><a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a> 可能的值。它指示 OpenSSL 在構建信任鍊來驗證憑證時會優先使用被信任的憑證。此旗標預設開啟。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.4.4 版新加入.</span></p>
 </div>
@@ -895,11 +661,7 @@ certificate. This flag is enabled by default.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.VERIFY_X509_PARTIAL_CHAIN">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">VERIFY_X509_PARTIAL_CHAIN</span></span><a class="headerlink" href="#ssl.VERIFY_X509_PARTIAL_CHAIN" title="Link to this definition">¶</a></dt>
-<dd><p>Possible value for <a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a>. It instructs OpenSSL to
-accept intermediate CAs in the trust store to be treated as trust-anchors,
-in the same way as the self-signed root CA certificates. This makes it
-possible to trust certificates issued by an intermediate CA without having
-to trust its ancestor root CA.</p>
+<dd><p><a class="reference internal" href="#ssl.SSLContext.verify_flags" title="ssl.SSLContext.verify_flags"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a> 可能的值。它指示 OpenSSL 接受信任存儲中的中間 CAs 作為信任錨，就像自簽名的根 CA 憑證。這樣就能去信任中間 CA 所頒發的憑證，而不一定非要去信任其祖先的根 CA。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.10 版新加入.</span></p>
 </div>
@@ -908,7 +670,7 @@ to trust its ancestor root CA.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ssl.VerifyFlags">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">VerifyFlags</span></span><a class="headerlink" href="#ssl.VerifyFlags" title="Link to this definition">¶</a></dt>
-<dd><p><a class="reference internal" href="enum.html#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntFlag</span></code></a> collection of VERIFY_* constants.</p>
+<dd><p><a class="reference internal" href="enum.html#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntFlag</span></code></a> 為 VERIFY_* 常數的其中一個集合。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.6 版新加入.</span></p>
 </div>
@@ -917,25 +679,19 @@ to trust its ancestor root CA.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.PROTOCOL_TLS">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">PROTOCOL_TLS</span></span><a class="headerlink" href="#ssl.PROTOCOL_TLS" title="Link to this definition">¶</a></dt>
-<dd><p>Selects the highest protocol version that both the client and server support.
-Despite the name, this option can select both &quot;SSL&quot; and &quot;TLS&quot; protocols.</p>
+<dd><p>選擇客戶端及伺服器均可以支援最高協定版本。儘管名稱只有 「TLS」，但實際上「SSL」和「TLS」均可以選擇。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.6 版新加入.</span></p>
 </div>
 <div class="deprecated">
-<p><span class="versionmodified deprecated">在 3.10 版之後被棄用: </span>TLS clients and servers require different default settings for secure
-communication. The generic TLS protocol constant is deprecated in
-favor of <a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT" title="ssl.PROTOCOL_TLS_CLIENT"><code class="xref py py-data docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a> and <a class="reference internal" href="#ssl.PROTOCOL_TLS_SERVER" title="ssl.PROTOCOL_TLS_SERVER"><code class="xref py py-data docutils literal notranslate"><span class="pre">PROTOCOL_TLS_SERVER</span></code></a>.</p>
+<p><span class="versionmodified deprecated">在 3.10 版之後被棄用: </span>TLS 的客戶端及伺服器端需要不同的預設值來實現安全通訊。通用的 TLS 協定常數已被廢除，並改用 <a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT" title="ssl.PROTOCOL_TLS_CLIENT"><code class="xref py py-data docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a> 和 <a class="reference internal" href="#ssl.PROTOCOL_TLS_SERVER" title="ssl.PROTOCOL_TLS_SERVER"><code class="xref py py-data docutils literal notranslate"><span class="pre">PROTOCOL_TLS_SERVER</span></code></a>。</p>
 </div>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.PROTOCOL_TLS_CLIENT">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">PROTOCOL_TLS_CLIENT</span></span><a class="headerlink" href="#ssl.PROTOCOL_TLS_CLIENT" title="Link to this definition">¶</a></dt>
-<dd><p>Auto-negotiate the highest protocol version that both the client and
-server support, and configure the context client-side connections. The
-protocol enables <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-data docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a> and
-<a class="reference internal" href="#ssl.SSLContext.check_hostname" title="ssl.SSLContext.check_hostname"><code class="xref py py-attr docutils literal notranslate"><span class="pre">check_hostname</span></code></a> by default.</p>
+<dd><p>自動協商客戶端和服務器都支援的最高協議版本，並配置客戶端語境連線。該協定預設啟用 <a class="reference internal" href="#ssl.CERT_REQUIRED" title="ssl.CERT_REQUIRED"><code class="xref py py-data docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a> 和 <a class="reference internal" href="#ssl.SSLContext.check_hostname" title="ssl.SSLContext.check_hostname"><code class="xref py py-attr docutils literal notranslate"><span class="pre">check_hostname</span></code></a>。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.6 版新加入.</span></p>
 </div>
@@ -944,8 +700,7 @@ protocol enables <a class="reference internal" href="#ssl.CERT_REQUIRED" title="
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.PROTOCOL_TLS_SERVER">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">PROTOCOL_TLS_SERVER</span></span><a class="headerlink" href="#ssl.PROTOCOL_TLS_SERVER" title="Link to this definition">¶</a></dt>
-<dd><p>Auto-negotiate the highest protocol version that both the client and
-server support, and configure the context server-side connections.</p>
+<dd><p>自動協商客戶端和服務器都支援的最高協議版本，並配置客戶端語境連線。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.6 版新加入.</span></p>
 </div>
@@ -2570,7 +2325,7 @@ extension (default: true).</p>
 <p><span class="versionmodified added">在 3.7 版新加入.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.10 版的變更: </span>The flag had no effect with OpenSSL before version 1.1.1k. Python 3.8.9,
+<p><span class="versionmodified changed">在 3.10 版的變更: </span>The flag had no effect with OpenSSL before version 1.1.1l. Python 3.8.9,
 3.9.3, and 3.10 include workarounds for previous versions.</p>
 </div>
 </dd></dl>
@@ -3053,12 +2808,9 @@ instance instead of a <a class="reference internal" href="#ssl.SSLSocket" title=
 This means that for example <a class="reference internal" href="#ssl.SSLSocket.read" title="ssl.SSLSocket.read"><code class="xref py py-meth docutils literal notranslate"><span class="pre">read()</span></code></a> will raise an
 <a class="reference internal" href="#ssl.SSLWantReadError" title="ssl.SSLWantReadError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">SSLWantReadError</span></code></a> if it needs more data than the incoming BIO has
 available.</p></li>
-<li><p>There is no module-level <code class="docutils literal notranslate"><span class="pre">wrap_bio()</span></code> call like there is for
-<a class="reference internal" href="#ssl.SSLContext.wrap_socket" title="ssl.SSLContext.wrap_socket"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wrap_socket()</span></code></a>. An <a class="reference internal" href="#ssl.SSLObject" title="ssl.SSLObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLObject</span></code></a> is always created
-via an <a class="reference internal" href="#ssl.SSLContext" title="ssl.SSLContext"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLContext</span></code></a>.</p></li>
 </ul>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.7 版的變更: </span><a class="reference internal" href="#ssl.SSLObject" title="ssl.SSLObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLObject</span></code></a> instances must to created with
+<p><span class="versionmodified changed">在 3.7 版的變更: </span><a class="reference internal" href="#ssl.SSLObject" title="ssl.SSLObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLObject</span></code></a> instances must be created with
 <a class="reference internal" href="#ssl.SSLContext.wrap_bio" title="ssl.SSLContext.wrap_bio"><code class="xref py py-meth docutils literal notranslate"><span class="pre">wrap_bio()</span></code></a>. In earlier versions, it was possible to
 create instances directly. This was never documented or officially
 supported.</p>
@@ -3303,181 +3055,15 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">ssl</span></code> --- socket 物件的 TLS/SSL 包裝器</a><ul>
 <li><a class="reference internal" href="#functions-constants-and-exceptions">函式、常數與例外</a><ul>
 <li><a class="reference internal" href="#socket-creation">Socket 建立</a></li>
-<li><a class="reference internal" href="#context-creation">語境建立</a><ul>
-<li><a class="reference internal" href="#ssl.create_default_context"><code class="docutils literal notranslate"><span class="pre">create_default_context()</span></code></a></li>
+<li><a class="reference internal" href="#context-creation">語境建立</a></li>
+<li><a class="reference internal" href="#exceptions">例外</a></li>
+<li><a class="reference internal" href="#random-generation">隨機產生</a></li>
+<li><a class="reference internal" href="#certificate-handling">認證處理</a></li>
+<li><a class="reference internal" href="#constants">常數</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#exceptions">例外</a><ul>
-<li><a class="reference internal" href="#ssl.SSLError"><code class="docutils literal notranslate"><span class="pre">SSLError</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.SSLError.library"><code class="docutils literal notranslate"><span class="pre">SSLError.library</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLError.reason"><code class="docutils literal notranslate"><span class="pre">SSLError.reason</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ssl.SSLZeroReturnError"><code class="docutils literal notranslate"><span class="pre">SSLZeroReturnError</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLWantReadError"><code class="docutils literal notranslate"><span class="pre">SSLWantReadError</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLWantWriteError"><code class="docutils literal notranslate"><span class="pre">SSLWantWriteError</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSyscallError"><code class="docutils literal notranslate"><span class="pre">SSLSyscallError</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLEOFError"><code class="docutils literal notranslate"><span class="pre">SSLEOFError</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLCertVerificationError"><code class="docutils literal notranslate"><span class="pre">SSLCertVerificationError</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.SSLCertVerificationError.verify_code"><code class="docutils literal notranslate"><span class="pre">SSLCertVerificationError.verify_code</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLCertVerificationError.verify_message"><code class="docutils literal notranslate"><span class="pre">SSLCertVerificationError.verify_message</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ssl.CertificateError"><code class="docutils literal notranslate"><span class="pre">CertificateError</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#random-generation">隨機產生</a><ul>
-<li><a class="reference internal" href="#ssl.RAND_bytes"><code class="docutils literal notranslate"><span class="pre">RAND_bytes()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.RAND_status"><code class="docutils literal notranslate"><span class="pre">RAND_status()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.RAND_add"><code class="docutils literal notranslate"><span class="pre">RAND_add()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#certificate-handling">認證處理</a><ul>
-<li><a class="reference internal" href="#ssl.cert_time_to_seconds"><code class="docutils literal notranslate"><span class="pre">cert_time_to_seconds()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.get_server_certificate"><code class="docutils literal notranslate"><span class="pre">get_server_certificate()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.DER_cert_to_PEM_cert"><code class="docutils literal notranslate"><span class="pre">DER_cert_to_PEM_cert()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PEM_cert_to_DER_cert"><code class="docutils literal notranslate"><span class="pre">PEM_cert_to_DER_cert()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.get_default_verify_paths"><code class="docutils literal notranslate"><span class="pre">get_default_verify_paths()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.enum_certificates"><code class="docutils literal notranslate"><span class="pre">enum_certificates()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.enum_crls"><code class="docutils literal notranslate"><span class="pre">enum_crls()</span></code></a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#constants">常數</a><ul>
-<li><a class="reference internal" href="#ssl.CERT_NONE"><code class="docutils literal notranslate"><span class="pre">CERT_NONE</span></code></a></li>
-<li><a class="reference internal" href="#ssl.CERT_OPTIONAL"><code class="docutils literal notranslate"><span class="pre">CERT_OPTIONAL</span></code></a></li>
-<li><a class="reference internal" href="#ssl.CERT_REQUIRED"><code class="docutils literal notranslate"><span class="pre">CERT_REQUIRED</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VerifyMode"><code class="docutils literal notranslate"><span class="pre">VerifyMode</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_DEFAULT"><code class="docutils literal notranslate"><span class="pre">VERIFY_DEFAULT</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_CRL_CHECK_LEAF"><code class="docutils literal notranslate"><span class="pre">VERIFY_CRL_CHECK_LEAF</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_CRL_CHECK_CHAIN"><code class="docutils literal notranslate"><span class="pre">VERIFY_CRL_CHECK_CHAIN</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_X509_STRICT"><code class="docutils literal notranslate"><span class="pre">VERIFY_X509_STRICT</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_ALLOW_PROXY_CERTS"><code class="docutils literal notranslate"><span class="pre">VERIFY_ALLOW_PROXY_CERTS</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_X509_TRUSTED_FIRST"><code class="docutils literal notranslate"><span class="pre">VERIFY_X509_TRUSTED_FIRST</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VERIFY_X509_PARTIAL_CHAIN"><code class="docutils literal notranslate"><span class="pre">VERIFY_X509_PARTIAL_CHAIN</span></code></a></li>
-<li><a class="reference internal" href="#ssl.VerifyFlags"><code class="docutils literal notranslate"><span class="pre">VerifyFlags</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_TLS"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_TLS</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_TLS_CLIENT"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_TLS_CLIENT</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_TLS_SERVER"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_TLS_SERVER</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_SSLv23"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_SSLv23</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_SSLv3"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_SSLv3</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_TLSv1"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_TLSv1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_TLSv1_1"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_TLSv1_1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.PROTOCOL_TLSv1_2"><code class="docutils literal notranslate"><span class="pre">PROTOCOL_TLSv1_2</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_ALL"><code class="docutils literal notranslate"><span class="pre">OP_ALL</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_SSLv2"><code class="docutils literal notranslate"><span class="pre">OP_NO_SSLv2</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_SSLv3"><code class="docutils literal notranslate"><span class="pre">OP_NO_SSLv3</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_TLSv1"><code class="docutils literal notranslate"><span class="pre">OP_NO_TLSv1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_TLSv1_1"><code class="docutils literal notranslate"><span class="pre">OP_NO_TLSv1_1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_TLSv1_2"><code class="docutils literal notranslate"><span class="pre">OP_NO_TLSv1_2</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_TLSv1_3"><code class="docutils literal notranslate"><span class="pre">OP_NO_TLSv1_3</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_RENEGOTIATION"><code class="docutils literal notranslate"><span class="pre">OP_NO_RENEGOTIATION</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_CIPHER_SERVER_PREFERENCE"><code class="docutils literal notranslate"><span class="pre">OP_CIPHER_SERVER_PREFERENCE</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_SINGLE_DH_USE"><code class="docutils literal notranslate"><span class="pre">OP_SINGLE_DH_USE</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_SINGLE_ECDH_USE"><code class="docutils literal notranslate"><span class="pre">OP_SINGLE_ECDH_USE</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_ENABLE_MIDDLEBOX_COMPAT"><code class="docutils literal notranslate"><span class="pre">OP_ENABLE_MIDDLEBOX_COMPAT</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_COMPRESSION"><code class="docutils literal notranslate"><span class="pre">OP_NO_COMPRESSION</span></code></a></li>
-<li><a class="reference internal" href="#ssl.Options"><code class="docutils literal notranslate"><span class="pre">Options</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_NO_TICKET"><code class="docutils literal notranslate"><span class="pre">OP_NO_TICKET</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_IGNORE_UNEXPECTED_EOF"><code class="docutils literal notranslate"><span class="pre">OP_IGNORE_UNEXPECTED_EOF</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_ENABLE_KTLS"><code class="docutils literal notranslate"><span class="pre">OP_ENABLE_KTLS</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OP_LEGACY_SERVER_CONNECT"><code class="docutils literal notranslate"><span class="pre">OP_LEGACY_SERVER_CONNECT</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_ALPN"><code class="docutils literal notranslate"><span class="pre">HAS_ALPN</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_NEVER_CHECK_COMMON_NAME"><code class="docutils literal notranslate"><span class="pre">HAS_NEVER_CHECK_COMMON_NAME</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_ECDH"><code class="docutils literal notranslate"><span class="pre">HAS_ECDH</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_SNI"><code class="docutils literal notranslate"><span class="pre">HAS_SNI</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_NPN"><code class="docutils literal notranslate"><span class="pre">HAS_NPN</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_SSLv2"><code class="docutils literal notranslate"><span class="pre">HAS_SSLv2</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_SSLv3"><code class="docutils literal notranslate"><span class="pre">HAS_SSLv3</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_TLSv1"><code class="docutils literal notranslate"><span class="pre">HAS_TLSv1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_TLSv1_1"><code class="docutils literal notranslate"><span class="pre">HAS_TLSv1_1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_TLSv1_2"><code class="docutils literal notranslate"><span class="pre">HAS_TLSv1_2</span></code></a></li>
-<li><a class="reference internal" href="#ssl.HAS_TLSv1_3"><code class="docutils literal notranslate"><span class="pre">HAS_TLSv1_3</span></code></a></li>
-<li><a class="reference internal" href="#ssl.CHANNEL_BINDING_TYPES"><code class="docutils literal notranslate"><span class="pre">CHANNEL_BINDING_TYPES</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OPENSSL_VERSION"><code class="docutils literal notranslate"><span class="pre">OPENSSL_VERSION</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OPENSSL_VERSION_INFO"><code class="docutils literal notranslate"><span class="pre">OPENSSL_VERSION_INFO</span></code></a></li>
-<li><a class="reference internal" href="#ssl.OPENSSL_VERSION_NUMBER"><code class="docutils literal notranslate"><span class="pre">OPENSSL_VERSION_NUMBER</span></code></a></li>
-<li><a class="reference internal" href="#ssl.ALERT_DESCRIPTION_HANDSHAKE_FAILURE"><code class="docutils literal notranslate"><span class="pre">ALERT_DESCRIPTION_HANDSHAKE_FAILURE</span></code></a></li>
-<li><a class="reference internal" href="#ssl.ALERT_DESCRIPTION_INTERNAL_ERROR"><code class="docutils literal notranslate"><span class="pre">ALERT_DESCRIPTION_INTERNAL_ERROR</span></code></a></li>
-<li><a class="reference internal" href="#ssl.AlertDescription"><code class="docutils literal notranslate"><span class="pre">AlertDescription</span></code></a></li>
-<li><a class="reference internal" href="#ssl.Purpose.SERVER_AUTH"><code class="docutils literal notranslate"><span class="pre">Purpose.SERVER_AUTH</span></code></a></li>
-<li><a class="reference internal" href="#ssl.Purpose.CLIENT_AUTH"><code class="docutils literal notranslate"><span class="pre">Purpose.CLIENT_AUTH</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLErrorNumber"><code class="docutils literal notranslate"><span class="pre">SSLErrorNumber</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion"><code class="docutils literal notranslate"><span class="pre">TLSVersion</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.TLSVersion.MINIMUM_SUPPORTED"><code class="docutils literal notranslate"><span class="pre">TLSVersion.MINIMUM_SUPPORTED</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion.MAXIMUM_SUPPORTED"><code class="docutils literal notranslate"><span class="pre">TLSVersion.MAXIMUM_SUPPORTED</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion.SSLv3"><code class="docutils literal notranslate"><span class="pre">TLSVersion.SSLv3</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion.TLSv1"><code class="docutils literal notranslate"><span class="pre">TLSVersion.TLSv1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion.TLSv1_1"><code class="docutils literal notranslate"><span class="pre">TLSVersion.TLSv1_1</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion.TLSv1_2"><code class="docutils literal notranslate"><span class="pre">TLSVersion.TLSv1_2</span></code></a></li>
-<li><a class="reference internal" href="#ssl.TLSVersion.TLSv1_3"><code class="docutils literal notranslate"><span class="pre">TLSVersion.TLSv1_3</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ssl-sockets">SSL Sockets</a><ul>
-<li><a class="reference internal" href="#ssl.SSLSocket"><code class="docutils literal notranslate"><span class="pre">SSLSocket</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.SSLSocket.read"><code class="docutils literal notranslate"><span class="pre">SSLSocket.read()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.write"><code class="docutils literal notranslate"><span class="pre">SSLSocket.write()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.do_handshake"><code class="docutils literal notranslate"><span class="pre">SSLSocket.do_handshake()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.getpeercert"><code class="docutils literal notranslate"><span class="pre">SSLSocket.getpeercert()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.cipher"><code class="docutils literal notranslate"><span class="pre">SSLSocket.cipher()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.shared_ciphers"><code class="docutils literal notranslate"><span class="pre">SSLSocket.shared_ciphers()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.compression"><code class="docutils literal notranslate"><span class="pre">SSLSocket.compression()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.get_channel_binding"><code class="docutils literal notranslate"><span class="pre">SSLSocket.get_channel_binding()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.selected_alpn_protocol"><code class="docutils literal notranslate"><span class="pre">SSLSocket.selected_alpn_protocol()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.selected_npn_protocol"><code class="docutils literal notranslate"><span class="pre">SSLSocket.selected_npn_protocol()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.unwrap"><code class="docutils literal notranslate"><span class="pre">SSLSocket.unwrap()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.verify_client_post_handshake"><code class="docutils literal notranslate"><span class="pre">SSLSocket.verify_client_post_handshake()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.version"><code class="docutils literal notranslate"><span class="pre">SSLSocket.version()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.pending"><code class="docutils literal notranslate"><span class="pre">SSLSocket.pending()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.context"><code class="docutils literal notranslate"><span class="pre">SSLSocket.context</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.server_side"><code class="docutils literal notranslate"><span class="pre">SSLSocket.server_side</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.server_hostname"><code class="docutils literal notranslate"><span class="pre">SSLSocket.server_hostname</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.session"><code class="docutils literal notranslate"><span class="pre">SSLSocket.session</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSocket.session_reused"><code class="docutils literal notranslate"><span class="pre">SSLSocket.session_reused</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ssl-contexts">SSL Contexts</a><ul>
-<li><a class="reference internal" href="#ssl.SSLContext"><code class="docutils literal notranslate"><span class="pre">SSLContext</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.SSLContext.cert_store_stats"><code class="docutils literal notranslate"><span class="pre">SSLContext.cert_store_stats()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.load_cert_chain"><code class="docutils literal notranslate"><span class="pre">SSLContext.load_cert_chain()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.load_default_certs"><code class="docutils literal notranslate"><span class="pre">SSLContext.load_default_certs()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.load_verify_locations"><code class="docutils literal notranslate"><span class="pre">SSLContext.load_verify_locations()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.get_ca_certs"><code class="docutils literal notranslate"><span class="pre">SSLContext.get_ca_certs()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.get_ciphers"><code class="docutils literal notranslate"><span class="pre">SSLContext.get_ciphers()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.set_default_verify_paths"><code class="docutils literal notranslate"><span class="pre">SSLContext.set_default_verify_paths()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.set_ciphers"><code class="docutils literal notranslate"><span class="pre">SSLContext.set_ciphers()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.set_alpn_protocols"><code class="docutils literal notranslate"><span class="pre">SSLContext.set_alpn_protocols()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.set_npn_protocols"><code class="docutils literal notranslate"><span class="pre">SSLContext.set_npn_protocols()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.sni_callback"><code class="docutils literal notranslate"><span class="pre">SSLContext.sni_callback</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.set_servername_callback"><code class="docutils literal notranslate"><span class="pre">SSLContext.set_servername_callback</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.load_dh_params"><code class="docutils literal notranslate"><span class="pre">SSLContext.load_dh_params()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.set_ecdh_curve"><code class="docutils literal notranslate"><span class="pre">SSLContext.set_ecdh_curve()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.wrap_socket"><code class="docutils literal notranslate"><span class="pre">SSLContext.wrap_socket()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.sslsocket_class"><code class="docutils literal notranslate"><span class="pre">SSLContext.sslsocket_class</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.wrap_bio"><code class="docutils literal notranslate"><span class="pre">SSLContext.wrap_bio()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.sslobject_class"><code class="docutils literal notranslate"><span class="pre">SSLContext.sslobject_class</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.session_stats"><code class="docutils literal notranslate"><span class="pre">SSLContext.session_stats()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.check_hostname"><code class="docutils literal notranslate"><span class="pre">SSLContext.check_hostname</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.keylog_filename"><code class="docutils literal notranslate"><span class="pre">SSLContext.keylog_filename</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.maximum_version"><code class="docutils literal notranslate"><span class="pre">SSLContext.maximum_version</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.minimum_version"><code class="docutils literal notranslate"><span class="pre">SSLContext.minimum_version</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.num_tickets"><code class="docutils literal notranslate"><span class="pre">SSLContext.num_tickets</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.options"><code class="docutils literal notranslate"><span class="pre">SSLContext.options</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.post_handshake_auth"><code class="docutils literal notranslate"><span class="pre">SSLContext.post_handshake_auth</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.protocol"><code class="docutils literal notranslate"><span class="pre">SSLContext.protocol</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.hostname_checks_common_name"><code class="docutils literal notranslate"><span class="pre">SSLContext.hostname_checks_common_name</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.security_level"><code class="docutils literal notranslate"><span class="pre">SSLContext.security_level</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.verify_flags"><code class="docutils literal notranslate"><span class="pre">SSLContext.verify_flags</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLContext.verify_mode"><code class="docutils literal notranslate"><span class="pre">SSLContext.verify_mode</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#ssl-sockets">SSL Sockets</a></li>
+<li><a class="reference internal" href="#ssl-contexts">SSL Contexts</a></li>
 <li><a class="reference internal" href="#certificates">Certificates</a><ul>
 <li><a class="reference internal" href="#certificate-chains">Certificate chains</a></li>
 <li><a class="reference internal" href="#ca-certificates">CA certificates</a></li>
@@ -3492,29 +3078,8 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#notes-on-non-blocking-sockets">Notes on non-blocking sockets</a></li>
-<li><a class="reference internal" href="#memory-bio-support">Memory BIO Support</a><ul>
-<li><a class="reference internal" href="#ssl.SSLObject"><code class="docutils literal notranslate"><span class="pre">SSLObject</span></code></a></li>
-<li><a class="reference internal" href="#ssl.MemoryBIO"><code class="docutils literal notranslate"><span class="pre">MemoryBIO</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.MemoryBIO.pending"><code class="docutils literal notranslate"><span class="pre">MemoryBIO.pending</span></code></a></li>
-<li><a class="reference internal" href="#ssl.MemoryBIO.eof"><code class="docutils literal notranslate"><span class="pre">MemoryBIO.eof</span></code></a></li>
-<li><a class="reference internal" href="#ssl.MemoryBIO.read"><code class="docutils literal notranslate"><span class="pre">MemoryBIO.read()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.MemoryBIO.write"><code class="docutils literal notranslate"><span class="pre">MemoryBIO.write()</span></code></a></li>
-<li><a class="reference internal" href="#ssl.MemoryBIO.write_eof"><code class="docutils literal notranslate"><span class="pre">MemoryBIO.write_eof()</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#ssl-session">SSL session</a><ul>
-<li><a class="reference internal" href="#ssl.SSLSession"><code class="docutils literal notranslate"><span class="pre">SSLSession</span></code></a><ul>
-<li><a class="reference internal" href="#ssl.SSLSession.id"><code class="docutils literal notranslate"><span class="pre">SSLSession.id</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSession.time"><code class="docutils literal notranslate"><span class="pre">SSLSession.time</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSession.timeout"><code class="docutils literal notranslate"><span class="pre">SSLSession.timeout</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSession.ticket_lifetime_hint"><code class="docutils literal notranslate"><span class="pre">SSLSession.ticket_lifetime_hint</span></code></a></li>
-<li><a class="reference internal" href="#ssl.SSLSession.has_ticket"><code class="docutils literal notranslate"><span class="pre">SSLSession.has_ticket</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li><a class="reference internal" href="#memory-bio-support">Memory BIO Support</a></li>
+<li><a class="reference internal" href="#ssl-session">SSL session</a></li>
 <li><a class="reference internal" href="#security-considerations">Security considerations</a><ul>
 <li><a class="reference internal" href="#best-defaults">Best defaults</a></li>
 <li><a class="reference internal" href="#manual-settings">手動設定</a><ul>
@@ -3577,7 +3142,7 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
           <a href="socket.html" title="socket --- Low-level networking interface"
              >上一頁</a> |</li>
 
-          <li><img src="../_static/py.svg" alt="python logo" style="vertical-align: middle; margin-top: -1px"/></li>
+          <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
           <li><a href="https://www.python.org/">Python</a> &#187;</li>
           <li class="switchers">
             <div class="language_switcher_placeholder"></div>
@@ -3587,7 +3152,7 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.1 Documentation</a> &#187;
+      <a href="../index.html">3.12.2 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -3624,6 +3189,7 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
     Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
     <br />
     See <a href="/license.html">History and License</a> for more information.<br />
+    
     <br />
 
     The Python Software Foundation is a non-profit corporation.
@@ -3631,7 +3197,7 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
 <br />
     <br />
 
-    最後更新於 Jan 05, 2024 (01:03 UTC)。
+    最後更新於 Feb 19, 2024 (00:19 UTC)。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
