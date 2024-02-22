@@ -5641,13 +5641,13 @@
 <li class="toctree-l5"><a class="reference internal" href="library/unittest.mock.html#patch-methods-start-and-stop">patch 方法：啟動與停止</a></li>
 <li class="toctree-l5"><a class="reference internal" href="library/unittest.mock.html#patch-builtins">patch 內建函式</a></li>
 <li class="toctree-l5"><a class="reference internal" href="library/unittest.mock.html#test-prefix">TEST_PREFIX</a></li>
-<li class="toctree-l5"><a class="reference internal" href="library/unittest.mock.html#nesting-patch-decorators">Nesting Patch Decorators</a></li>
-<li class="toctree-l5"><a class="reference internal" href="library/unittest.mock.html#where-to-patch">Where to patch</a></li>
-<li class="toctree-l5"><a class="reference internal" href="library/unittest.mock.html#patching-descriptors-and-proxy-objects">Patching Descriptors and Proxy Objects</a></li>
+<li class="toctree-l5"><a class="reference internal" href="library/unittest.mock.html#nesting-patch-decorators">巢狀使用 Patch 裝飾器</a></li>
+<li class="toctree-l5"><a class="reference internal" href="library/unittest.mock.html#where-to-patch">該 patch 何處</a></li>
+<li class="toctree-l5"><a class="reference internal" href="library/unittest.mock.html#patching-descriptors-and-proxy-objects">Patch 描述器與代理物件 (Proxy Objects)</a></li>
 </ul>
 </li>
-<li class="toctree-l4"><a class="reference internal" href="library/unittest.mock.html#magicmock-and-magic-method-support">MagicMock and magic method support</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="library/unittest.mock.html#mocking-magic-methods">Mocking Magic Methods</a></li>
+<li class="toctree-l4"><a class="reference internal" href="library/unittest.mock.html#magicmock-and-magic-method-support">MagicMock 以及魔術方法支援</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="library/unittest.mock.html#mocking-magic-methods">Mock 魔術方法</a></li>
 <li class="toctree-l5"><a class="reference internal" href="library/unittest.mock.html#magic-mock">Magic Mock</a></li>
 </ul>
 </li>
@@ -6736,28 +6736,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="howto/index.html">Python 如何達成任務</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="howto/pyporting.html">如何將 Python 2 的程式碼移植到 Python 3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="howto/pyporting.html#the-short-explanation">簡短的說明</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howto/pyporting.html#details">詳細的</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="howto/pyporting.html#different-versions-of-python-2">Different versions of Python 2</a></li>
-<li class="toctree-l4"><a class="reference internal" href="howto/pyporting.html#make-sure-you-specify-the-proper-version-support-in-your-setup-py-file">Make sure you specify the proper version support in your <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file</a></li>
-<li class="toctree-l4"><a class="reference internal" href="howto/pyporting.html#have-good-test-coverage">有好的測試覆蓋率</a></li>
-<li class="toctree-l4"><a class="reference internal" href="howto/pyporting.html#be-aware-of-the-differences-between-python-2-and-3">注意 Python 2 &amp; 3 的差異</a></li>
-<li class="toctree-l4"><a class="reference internal" href="howto/pyporting.html#update-your-code">更新你的程式碼</a><ul>
-<li class="toctree-l5"><a class="reference internal" href="howto/pyporting.html#division">Division</a></li>
-<li class="toctree-l5"><a class="reference internal" href="howto/pyporting.html#text-versus-binary-data">Text versus binary data</a></li>
-<li class="toctree-l5"><a class="reference internal" href="howto/pyporting.html#use-feature-detection-instead-of-version-detection">Use feature detection instead of version detection</a></li>
-</ul>
-</li>
-<li class="toctree-l4"><a class="reference internal" href="howto/pyporting.html#prevent-compatibility-regressions">Prevent compatibility regressions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="howto/pyporting.html#check-which-dependencies-block-your-transition">Check which dependencies block your transition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="howto/pyporting.html#update-your-setup-py-file-to-denote-python-3-compatibility">Update your <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file to denote Python 3 compatibility</a></li>
-<li class="toctree-l4"><a class="reference internal" href="howto/pyporting.html#use-continuous-integration-to-stay-compatible">Use continuous integration to stay compatible</a></li>
-<li class="toctree-l4"><a class="reference internal" href="howto/pyporting.html#consider-using-optional-static-type-checking">Consider using optional static type checking</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="howto/cporting.html">遷移延伸模組到 Python 3</a></li>
 <li class="toctree-l2"><a class="reference internal" href="howto/curses.html">Curses Programming with Python</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="howto/curses.html#what-is-curses">What is curses?</a><ul>
@@ -6774,7 +6752,7 @@
 <li class="toctree-l3"><a class="reference internal" href="howto/curses.html#for-more-information">For More Information</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="howto/descriptor.html">描述器 HowTo 指南</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howto/descriptor.html">Descriptor Guide</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="howto/descriptor.html#primer">Primer</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="howto/descriptor.html#simple-example-a-descriptor-that-returns-a-constant">Simple example: A descriptor that returns a constant</a></li>
 <li class="toctree-l4"><a class="reference internal" href="howto/descriptor.html#dynamic-lookups">Dynamic lookups</a></li>
@@ -7066,15 +7044,16 @@
 <li class="toctree-l3"><a class="reference internal" href="howto/sockets.html#non-blocking-sockets">非阻塞的 Sockets</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="howto/sorting.html">如何排序</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="howto/sorting.html">Sorting Techniques</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="howto/sorting.html#sorting-basics">基礎排序</a></li>
 <li class="toctree-l3"><a class="reference internal" href="howto/sorting.html#key-functions">鍵函式 (key functions)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="howto/sorting.html#operator-module-functions">Operator 模組的函式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="howto/sorting.html#operator-module-functions-and-partial-function-evaluation">Operator Module Functions and Partial Function Evaluation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="howto/sorting.html#ascending-and-descending">升冪與降冪</a></li>
 <li class="toctree-l3"><a class="reference internal" href="howto/sorting.html#sort-stability-and-complex-sorts">排序穩定性與複合排序</a></li>
 <li class="toctree-l3"><a class="reference internal" href="howto/sorting.html#decorate-sort-undecorate">裝飾-排序-移除裝飾 (decorate-sort-undecorate)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="howto/sorting.html#comparison-functions">比較函式 (comparison functions)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="howto/sorting.html#odds-and-ends">雜項說明</a></li>
+<li class="toctree-l3"><a class="reference internal" href="howto/sorting.html#partial-sorts">Partial Sorts</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="howto/unicode.html">Unicode HOWTO</a><ul>
@@ -7482,7 +7461,7 @@
 <br />
     <br />
 
-    最後更新於 Feb 19, 2024 (00:19 UTC)。
+    最後更新於 Feb 22, 2024 (06:04 UTC)。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
