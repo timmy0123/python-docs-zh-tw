@@ -153,8 +153,6 @@
  | <a href="#"><strong></strong></a>
  | <a href="#A"><strong>A</strong></a>
  | <a href="#"><strong></strong></a>
- | <a href="#A"><strong>A</strong></a>
- | <a href="#"><strong></strong></a>
  | <a href="#B"><strong>B</strong></a>
  | <a href="#"><strong></strong></a>
  | <a href="#B"><strong>B</strong></a>
@@ -279,8 +277,6 @@
  | <a href="#"><strong></strong></a>
  | <a href="#N"><strong>N</strong></a>
  | <a href="#O"><strong>O</strong></a>
- | <a href="#P"><strong>P</strong></a>
- | <a href="#"><strong></strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#"><strong></strong></a>
  | <a href="#P"><strong>P</strong></a>
@@ -2204,7 +2200,7 @@
 </li>
         <li><a href="library/doctest.html#index-0">interpreter prompt（直譯器提示）</a>, <a href="library/sys.html#index-27">[1]</a>
 </li>
-        <li><a href="library/pprint.html#index-0">placeholder（佔位符號）</a>, <a href="library/reprlib.html#index-0">[1]</a>, <a href="library/textwrap.html#index-0">[2]</a>
+        <li><a href="library/pprint.html#index-1">placeholder（佔位符號）</a>, <a href="library/reprlib.html#index-0">[1]</a>, <a href="library/textwrap.html#index-0">[2]</a>
 </li>
         <li><a href="library/doctest.html#index-3">於 doctests 中</a>
 </li>
@@ -3808,6 +3804,8 @@
 </li>
       <li><a href="c-api/import.html#c._inittab">_inittab (C struct)</a>
 </li>
+      <li><a href="c-api/import.html#c._inittab.initfunc">_inittab.initfunc (C member)</a>
+</li>
       <li><a href="c-api/import.html#c._inittab.name">_inittab.name (C member)</a>
 </li>
       <li><a href="library/asyncio-extending.html#asyncio._leave_task">_leave_task() (於 asyncio 模組中)</a>
@@ -3867,11 +3865,11 @@
 </li>
       <li><a href="c-api/structures.html#c._PyCFunctionFastWithKeywords">_PyCFunctionFastWithKeywords (C type)</a>
 </li>
-      <li><a href="c-api/code.html#index-4">_PyCode_GetExtra (C function)</a>
+      <li><a href="c-api/code.html#index-4">_PyCode_GetExtra（C 函式）</a>
 </li>
-      <li><a href="c-api/code.html#index-5">_PyCode_SetExtra (C function)</a>
+      <li><a href="c-api/code.html#index-5">_PyCode_SetExtra（C 函式）</a>
 </li>
-      <li><a href="c-api/code.html#index-3">_PyEval_RequestCodeExtraIndex (C function)</a>
+      <li><a href="c-api/code.html#index-3">_PyEval_RequestCodeExtraIndex（C 函式）</a>
 </li>
       <li><a href="c-api/init.html#c._PyFrameEvalFunction">_PyFrameEvalFunction (C type)</a>
 </li>
@@ -4046,8 +4044,6 @@
 </li>
       <li><a href="library/locale.html#locale.ABMON_9">ABMON_9 (於 locale 模組中)</a>
 </li>
-      <li><a href="c-api/sys.html#index-2">abort (C function)</a>
-</li>
       <li><a href="library/tkinter.messagebox.html#tkinter.messagebox.ABORT">ABORT (於 tkinter.messagebox 模組中)</a>
 </li>
       <li><a href="library/asyncio-sync.html#asyncio.Barrier.abort">abort() (asyncio.Barrier 的方法)</a>
@@ -4065,6 +4061,8 @@
 </li>
       </ul></li>
       <li><a href="library/tkinter.messagebox.html#tkinter.messagebox.ABORTRETRYIGNORE">ABORTRETRYIGNORE (於 tkinter.messagebox 模組中)</a>
+</li>
+      <li><a href="c-api/sys.html#index-2">abort（C 函式）</a>
 </li>
       <li><a href="library/curses.panel.html#curses.panel.Panel.above">above() (curses.panel.Panel 的方法)</a>
 </li>
@@ -4795,8 +4793,6 @@
 </li>
       <li><a href="library/wsgiref.html#wsgiref.util.application_uri">application_uri() (於 wsgiref.util 模組中)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/2to3.html#to3fixer-apply">apply (2to3 fixer)</a>
 </li>
       <li><a href="library/multiprocessing.html#multiprocessing.pool.Pool.apply">apply() (multiprocessing.pool.Pool 的方法)</a>
@@ -4858,12 +4854,6 @@
       </ul></li>
       <li><a href="library/argparse.html#argparse.ArgumentTypeError">ArgumentTypeError</a>
 </li>
-  </ul></td>
-</tr></table>
-
-<h2 id=""></h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-argument"><strong>argument（引數）</strong></a>
 
       <ul>
@@ -4876,12 +4866,6 @@
         <li><a href="faq/programming.html#index-1">與 parameter（參數）的差異</a>
 </li>
       </ul></li>
-  </ul></td>
-</tr></table>
-
-<h2 id="A">A</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/sys.html#sys.argv">argv (於 sys 模組中)</a>
 </li>
       <li><a href="c-api/init.html#index-29">argv（sys 模組中）</a>
@@ -5038,6 +5022,8 @@
 </li>
       <li><a href="library/dialog.html#tkinter.simpledialog.askfloat">askfloat() (於 tkinter.simpledialog 模組中)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/dialog.html#tkinter.simpledialog.askinteger">askinteger() (於 tkinter.simpledialog 模組中)</a>
 </li>
       <li><a href="library/tkinter.messagebox.html#tkinter.messagebox.askokcancel">askokcancel() (於 tkinter.messagebox 模組中)</a>
@@ -5099,8 +5085,6 @@
 </li>
       <li><a href="library/typing.html#typing.assert_never">assert_never() (於 typing 模組中)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/unittest.mock.html#unittest.mock.AsyncMock.assert_not_awaited">assert_not_awaited() (unittest.mock.AsyncMock 的方法)</a>
 </li>
       <li><a href="library/unittest.mock.html#unittest.mock.Mock.assert_not_called">assert_not_called() (unittest.mock.Mock 的方法)</a>
@@ -6431,7 +6415,7 @@
 </li>
         <li><a href="c-api/number.html#index-0">divmod</a>, <a href="reference/datamodel.html#index-100">[1]</a>, <a href="reference/datamodel.html#index-101">[2]</a>
 </li>
-        <li><a href="library/pprint.html#index-1">eval</a>, <a href="library/pprint.html#index-2">[1]</a>, <a href="library/stdtypes.html#index-64">[2]</a>, <a href="reference/simple_stmts.html#index-44">[3]</a>, <a href="reference/toplevel_components.html#index-6">[4]</a>
+        <li><a href="library/pprint.html#index-0">eval</a>, <a href="library/pprint.html#index-2">[1]</a>, <a href="library/stdtypes.html#index-64">[2]</a>, <a href="reference/simple_stmts.html#index-44">[3]</a>, <a href="reference/toplevel_components.html#index-6">[4]</a>
 </li>
         <li><a href="library/functions.html#index-2">exec</a>, <a href="library/stdtypes.html#index-64">[1]</a>, <a href="reference/simple_stmts.html#index-44">[2]</a>
 </li>
@@ -6980,7 +6964,7 @@
 </li>
       <li><a href="library/subprocess.html#subprocess.CalledProcessError">CalledProcessError</a>
 </li>
-      <li><a href="c-api/memory.html#index-0">calloc (C function)</a>
+      <li><a href="c-api/memory.html#index-0">calloc（C 函式）</a>
 </li>
       <li><a href="reference/expressions.html#index-47">call（呼叫）</a>
 
@@ -7717,8 +7701,6 @@
 </li>
       <li><a href="library/xml.dom.html#xml.dom.Node.cloneNode">cloneNode() (xml.dom.Node 的方法)</a>
 </li>
-      <li><a href="c-api/init.html#index-44">close (in module os)</a>
-</li>
       <li><a href="library/aifc.html#aifc.aifc.close">close() (aifc.aifc 的方法)</a>
 
       <ul>
@@ -7886,6 +7868,8 @@
       <li><a href="library/syslog.html#syslog.closelog">closelog() (於 syslog 模組中)</a>
 </li>
       <li><a href="library/os.html#os.closerange">closerange() (於 os 模組中)</a>
+</li>
+      <li><a href="c-api/init.html#index-44">close（os 模組中）</a>
 </li>
       <li><a href="library/contextlib.html#contextlib.closing">closing() (於 contextlib 模組中)</a>
 </li>
@@ -10304,13 +10288,15 @@
         <li><a href="library/logging.html#logging.disable">(於 logging 模組中)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/test.html#test.support.disable_faulthandler">disable_faulthandler() (於 test.support 模組中)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/test.html#test.support.disable_gc">disable_gc() (於 test.support 模組中)</a>
 </li>
       <li><a href="library/optparse.html#optparse.OptionParser.disable_interspersed_args">disable_interspersed_args() (optparse.OptionParser 的方法)</a>
+</li>
+      <li><a href="library/logging.html#logging.Logger.disabled">disabled (logging.Logger 的屬性)</a>
 </li>
       <li><a href="library/winreg.html#winreg.DisableReflectionKey">DisableReflectionKey() (於 winreg 模組中)</a>
 </li>
@@ -10500,6 +10486,8 @@
       <li><a href="library/email.headerregistry.html#email.headerregistry.Address.domain">domain (email.headerregistry.Address 的屬性)</a>
 
       <ul>
+        <li><a href="library/http.cookiejar.html#http.cookiejar.Cookie.domain">(http.cookiejar.Cookie 的屬性)</a>
+</li>
         <li><a href="library/http.cookies.html#http.cookies.Morsel.domain">(http.cookies.Morsel 的屬性)</a>
 </li>
         <li><a href="library/tracemalloc.html#tracemalloc.DomainFilter.domain">(tracemalloc.DomainFilter 的屬性)</a>
@@ -11485,10 +11473,10 @@
 </li>
       <li><a href="library/enum.html#enum.EnumType">EnumType (enum 中的類別)</a>
 </li>
-      <li><a href="library/winreg.html#winreg.EnumValue">EnumValue() (於 winreg 模組中)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="library/winreg.html#winreg.EnumValue">EnumValue() (於 winreg 模組中)</a>
+</li>
       <li><a href="library/venv.html#venv.EnvBuilder">EnvBuilder (venv 中的類別)</a>
 </li>
       <li><a href="library/os.html#os.environ">environ (於 os 模組中)</a>
@@ -11812,7 +11800,7 @@
     eval
 
       <ul>
-        <li><a href="library/pprint.html#index-1">built-in function（內建函式）</a>, <a href="library/pprint.html#index-2">[1]</a>, <a href="library/stdtypes.html#index-64">[2]</a>, <a href="reference/simple_stmts.html#index-44">[3]</a>, <a href="reference/toplevel_components.html#index-6">[4]</a>
+        <li><a href="library/pprint.html#index-0">built-in function（內建函式）</a>, <a href="library/pprint.html#index-2">[1]</a>, <a href="library/stdtypes.html#index-64">[2]</a>, <a href="reference/simple_stmts.html#index-44">[3]</a>, <a href="reference/toplevel_components.html#index-6">[4]</a>
 </li>
       </ul></li>
       <li>
@@ -11906,12 +11894,8 @@
       <li><a href="library/doctest.html#doctest.DocTest.examples">examples (doctest.DocTest 的屬性)</a>
 </li>
       <li><a href="library/doctest.html#doctest.UnexpectedException.exc_info">exc_info (doctest.UnexpectedException 的屬性)</a>
-
-      <ul>
-        <li><a href="c-api/intro.html#index-13">(in module sys)</a>
 </li>
-      </ul></li>
-      <li><a href="reference/datamodel.html#index-66">exc_info （sys 模組中）</a>
+      <li><a href="c-api/intro.html#index-13">exc_info （sys 模組中）</a>, <a href="reference/datamodel.html#index-66">[1]</a>
 </li>
       <li><a href="library/sys.html#sys.exc_info">exc_info() (於 sys 模組中)</a>
 </li>
@@ -12143,12 +12127,8 @@
         <li><a href="library/os.path.html#os.path.exists">(於 os.path 模組中)</a>
 </li>
       </ul></li>
-      <li><a href="c-api/sys.html#index-3">exit (C function)</a>
-
-      <ul>
-        <li><a href="library/constants.html#exit">(內建變數)</a>
+      <li><a href="library/constants.html#exit">exit (內建變數)</a>
 </li>
-      </ul></li>
       <li><a href="library/argparse.html#argparse.ArgumentParser.exit">exit() (argparse.ArgumentParser 的方法)</a>
 
       <ul>
@@ -12164,6 +12144,8 @@
       <li><a href="library/turtle.html#turtle.exitonclick">exitonclick() (於 turtle 模組中)</a>
 </li>
       <li><a href="library/contextlib.html#contextlib.ExitStack">ExitStack (contextlib 中的類別)</a>
+</li>
+      <li><a href="c-api/sys.html#index-3">exit（C 函式）</a>
 </li>
       <li><a href="library/decimal.html#decimal.Context.exp">exp() (decimal.Context 的方法)</a>
 
@@ -13227,6 +13209,10 @@
 </li>
         <li><a href="library/mmap.html#mmap.mmap.flush">(mmap.mmap 的方法)</a>
 </li>
+        <li><a href="library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLParser.flush">(xml.etree.ElementTree.XMLParser 的方法)</a>
+</li>
+        <li><a href="library/xml.etree.elementtree.html#xml.etree.ElementTree.XMLPullParser.flush">(xml.etree.ElementTree.XMLPullParser 的方法)</a>
+</li>
         <li><a href="library/zlib.html#zlib.Compress.flush">(zlib.Compress 的方法)</a>
 </li>
         <li><a href="library/zlib.html#zlib.Decompress.flush">(zlib.Decompress 的方法)</a>
@@ -13478,10 +13464,10 @@
 </li>
       <li><a href="c-api/buffer.html#index-2">Fortran contiguous（Fortran 連續的）</a>, <a href="glossary.html#index-10">[1]</a>
 </li>
-      <li><a href="library/turtle.html#turtle.forward">forward() (於 turtle 模組中)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="library/turtle.html#turtle.forward">forward() (於 turtle 模組中)</a>
+</li>
       <li><a href="library/typing.html#typing.ForwardRef">ForwardRef (typing 中的類別)</a>
 </li>
       <li><a href="library/urllib.error.html#urllib.error.HTTPError.fp">fp (urllib.error.HTTPError 的屬性)</a>
@@ -13527,8 +13513,6 @@
         <li><a href="reference/executionmodel.html#index-6">variable（變數）</a>
 </li>
       </ul></li>
-      <li><a href="c-api/memory.html#index-0">free (C function)</a>
-</li>
       <li><a href="library/sys.monitoring.html#sys.monitoring.free_tool_id">free_tool_id() (於 sys.monitoring 模組中)</a>
 </li>
       <li><a href="library/platform.html#platform.freedesktop_os_release">freedesktop_os_release() (於 platform 模組中)</a>
@@ -13540,6 +13524,8 @@
       <li><a href="library/gc.html#gc.freeze">freeze() (於 gc 模組中)</a>
 </li>
       <li><a href="library/multiprocessing.html#multiprocessing.freeze_support">freeze_support() (於 multiprocessing 模組中)</a>
+</li>
+      <li><a href="c-api/memory.html#index-0">free（C 函式）</a>
 </li>
       <li><a href="library/math.html#math.frexp">frexp() (於 math 模組中)</a>
 </li>
@@ -15168,6 +15154,8 @@
 </li>
       <li><a href="library/sys.html#sys.getrefcount">getrefcount() (於 sys 模組中)</a>
 </li>
+      <li><a href="library/pyexpat.html#xml.parsers.expat.xmlparser.GetReparseDeferralEnabled">GetReparseDeferralEnabled() (xml.parsers.expat.xmlparser 的方法)</a>
+</li>
       <li><a href="library/os.html#os.getresgid">getresgid() (於 os 模組中)</a>
 </li>
       <li><a href="library/http.client.html#http.client.HTTPConnection.getresponse">getresponse() (http.client.HTTPConnection 的方法)</a>
@@ -15616,6 +15604,8 @@
       <li><a href="library/logging.html#logging.Handler">Handler (logging 中的類別)</a>
 </li>
       <li><a href="library/cgitb.html#cgitb.handler">handler() (於 cgitb 模組中)</a>
+</li>
+      <li><a href="library/logging.html#logging.Logger.handlers">handlers (logging.Logger 的屬性)</a>
 </li>
       <li><a href="library/signal.html#signal.Handlers">Handlers (signal 中的類別)</a>
 </li>
@@ -19019,6 +19009,8 @@
 </li>
       <li><a href="library/token.html#token.LESSEQUAL">LESSEQUAL (於 token 模組中)</a>
 </li>
+      <li><a href="library/logging.html#logging.Logger.level">level (logging.Logger 的屬性)</a>
+</li>
       <li><a href="reference/lexical_analysis.html#index-0">lexical analysis（詞法分析）</a>
 </li>
       <li><a href="reference/introduction.html#index-1">lexical definitions（詞法定義）</a>
@@ -19558,6 +19550,14 @@
 </li>
       <li><a href="c-api/init.html#index-32">lock, interpreter（鎖、直譯器）</a>
 </li>
+      <li><a href="library/fcntl.html#fcntl.LOCK_EX">LOCK_EX (於 fcntl 模組中)</a>
+</li>
+      <li><a href="library/fcntl.html#fcntl.LOCK_NB">LOCK_NB (於 fcntl 模組中)</a>
+</li>
+      <li><a href="library/fcntl.html#fcntl.LOCK_SH">LOCK_SH (於 fcntl 模組中)</a>
+</li>
+      <li><a href="library/fcntl.html#fcntl.LOCK_UN">LOCK_UN (於 fcntl 模組中)</a>
+</li>
       <li><a href="library/_thread.html#thread.lock.locked">locked() (_thread.lock 的方法)</a>
 
       <ul>
@@ -19654,6 +19654,8 @@
         <li><a href="library/logging.html#index-0">Errors（錯誤）</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="reference/lexical_analysis.html#index-3">logical line（邏輯列）</a>
 </li>
       <li><a href="library/decimal.html#decimal.Context.logical_and">logical_and() (decimal.Context 的方法)</a>
@@ -19662,8 +19664,6 @@
         <li><a href="library/decimal.html#decimal.Decimal.logical_and">(decimal.Decimal 的方法)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/decimal.html#decimal.Context.logical_invert">logical_invert() (decimal.Context 的方法)</a>
 
       <ul>
@@ -19713,7 +19713,7 @@
         <li><a href="c-api/long.html#index-0">object（物件）</a>
 </li>
       </ul></li>
-      <li><a href="c-api/long.html#index-1">LONG_MAX (C macro)</a>
+      <li><a href="c-api/long.html#index-1">LONG_MAX（C 巨集）</a>
 </li>
       <li><a href="library/test.html#test.support.LONG_TIMEOUT">LONG_TIMEOUT (於 test.support 模組中)</a>
 </li>
@@ -20017,7 +20017,7 @@
         <li><a href="library/stdtypes.html#str.maketrans">(str 的靜態方法)</a>
 </li>
       </ul></li>
-      <li><a href="c-api/memory.html#index-0">malloc (C function)</a>
+      <li><a href="c-api/memory.html#index-0">malloc（C 函式）</a>
 </li>
       <li><a href="library/logging.html#logging.LoggerAdapter.manager">manager (logging.LoggerAdapter 的屬性)</a>
 </li>
@@ -21955,6 +21955,8 @@
 </li>
         <li><a href="library/io.html#io.FileIO.name">(io.FileIO 的屬性)</a>
 </li>
+        <li><a href="library/logging.html#logging.Logger.name">(logging.Logger 的屬性)</a>
+</li>
         <li><a href="library/multiprocessing.html#multiprocessing.Process.name">(multiprocessing.Process 的屬性)</a>
 </li>
         <li><a href="library/multiprocessing.shared_memory.html#multiprocessing.shared_memory.SharedMemory.name">(multiprocessing.shared_memory.SharedMemory 的屬性)</a>
@@ -23675,8 +23677,6 @@
       </ul></li>
       <li><a href="library/pydoc.html#index-1">PAGER</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/curses.html#curses.pair_content">pair_content() (於 curses 模組中)</a>
 </li>
       <li><a href="library/curses.html#curses.pair_number">pair_number() (於 curses 模組中)</a>
@@ -23691,12 +23691,6 @@
 </li>
       <li><a href="library/inspect.html#inspect.Signature.parameters">parameters (inspect.Signature 的屬性)</a>
 </li>
-  </ul></td>
-</tr></table>
-
-<h2 id=""></h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="glossary.html#term-parameter"><strong>parameter（參數）</strong></a>
 
       <ul>
@@ -23709,12 +23703,6 @@
         <li><a href="faq/programming.html#index-1">與 argument（引數）的差異</a>
 </li>
       </ul></li>
-  </ul></td>
-</tr></table>
-
-<h2 id="P">P</h2>
-<table style="width: 100%" class="indextable genindextable"><tr>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/email.headerregistry.html#email.headerregistry.ParameterizedMIMEHeader.params">params (email.headerregistry.ParameterizedMIMEHeader 的屬性)</a>
 </li>
       <li><a href="library/ast.html#ast.ParamSpec">ParamSpec (ast 中的類別)</a>
@@ -23736,6 +23724,8 @@
       <li><a href="library/importlib.html#importlib.machinery.ModuleSpec.parent">parent (importlib.machinery.ModuleSpec 的屬性)</a>
 
       <ul>
+        <li><a href="library/logging.html#logging.Logger.parent">(logging.Logger 的屬性)</a>
+</li>
         <li><a href="library/pathlib.html#pathlib.PurePath.parent">(pathlib.PurePath 的屬性)</a>
 </li>
         <li><a href="library/pyclbr.html#pyclbr.Class.parent">(pyclbr.Class 的屬性)</a>
@@ -23809,6 +23799,8 @@
 </li>
       <li><a href="library/cgi.html#cgi.parse_header">parse_header() (於 cgi 模組中)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/http.client.html#http.client.parse_headers">parse_headers() (於 http.client 模組中)</a>
 </li>
       <li><a href="library/argparse.html#argparse.ArgumentParser.parse_intermixed_args">parse_intermixed_args() (argparse.ArgumentParser 的方法)</a>
@@ -23829,8 +23821,6 @@
 </li>
       <li><a href="library/email.utils.html#email.utils.parsedate">parsedate() (於 email.utils 模組中)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/email.utils.html#email.utils.parsedate_to_datetime">parsedate_to_datetime() (於 email.utils 模組中)</a>
 </li>
       <li><a href="library/email.utils.html#email.utils.parsedate_tz">parsedate_tz() (於 email.utils 模組中)</a>
@@ -23923,7 +23913,7 @@
 </li>
       <li><a href="library/unittest.mock.html#unittest.mock.patch.stopall">patch.stopall() (於 unittest.mock 模組中)</a>
 </li>
-      <li><a href="c-api/intro.html#index-41">PATH</a>, <a href="c-api/intro.html#index-42">[1]</a>, <a href="faq/library.html#index-0">[2]</a>, <a href="faq/library.html#index-1">[3]</a>, <a href="library/cgi.html#index-3">[4]</a>, <a href="library/cgi.html#index-6">[5]</a>, <a href="library/os.html#index-33">[6]</a>, <a href="library/os.html#index-34">[7]</a>, <a href="library/os.html#index-35">[8]</a>, <a href="library/os.html#index-36">[9]</a>, <a href="library/os.html#index-39">[10]</a>, <a href="library/os.html#index-40">[11]</a>, <a href="library/os.html#index-41">[12]</a>, <a href="library/os.html#index-42">[13]</a>, <a href="library/os.html#index-52">[14]</a>, <a href="library/site.html#index-3">[15]</a>, <a href="library/subprocess.html#index-2">[16]</a>, <a href="library/venv.html#index-10">[17]</a>, <a href="library/venv.html#index-11">[18]</a>, <a href="library/venv.html#index-12">[19]</a>, <a href="library/webbrowser.html#index-3">[20]</a>, <a href="tutorial/appendix.html#index-12">[21]</a>, <a href="tutorial/modules.html#index-15">[22]</a>, <a href="using/cmdline.html#index-30">[23]</a>, <a href="using/unix.html#index-2">[24]</a>, <a href="using/windows.html#index-10">[25]</a>, <a href="using/windows.html#index-12">[26]</a>, <a href="using/windows.html#index-13">[27]</a>, <a href="using/windows.html#index-14">[28]</a>, <a href="using/windows.html#index-18">[29]</a>, <a href="using/windows.html#index-2">[30]</a>, <a href="using/windows.html#index-20">[31]</a>, <a href="using/windows.html#index-22">[32]</a>, <a href="using/windows.html#index-23">[33]</a>, <a href="using/windows.html#index-25">[34]</a>, <a href="using/windows.html#index-3">[35]</a>, <a href="using/windows.html#index-40">[36]</a>, <a href="using/windows.html#index-5">[37]</a>, <a href="using/windows.html#index-9">[38]</a>, <a href="whatsnew/3.4.html#index-54">[39]</a>, <a href="whatsnew/3.4.html#index-57">[40]</a>, <a href="whatsnew/3.4.html#index-58">[41]</a>, <a href="whatsnew/3.8.html#index-22">[42]</a>, <a href="whatsnew/changelog.html#index-211">[43]</a>, <a href="whatsnew/changelog.html#index-212">[44]</a>, <a href="whatsnew/changelog.html#index-53">[45]</a>, <a href="whatsnew/changelog.html#index-78">[46]</a>
+      <li><a href="c-api/intro.html#index-41">PATH</a>, <a href="c-api/intro.html#index-42">[1]</a>, <a href="faq/library.html#index-0">[2]</a>, <a href="faq/library.html#index-1">[3]</a>, <a href="library/cgi.html#index-3">[4]</a>, <a href="library/cgi.html#index-6">[5]</a>, <a href="library/os.html#index-33">[6]</a>, <a href="library/os.html#index-34">[7]</a>, <a href="library/os.html#index-35">[8]</a>, <a href="library/os.html#index-36">[9]</a>, <a href="library/os.html#index-39">[10]</a>, <a href="library/os.html#index-40">[11]</a>, <a href="library/os.html#index-41">[12]</a>, <a href="library/os.html#index-42">[13]</a>, <a href="library/os.html#index-52">[14]</a>, <a href="library/site.html#index-3">[15]</a>, <a href="library/subprocess.html#index-2">[16]</a>, <a href="library/venv.html#index-10">[17]</a>, <a href="library/venv.html#index-11">[18]</a>, <a href="library/venv.html#index-12">[19]</a>, <a href="library/webbrowser.html#index-3">[20]</a>, <a href="tutorial/appendix.html#index-12">[21]</a>, <a href="tutorial/modules.html#index-15">[22]</a>, <a href="using/cmdline.html#index-32">[23]</a>, <a href="using/unix.html#index-2">[24]</a>, <a href="using/windows.html#index-10">[25]</a>, <a href="using/windows.html#index-12">[26]</a>, <a href="using/windows.html#index-13">[27]</a>, <a href="using/windows.html#index-14">[28]</a>, <a href="using/windows.html#index-18">[29]</a>, <a href="using/windows.html#index-2">[30]</a>, <a href="using/windows.html#index-20">[31]</a>, <a href="using/windows.html#index-22">[32]</a>, <a href="using/windows.html#index-23">[33]</a>, <a href="using/windows.html#index-25">[34]</a>, <a href="using/windows.html#index-3">[35]</a>, <a href="using/windows.html#index-40">[36]</a>, <a href="using/windows.html#index-5">[37]</a>, <a href="using/windows.html#index-9">[38]</a>, <a href="whatsnew/3.4.html#index-54">[39]</a>, <a href="whatsnew/3.4.html#index-57">[40]</a>, <a href="whatsnew/3.4.html#index-58">[41]</a>, <a href="whatsnew/3.8.html#index-22">[42]</a>, <a href="whatsnew/changelog.html#index-211">[43]</a>, <a href="whatsnew/changelog.html#index-212">[44]</a>, <a href="whatsnew/changelog.html#index-53">[45]</a>, <a href="whatsnew/changelog.html#index-78">[46]</a>
 </li>
       <li><a href="library/http.cookiejar.html#http.cookiejar.Cookie.path">path (http.cookiejar.Cookie 的屬性)</a>
 
@@ -25209,7 +25199,9 @@
 </li>
       <li><a href="c-api/sys.html#c.Py_AuditHookFunction">Py_AuditHookFunction (C type)</a>
 </li>
-      <li><a href="c-api/init.html#c.Py_BEGIN_ALLOW_THREADS">Py_BEGIN_ALLOW_THREADS (C macro)</a>, <a href="c-api/init.html#index-35">[1]</a>
+      <li><a href="c-api/init.html#c.Py_BEGIN_ALLOW_THREADS">Py_BEGIN_ALLOW_THREADS (C macro)</a>
+</li>
+      <li><a href="c-api/init.html#index-35">Py_BEGIN_ALLOW_THREADS（C 巨集）</a>
 </li>
       <li><a href="c-api/init.html#c.Py_BLOCK_THREADS">Py_BLOCK_THREADS (C macro)</a>
 </li>
@@ -25254,13 +25246,15 @@
         <li><a href="library/py_compile.html#module-py_compile">module</a>
 </li>
       </ul></li>
-      <li><a href="c-api/veryhigh.html#c.Py_CompileString">Py_CompileString (C function)</a>, <a href="c-api/veryhigh.html#index-0">[1]</a>, <a href="c-api/veryhigh.html#index-1">[2]</a>, <a href="c-api/veryhigh.html#index-2">[3]</a>
+      <li><a href="c-api/veryhigh.html#c.Py_CompileString">Py_CompileString (C function)</a>
 </li>
       <li><a href="c-api/veryhigh.html#c.Py_CompileStringExFlags">Py_CompileStringExFlags (C function)</a>
 </li>
       <li><a href="c-api/veryhigh.html#c.Py_CompileStringFlags">Py_CompileStringFlags (C function)</a>
 </li>
       <li><a href="c-api/veryhigh.html#c.Py_CompileStringObject">Py_CompileStringObject (C function)</a>
+</li>
+      <li><a href="c-api/veryhigh.html#index-0">Py_CompileString（C 函式）</a>, <a href="c-api/veryhigh.html#index-1">[1]</a>, <a href="c-api/veryhigh.html#index-2">[2]</a>
 </li>
       <li><a href="c-api/complex.html#c.Py_complex">Py_complex (C type)</a>
 </li>
@@ -25274,9 +25268,11 @@
 </li>
       <li><a href="c-api/sys.html#c.Py_DecodeLocale">Py_DecodeLocale (C function)</a>
 </li>
-      <li><a href="c-api/intro.html#index-4">Py_DECREF (C function)</a>, <a href="c-api/refcounting.html#c.Py_DECREF">[1]</a>
+      <li><a href="c-api/refcounting.html#c.Py_DECREF">Py_DECREF (C function)</a>
 </li>
       <li><a href="c-api/refcounting.html#c.Py_DecRef">Py_DecRef (C function)</a>
+</li>
+      <li><a href="c-api/intro.html#index-4">Py_DECREF（C 函式）</a>
 </li>
       <li><a href="c-api/intro.html#c.Py_DEPRECATED">Py_DEPRECATED (C macro)</a>
 </li>
@@ -25286,7 +25282,9 @@
 </li>
       <li><a href="c-api/sys.html#c.Py_EncodeLocale">Py_EncodeLocale (C function)</a>
 </li>
-      <li><a href="c-api/init.html#c.Py_END_ALLOW_THREADS">Py_END_ALLOW_THREADS (C macro)</a>, <a href="c-api/init.html#index-35">[1]</a>
+      <li><a href="c-api/init.html#c.Py_END_ALLOW_THREADS">Py_END_ALLOW_THREADS (C macro)</a>
+</li>
+      <li><a href="c-api/init.html#index-35">Py_END_ALLOW_THREADS（C 巨集）</a>
 </li>
       <li><a href="c-api/init.html#c.Py_EndInterpreter">Py_EndInterpreter (C function)</a>
 </li>
@@ -25312,7 +25310,9 @@
 </li>
       <li><a href="c-api/init.html#c.Py_Finalize">Py_Finalize (C function)</a>
 </li>
-      <li><a href="c-api/init.html#c.Py_FinalizeEx">Py_FinalizeEx (C function)</a>, <a href="c-api/init.html#index-15">[1]</a>, <a href="c-api/init.html#index-43">[2]</a>, <a href="c-api/init.html#index-46">[3]</a>, <a href="c-api/sys.html#index-3">[4]</a>, <a href="c-api/sys.html#index-4">[5]</a>
+      <li><a href="c-api/init.html#c.Py_FinalizeEx">Py_FinalizeEx (C function)</a>
+</li>
+      <li><a href="c-api/init.html#index-15">Py_FinalizeEx（C 函式）</a>, <a href="c-api/init.html#index-43">[1]</a>, <a href="c-api/init.html#index-46">[2]</a>, <a href="c-api/sys.html#index-3">[3]</a>, <a href="c-api/sys.html#index-4">[4]</a>
 </li>
       <li><a href="c-api/init.html#c.Py_FrozenFlag">Py_FrozenFlag (C var)</a>
 </li>
@@ -25332,17 +25332,25 @@
 </li>
       <li><a href="c-api/intro.html#c.Py_GETENV">Py_GETENV (C macro)</a>
 </li>
-      <li><a href="c-api/init.html#c.Py_GetExecPrefix">Py_GetExecPrefix (C function)</a>, <a href="c-api/intro.html#index-23">[1]</a>
+      <li><a href="c-api/init.html#c.Py_GetExecPrefix">Py_GetExecPrefix (C function)</a>
 </li>
-      <li><a href="c-api/init.html#c.Py_GetPath">Py_GetPath (C function)</a>, <a href="c-api/intro.html#index-23">[1]</a>
+      <li><a href="c-api/intro.html#index-23">Py_GetExecPrefix（C 函式）</a>
+</li>
+      <li><a href="c-api/init.html#c.Py_GetPath">Py_GetPath (C function)</a>
 </li>
       <li><a href="c-api/init.html#index-19">Py_GetPath()</a>, <a href="c-api/init.html#index-23">[1]</a>
 </li>
+      <li><a href="c-api/intro.html#index-23">Py_GetPath（C 函式）</a>
+</li>
       <li><a href="c-api/init.html#c.Py_GetPlatform">Py_GetPlatform (C function)</a>
 </li>
-      <li><a href="c-api/init.html#c.Py_GetPrefix">Py_GetPrefix (C function)</a>, <a href="c-api/intro.html#index-23">[1]</a>
+      <li><a href="c-api/init.html#c.Py_GetPrefix">Py_GetPrefix (C function)</a>
 </li>
-      <li><a href="c-api/init.html#c.Py_GetProgramFullPath">Py_GetProgramFullPath (C function)</a>, <a href="c-api/intro.html#index-23">[1]</a>
+      <li><a href="c-api/intro.html#index-23">Py_GetPrefix（C 函式）</a>
+</li>
+      <li><a href="c-api/init.html#c.Py_GetProgramFullPath">Py_GetProgramFullPath (C function)</a>
+</li>
+      <li><a href="c-api/intro.html#index-23">Py_GetProgramFullPath（C 函式）</a>
 </li>
       <li><a href="c-api/init.html#c.Py_GetProgramName">Py_GetProgramName (C function)</a>
 </li>
@@ -25358,17 +25366,21 @@
 </li>
       <li><a href="c-api/init.html#c.Py_IgnoreEnvironmentFlag">Py_IgnoreEnvironmentFlag (C var)</a>
 </li>
-      <li><a href="c-api/intro.html#index-4">Py_INCREF (C function)</a>, <a href="c-api/refcounting.html#c.Py_INCREF">[1]</a>
+      <li><a href="c-api/refcounting.html#c.Py_INCREF">Py_INCREF (C function)</a>
 </li>
       <li><a href="c-api/refcounting.html#c.Py_IncRef">Py_IncRef (C function)</a>
 </li>
-      <li><a href="c-api/init.html#c.Py_Initialize">Py_Initialize (C function)</a>, <a href="c-api/init.html#index-43">[1]</a>, <a href="c-api/intro.html#index-18">[2]</a>
+      <li><a href="c-api/intro.html#index-4">Py_INCREF（C 函式）</a>
+</li>
+      <li><a href="c-api/init.html#c.Py_Initialize">Py_Initialize (C function)</a>
 </li>
       <li><a href="c-api/init.html#index-16">Py_Initialize()</a>, <a href="c-api/init.html#index-19">[1]</a>
 </li>
       <li><a href="c-api/init.html#c.Py_InitializeEx">Py_InitializeEx (C function)</a>
 </li>
       <li><a href="c-api/init_config.html#c.Py_InitializeFromConfig">Py_InitializeFromConfig (C function)</a>
+</li>
+      <li><a href="c-api/init.html#index-43">Py_Initialize（C 函式）</a>, <a href="c-api/intro.html#index-18">[1]</a>
 </li>
       <li><a href="c-api/init.html#c.Py_InspectFlag">Py_InspectFlag (C var)</a>
 </li>
@@ -25380,7 +25392,9 @@
 </li>
       <li><a href="c-api/structures.html#c.Py_IsFalse">Py_IsFalse (C function)</a>
 </li>
-      <li><a href="c-api/init.html#c.Py_IsInitialized">Py_IsInitialized (C function)</a>, <a href="c-api/intro.html#index-26">[1]</a>
+      <li><a href="c-api/init.html#c.Py_IsInitialized">Py_IsInitialized (C function)</a>
+</li>
+      <li><a href="c-api/intro.html#index-26">Py_IsInitialized（C 函式）</a>
 </li>
       <li><a href="c-api/structures.html#c.Py_IsNone">Py_IsNone (C function)</a>
 </li>
@@ -25454,7 +25468,9 @@
 </li>
       <li><a href="c-api/init_config.html#c.Py_PreInitializeFromBytesArgs">Py_PreInitializeFromBytesArgs (C function)</a>
 </li>
-      <li><a href="c-api/file.html#index-2">Py_PRINT_RAW (C macro)</a>, <a href="c-api/object.html#c.Py_PRINT_RAW">[1]</a>
+      <li><a href="c-api/object.html#c.Py_PRINT_RAW">Py_PRINT_RAW (C macro)</a>
+</li>
+      <li><a href="c-api/file.html#index-2">Py_PRINT_RAW（C 巨集）</a>
 </li>
       <li><a href="using/windows.html#index-26">PY_PYTHON</a>
 </li>
@@ -25500,9 +25516,11 @@
 </li>
       <li><a href="c-api/init.html#index-22">Py_SetPath()</a>
 </li>
-      <li><a href="c-api/init.html#c.Py_SetProgramName">Py_SetProgramName (C function)</a>, <a href="c-api/intro.html#index-23">[1]</a>
+      <li><a href="c-api/init.html#c.Py_SetProgramName">Py_SetProgramName (C function)</a>
 </li>
       <li><a href="c-api/init.html#index-15">Py_SetProgramName()</a>, <a href="c-api/init.html#index-20">[1]</a>, <a href="c-api/init.html#index-21">[2]</a>
+</li>
+      <li><a href="c-api/intro.html#index-23">Py_SetProgramName（C 函式）</a>
 </li>
       <li><a href="c-api/init.html#c.Py_SetPythonHome">Py_SetPythonHome (C function)</a>
 </li>
@@ -25516,7 +25534,7 @@
 </li>
       <li><a href="c-api/intro.html#c.Py_ssize_t">Py_ssize_t (C type)</a>
 </li>
-      <li><a href="c-api/long.html#index-3">PY_SSIZE_T_MAX (C macro)</a>
+      <li><a href="c-api/long.html#index-3">PY_SSIZE_T_MAX（C 巨集）</a>
 </li>
       <li><a href="library/sys.monitoring.html#monitoring-event-PY_START">PY_START (monitoring event)</a>
 </li>
@@ -25694,7 +25712,9 @@
 </li>
       <li><a href="c-api/gcsupport.html#c.Py_VISIT">Py_VISIT (C function)</a>
 </li>
-      <li><a href="c-api/intro.html#index-17">Py_XDECREF (C function)</a>, <a href="c-api/refcounting.html#c.Py_XDECREF">[1]</a>
+      <li><a href="c-api/refcounting.html#c.Py_XDECREF">Py_XDECREF (C function)</a>
+</li>
+      <li><a href="c-api/intro.html#index-17">Py_XDECREF（C 函式）</a>
 </li>
       <li><a href="c-api/refcounting.html#c.Py_XINCREF">Py_XINCREF (C function)</a>
 </li>
@@ -25712,9 +25732,13 @@
 </li>
       <li><a href="c-api/arg.html#c.PyArg_Parse">PyArg_Parse (C function)</a>
 </li>
-      <li><a href="c-api/arg.html#c.PyArg_ParseTuple">PyArg_ParseTuple (C function)</a>, <a href="extending/extending.html#index-2">[1]</a>
+      <li><a href="c-api/arg.html#c.PyArg_ParseTuple">PyArg_ParseTuple (C function)</a>
 </li>
-      <li><a href="c-api/arg.html#c.PyArg_ParseTupleAndKeywords">PyArg_ParseTupleAndKeywords (C function)</a>, <a href="extending/extending.html#index-3">[1]</a>
+      <li><a href="c-api/arg.html#c.PyArg_ParseTupleAndKeywords">PyArg_ParseTupleAndKeywords (C function)</a>
+</li>
+      <li><a href="extending/extending.html#index-3">PyArg_ParseTupleAndKeywords（C 函式）</a>
+</li>
+      <li><a href="extending/extending.html#index-2">PyArg_ParseTuple（C 函式）</a>
 </li>
       <li><a href="c-api/arg.html#c.PyArg_UnpackTuple">PyArg_UnpackTuple (C function)</a>
 </li>
@@ -25798,11 +25822,13 @@
 </li>
       <li><a href="c-api/buffer.html#c.PyBuffer_ToContiguous">PyBuffer_ToContiguous (C function)</a>
 </li>
-      <li><a href="c-api/buffer.html#index-1">PyBufferProcs (C type)</a>, <a href="c-api/typeobj.html#c.PyBufferProcs">[1]</a>
+      <li><a href="c-api/typeobj.html#c.PyBufferProcs">PyBufferProcs (C type)</a>
 </li>
       <li><a href="c-api/typeobj.html#c.PyBufferProcs.bf_getbuffer">PyBufferProcs.bf_getbuffer (C member)</a>
 </li>
       <li><a href="c-api/typeobj.html#c.PyBufferProcs.bf_releasebuffer">PyBufferProcs.bf_releasebuffer (C member)</a>
+</li>
+      <li><a href="c-api/buffer.html#index-1">PyBufferProcs（C 型別）</a>
 </li>
       <li><a href="c-api/bytearray.html#c.PyByteArray_AS_STRING">PyByteArray_AS_STRING (C function)</a>
 </li>
@@ -25963,11 +25989,11 @@
 </li>
       <li><a href="c-api/code.html#c.PyCode_GetVarnames">PyCode_GetVarnames (C function)</a>
 </li>
-      <li><a href="c-api/code.html#index-1">PyCode_New (C function)</a>
-</li>
       <li><a href="c-api/code.html#c.PyCode_NewEmpty">PyCode_NewEmpty (C function)</a>
 </li>
-      <li><a href="c-api/code.html#index-2">PyCode_NewWithPosOnlyArgs (C function)</a>
+      <li><a href="c-api/code.html#index-2">PyCode_NewWithPosOnlyArgs（C 函式）</a>
+</li>
+      <li><a href="c-api/code.html#index-1">PyCode_New（C 函式）</a>
 </li>
       <li><a href="c-api/code.html#c.PyCode_Type">PyCode_Type (C var)</a>
 </li>
@@ -26396,13 +26422,19 @@
 </li>
       <li><a href="c-api/exceptions.html#c.PyErr_CheckSignals">PyErr_CheckSignals (C function)</a>
 </li>
-      <li><a href="c-api/exceptions.html#c.PyErr_Clear">PyErr_Clear (C function)</a>, <a href="c-api/intro.html#index-12">[1]</a>, <a href="c-api/intro.html#index-17">[2]</a>
+      <li><a href="c-api/exceptions.html#c.PyErr_Clear">PyErr_Clear (C function)</a>
+</li>
+      <li><a href="c-api/intro.html#index-12">PyErr_Clear（C 函式）</a>, <a href="c-api/intro.html#index-17">[1]</a>
 </li>
       <li><a href="c-api/exceptions.html#c.PyErr_DisplayException">PyErr_DisplayException (C function)</a>
 </li>
-      <li><a href="c-api/exceptions.html#c.PyErr_ExceptionMatches">PyErr_ExceptionMatches (C function)</a>, <a href="c-api/intro.html#index-17">[1]</a>
+      <li><a href="c-api/exceptions.html#c.PyErr_ExceptionMatches">PyErr_ExceptionMatches (C function)</a>
 </li>
-      <li><a href="c-api/exceptions.html#c.PyErr_Fetch">PyErr_Fetch (C function)</a>, <a href="extending/newtypes.html#index-1">[1]</a>
+      <li><a href="c-api/intro.html#index-17">PyErr_ExceptionMatches（C 函式）</a>
+</li>
+      <li><a href="c-api/exceptions.html#c.PyErr_Fetch">PyErr_Fetch (C function)</a>
+</li>
+      <li><a href="extending/newtypes.html#index-1">PyErr_Fetch（C 函式）</a>
 </li>
       <li><a href="c-api/exceptions.html#c.PyErr_Format">PyErr_Format (C function)</a>
 </li>
@@ -26424,7 +26456,9 @@
 </li>
       <li><a href="c-api/exceptions.html#c.PyErr_NormalizeException">PyErr_NormalizeException (C function)</a>
 </li>
-      <li><a href="c-api/exceptions.html#c.PyErr_Occurred">PyErr_Occurred (C function)</a>, <a href="c-api/intro.html#index-11">[1]</a>
+      <li><a href="c-api/exceptions.html#c.PyErr_Occurred">PyErr_Occurred (C function)</a>
+</li>
+      <li><a href="c-api/intro.html#index-11">PyErr_Occurred（C 函式）</a>
 </li>
       <li><a href="c-api/exceptions.html#c.PyErr_Print">PyErr_Print (C function)</a>
 </li>
@@ -26432,7 +26466,9 @@
 </li>
       <li><a href="c-api/exceptions.html#c.PyErr_ResourceWarning">PyErr_ResourceWarning (C function)</a>
 </li>
-      <li><a href="c-api/exceptions.html#c.PyErr_Restore">PyErr_Restore (C function)</a>, <a href="extending/newtypes.html#index-1">[1]</a>
+      <li><a href="c-api/exceptions.html#c.PyErr_Restore">PyErr_Restore (C function)</a>
+</li>
+      <li><a href="extending/newtypes.html#index-1">PyErr_Restore（C 函式）</a>
 </li>
       <li><a href="c-api/exceptions.html#c.PyErr_SetExcFromWindowsErr">PyErr_SetExcFromWindowsErr (C function)</a>
 </li>
@@ -26472,7 +26508,9 @@
 </li>
       <li><a href="c-api/exceptions.html#c.PyErr_SetRaisedException">PyErr_SetRaisedException (C function)</a>
 </li>
-      <li><a href="c-api/exceptions.html#c.PyErr_SetString">PyErr_SetString (C function)</a>, <a href="c-api/intro.html#index-12">[1]</a>
+      <li><a href="c-api/exceptions.html#c.PyErr_SetString">PyErr_SetString (C function)</a>
+</li>
+      <li><a href="c-api/intro.html#index-12">PyErr_SetString（C 函式）</a>
 </li>
       <li><a href="c-api/exceptions.html#c.PyErr_SyntaxLocation">PyErr_SyntaxLocation (C function)</a>
 </li>
@@ -26528,13 +26566,17 @@
 </li>
       <li><a href="c-api/init.html#index-37">PyEval_ReleaseThread()</a>
 </li>
-      <li><a href="c-api/init.html#c.PyEval_RestoreThread">PyEval_RestoreThread (C function)</a>, <a href="c-api/init.html#index-36">[1]</a>
+      <li><a href="c-api/init.html#c.PyEval_RestoreThread">PyEval_RestoreThread (C function)</a>
 </li>
       <li><a href="c-api/init.html#index-37">PyEval_RestoreThread()</a>
 </li>
-      <li><a href="c-api/init.html#c.PyEval_SaveThread">PyEval_SaveThread (C function)</a>, <a href="c-api/init.html#index-36">[1]</a>
+      <li><a href="c-api/init.html#index-36">PyEval_RestoreThread（C 函式）</a>
+</li>
+      <li><a href="c-api/init.html#c.PyEval_SaveThread">PyEval_SaveThread (C function)</a>
 </li>
       <li><a href="c-api/init.html#index-37">PyEval_SaveThread()</a>
+</li>
+      <li><a href="c-api/init.html#index-36">PyEval_SaveThread（C 函式）</a>
 </li>
       <li><a href="c-api/init.html#c.PyEval_SetProfile">PyEval_SetProfile (C function)</a>
 </li>
@@ -26546,139 +26588,139 @@
 </li>
       <li><a href="c-api/init.html#c.PyEval_ThreadsInitialized">PyEval_ThreadsInitialized (C function)</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_ArithmeticError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_ArithmeticError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_AssertionError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_AssertionError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_AttributeError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_AttributeError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_BaseException (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_BaseException（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_BlockingIOError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_BlockingIOError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_BrokenPipeError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_BrokenPipeError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_BufferError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_BufferError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-7">PyExc_BytesWarning (C var)</a>
+      <li><a href="c-api/exceptions.html#index-7">PyExc_BytesWarning（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_ChildProcessError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_ChildProcessError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_ConnectionAbortedError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_ConnectionAbortedError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_ConnectionError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_ConnectionError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_ConnectionRefusedError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_ConnectionRefusedError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_ConnectionResetError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_ConnectionResetError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-7">PyExc_DeprecationWarning (C var)</a>
+      <li><a href="c-api/exceptions.html#index-7">PyExc_DeprecationWarning（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-6">PyExc_EnvironmentError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-6">PyExc_EnvironmentError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_EOFError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_EOFError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_Exception (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_Exception（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_FileExistsError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_FileExistsError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_FileNotFoundError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_FileNotFoundError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_FloatingPointError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_FloatingPointError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-7">PyExc_FutureWarning (C var)</a>
+      <li><a href="c-api/exceptions.html#index-7">PyExc_FutureWarning（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_GeneratorExit (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_GeneratorExit（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_ImportError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_ImportError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-7">PyExc_ImportWarning (C var)</a>
+      <li><a href="c-api/exceptions.html#index-7">PyExc_ImportWarning（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_IndentationError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_IndentationError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_IndexError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_IndexError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_InterruptedError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_InterruptedError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-6">PyExc_IOError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-6">PyExc_IOError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_IsADirectoryError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_IsADirectoryError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_KeyboardInterrupt (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_KeyboardInterrupt（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_KeyError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_KeyError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_LookupError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_LookupError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_MemoryError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_MemoryError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_ModuleNotFoundError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_ModuleNotFoundError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_NameError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_NameError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_NotADirectoryError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_NotADirectoryError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_NotImplementedError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_NotImplementedError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_OSError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_OSError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_OverflowError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_OverflowError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-7">PyExc_PendingDeprecationWarning (C var)</a>
+      <li><a href="c-api/exceptions.html#index-7">PyExc_PendingDeprecationWarning（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_PermissionError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_PermissionError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_ProcessLookupError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_ProcessLookupError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_RecursionError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_RecursionError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_ReferenceError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_ReferenceError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-7">PyExc_ResourceWarning (C var)</a>
+      <li><a href="c-api/exceptions.html#index-7">PyExc_ResourceWarning（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_RuntimeError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_RuntimeError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-7">PyExc_RuntimeWarning (C var)</a>
+      <li><a href="c-api/exceptions.html#index-7">PyExc_RuntimeWarning（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_StopAsyncIteration (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_StopAsyncIteration（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_StopIteration (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_StopIteration（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_SyntaxError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_SyntaxError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-7">PyExc_SyntaxWarning (C var)</a>
+      <li><a href="c-api/exceptions.html#index-7">PyExc_SyntaxWarning（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_SystemError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_SystemError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_SystemExit (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_SystemExit（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_TabError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_TabError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_TimeoutError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_TimeoutError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_TypeError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_TypeError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_UnboundLocalError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_UnboundLocalError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_UnicodeDecodeError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_UnicodeDecodeError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_UnicodeEncodeError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_UnicodeEncodeError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_UnicodeError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_UnicodeError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_UnicodeTranslateError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_UnicodeTranslateError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-7">PyExc_UnicodeWarning (C var)</a>
+      <li><a href="c-api/exceptions.html#index-7">PyExc_UnicodeWarning（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-7">PyExc_UserWarning (C var)</a>
+      <li><a href="c-api/exceptions.html#index-7">PyExc_UserWarning（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_ValueError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_ValueError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-7">PyExc_Warning (C var)</a>
+      <li><a href="c-api/exceptions.html#index-7">PyExc_Warning（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-6">PyExc_WindowsError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-6">PyExc_WindowsError（C 變數）</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-4">PyExc_ZeroDivisionError (C var)</a>
+      <li><a href="c-api/exceptions.html#index-4">PyExc_ZeroDivisionError（C 變數）</a>
 </li>
       <li><a href="c-api/exceptions.html#c.PyException_GetArgs">PyException_GetArgs (C function)</a>
 </li>
@@ -26821,6 +26863,8 @@
 </li>
       <li><a href="c-api/function.html#c.PyFunctionObject">PyFunctionObject (C type)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/ctypes.html#ctypes.PYFUNCTYPE">PYFUNCTYPE() (於 ctypes 模組中)</a>
 </li>
       <li><a href="c-api/gcsupport.html#c.PyGC_Collect">PyGC_Collect (C function)</a>
@@ -26843,8 +26887,6 @@
 </li>
       <li><a href="c-api/gen.html#c.PyGenObject">PyGenObject (C type)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="c-api/structures.html#c.PyGetSetDef">PyGetSetDef (C type)</a>
 </li>
       <li><a href="c-api/structures.html#c.PyGetSetDef.closure">PyGetSetDef.closure (C member)</a>
@@ -27007,7 +27049,9 @@
 </li>
       <li><a href="c-api/list.html#c.PyList_GET_SIZE">PyList_GET_SIZE (C function)</a>
 </li>
-      <li><a href="c-api/intro.html#index-7">PyList_GetItem (C function)</a>, <a href="c-api/list.html#c.PyList_GetItem">[1]</a>
+      <li><a href="c-api/list.html#c.PyList_GetItem">PyList_GetItem (C function)</a>
+</li>
+      <li><a href="c-api/intro.html#index-7">PyList_GetItem（C 函式）</a>
 </li>
       <li><a href="c-api/list.html#c.PyList_GetSlice">PyList_GetSlice (C function)</a>
 </li>
@@ -27019,7 +27063,9 @@
 </li>
       <li><a href="c-api/list.html#c.PyList_SET_ITEM">PyList_SET_ITEM (C function)</a>
 </li>
-      <li><a href="c-api/intro.html#index-5">PyList_SetItem (C function)</a>, <a href="c-api/list.html#c.PyList_SetItem">[1]</a>
+      <li><a href="c-api/list.html#c.PyList_SetItem">PyList_SetItem (C function)</a>
+</li>
+      <li><a href="c-api/intro.html#index-5">PyList_SetItem（C 函式）</a>
 </li>
       <li><a href="c-api/list.html#c.PyList_SetSlice">PyList_SetSlice (C function)</a>
 </li>
@@ -27493,7 +27539,9 @@
 </li>
       <li><a href="c-api/call.html#c.PyObject_CallNoArgs">PyObject_CallNoArgs (C function)</a>
 </li>
-      <li><a href="c-api/call.html#c.PyObject_CallObject">PyObject_CallObject (C function)</a>, <a href="extending/extending.html#index-1">[1]</a>
+      <li><a href="c-api/call.html#c.PyObject_CallObject">PyObject_CallObject (C function)</a>
+</li>
+      <li><a href="extending/extending.html#index-1">PyObject_CallObject（C 函式）</a>
 </li>
       <li><a href="c-api/memory.html#c.PyObject_Calloc">PyObject_Calloc (C function)</a>
 </li>
@@ -27767,7 +27815,9 @@
 </li>
       <li><a href="c-api/sequence.html#c.PySequence_Fast_ITEMS">PySequence_Fast_ITEMS (C function)</a>
 </li>
-      <li><a href="c-api/intro.html#index-7">PySequence_GetItem (C function)</a>, <a href="c-api/sequence.html#c.PySequence_GetItem">[1]</a>
+      <li><a href="c-api/sequence.html#c.PySequence_GetItem">PySequence_GetItem (C function)</a>
+</li>
+      <li><a href="c-api/intro.html#index-7">PySequence_GetItem（C 函式）</a>
 </li>
       <li><a href="c-api/sequence.html#c.PySequence_GetSlice">PySequence_GetSlice (C function)</a>
 </li>
@@ -27933,9 +27983,13 @@
 </li>
       <li><a href="c-api/sys.html#c.PySys_ResetWarnOptions">PySys_ResetWarnOptions (C function)</a>
 </li>
-      <li><a href="c-api/init.html#c.PySys_SetArgv">PySys_SetArgv (C function)</a>, <a href="c-api/init.html#index-15">[1]</a>
+      <li><a href="c-api/init.html#c.PySys_SetArgv">PySys_SetArgv (C function)</a>
 </li>
-      <li><a href="c-api/init.html#c.PySys_SetArgvEx">PySys_SetArgvEx (C function)</a>, <a href="c-api/init.html#index-15">[1]</a>
+      <li><a href="c-api/init.html#c.PySys_SetArgvEx">PySys_SetArgvEx (C function)</a>
+</li>
+      <li><a href="c-api/init.html#index-15">PySys_SetArgvEx（C 函式）</a>
+</li>
+      <li><a href="c-api/init.html#index-15">PySys_SetArgv（C 函式）</a>
 </li>
       <li><a href="c-api/sys.html#c.PySys_SetObject">PySys_SetObject (C function)</a>
 </li>
@@ -28099,7 +28153,7 @@
 </li>
         <li><a href="reference/simple_stmts.html#index-13">PEP 3132</a>, <a href="whatsnew/3.0.html#index-9">[1]</a>
 </li>
-        <li><a href="library/exceptions.html#index-3">PEP 3134</a>, <a href="whatsnew/3.0.html#index-12">[1]</a>, <a href="whatsnew/3.0.html#index-28">[2]</a>, <a href="whatsnew/3.0.html#index-29">[3]</a>, <a href="whatsnew/changelog.html#index-65">[4]</a>
+        <li><a href="library/exceptions.html#index-14">PEP 3134</a>, <a href="whatsnew/3.0.html#index-12">[1]</a>, <a href="whatsnew/3.0.html#index-28">[2]</a>, <a href="whatsnew/3.0.html#index-29">[3]</a>, <a href="whatsnew/changelog.html#index-65">[4]</a>
 </li>
         <li><a href="reference/datamodel.html#index-93">PEP 3135</a>, <a href="whatsnew/3.0.html#index-31">[1]</a>
 </li>
@@ -28171,7 +28225,7 @@
 </li>
         <li><a href="library/importlib.html#index-4">PEP 366</a>, <a href="library/runpy.html#index-7">[1]</a>, <a href="reference/import.html#index-11">[2]</a>, <a href="reference/import.html#index-12">[3]</a>, <a href="reference/import.html#index-23">[4]</a>, <a href="reference/import.html#index-25">[5]</a>, <a href="whatsnew/3.3.html#index-22">[6]</a>
 </li>
-        <li><a href="library/site.html#index-9">PEP 370</a>, <a href="using/cmdline.html#index-15">[1]</a>, <a href="using/cmdline.html#index-37">[2]</a>, <a href="using/cmdline.html#index-38">[3]</a>, <a href="whatsnew/2.6.html#index-7">[4]</a>, <a href="whatsnew/changelog.html#index-46">[5]</a>
+        <li><a href="library/site.html#index-9">PEP 370</a>, <a href="using/cmdline.html#index-16">[1]</a>, <a href="using/cmdline.html#index-39">[2]</a>, <a href="using/cmdline.html#index-40">[3]</a>, <a href="whatsnew/2.6.html#index-7">[4]</a>, <a href="whatsnew/changelog.html#index-46">[5]</a>
 </li>
         <li><a href="whatsnew/2.6.html#index-8">PEP 371</a>
 </li>
@@ -28191,7 +28245,7 @@
 </li>
         <li><a href="whatsnew/3.2.html#index-14">PEP 385</a>
 </li>
-        <li><a href="c-api/stable.html#index-3">PEP 387</a>, <a href="library/exceptions.html#index-11">[1]</a>, <a href="library/exceptions.html#index-12">[2]</a>
+        <li><a href="c-api/stable.html#index-3">PEP 387</a>, <a href="faq/general.html#index-0">[1]</a>, <a href="library/exceptions.html#index-11">[2]</a>, <a href="library/exceptions.html#index-12">[3]</a>
 </li>
         <li><a href="whatsnew/2.7.html#index-4">PEP 389</a>, <a href="whatsnew/3.2.html#index-2">[1]</a>
 </li>
@@ -28279,19 +28333,19 @@
 </li>
         <li><a href="library/__future__.html#index-31">PEP 479</a>, <a href="library/exceptions.html#index-6">[1]</a>, <a href="library/exceptions.html#index-7">[2]</a>, <a href="whatsnew/3.5.html#index-17">[3]</a>, <a href="whatsnew/3.5.html#index-18">[4]</a>, <a href="whatsnew/3.7.html#index-37">[5]</a>, <a href="whatsnew/changelog.html#index-221">[6]</a>, <a href="whatsnew/changelog.html#index-229">[7]</a>, <a href="whatsnew/changelog.html#index-232">[8]</a>, <a href="whatsnew/changelog.html#index-254">[9]</a>, <a href="whatsnew/changelog.html#index-275">[10]</a>, <a href="whatsnew/changelog.html#index-289">[11]</a>
 </li>
-        <li><a href="glossary.html#index-96">PEP 483</a>, <a href="library/typing.html#index-136">[1]</a>, <a href="library/typing.html#index-138">[2]</a>, <a href="whatsnew/3.5.html#index-12">[3]</a>
+        <li><a href="glossary.html#index-96">PEP 483</a>, <a href="library/typing.html#index-137">[1]</a>, <a href="library/typing.html#index-139">[2]</a>, <a href="whatsnew/3.5.html#index-12">[3]</a>
 </li>
-        <li><a href="glossary.html#index-107">PEP 484</a>, <a href="glossary.html#index-108">[1]</a>, <a href="glossary.html#index-111">[2]</a>, <a href="glossary.html#index-77">[3]</a>, <a href="glossary.html#index-94">[4]</a>, <a href="glossary.html#index-97">[5]</a>, <a href="library/ast.html#index-14">[6]</a>, <a href="library/ast.html#index-15">[7]</a>, <a href="library/ast.html#index-17">[8]</a>, <a href="library/ast.html#index-18">[9]</a>, <a href="library/stdtypes.html#index-57">[10]</a>, <a href="library/typing.html#index-135">[11]</a>, <a href="library/typing.html#index-137">[12]</a>, <a href="library/typing.html#index-158">[13]</a>, <a href="library/typing.html#index-26">[14]</a>, <a href="library/typing.html#index-27">[15]</a>, <a href="library/typing.html#index-41">[16]</a>, <a href="library/typing.html#index-54">[17]</a>, <a href="reference/compound_stmts.html#index-37">[18]</a>, <a href="reference/datamodel.html#index-95">[19]</a>, <a href="reference/simple_stmts.html#index-17">[20]</a>, <a href="tutorial/controlflow.html#index-17">[21]</a>, <a href="whatsnew/3.10.html#index-101">[22]</a>, <a href="whatsnew/3.10.html#index-103">[23]</a>, <a href="whatsnew/3.10.html#index-99">[24]</a>, <a href="whatsnew/3.11.html#index-93">[25]</a>, <a href="whatsnew/3.11.html#index-94">[26]</a>, <a href="whatsnew/3.12.html#index-15">[27]</a>, <a href="whatsnew/3.12.html#index-16">[28]</a>, <a href="whatsnew/3.12.html#index-3">[29]</a>, <a href="whatsnew/3.5.html#index-10">[30]</a>, <a href="whatsnew/3.5.html#index-11">[31]</a>, <a href="whatsnew/3.6.html#index-5">[32]</a>, <a href="whatsnew/3.7.html#index-20">[33]</a>, <a href="whatsnew/3.8.html#index-10">[34]</a>, <a href="whatsnew/3.8.html#index-12">[35]</a>
+        <li><a href="glossary.html#index-107">PEP 484</a>, <a href="glossary.html#index-108">[1]</a>, <a href="glossary.html#index-111">[2]</a>, <a href="glossary.html#index-77">[3]</a>, <a href="glossary.html#index-94">[4]</a>, <a href="glossary.html#index-97">[5]</a>, <a href="library/ast.html#index-14">[6]</a>, <a href="library/ast.html#index-15">[7]</a>, <a href="library/ast.html#index-17">[8]</a>, <a href="library/ast.html#index-18">[9]</a>, <a href="library/stdtypes.html#index-57">[10]</a>, <a href="library/typing.html#index-136">[11]</a>, <a href="library/typing.html#index-138">[12]</a>, <a href="library/typing.html#index-159">[13]</a>, <a href="library/typing.html#index-26">[14]</a>, <a href="library/typing.html#index-27">[15]</a>, <a href="library/typing.html#index-41">[16]</a>, <a href="library/typing.html#index-54">[17]</a>, <a href="reference/compound_stmts.html#index-37">[18]</a>, <a href="reference/datamodel.html#index-95">[19]</a>, <a href="reference/simple_stmts.html#index-17">[20]</a>, <a href="tutorial/controlflow.html#index-17">[21]</a>, <a href="whatsnew/3.10.html#index-101">[22]</a>, <a href="whatsnew/3.10.html#index-103">[23]</a>, <a href="whatsnew/3.10.html#index-99">[24]</a>, <a href="whatsnew/3.11.html#index-93">[25]</a>, <a href="whatsnew/3.11.html#index-94">[26]</a>, <a href="whatsnew/3.12.html#index-15">[27]</a>, <a href="whatsnew/3.12.html#index-16">[28]</a>, <a href="whatsnew/3.12.html#index-3">[29]</a>, <a href="whatsnew/3.5.html#index-10">[30]</a>, <a href="whatsnew/3.5.html#index-11">[31]</a>, <a href="whatsnew/3.6.html#index-5">[32]</a>, <a href="whatsnew/3.7.html#index-20">[33]</a>, <a href="whatsnew/3.8.html#index-10">[34]</a>, <a href="whatsnew/3.8.html#index-12">[35]</a>
 </li>
         <li><a href="whatsnew/3.11.html#index-98">PEP 484#annotating-instance-and-class-methods</a>
 </li>
-        <li><a href="library/cmath.html#index-0">PEP 485</a>, <a href="library/math.html#index-0">[1]</a>, <a href="whatsnew/3.5.html#index-19">[2]</a>, <a href="whatsnew/3.5.html#index-20">[3]</a>, <a href="whatsnew/changelog.html#index-296">[4]</a>
+        <li><a href="library/cmath.html#index-3">PEP 485</a>, <a href="library/math.html#index-0">[1]</a>, <a href="whatsnew/3.5.html#index-19">[2]</a>, <a href="whatsnew/3.5.html#index-20">[3]</a>, <a href="whatsnew/changelog.html#index-296">[4]</a>
 </li>
         <li><a href="whatsnew/3.5.html#index-21">PEP 486</a>, <a href="whatsnew/3.5.html#index-23">[1]</a>, <a href="whatsnew/changelog.html#index-301">[2]</a>
 </li>
         <li><a href="whatsnew/3.6.html#index-13">PEP 487</a>, <a href="whatsnew/3.6.html#index-14">[1]</a>, <a href="whatsnew/3.6.html#index-15">[2]</a>, <a href="whatsnew/3.6.html#index-37">[3]</a>, <a href="whatsnew/changelog.html#index-251">[4]</a>, <a href="whatsnew/changelog.html#index-261">[5]</a>, <a href="whatsnew/changelog.html#index-270">[6]</a>
 </li>
-        <li><a href="library/importlib.html#index-22">PEP 488</a>, <a href="library/importlib.html#index-25">[1]</a>, <a href="library/importlib.html#index-7">[2]</a>, <a href="library/py_compile.html#index-2">[3]</a>, <a href="library/test.html#index-4">[4]</a>, <a href="using/cmdline.html#index-10">[5]</a>, <a href="using/cmdline.html#index-50">[6]</a>, <a href="using/cmdline.html#index-51">[7]</a>, <a href="using/cmdline.html#index-7">[8]</a>, <a href="whatsnew/3.5.html#index-24">[9]</a>, <a href="whatsnew/3.5.html#index-25">[10]</a>, <a href="whatsnew/3.5.html#index-50">[11]</a>, <a href="whatsnew/changelog.html#index-298">[12]</a>
+        <li><a href="library/importlib.html#index-22">PEP 488</a>, <a href="library/importlib.html#index-25">[1]</a>, <a href="library/importlib.html#index-7">[2]</a>, <a href="library/py_compile.html#index-2">[3]</a>, <a href="library/test.html#index-4">[4]</a>, <a href="using/cmdline.html#index-10">[5]</a>, <a href="using/cmdline.html#index-52">[6]</a>, <a href="using/cmdline.html#index-53">[7]</a>, <a href="using/cmdline.html#index-7">[8]</a>, <a href="whatsnew/3.5.html#index-24">[9]</a>, <a href="whatsnew/3.5.html#index-25">[10]</a>, <a href="whatsnew/3.5.html#index-50">[11]</a>, <a href="whatsnew/changelog.html#index-298">[12]</a>
 </li>
         <li><a href="c-api/init.html#index-41">PEP 489</a>, <a href="c-api/module.html#index-8">[1]</a>, <a href="extending/building.html#index-1">[2]</a>, <a href="extending/extending.html#index-0">[3]</a>, <a href="library/importlib.html#index-17">[4]</a>, <a href="library/importlib.html#index-18">[5]</a>, <a href="library/importlib.html#index-19">[6]</a>, <a href="library/importlib.html#index-20">[7]</a>, <a href="library/importlib.html#index-26">[8]</a>, <a href="library/importlib.html#index-8">[9]</a>, <a href="whatsnew/3.5.html#index-26">[10]</a>, <a href="whatsnew/3.5.html#index-28">[11]</a>, <a href="whatsnew/3.5.html#index-45">[12]</a>, <a href="whatsnew/changelog.html#index-111">[13]</a>, <a href="whatsnew/changelog.html#index-112">[14]</a>, <a href="whatsnew/changelog.html#index-114">[15]</a>, <a href="whatsnew/changelog.html#index-117">[16]</a>, <a href="whatsnew/changelog.html#index-119">[17]</a>, <a href="whatsnew/changelog.html#index-120">[18]</a>, <a href="whatsnew/changelog.html#index-121">[19]</a>, <a href="whatsnew/changelog.html#index-122">[20]</a>, <a href="whatsnew/changelog.html#index-123">[21]</a>, <a href="whatsnew/changelog.html#index-124">[22]</a>, <a href="whatsnew/changelog.html#index-125">[23]</a>, <a href="whatsnew/changelog.html#index-126">[24]</a>, <a href="whatsnew/changelog.html#index-127">[25]</a>, <a href="whatsnew/changelog.html#index-128">[26]</a>, <a href="whatsnew/changelog.html#index-129">[27]</a>, <a href="whatsnew/changelog.html#index-130">[28]</a>, <a href="whatsnew/changelog.html#index-131">[29]</a>, <a href="whatsnew/changelog.html#index-132">[30]</a>, <a href="whatsnew/changelog.html#index-134">[31]</a>, <a href="whatsnew/changelog.html#index-139">[32]</a>, <a href="whatsnew/changelog.html#index-140">[33]</a>, <a href="whatsnew/changelog.html#index-141">[34]</a>, <a href="whatsnew/changelog.html#index-142">[35]</a>, <a href="whatsnew/changelog.html#index-143">[36]</a>, <a href="whatsnew/changelog.html#index-144">[37]</a>, <a href="whatsnew/changelog.html#index-145">[38]</a>, <a href="whatsnew/changelog.html#index-146">[39]</a>, <a href="whatsnew/changelog.html#index-147">[40]</a>, <a href="whatsnew/changelog.html#index-148">[41]</a>, <a href="whatsnew/changelog.html#index-149">[42]</a>, <a href="whatsnew/changelog.html#index-153">[43]</a>, <a href="whatsnew/changelog.html#index-154">[44]</a>, <a href="whatsnew/changelog.html#index-155">[45]</a>, <a href="whatsnew/changelog.html#index-159">[46]</a>, <a href="whatsnew/changelog.html#index-160">[47]</a>, <a href="whatsnew/changelog.html#index-161">[48]</a>, <a href="whatsnew/changelog.html#index-165">[49]</a>, <a href="whatsnew/changelog.html#index-166">[50]</a>, <a href="whatsnew/changelog.html#index-167">[51]</a>, <a href="whatsnew/changelog.html#index-168">[52]</a>, <a href="whatsnew/changelog.html#index-169">[53]</a>, <a href="whatsnew/changelog.html#index-177">[54]</a>, <a href="whatsnew/changelog.html#index-178">[55]</a>, <a href="whatsnew/changelog.html#index-179">[56]</a>, <a href="whatsnew/changelog.html#index-182">[57]</a>, <a href="whatsnew/changelog.html#index-184">[58]</a>, <a href="whatsnew/changelog.html#index-186">[59]</a>, <a href="whatsnew/changelog.html#index-193">[60]</a>, <a href="whatsnew/changelog.html#index-194">[61]</a>, <a href="whatsnew/changelog.html#index-195">[62]</a>, <a href="whatsnew/changelog.html#index-196">[63]</a>, <a href="whatsnew/changelog.html#index-197">[64]</a>, <a href="whatsnew/changelog.html#index-202">[65]</a>, <a href="whatsnew/changelog.html#index-29">[66]</a>
 </li>
@@ -28305,7 +28359,7 @@
 </li>
         <li><a href="glossary.html#index-89">PEP 498</a>, <a href="reference/lexical_analysis.html#index-26">[1]</a>, <a href="whatsnew/3.6.html#index-3">[2]</a>, <a href="whatsnew/3.6.html#index-4">[3]</a>, <a href="whatsnew/changelog.html#index-287">[4]</a>
 </li>
-        <li><a href="faq/general.html#index-8">PEP 5</a>, <a href="whatsnew/2.1.html#index-6">[1]</a>
+        <li><a href="faq/general.html#index-6">PEP 5</a>, <a href="whatsnew/2.1.html#index-6">[1]</a>
 </li>
         <li><a href="library/secrets.html#index-0">PEP 506</a>, <a href="whatsnew/3.6.html#index-28">[1]</a>, <a href="whatsnew/changelog.html#index-288">[2]</a>
 </li>
@@ -28325,21 +28379,21 @@
 </li>
         <li><a href="glossary.html#index-82">PEP 525</a>, <a href="library/collections.abc.html#index-2">[1]</a>, <a href="library/inspect.html#index-3">[2]</a>, <a href="library/sys.html#index-30">[3]</a>, <a href="library/sys.html#index-43">[4]</a>, <a href="reference/expressions.html#index-29">[5]</a>, <a href="whatsnew/3.6.html#index-10">[6]</a>, <a href="whatsnew/changelog.html#index-264">[7]</a>
 </li>
-        <li><a href="glossary.html#index-112">PEP 526</a>, <a href="glossary.html#index-78">[1]</a>, <a href="library/ast.html#index-16">[2]</a>, <a href="library/ast.html#index-19">[3]</a>, <a href="library/dataclasses.html#index-1">[4]</a>, <a href="library/dataclasses.html#index-2">[5]</a>, <a href="library/typing.html#index-139">[6]</a>, <a href="library/typing.html#index-34">[7]</a>, <a href="library/typing.html#index-48">[8]</a>, <a href="library/typing.html#index-50">[9]</a>, <a href="reference/compound_stmts.html#index-38">[10]</a>, <a href="reference/simple_stmts.html#index-16">[11]</a>, <a href="whatsnew/3.10.html#index-107">[12]</a>, <a href="whatsnew/3.6.html#index-33">[13]</a>, <a href="whatsnew/3.6.html#index-6">[14]</a>, <a href="whatsnew/3.7.html#index-1">[15]</a>, <a href="whatsnew/3.8.html#index-11">[16]</a>, <a href="whatsnew/changelog.html#index-265">[17]</a>
+        <li><a href="glossary.html#index-112">PEP 526</a>, <a href="glossary.html#index-78">[1]</a>, <a href="library/ast.html#index-16">[2]</a>, <a href="library/ast.html#index-19">[3]</a>, <a href="library/dataclasses.html#index-1">[4]</a>, <a href="library/dataclasses.html#index-2">[5]</a>, <a href="library/typing.html#index-140">[6]</a>, <a href="library/typing.html#index-34">[7]</a>, <a href="library/typing.html#index-48">[8]</a>, <a href="library/typing.html#index-50">[9]</a>, <a href="reference/compound_stmts.html#index-38">[10]</a>, <a href="reference/simple_stmts.html#index-16">[11]</a>, <a href="whatsnew/3.10.html#index-107">[12]</a>, <a href="whatsnew/3.6.html#index-33">[13]</a>, <a href="whatsnew/3.6.html#index-6">[14]</a>, <a href="whatsnew/3.7.html#index-1">[15]</a>, <a href="whatsnew/3.8.html#index-11">[16]</a>, <a href="whatsnew/changelog.html#index-265">[17]</a>
 </li>
         <li><a href="c-api/init.html#index-70">PEP 528</a>, <a href="c-api/init_config.html#index-17">[1]</a>, <a href="using/windows.html#index-16">[2]</a>, <a href="whatsnew/3.6.html#index-22">[3]</a>
 </li>
-        <li><a href="c-api/init.html#index-69">PEP 529</a>, <a href="c-api/unicode.html#index-5">[1]</a>, <a href="library/os.html#index-27">[2]</a>, <a href="library/sys.html#index-44">[3]</a>, <a href="library/sys.html#index-9">[4]</a>, <a href="using/cmdline.html#index-54">[5]</a>, <a href="using/windows.html#index-17">[6]</a>, <a href="whatsnew/3.6.html#index-20">[7]</a>, <a href="whatsnew/3.8.html#index-19">[8]</a>, <a href="whatsnew/changelog.html#index-206">[9]</a>, <a href="whatsnew/changelog.html#index-260">[10]</a>, <a href="whatsnew/changelog.html#index-62">[11]</a>
+        <li><a href="c-api/init.html#index-69">PEP 529</a>, <a href="c-api/unicode.html#index-5">[1]</a>, <a href="library/os.html#index-27">[2]</a>, <a href="library/sys.html#index-44">[3]</a>, <a href="library/sys.html#index-9">[4]</a>, <a href="using/cmdline.html#index-56">[5]</a>, <a href="using/windows.html#index-17">[6]</a>, <a href="whatsnew/3.6.html#index-20">[7]</a>, <a href="whatsnew/3.8.html#index-19">[8]</a>, <a href="whatsnew/changelog.html#index-206">[9]</a>, <a href="whatsnew/changelog.html#index-260">[10]</a>, <a href="whatsnew/changelog.html#index-62">[11]</a>
 </li>
         <li><a href="reference/expressions.html#index-14">PEP 530</a>, <a href="whatsnew/3.6.html#index-11">[1]</a>, <a href="whatsnew/3.6.html#index-12">[2]</a>, <a href="whatsnew/changelog.html#index-267">[3]</a>
 </li>
-        <li><a href="c-api/init_config.html#index-33">PEP 538</a>, <a href="library/locale.html#index-6">[1]</a>, <a href="using/cmdline.html#index-55">[2]</a>, <a href="using/configure.html#index-34">[3]</a>, <a href="whatsnew/3.7.html#index-10">[4]</a>, <a href="whatsnew/3.7.html#index-3">[5]</a>, <a href="whatsnew/3.7.html#index-6">[6]</a>, <a href="whatsnew/3.7.html#index-7">[7]</a>, <a href="whatsnew/changelog.html#index-223">[8]</a>, <a href="whatsnew/changelog.html#index-227">[9]</a>, <a href="whatsnew/changelog.html#index-248">[10]</a>
+        <li><a href="c-api/init_config.html#index-33">PEP 538</a>, <a href="library/locale.html#index-6">[1]</a>, <a href="using/cmdline.html#index-57">[2]</a>, <a href="using/configure.html#index-34">[3]</a>, <a href="whatsnew/3.7.html#index-10">[4]</a>, <a href="whatsnew/3.7.html#index-3">[5]</a>, <a href="whatsnew/3.7.html#index-6">[6]</a>, <a href="whatsnew/3.7.html#index-7">[7]</a>, <a href="whatsnew/changelog.html#index-223">[8]</a>, <a href="whatsnew/changelog.html#index-227">[9]</a>, <a href="whatsnew/changelog.html#index-248">[10]</a>
 </li>
         <li><a href="c-api/init.html#index-48">PEP 539</a>, <a href="whatsnew/3.7.html#index-14">[1]</a>, <a href="whatsnew/3.7.html#index-15">[2]</a>, <a href="whatsnew/changelog.html#index-247">[3]</a>
 </li>
         <li><a href="c-api/init_config.html#index-34">PEP 540</a>, <a href="library/locale.html#index-7">[1]</a>, <a href="library/os.html#index-55">[2]</a>, <a href="whatsnew/3.7.html#index-11">[3]</a>, <a href="whatsnew/3.7.html#index-9">[4]</a>, <a href="whatsnew/changelog.html#index-237">[5]</a>
 </li>
-        <li><a href="library/typing.html#index-140">PEP 544</a>, <a href="library/typing.html#index-28">[1]</a>, <a href="library/typing.html#index-49">[2]</a>, <a href="whatsnew/3.8.html#index-18">[3]</a>
+        <li><a href="library/typing.html#index-141">PEP 544</a>, <a href="library/typing.html#index-28">[1]</a>, <a href="library/typing.html#index-49">[2]</a>, <a href="whatsnew/3.8.html#index-18">[3]</a>
 </li>
         <li><a href="whatsnew/3.7.html#index-24">PEP 545</a>, <a href="whatsnew/3.7.html#index-42">[1]</a>
 </li>
@@ -28377,19 +28431,19 @@
 </li>
         <li><a href="library/collections.html#index-11">PEP 584</a>, <a href="library/collections.html#index-8">[1]</a>, <a href="library/collections.html#index-9">[2]</a>, <a href="library/os.html#index-6">[3]</a>, <a href="library/os.html#index-7">[4]</a>, <a href="library/types.html#index-6">[5]</a>, <a href="library/weakref.html#index-1">[6]</a>, <a href="library/weakref.html#index-4">[7]</a>, <a href="whatsnew/3.9.html#index-1">[8]</a>, <a href="whatsnew/3.9.html#index-11">[9]</a>, <a href="whatsnew/changelog.html#index-173">[10]</a>, <a href="whatsnew/changelog.html#index-174">[11]</a>, <a href="whatsnew/changelog.html#index-175">[12]</a>, <a href="whatsnew/changelog.html#index-187">[13]</a>, <a href="whatsnew/changelog.html#index-188">[14]</a>, <a href="whatsnew/changelog.html#index-189">[15]</a>, <a href="whatsnew/changelog.html#index-190">[16]</a>
 </li>
-        <li><a href="glossary.html#index-98">PEP 585</a>, <a href="library/collections.abc.html#index-0">[1]</a>, <a href="library/stdtypes.html#index-58">[2]</a>, <a href="library/types.html#index-5">[3]</a>, <a href="library/typing.html#index-141">[4]</a>, <a href="library/typing.html#index-59">[5]</a>, <a href="library/typing.html#index-61">[6]</a>, <a href="library/typing.html#index-62">[7]</a>, <a href="library/typing.html#index-63">[8]</a>, <a href="library/typing.html#index-64">[9]</a>, <a href="library/typing.html#index-65">[10]</a>, <a href="library/typing.html#index-66">[11]</a>, <a href="library/typing.html#index-67">[12]</a>, <a href="library/typing.html#index-68">[13]</a>, <a href="library/typing.html#index-69">[14]</a>, <a href="library/typing.html#index-70">[15]</a>, <a href="library/typing.html#index-71">[16]</a>, <a href="library/typing.html#index-72">[17]</a>, <a href="library/typing.html#index-73">[18]</a>, <a href="library/typing.html#index-74">[19]</a>, <a href="library/typing.html#index-75">[20]</a>, <a href="library/typing.html#index-76">[21]</a>, <a href="library/typing.html#index-77">[22]</a>, <a href="library/typing.html#index-78">[23]</a>, <a href="library/typing.html#index-79">[24]</a>, <a href="library/typing.html#index-80">[25]</a>, <a href="library/typing.html#index-81">[26]</a>, <a href="library/typing.html#index-82">[27]</a>, <a href="library/typing.html#index-83">[28]</a>, <a href="library/typing.html#index-84">[29]</a>, <a href="library/typing.html#index-85">[30]</a>, <a href="library/typing.html#index-86">[31]</a>, <a href="library/typing.html#index-87">[32]</a>, <a href="library/typing.html#index-88">[33]</a>, <a href="library/typing.html#index-89">[34]</a>, <a href="library/typing.html#index-90">[35]</a>, <a href="library/typing.html#index-91">[36]</a>, <a href="library/typing.html#index-92">[37]</a>, <a href="library/typing.html#index-93">[38]</a>, <a href="library/typing.html#index-95">[39]</a>, <a href="library/typing.html#index-96">[40]</a>, <a href="library/typing.html#index-97">[41]</a>, <a href="library/typing.html#index-98">[42]</a>, <a href="library/typing.html#index-99">[43]</a>, <a href="whatsnew/3.9.html#index-13">[44]</a>, <a href="whatsnew/3.9.html#index-2">[45]</a>, <a href="whatsnew/changelog.html#index-32">[46]</a>, <a href="whatsnew/changelog.html#index-81">[47]</a>, <a href="whatsnew/changelog.html#index-85">[48]</a>
+        <li><a href="glossary.html#index-98">PEP 585</a>, <a href="library/collections.abc.html#index-0">[1]</a>, <a href="library/stdtypes.html#index-58">[2]</a>, <a href="library/types.html#index-5">[3]</a>, <a href="library/typing.html#index-142">[4]</a>, <a href="library/typing.html#index-59">[5]</a>, <a href="library/typing.html#index-61">[6]</a>, <a href="library/typing.html#index-62">[7]</a>, <a href="library/typing.html#index-63">[8]</a>, <a href="library/typing.html#index-64">[9]</a>, <a href="library/typing.html#index-65">[10]</a>, <a href="library/typing.html#index-66">[11]</a>, <a href="library/typing.html#index-67">[12]</a>, <a href="library/typing.html#index-68">[13]</a>, <a href="library/typing.html#index-69">[14]</a>, <a href="library/typing.html#index-70">[15]</a>, <a href="library/typing.html#index-71">[16]</a>, <a href="library/typing.html#index-72">[17]</a>, <a href="library/typing.html#index-73">[18]</a>, <a href="library/typing.html#index-74">[19]</a>, <a href="library/typing.html#index-75">[20]</a>, <a href="library/typing.html#index-76">[21]</a>, <a href="library/typing.html#index-77">[22]</a>, <a href="library/typing.html#index-78">[23]</a>, <a href="library/typing.html#index-79">[24]</a>, <a href="library/typing.html#index-80">[25]</a>, <a href="library/typing.html#index-81">[26]</a>, <a href="library/typing.html#index-82">[27]</a>, <a href="library/typing.html#index-83">[28]</a>, <a href="library/typing.html#index-84">[29]</a>, <a href="library/typing.html#index-85">[30]</a>, <a href="library/typing.html#index-86">[31]</a>, <a href="library/typing.html#index-87">[32]</a>, <a href="library/typing.html#index-88">[33]</a>, <a href="library/typing.html#index-89">[34]</a>, <a href="library/typing.html#index-90">[35]</a>, <a href="library/typing.html#index-91">[36]</a>, <a href="library/typing.html#index-92">[37]</a>, <a href="library/typing.html#index-93">[38]</a>, <a href="library/typing.html#index-95">[39]</a>, <a href="library/typing.html#index-96">[40]</a>, <a href="library/typing.html#index-97">[41]</a>, <a href="library/typing.html#index-98">[42]</a>, <a href="library/typing.html#index-99">[43]</a>, <a href="whatsnew/3.9.html#index-13">[44]</a>, <a href="whatsnew/3.9.html#index-2">[45]</a>, <a href="whatsnew/changelog.html#index-32">[46]</a>, <a href="whatsnew/changelog.html#index-81">[47]</a>, <a href="whatsnew/changelog.html#index-85">[48]</a>
 </li>
-        <li><a href="library/typing.html#index-142">PEP 586</a>, <a href="library/typing.html#index-33">[1]</a>, <a href="whatsnew/3.10.html#index-111">[2]</a>, <a href="whatsnew/3.8.html#index-16">[3]</a>, <a href="whatsnew/3.9.html#index-27">[4]</a>
+        <li><a href="library/typing.html#index-143">PEP 586</a>, <a href="library/typing.html#index-33">[1]</a>, <a href="whatsnew/3.10.html#index-111">[2]</a>, <a href="whatsnew/3.8.html#index-16">[3]</a>, <a href="whatsnew/3.9.html#index-27">[4]</a>
 </li>
         <li><a href="c-api/init_config.html#index-0">PEP 587</a>, <a href="whatsnew/3.8.html#index-36">[1]</a>, <a href="whatsnew/3.8.html#index-5">[2]</a>, <a href="whatsnew/changelog.html#index-204">[3]</a>, <a href="whatsnew/changelog.html#index-209">[4]</a>, <a href="whatsnew/changelog.html#index-94">[5]</a>
 </li>
-        <li><a href="library/typing.html#index-143">PEP 589</a>, <a href="library/typing.html#index-51">[1]</a>, <a href="whatsnew/3.8.html#index-15">[2]</a>
+        <li><a href="library/typing.html#index-144">PEP 589</a>, <a href="library/typing.html#index-51">[1]</a>, <a href="whatsnew/3.8.html#index-15">[2]</a>
 </li>
         <li><a href="c-api/call.html#index-2">PEP 590</a>, <a href="whatsnew/3.10.html#index-113">[1]</a>, <a href="whatsnew/3.11.html#index-119">[2]</a>, <a href="whatsnew/3.8.html#index-37">[3]</a>, <a href="whatsnew/3.9.html#index-18">[4]</a>, <a href="whatsnew/3.9.html#index-8">[5]</a>, <a href="whatsnew/changelog.html#index-103">[6]</a>, <a href="whatsnew/changelog.html#index-104">[7]</a>, <a href="whatsnew/changelog.html#index-137">[8]</a>, <a href="whatsnew/changelog.html#index-138">[9]</a>, <a href="whatsnew/changelog.html#index-164">[10]</a>, <a href="whatsnew/changelog.html#index-171">[11]</a>, <a href="whatsnew/changelog.html#index-180">[12]</a>, <a href="whatsnew/changelog.html#index-181">[13]</a>, <a href="whatsnew/changelog.html#index-183">[14]</a>, <a href="whatsnew/changelog.html#index-210">[15]</a>, <a href="whatsnew/changelog.html#index-36">[16]</a>, <a href="whatsnew/changelog.html#index-67">[17]</a>, <a href="whatsnew/changelog.html#index-77">[18]</a>, <a href="whatsnew/changelog.html#index-83">[19]</a>, <a href="whatsnew/changelog.html#index-88">[20]</a>
 </li>
-        <li><a href="library/typing.html#index-144">PEP 591</a>, <a href="library/typing.html#index-35">[1]</a>, <a href="library/typing.html#index-55">[2]</a>, <a href="whatsnew/3.8.html#index-17">[3]</a>
+        <li><a href="library/typing.html#index-145">PEP 591</a>, <a href="library/typing.html#index-35">[1]</a>, <a href="library/typing.html#index-55">[2]</a>, <a href="whatsnew/3.8.html#index-17">[3]</a>
 </li>
-        <li><a href="library/typing.html#index-145">PEP 593</a>, <a href="library/typing.html#index-167">[1]</a>, <a href="library/typing.html#index-38">[2]</a>, <a href="whatsnew/3.9.html#index-17">[3]</a>, <a href="whatsnew/3.9.html#index-5">[4]</a>, <a href="whatsnew/changelog.html#index-198">[5]</a>
+        <li><a href="library/typing.html#index-146">PEP 593</a>, <a href="library/typing.html#index-169">[1]</a>, <a href="library/typing.html#index-38">[2]</a>, <a href="whatsnew/3.9.html#index-17">[3]</a>, <a href="whatsnew/3.9.html#index-5">[4]</a>, <a href="whatsnew/changelog.html#index-198">[5]</a>
 </li>
         <li><a href="library/nntplib.html#index-12">PEP 594</a>, <a href="whatsnew/3.11.html#index-113">[1]</a>, <a href="whatsnew/3.11.html#index-84">[2]</a>, <a href="whatsnew/3.12.html#index-31">[3]</a>, <a href="whatsnew/3.12.html#index-32">[4]</a>, <a href="whatsnew/3.12.html#index-35">[5]</a>, <a href="whatsnew/changelog.html#index-38">[6]</a>, <a href="whatsnew/changelog.html#index-47">[7]</a>, <a href="whatsnew/changelog.html#index-57">[8]</a>, <a href="whatsnew/changelog.html#index-68">[9]</a>, <a href="whatsnew/changelog.html#index-69">[10]</a>, <a href="whatsnew/changelog.html#index-73">[11]</a>
 </li>
@@ -28433,15 +28487,13 @@
 </li>
         <li><a href="library/io.html#index-8">PEP 597</a>, <a href="whatsnew/3.10.html#index-93">[1]</a>, <a href="whatsnew/changelog.html#index-105">[2]</a>
 </li>
-        <li><a href="faq/general.html#index-6">PEP 6</a>
+        <li><a href="faq/general.html#index-5">PEP 602</a>, <a href="whatsnew/3.9.html#index-10">[1]</a>
 </li>
-        <li><a href="faq/general.html#index-7">PEP 602</a>, <a href="whatsnew/3.9.html#index-10">[1]</a>
+        <li><a href="howto/annotations.html#index-2">PEP 604</a>, <a href="library/stdtypes.html#index-60">[1]</a>, <a href="library/typing.html#index-147">[2]</a>, <a href="whatsnew/3.10.html#index-100">[3]</a>, <a href="whatsnew/3.10.html#index-85">[4]</a>, <a href="whatsnew/changelog.html#index-115">[5]</a>, <a href="whatsnew/changelog.html#index-156">[6]</a>
 </li>
-        <li><a href="howto/annotations.html#index-2">PEP 604</a>, <a href="library/stdtypes.html#index-60">[1]</a>, <a href="library/typing.html#index-146">[2]</a>, <a href="whatsnew/3.10.html#index-100">[3]</a>, <a href="whatsnew/3.10.html#index-85">[4]</a>, <a href="whatsnew/changelog.html#index-115">[5]</a>, <a href="whatsnew/changelog.html#index-156">[6]</a>
+        <li><a href="library/typing.html#index-148">PEP 612</a>, <a href="library/typing.html#index-160">[1]</a>, <a href="library/typing.html#index-161">[2]</a>, <a href="library/typing.html#index-170">[3]</a>, <a href="library/typing.html#index-32">[4]</a>, <a href="library/typing.html#index-47">[5]</a>, <a href="whatsnew/3.10.html#index-102">[6]</a>, <a href="whatsnew/3.10.html#index-86">[7]</a>, <a href="whatsnew/changelog.html#index-113">[8]</a>, <a href="whatsnew/changelog.html#index-116">[9]</a>, <a href="whatsnew/changelog.html#index-118">[10]</a>, <a href="whatsnew/changelog.html#index-91">[11]</a>, <a href="whatsnew/changelog.html#index-98">[12]</a>
 </li>
-        <li><a href="library/typing.html#index-147">PEP 612</a>, <a href="library/typing.html#index-159">[1]</a>, <a href="library/typing.html#index-168">[2]</a>, <a href="library/typing.html#index-25">[3]</a>, <a href="library/typing.html#index-32">[4]</a>, <a href="library/typing.html#index-47">[5]</a>, <a href="whatsnew/3.10.html#index-102">[6]</a>, <a href="whatsnew/3.10.html#index-86">[7]</a>, <a href="whatsnew/changelog.html#index-113">[8]</a>, <a href="whatsnew/changelog.html#index-116">[9]</a>, <a href="whatsnew/changelog.html#index-118">[10]</a>, <a href="whatsnew/changelog.html#index-91">[11]</a>, <a href="whatsnew/changelog.html#index-98">[12]</a>
-</li>
-        <li><a href="library/typing.html#index-148">PEP 613</a>, <a href="library/typing.html#index-162">[1]</a>, <a href="whatsnew/3.10.html#index-104">[2]</a>, <a href="whatsnew/3.10.html#index-87">[3]</a>, <a href="whatsnew/changelog.html#index-135">[4]</a>
+        <li><a href="library/typing.html#index-149">PEP 613</a>, <a href="library/typing.html#index-164">[1]</a>, <a href="whatsnew/3.10.html#index-104">[2]</a>, <a href="whatsnew/3.10.html#index-87">[3]</a>, <a href="whatsnew/changelog.html#index-135">[4]</a>
 </li>
         <li><a href="reference/compound_stmts.html#index-30">PEP 614</a>, <a href="reference/compound_stmts.html#index-44">[1]</a>, <a href="whatsnew/3.9.html#index-15">[2]</a>, <a href="whatsnew/3.9.html#index-3">[3]</a>, <a href="whatsnew/changelog.html#index-185">[4]</a>
 </li>
@@ -28473,9 +28525,9 @@
 </li>
         <li><a href="library/ssl.html#index-28">PEP 644</a>, <a href="whatsnew/3.10.html#index-109">[1]</a>, <a href="whatsnew/3.10.html#index-110">[2]</a>, <a href="whatsnew/3.10.html#index-114">[3]</a>, <a href="whatsnew/3.10.html#index-89">[4]</a>, <a href="whatsnew/3.12.html#index-34">[5]</a>, <a href="whatsnew/changelog.html#index-101">[6]</a>, <a href="whatsnew/changelog.html#index-45">[7]</a>
 </li>
-        <li><a href="library/typing.html#index-149">PEP 646</a>, <a href="library/typing.html#index-44">[1]</a>, <a href="whatsnew/3.11.html#index-95">[2]</a>, <a href="whatsnew/3.11.html#index-96">[3]</a>
+        <li><a href="library/typing.html#index-150">PEP 646</a>, <a href="library/typing.html#index-44">[1]</a>, <a href="whatsnew/3.11.html#index-95">[2]</a>, <a href="whatsnew/3.11.html#index-96">[3]</a>
 </li>
-        <li><a href="library/typing.html#index-150">PEP 647</a>, <a href="library/typing.html#index-39">[1]</a>, <a href="whatsnew/3.10.html#index-105">[2]</a>, <a href="whatsnew/3.10.html#index-88">[3]</a>, <a href="whatsnew/changelog.html#index-99">[4]</a>
+        <li><a href="library/typing.html#index-151">PEP 647</a>, <a href="library/typing.html#index-39">[1]</a>, <a href="whatsnew/3.10.html#index-105">[2]</a>, <a href="whatsnew/3.10.html#index-88">[3]</a>, <a href="whatsnew/changelog.html#index-99">[4]</a>
 </li>
         <li><a href="library/__future__.html#index-34">PEP 649</a>, <a href="reference/executionmodel.html#index-11">[1]</a>
 </li>
@@ -28483,7 +28535,7 @@
 </li>
         <li><a href="whatsnew/3.11.html#index-112">PEP 654</a>, <a href="whatsnew/3.11.html#index-89">[1]</a>, <a href="whatsnew/3.11.html#index-90">[2]</a>, <a href="whatsnew/changelog.html#index-41">[3]</a>, <a href="whatsnew/changelog.html#index-79">[4]</a>, <a href="whatsnew/changelog.html#index-82">[5]</a>
 </li>
-        <li><a href="library/typing.html#index-151">PEP 655</a>, <a href="library/typing.html#index-163">[1]</a>, <a href="library/typing.html#index-164">[2]</a>, <a href="library/typing.html#index-52">[3]</a>, <a href="whatsnew/3.11.html#index-97">[4]</a>, <a href="whatsnew/changelog.html#index-60">[5]</a>
+        <li><a href="library/typing.html#index-152">PEP 655</a>, <a href="library/typing.html#index-165">[1]</a>, <a href="library/typing.html#index-166">[2]</a>, <a href="library/typing.html#index-52">[3]</a>, <a href="whatsnew/3.11.html#index-97">[4]</a>, <a href="whatsnew/changelog.html#index-60">[5]</a>
 </li>
         <li><a href="whatsnew/3.11.html#index-109">PEP 657</a>, <a href="whatsnew/3.11.html#index-87">[1]</a>, <a href="whatsnew/changelog.html#index-59">[2]</a>, <a href="whatsnew/changelog.html#index-87">[3]</a>
 </li>
@@ -28493,9 +28545,9 @@
 </li>
         <li><a href="whatsnew/3.11.html#index-117">PEP 670</a>, <a href="whatsnew/3.11.html#index-86">[1]</a>
 </li>
-        <li><a href="library/typing.html#index-152">PEP 673</a>, <a href="library/typing.html#index-161">[1]</a>, <a href="whatsnew/3.11.html#index-99">[2]</a>, <a href="whatsnew/changelog.html#index-76">[3]</a>
+        <li><a href="library/typing.html#index-153">PEP 673</a>, <a href="library/typing.html#index-163">[1]</a>, <a href="whatsnew/3.11.html#index-99">[2]</a>, <a href="whatsnew/changelog.html#index-76">[3]</a>
 </li>
-        <li><a href="library/typing.html#index-153">PEP 675</a>, <a href="library/typing.html#index-160">[1]</a>, <a href="whatsnew/3.11.html#index-100">[2]</a>, <a href="whatsnew/changelog.html#index-66">[3]</a>
+        <li><a href="library/typing.html#index-154">PEP 675</a>, <a href="library/typing.html#index-162">[1]</a>, <a href="whatsnew/3.11.html#index-100">[2]</a>, <a href="whatsnew/changelog.html#index-66">[3]</a>
 </li>
         <li><a href="whatsnew/changelog.html#index-72">PEP 676</a>
 </li>
@@ -28503,7 +28555,7 @@
 </li>
         <li><a href="whatsnew/3.11.html#index-106">PEP 680</a>, <a href="whatsnew/3.11.html#index-82">[1]</a>, <a href="whatsnew/changelog.html#index-70">[2]</a>
 </li>
-        <li><a href="library/typing.html#index-154">PEP 681</a>, <a href="library/typing.html#index-165">[1]</a>, <a href="whatsnew/3.11.html#index-101">[2]</a>, <a href="whatsnew/changelog.html#index-58">[3]</a>
+        <li><a href="library/typing.html#index-155">PEP 681</a>, <a href="library/typing.html#index-167">[1]</a>, <a href="whatsnew/3.11.html#index-101">[2]</a>, <a href="whatsnew/changelog.html#index-58">[3]</a>
 </li>
         <li><a href="library/string.html#index-18">PEP 682</a>, <a href="whatsnew/3.11.html#index-104">[1]</a>
 </li>
@@ -28519,15 +28571,15 @@
 </li>
         <li><a href="whatsnew/changelog.html#index-28">PEP 689</a>
 </li>
-        <li><a href="library/typing.html#index-155">PEP 692</a>, <a href="library/typing.html#index-40">[1]</a>, <a href="whatsnew/3.12.html#index-17">[2]</a>, <a href="whatsnew/3.12.html#index-60">[3]</a>, <a href="whatsnew/changelog.html#index-14">[4]</a>, <a href="whatsnew/changelog.html#index-21">[5]</a>
+        <li><a href="library/typing.html#index-156">PEP 692</a>, <a href="library/typing.html#index-40">[1]</a>, <a href="whatsnew/3.12.html#index-17">[2]</a>, <a href="whatsnew/3.12.html#index-60">[3]</a>, <a href="whatsnew/changelog.html#index-14">[4]</a>, <a href="whatsnew/changelog.html#index-21">[5]</a>
 </li>
         <li><a href="whatsnew/3.12.html#index-56">PEP 693</a>
 </li>
-        <li><a href="library/typing.html#index-100">PEP 695</a>, <a href="library/typing.html#index-156">[1]</a>, <a href="library/typing.html#index-42">[2]</a>, <a href="library/typing.html#index-43">[3]</a>, <a href="library/typing.html#index-45">[4]</a>, <a href="library/typing.html#index-46">[5]</a>, <a href="reference/executionmodel.html#index-12">[6]</a>, <a href="reference/simple_stmts.html#index-48">[7]</a>, <a href="whatsnew/3.12.html#index-29">[8]</a>, <a href="whatsnew/3.12.html#index-4">[9]</a>, <a href="whatsnew/3.12.html#index-57">[10]</a>, <a href="whatsnew/changelog.html#index-1">[11]</a>, <a href="whatsnew/changelog.html#index-13">[12]</a>, <a href="whatsnew/changelog.html#index-2">[13]</a>, <a href="whatsnew/changelog.html#index-3">[14]</a>, <a href="whatsnew/changelog.html#index-4">[15]</a>, <a href="whatsnew/changelog.html#index-5">[16]</a>, <a href="whatsnew/changelog.html#index-8">[17]</a>
+        <li><a href="library/typing.html#index-100">PEP 695</a>, <a href="library/typing.html#index-157">[1]</a>, <a href="library/typing.html#index-42">[2]</a>, <a href="library/typing.html#index-43">[3]</a>, <a href="library/typing.html#index-45">[4]</a>, <a href="library/typing.html#index-46">[5]</a>, <a href="reference/executionmodel.html#index-12">[6]</a>, <a href="reference/simple_stmts.html#index-48">[7]</a>, <a href="whatsnew/3.12.html#index-29">[8]</a>, <a href="whatsnew/3.12.html#index-4">[9]</a>, <a href="whatsnew/3.12.html#index-57">[10]</a>, <a href="whatsnew/changelog.html#index-1">[11]</a>, <a href="whatsnew/changelog.html#index-13">[12]</a>, <a href="whatsnew/changelog.html#index-2">[13]</a>, <a href="whatsnew/changelog.html#index-3">[14]</a>, <a href="whatsnew/changelog.html#index-4">[15]</a>, <a href="whatsnew/changelog.html#index-5">[16]</a>, <a href="whatsnew/changelog.html#index-8">[17]</a>
 </li>
         <li><a href="whatsnew/3.12.html#index-40">PEP 697</a>, <a href="whatsnew/3.12.html#index-42">[1]</a>, <a href="whatsnew/changelog.html#index-22">[2]</a>
 </li>
-        <li><a href="library/typing.html#index-157">PEP 698</a>, <a href="library/typing.html#index-166">[1]</a>, <a href="whatsnew/3.12.html#index-61">[2]</a>, <a href="whatsnew/changelog.html#index-25">[3]</a>
+        <li><a href="library/typing.html#index-158">PEP 698</a>, <a href="library/typing.html#index-168">[1]</a>, <a href="whatsnew/3.12.html#index-61">[2]</a>, <a href="whatsnew/changelog.html#index-25">[3]</a>
 </li>
         <li><a href="whatsnew/3.12.html#index-45">PEP 699</a>, <a href="whatsnew/3.12.html#index-46">[1]</a>, <a href="whatsnew/changelog.html#index-30">[2]</a>
 </li>
@@ -28596,7 +28648,7 @@
 </li>
       <li><a href="c-api/init.html#index-62">PYTHONDEBUG</a>, <a href="c-api/init_config.html#index-22">[1]</a>, <a href="using/cmdline.html#index-2">[2]</a>, <a href="using/configure.html#index-6">[3]</a>
 </li>
-      <li><a href="c-api/init_config.html#index-8">PYTHONDEVMODE</a>, <a href="library/devmode.html#index-0">[1]</a>, <a href="whatsnew/3.7.html#index-26">[2]</a>
+      <li><a href="c-api/init_config.html#index-8">PYTHONDEVMODE</a>, <a href="library/devmode.html#index-0">[1]</a>, <a href="using/cmdline.html#index-24">[2]</a>, <a href="whatsnew/3.7.html#index-26">[3]</a>
 </li>
       <li><a href="library/pydoc.html#index-2">PYTHONDOCS</a>
 </li>
@@ -28608,11 +28660,11 @@
 </li>
       <li><a href="c-api/init_config.html#index-23">PYTHONEXECUTABLE</a>
 </li>
-      <li><a href="c-api/init_config.html#index-10">PYTHONFAULTHANDLER</a>, <a href="library/devmode.html#index-4">[1]</a>, <a href="library/faulthandler.html#index-0">[2]</a>, <a href="using/cmdline.html#index-19">[3]</a>, <a href="whatsnew/3.3.html#index-24">[4]</a>
+      <li><a href="c-api/init_config.html#index-10">PYTHONFAULTHANDLER</a>, <a href="library/devmode.html#index-4">[1]</a>, <a href="library/faulthandler.html#index-0">[2]</a>, <a href="using/cmdline.html#index-20">[3]</a>, <a href="whatsnew/3.3.html#index-24">[4]</a>
 </li>
-      <li><a href="c-api/init.html#index-3">PYTHONHASHSEED</a>, <a href="c-api/init.html#index-64">[1]</a>, <a href="c-api/init_config.html#index-11">[2]</a>, <a href="reference/datamodel.html#index-114">[3]</a>, <a href="using/cmdline.html#index-13">[4]</a>, <a href="using/cmdline.html#index-14">[5]</a>, <a href="using/cmdline.html#index-35">[6]</a>, <a href="whatsnew/3.3.html#index-23">[7]</a>, <a href="whatsnew/3.3.html#index-35">[8]</a>, <a href="whatsnew/changelog.html#index-236">[9]</a>
+      <li><a href="c-api/init.html#index-3">PYTHONHASHSEED</a>, <a href="c-api/init.html#index-64">[1]</a>, <a href="c-api/init_config.html#index-11">[2]</a>, <a href="reference/datamodel.html#index-114">[3]</a>, <a href="using/cmdline.html#index-13">[4]</a>, <a href="using/cmdline.html#index-14">[5]</a>, <a href="using/cmdline.html#index-37">[6]</a>, <a href="whatsnew/3.3.html#index-23">[7]</a>, <a href="whatsnew/3.3.html#index-35">[8]</a>, <a href="whatsnew/changelog.html#index-236">[9]</a>
 </li>
-      <li><a href="c-api/init.html#index-30">PYTHONHOME</a>, <a href="c-api/init.html#index-31">[1]</a>, <a href="c-api/init.html#index-66">[2]</a>, <a href="c-api/init_config.html#index-12">[3]</a>, <a href="c-api/intro.html#index-43">[4]</a>, <a href="c-api/intro.html#index-45">[5]</a>, <a href="library/sys_path_init.html#index-2">[6]</a>, <a href="library/sys_path_init.html#index-4">[7]</a>, <a href="library/test.html#index-0">[8]</a>, <a href="using/cmdline.html#index-28">[9]</a>, <a href="using/cmdline.html#index-29">[10]</a>, <a href="using/cmdline.html#index-32">[11]</a>, <a href="using/cmdline.html#index-4">[12]</a>, <a href="using/windows.html#index-33">[13]</a>, <a href="using/windows.html#index-35">[14]</a>, <a href="using/windows.html#index-37">[15]</a>, <a href="whatsnew/3.12.html#index-62">[16]</a>, <a href="whatsnew/3.6.html#index-2">[17]</a>
+      <li><a href="c-api/init.html#index-30">PYTHONHOME</a>, <a href="c-api/init.html#index-31">[1]</a>, <a href="c-api/init.html#index-66">[2]</a>, <a href="c-api/init_config.html#index-12">[3]</a>, <a href="c-api/intro.html#index-43">[4]</a>, <a href="c-api/intro.html#index-45">[5]</a>, <a href="library/sys_path_init.html#index-2">[6]</a>, <a href="library/sys_path_init.html#index-4">[7]</a>, <a href="library/test.html#index-0">[8]</a>, <a href="using/cmdline.html#index-30">[9]</a>, <a href="using/cmdline.html#index-31">[10]</a>, <a href="using/cmdline.html#index-34">[11]</a>, <a href="using/cmdline.html#index-4">[12]</a>, <a href="using/windows.html#index-33">[13]</a>, <a href="using/windows.html#index-35">[14]</a>, <a href="using/windows.html#index-37">[15]</a>, <a href="whatsnew/3.12.html#index-62">[16]</a>, <a href="whatsnew/3.6.html#index-2">[17]</a>
 </li>
   </ul></td>
 </tr></table>
@@ -28630,33 +28682,33 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="c-api/init.html#index-67">PYTHONINSPECT</a>, <a href="c-api/init_config.html#index-14">[1]</a>, <a href="using/cmdline.html#index-6">[2]</a>, <a href="whatsnew/2.3.html#index-28">[3]</a>
 </li>
-      <li><a href="c-api/init_config.html#index-15">PYTHONINTMAXSTRDIGITS</a>, <a href="library/stdtypes.html#index-67">[1]</a>, <a href="library/stdtypes.html#index-68">[2]</a>, <a href="library/sys.html#index-17">[3]</a>, <a href="using/cmdline.html#index-21">[4]</a>, <a href="whatsnew/changelog.html#index-40">[5]</a>
+      <li><a href="c-api/init_config.html#index-15">PYTHONINTMAXSTRDIGITS</a>, <a href="library/stdtypes.html#index-67">[1]</a>, <a href="library/stdtypes.html#index-68">[2]</a>, <a href="library/sys.html#index-17">[3]</a>, <a href="using/cmdline.html#index-22">[4]</a>, <a href="whatsnew/changelog.html#index-40">[5]</a>
 </li>
-      <li><a href="c-api/init.html#index-17">PYTHONIOENCODING</a>, <a href="c-api/init.html#index-18">[1]</a>, <a href="c-api/init_config.html#index-26">[2]</a>, <a href="library/os.html#index-1">[3]</a>, <a href="library/sys.html#index-35">[4]</a>, <a href="using/cmdline.html#index-41">[5]</a>, <a href="whatsnew/2.6.html#index-21">[6]</a>, <a href="whatsnew/3.4.html#index-53">[7]</a>
+      <li><a href="c-api/init.html#index-17">PYTHONIOENCODING</a>, <a href="c-api/init.html#index-18">[1]</a>, <a href="c-api/init_config.html#index-26">[2]</a>, <a href="library/os.html#index-1">[3]</a>, <a href="library/sys.html#index-35">[4]</a>, <a href="using/cmdline.html#index-43">[5]</a>, <a href="whatsnew/2.6.html#index-21">[6]</a>, <a href="whatsnew/3.4.html#index-53">[7]</a>
 </li>
       <li><a href="c-api/init.html#index-68">PYTHONLEGACYWINDOWSFSENCODING</a>, <a href="c-api/init_config.html#index-1">[1]</a>, <a href="library/sys.html#index-33">[2]</a>, <a href="whatsnew/3.6.html#index-19">[3]</a>
 </li>
-      <li><a href="c-api/init.html#index-9">PYTHONLEGACYWINDOWSSTDIO</a>, <a href="c-api/init_config.html#index-16">[1]</a>, <a href="library/sys.html#index-37">[2]</a>, <a href="using/cmdline.html#index-36">[3]</a>, <a href="whatsnew/3.6.html#index-21">[4]</a>
+      <li><a href="c-api/init.html#index-9">PYTHONLEGACYWINDOWSSTDIO</a>, <a href="c-api/init_config.html#index-16">[1]</a>, <a href="library/sys.html#index-37">[2]</a>, <a href="using/cmdline.html#index-38">[3]</a>, <a href="whatsnew/3.6.html#index-21">[4]</a>
 </li>
-      <li><a href="c-api/memory.html#index-1">PYTHONMALLOC</a>, <a href="c-api/memory.html#index-3">[1]</a>, <a href="c-api/memory.html#index-4">[2]</a>, <a href="c-api/memory.html#index-5">[3]</a>, <a href="library/devmode.html#index-2">[4]</a>, <a href="library/devmode.html#index-3">[5]</a>, <a href="using/cmdline.html#index-39">[6]</a>, <a href="using/configure.html#index-35">[7]</a>, <a href="whatsnew/3.6.html#index-27">[8]</a>, <a href="whatsnew/3.6.html#index-38">[9]</a>, <a href="whatsnew/changelog.html#index-285">[10]</a>
+      <li><a href="c-api/memory.html#index-1">PYTHONMALLOC</a>, <a href="c-api/memory.html#index-3">[1]</a>, <a href="c-api/memory.html#index-4">[2]</a>, <a href="c-api/memory.html#index-5">[3]</a>, <a href="library/devmode.html#index-2">[4]</a>, <a href="library/devmode.html#index-3">[5]</a>, <a href="using/cmdline.html#index-41">[6]</a>, <a href="using/configure.html#index-35">[7]</a>, <a href="whatsnew/3.6.html#index-27">[8]</a>, <a href="whatsnew/3.6.html#index-38">[9]</a>, <a href="whatsnew/changelog.html#index-285">[10]</a>
 </li>
       <li><a href="c-api/init_config.html#index-18">PYTHONMALLOCSTATS</a>, <a href="c-api/memory.html#index-2">[1]</a>, <a href="whatsnew/changelog.html#index-286">[2]</a>
 </li>
-      <li><a href="c-api/init_config.html#index-6">PYTHONNODEBUGRANGES</a>, <a href="reference/datamodel.html#index-61">[1]</a>, <a href="using/cmdline.html#index-26">[2]</a>, <a href="whatsnew/3.11.html#index-88">[3]</a>
+      <li><a href="c-api/init_config.html#index-6">PYTHONNODEBUGRANGES</a>, <a href="reference/datamodel.html#index-61">[1]</a>, <a href="using/cmdline.html#index-28">[2]</a>, <a href="whatsnew/3.11.html#index-88">[3]</a>
 </li>
-      <li><a href="c-api/init.html#index-71">PYTHONNOUSERSITE</a>, <a href="c-api/init_config.html#index-29">[1]</a>, <a href="library/site.html#index-6">[2]</a>, <a href="whatsnew/2.6.html#index-6">[3]</a>
+      <li><a href="c-api/init.html#index-71">PYTHONNOUSERSITE</a>, <a href="c-api/init_config.html#index-29">[1]</a>, <a href="library/site.html#index-6">[2]</a>, <a href="using/cmdline.html#index-15">[3]</a>, <a href="whatsnew/2.6.html#index-6">[4]</a>
 </li>
       <li><a href="c-api/init.html#index-72">PYTHONOPTIMIZE</a>, <a href="c-api/init_config.html#index-21">[1]</a>, <a href="using/cmdline.html#index-8">[2]</a>
 </li>
-      <li><a href="c-api/init.html#index-65">PYTHONPATH</a>, <a href="c-api/init_config.html#index-20">[1]</a>, <a href="c-api/intro.html#index-44">[2]</a>, <a href="c-api/intro.html#index-46">[3]</a>, <a href="extending/building.html#index-0">[4]</a>, <a href="library/cgi.html#index-4">[5]</a>, <a href="library/sys.html#index-22">[6]</a>, <a href="library/sys.html#index-23">[7]</a>, <a href="library/sys_path_init.html#index-0">[8]</a>, <a href="library/sys_path_init.html#index-1">[9]</a>, <a href="library/test.html#index-1">[10]</a>, <a href="reference/import.html#index-17">[11]</a>, <a href="reference/import.html#index-18">[12]</a>, <a href="tutorial/modules.html#index-14">[13]</a>, <a href="tutorial/modules.html#index-17">[14]</a>, <a href="tutorial/modules.html#index-18">[15]</a>, <a href="using/cmdline.html#index-3">[16]</a>, <a href="using/cmdline.html#index-31">[17]</a>, <a href="using/cmdline.html#index-33">[18]</a>, <a href="using/cmdline.html#index-34">[19]</a>, <a href="using/mac.html#index-0">[20]</a>, <a href="using/windows.html#index-11">[21]</a>, <a href="using/windows.html#index-32">[22]</a>, <a href="using/windows.html#index-34">[23]</a>, <a href="using/windows.html#index-36">[24]</a>, <a href="whatsnew/3.4.html#index-55">[25]</a>, <a href="whatsnew/3.4.html#index-56">[26]</a>
+      <li><a href="c-api/init.html#index-65">PYTHONPATH</a>, <a href="c-api/init_config.html#index-20">[1]</a>, <a href="c-api/intro.html#index-44">[2]</a>, <a href="c-api/intro.html#index-46">[3]</a>, <a href="extending/building.html#index-0">[4]</a>, <a href="library/cgi.html#index-4">[5]</a>, <a href="library/sys.html#index-22">[6]</a>, <a href="library/sys.html#index-23">[7]</a>, <a href="library/sys_path_init.html#index-0">[8]</a>, <a href="library/sys_path_init.html#index-1">[9]</a>, <a href="library/test.html#index-1">[10]</a>, <a href="reference/import.html#index-17">[11]</a>, <a href="reference/import.html#index-18">[12]</a>, <a href="tutorial/modules.html#index-14">[13]</a>, <a href="tutorial/modules.html#index-17">[14]</a>, <a href="tutorial/modules.html#index-18">[15]</a>, <a href="using/cmdline.html#index-3">[16]</a>, <a href="using/cmdline.html#index-33">[17]</a>, <a href="using/cmdline.html#index-35">[18]</a>, <a href="using/cmdline.html#index-36">[19]</a>, <a href="using/mac.html#index-2">[20]</a>, <a href="using/windows.html#index-11">[21]</a>, <a href="using/windows.html#index-32">[22]</a>, <a href="using/windows.html#index-34">[23]</a>, <a href="using/windows.html#index-36">[24]</a>, <a href="whatsnew/3.4.html#index-55">[25]</a>, <a href="whatsnew/3.4.html#index-56">[26]</a>
 </li>
-      <li><a href="c-api/init_config.html#index-28">PYTHONPERFSUPPORT</a>, <a href="howto/perf_profiling.html#index-2">[1]</a>, <a href="using/cmdline.html#index-27">[2]</a>, <a href="whatsnew/3.12.html#index-23">[3]</a>
+      <li><a href="c-api/init_config.html#index-28">PYTHONPERFSUPPORT</a>, <a href="howto/perf_profiling.html#index-2">[1]</a>, <a href="using/cmdline.html#index-29">[2]</a>, <a href="whatsnew/3.12.html#index-23">[3]</a>
 </li>
       <li><a href="c-api/init_config.html#index-19">PYTHONPLATLIBDIR</a>, <a href="library/sys_path_init.html#index-3">[1]</a>, <a href="whatsnew/changelog.html#index-152">[2]</a>
 </li>
-      <li><a href="c-api/init_config.html#index-13">PYTHONPROFILEIMPORTTIME</a>, <a href="using/cmdline.html#index-22">[1]</a>, <a href="whatsnew/3.7.html#index-27">[2]</a>, <a href="whatsnew/changelog.html#index-244">[3]</a>
+      <li><a href="c-api/init_config.html#index-13">PYTHONPROFILEIMPORTTIME</a>, <a href="using/cmdline.html#index-23">[1]</a>, <a href="whatsnew/3.7.html#index-27">[2]</a>, <a href="whatsnew/changelog.html#index-244">[3]</a>
 </li>
-      <li><a href="c-api/init_config.html#index-25">PYTHONPYCACHEPREFIX</a>, <a href="library/sys.html#index-7">[1]</a>, <a href="using/cmdline.html#index-24">[2]</a>, <a href="whatsnew/3.8.html#index-2">[3]</a>, <a href="whatsnew/changelog.html#index-216">[4]</a>
+      <li><a href="c-api/init_config.html#index-25">PYTHONPYCACHEPREFIX</a>, <a href="library/sys.html#index-7">[1]</a>, <a href="using/cmdline.html#index-26">[2]</a>, <a href="whatsnew/3.8.html#index-2">[3]</a>, <a href="whatsnew/changelog.html#index-216">[4]</a>
 </li>
       <li><a href="whatsnew/changelog.html#index-63">PYTHONREGRTEST_UNICODE_GUARD</a>
 </li>
@@ -28664,23 +28716,23 @@
 </li>
       <li><a href="library/idle.html#index-6">PYTHONSTARTUP</a>, <a href="library/readline.html#index-0">[1]</a>, <a href="library/site.html#index-5">[2]</a>, <a href="library/sys.html#index-18">[3]</a>, <a href="tutorial/appendix.html#index-13">[4]</a>, <a href="using/cmdline.html#index-5">[5]</a>, <a href="whatsnew/3.4.html#index-40">[6]</a>, <a href="whatsnew/3.4.html#index-41">[7]</a>, <a href="whatsnew/changelog.html#index-226">[8]</a>, <a href="whatsnew/changelog.html#index-231">[9]</a>, <a href="whatsnew/changelog.html#index-256">[10]</a>
 </li>
-      <li><a href="c-api/init_config.html#index-27">PYTHONTRACEMALLOC</a>, <a href="library/tracemalloc.html#index-0">[1]</a>, <a href="library/tracemalloc.html#index-1">[2]</a>, <a href="library/tracemalloc.html#index-2">[3]</a>, <a href="using/cmdline.html#index-20">[4]</a>
+      <li><a href="c-api/init_config.html#index-27">PYTHONTRACEMALLOC</a>, <a href="library/tracemalloc.html#index-0">[1]</a>, <a href="library/tracemalloc.html#index-1">[2]</a>, <a href="library/tracemalloc.html#index-2">[3]</a>, <a href="using/cmdline.html#index-21">[4]</a>
 </li>
       <li><a href="library/zoneinfo.html#index-2">PYTHONTZPATH</a>
 </li>
-      <li><a href="c-api/init.html#index-73">PYTHONUNBUFFERED</a>, <a href="c-api/init_config.html#index-5">[1]</a>, <a href="library/sys.html#index-38">[2]</a>, <a href="using/cmdline.html#index-52">[3]</a>, <a href="whatsnew/changelog.html#index-203">[4]</a>
+      <li><a href="c-api/init.html#index-73">PYTHONUNBUFFERED</a>, <a href="c-api/init_config.html#index-5">[1]</a>, <a href="library/sys.html#index-38">[2]</a>, <a href="using/cmdline.html#index-54">[3]</a>, <a href="whatsnew/changelog.html#index-203">[4]</a>
 </li>
       <li><a href="library/site.html#index-7">PYTHONUSERBASE</a>, <a href="library/site.html#index-8">[1]</a>, <a href="whatsnew/2.6.html#index-4">[2]</a>
 </li>
       <li><a href="library/test.html#index-2">PYTHONUSERSITE</a>
 </li>
-      <li><a href="c-api/init_config.html#index-2">PYTHONUTF8</a>, <a href="c-api/init_config.html#index-35">[1]</a>, <a href="library/os.html#index-2">[2]</a>, <a href="library/os.html#index-3">[3]</a>, <a href="library/sys.html#index-36">[4]</a>, <a href="using/cmdline.html#index-23">[5]</a>, <a href="using/cmdline.html#index-42">[6]</a>, <a href="using/windows.html#index-15">[7]</a>, <a href="whatsnew/3.7.html#index-8">[8]</a>
+      <li><a href="c-api/init_config.html#index-2">PYTHONUTF8</a>, <a href="c-api/init_config.html#index-35">[1]</a>, <a href="library/os.html#index-2">[2]</a>, <a href="library/os.html#index-3">[3]</a>, <a href="library/sys.html#index-36">[4]</a>, <a href="using/cmdline.html#index-25">[5]</a>, <a href="using/cmdline.html#index-44">[6]</a>, <a href="using/windows.html#index-15">[7]</a>, <a href="whatsnew/3.7.html#index-8">[8]</a>
 </li>
-      <li><a href="c-api/init.html#index-74">PYTHONVERBOSE</a>, <a href="c-api/init_config.html#index-30">[1]</a>, <a href="using/cmdline.html#index-53">[2]</a>
+      <li><a href="c-api/init.html#index-74">PYTHONVERBOSE</a>, <a href="c-api/init_config.html#index-30">[1]</a>, <a href="using/cmdline.html#index-55">[2]</a>
 </li>
-      <li><a href="library/io.html#index-9">PYTHONWARNDEFAULTENCODING</a>, <a href="using/cmdline.html#index-25">[1]</a>, <a href="whatsnew/3.10.html#index-98">[2]</a>, <a href="whatsnew/changelog.html#index-106">[3]</a>
+      <li><a href="library/io.html#index-9">PYTHONWARNDEFAULTENCODING</a>, <a href="using/cmdline.html#index-27">[1]</a>, <a href="whatsnew/3.10.html#index-98">[2]</a>, <a href="whatsnew/changelog.html#index-106">[3]</a>
 </li>
-      <li><a href="c-api/init_config.html#index-31">PYTHONWARNINGS</a>, <a href="library/devmode.html#index-1">[1]</a>, <a href="library/warnings.html#index-1">[2]</a>, <a href="library/warnings.html#index-2">[3]</a>, <a href="library/warnings.html#index-3">[4]</a>, <a href="library/warnings.html#index-4">[5]</a>, <a href="library/warnings.html#index-5">[6]</a>, <a href="using/cmdline.html#index-18">[7]</a>, <a href="whatsnew/2.7.html#index-1">[8]</a>, <a href="whatsnew/2.7.html#index-8">[9]</a>, <a href="whatsnew/3.2.html#index-10">[10]</a>, <a href="whatsnew/3.7.html#index-36">[11]</a>, <a href="whatsnew/changelog.html#index-49">[12]</a>
+      <li><a href="c-api/init_config.html#index-31">PYTHONWARNINGS</a>, <a href="library/devmode.html#index-1">[1]</a>, <a href="library/warnings.html#index-1">[2]</a>, <a href="library/warnings.html#index-2">[3]</a>, <a href="library/warnings.html#index-3">[4]</a>, <a href="library/warnings.html#index-4">[5]</a>, <a href="library/warnings.html#index-5">[6]</a>, <a href="using/cmdline.html#index-19">[7]</a>, <a href="whatsnew/2.7.html#index-1">[8]</a>, <a href="whatsnew/2.7.html#index-8">[9]</a>, <a href="whatsnew/3.2.html#index-10">[10]</a>, <a href="whatsnew/3.7.html#index-36">[11]</a>, <a href="whatsnew/changelog.html#index-49">[12]</a>
 </li>
       <li><a href="c-api/init.html#c.PyThread_create_key">PyThread_create_key (C function)</a>
 </li>
@@ -28708,7 +28760,7 @@
 </li>
       <li><a href="c-api/init.html#c.PyThread_tss_set">PyThread_tss_set (C function)</a>
 </li>
-      <li><a href="c-api/init.html#c.PyThreadState">PyThreadState (C type)</a>, <a href="c-api/init.html#index-34">[1]</a>
+      <li><a href="c-api/init.html#c.PyThreadState">PyThreadState (C type)</a>
 </li>
       <li><a href="c-api/init.html#c.PyThreadState.interp">PyThreadState.interp (C member)</a>
 </li>
@@ -28739,6 +28791,8 @@
       <li><a href="c-api/init.html#c.PyThreadState_SetAsyncExc">PyThreadState_SetAsyncExc (C function)</a>
 </li>
       <li><a href="c-api/init.html#c.PyThreadState_Swap">PyThreadState_Swap (C function)</a>
+</li>
+      <li><a href="c-api/init.html#index-34">PyThreadState（C 型別）</a>
 </li>
       <li><a href="c-api/datetime.html#c.PyTime_Check">PyTime_Check (C function)</a>
 </li>
@@ -28790,7 +28844,9 @@
 </li>
       <li><a href="c-api/tuple.html#c.PyTuple_SET_ITEM">PyTuple_SET_ITEM (C function)</a>
 </li>
-      <li><a href="c-api/intro.html#index-5">PyTuple_SetItem (C function)</a>, <a href="c-api/tuple.html#c.PyTuple_SetItem">[1]</a>
+      <li><a href="c-api/tuple.html#c.PyTuple_SetItem">PyTuple_SetItem (C function)</a>
+</li>
+      <li><a href="c-api/intro.html#index-5">PyTuple_SetItem（C 函式）</a>
 </li>
       <li><a href="c-api/tuple.html#c.PyTuple_Size">PyTuple_Size (C function)</a>
 </li>
@@ -28954,10 +29010,10 @@
 </li>
       <li><a href="c-api/typeobj.html#c.PyTypeObject.tp_setattro">PyTypeObject.tp_setattro (C member)</a>
 </li>
-      <li><a href="c-api/typeobj.html#c.PyTypeObject.tp_str">PyTypeObject.tp_str (C member)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="c-api/typeobj.html#c.PyTypeObject.tp_str">PyTypeObject.tp_str (C member)</a>
+</li>
       <li><a href="c-api/typeobj.html#c.PyTypeObject.tp_subclasses">PyTypeObject.tp_subclasses (C member)</a>
 </li>
       <li><a href="c-api/typeobj.html#c.PyTypeObject.tp_traverse">PyTypeObject.tp_traverse (C member)</a>
@@ -29700,7 +29756,7 @@
 </li>
       <li><a href="library/mimetypes.html#mimetypes.read_mime_types">read_mime_types() (於 mimetypes 模組中)</a>
 </li>
-      <li><a href="c-api/structures.html#index-2">READ_RESTRICTED (C macro)</a>
+      <li><a href="c-api/structures.html#index-2">READ_RESTRICTED（C 巨集）</a>
 </li>
       <li><a href="library/telnetlib.html#telnetlib.Telnet.read_sb_data">read_sb_data() (telnetlib.Telnet 的方法)</a>
 </li>
@@ -29809,9 +29865,9 @@
 </li>
       <li><a href="library/pyclbr.html#pyclbr.readmodule_ex">readmodule_ex() (於 pyclbr 模組中)</a>
 </li>
-      <li><a href="c-api/structures.html#index-3">READONLY (C macro)</a>
-</li>
       <li><a href="library/stdtypes.html#memoryview.readonly">readonly (memoryview 的屬性)</a>
+</li>
+      <li><a href="c-api/structures.html#index-3">READONLY（C 巨集）</a>
 </li>
       <li><a href="library/asyncio-protocol.html#asyncio.ReadTransport">ReadTransport (asyncio 中的類別)</a>
 </li>
@@ -29831,7 +29887,7 @@
 </li>
       <li><a href="library/difflib.html#difflib.SequenceMatcher.real_quick_ratio">real_quick_ratio() (difflib.SequenceMatcher 的方法)</a>
 </li>
-      <li><a href="c-api/memory.html#index-0">realloc (C function)</a>
+      <li><a href="c-api/memory.html#index-0">realloc（C 函式）</a>
 </li>
       <li><a href="library/os.path.html#os.path.realpath">realpath() (於 os.path 模組中)</a>
 </li>
@@ -30629,7 +30685,7 @@
         <li><a href="library/difflib.html#difflib.restore">(於 difflib 模組中)</a>
 </li>
       </ul></li>
-      <li><a href="c-api/structures.html#index-2">RESTRICTED (C macro)</a>
+      <li><a href="c-api/structures.html#index-2">RESTRICTED（C 巨集）</a>
 </li>
       <li>
     restricted（受限）
@@ -31589,7 +31645,7 @@
       </ul></li>
       <li><a href="library/os.html#os.scandir">scandir() (於 os 模組中)</a>
 </li>
-      <li><a href="library/re.html#index-40">scanf (C function)</a>
+      <li><a href="library/re.html#index-40">scanf（C 函式）</a>
 </li>
       <li>
     sched
@@ -32526,10 +32582,10 @@
         <li><a href="library/wave.html#wave.Wave_write.setnframes">(wave.Wave_write 的方法)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/os.html#os.setns">setns() (於 os 模組中)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/sqlite3.html#sqlite3.Cursor.setoutputsize">setoutputsize() (sqlite3.Cursor 的方法)</a>
 </li>
       <li><a href="library/pyexpat.html#xml.parsers.expat.xmlparser.SetParamEntityParsing">SetParamEntityParsing() (xml.parsers.expat.xmlparser 的方法)</a>
@@ -32586,6 +32642,8 @@
 </li>
       <li><a href="library/os.html#os.setregid">setregid() (於 os 模組中)</a>
 </li>
+      <li><a href="library/pyexpat.html#xml.parsers.expat.xmlparser.SetReparseDeferralEnabled">SetReparseDeferralEnabled() (xml.parsers.expat.xmlparser 的方法)</a>
+</li>
       <li><a href="library/os.html#os.setresgid">setresgid() (於 os 模組中)</a>
 </li>
       <li><a href="library/os.html#os.setresuid">setresuid() (於 os 模組中)</a>
@@ -32624,7 +32682,7 @@
 </li>
       <li><a href="library/msilib.html#msilib.Record.SetString">SetString() (msilib.Record 的方法)</a>
 </li>
-      <li><a href="c-api/init.html#index-33">setswitchinterval (in module sys)</a>
+      <li><a href="c-api/init.html#index-33">setswitchinterval （sys 模組中）</a>
 </li>
       <li><a href="library/sys.html#sys.setswitchinterval">setswitchinterval() (於 sys 模組中)</a>
 
@@ -32926,13 +32984,11 @@
 </li>
       <li><a href="library/signal.html#signal.SIGILL">SIGILL (於 signal 模組中)</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-1">SIGINT (C macro)</a>, <a href="c-api/exceptions.html#index-2">[1]</a>
-
-      <ul>
-        <li><a href="library/signal.html#signal.SIGINT">(於 signal 模組中)</a>
+      <li><a href="library/signal.html#signal.SIGINT">SIGINT (於 signal 模組中)</a>
 </li>
-      </ul></li>
       <li><a href="library/signal.html#signal.siginterrupt">siginterrupt() (於 signal 模組中)</a>
+</li>
+      <li><a href="c-api/exceptions.html#index-1">SIGINT（C 巨集）</a>, <a href="c-api/exceptions.html#index-2">[1]</a>
 </li>
       <li><a href="library/signal.html#signal.SIGKILL">SIGKILL (於 signal 模組中)</a>
 </li>
@@ -33117,7 +33173,7 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="library/tracemalloc.html#tracemalloc.StatisticDiff.size_diff">size_diff (tracemalloc.StatisticDiff 的屬性)</a>
 </li>
-      <li><a href="c-api/long.html#index-5">SIZE_MAX (C macro)</a>
+      <li><a href="c-api/long.html#index-5">SIZE_MAX（C 巨集）</a>
 </li>
       <li><a href="library/collections.abc.html#collections.abc.Sized">Sized (collections.abc 中的類別)</a>
 
@@ -34287,13 +34343,11 @@
 </li>
       <li><a href="library/enum.html#enum.StrEnum">StrEnum (enum 中的類別)</a>
 </li>
-      <li><a href="c-api/exceptions.html#index-0">strerror (C function)</a>
-
-      <ul>
-        <li><a href="library/exceptions.html#OSError.strerror">(OSError 的屬性)</a>
+      <li><a href="library/exceptions.html#OSError.strerror">strerror (OSError 的屬性)</a>
 </li>
-      </ul></li>
       <li><a href="library/os.html#os.strerror">strerror() (於 os 模組中)</a>
+</li>
+      <li><a href="c-api/exceptions.html#index-0">strerror（C 函式）</a>
 </li>
       <li><a href="library/datetime.html#datetime.date.strftime">strftime() (datetime.date 的方法)</a>
 
@@ -34867,49 +34921,49 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="c-api/structures.html#index-4">T_BOOL (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_BOOL（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_BYTE (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_BYTE（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_CHAR (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_CHAR（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_DOUBLE (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_DOUBLE（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_FLOAT (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_FLOAT（C 巨集）</a>
 </li>
       <li><a href="library/locale.html#locale.T_FMT">T_FMT (於 locale 模組中)</a>
 </li>
       <li><a href="library/locale.html#locale.T_FMT_AMPM">T_FMT_AMPM (於 locale 模組中)</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_INT (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_INT（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_LONG (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_LONGLONG（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_LONGLONG (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_LONG（C 巨集）</a>
 </li>
       <li><a href="c-api/structures.html#c.T_NONE">T_NONE (C macro)</a>
 </li>
       <li><a href="c-api/structures.html#c.T_OBJECT">T_OBJECT (C macro)</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_OBJECT_EX (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_OBJECT_EX（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_PYSSIZET (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_PYSSIZET（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_SHORT (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_SHORT（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_STRING (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_STRING_INPLACE（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_STRING_INPLACE (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_STRING（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_UBYTE (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_UBYTE（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_UINT (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_UINT（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_ULONG (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_ULONGULONG（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_ULONGULONG (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_ULONG（C 巨集）</a>
 </li>
-      <li><a href="c-api/structures.html#index-4">T_USHORT (C macro)</a>
+      <li><a href="c-api/structures.html#index-4">T_USHORT（C 巨集）</a>
 </li>
       <li><a href="library/curses.ascii.html#curses.ascii.TAB">TAB (於 curses.ascii 模組中)</a>
 </li>
@@ -36557,7 +36611,7 @@
 </li>
       <li><a href="library/audioop.html#audioop.ulaw2lin">ulaw2lin() (於 audioop 模組中)</a>
 </li>
-      <li><a href="c-api/long.html#index-4">ULONG_MAX (C macro)</a>
+      <li><a href="c-api/long.html#index-4">ULONG_MAX（C 巨集）</a>
 </li>
       <li><a href="library/math.html#math.ulp">ulp() (於 math 模組中)</a>
 </li>
@@ -37179,7 +37233,7 @@
 </li>
       <li><a href="library/cmd.html#cmd.Cmd.use_rawinput">use_rawinput (cmd.Cmd 的屬性)</a>
 </li>
-      <li><a href="c-api/sys.html#index-0">USE_STACKCHECK (C macro)</a>
+      <li><a href="c-api/sys.html#index-0">USE_STACKCHECK（C 巨集）</a>
 </li>
       <li><a href="library/sys.monitoring.html#sys.monitoring.use_tool_id">use_tool_id() (於 sys.monitoring 模組中)</a>
 </li>
@@ -38102,7 +38156,7 @@
       </ul></li>
       <li><a href="library/readline.html#readline.write_history_file">write_history_file() (於 readline 模組中)</a>
 </li>
-      <li><a href="c-api/structures.html#index-2">WRITE_RESTRICTED (C macro)</a>
+      <li><a href="c-api/structures.html#index-2">WRITE_RESTRICTED（C 巨集）</a>
 </li>
       <li><a href="library/trace.html#trace.CoverageResults.write_results">write_results() (trace.CoverageResults 的方法)</a>
 </li>
@@ -39109,7 +39163,7 @@
 </li>
         <li><a href="library/pydoc.html#index-1">PAGER</a>
 </li>
-        <li><a href="c-api/intro.html#index-41">PATH</a>, <a href="c-api/intro.html#index-42">[1]</a>, <a href="faq/library.html#index-0">[2]</a>, <a href="faq/library.html#index-1">[3]</a>, <a href="library/cgi.html#index-3">[4]</a>, <a href="library/cgi.html#index-6">[5]</a>, <a href="library/os.html#index-33">[6]</a>, <a href="library/os.html#index-34">[7]</a>, <a href="library/os.html#index-35">[8]</a>, <a href="library/os.html#index-36">[9]</a>, <a href="library/os.html#index-39">[10]</a>, <a href="library/os.html#index-40">[11]</a>, <a href="library/os.html#index-41">[12]</a>, <a href="library/os.html#index-42">[13]</a>, <a href="library/os.html#index-52">[14]</a>, <a href="library/site.html#index-3">[15]</a>, <a href="library/subprocess.html#index-2">[16]</a>, <a href="library/venv.html#index-10">[17]</a>, <a href="library/venv.html#index-11">[18]</a>, <a href="library/venv.html#index-12">[19]</a>, <a href="library/webbrowser.html#index-3">[20]</a>, <a href="tutorial/appendix.html#index-12">[21]</a>, <a href="tutorial/modules.html#index-15">[22]</a>, <a href="using/cmdline.html#index-30">[23]</a>, <a href="using/unix.html#index-2">[24]</a>, <a href="using/windows.html#index-10">[25]</a>, <a href="using/windows.html#index-12">[26]</a>, <a href="using/windows.html#index-13">[27]</a>, <a href="using/windows.html#index-14">[28]</a>, <a href="using/windows.html#index-18">[29]</a>, <a href="using/windows.html#index-2">[30]</a>, <a href="using/windows.html#index-20">[31]</a>, <a href="using/windows.html#index-22">[32]</a>, <a href="using/windows.html#index-23">[33]</a>, <a href="using/windows.html#index-25">[34]</a>, <a href="using/windows.html#index-3">[35]</a>, <a href="using/windows.html#index-40">[36]</a>, <a href="using/windows.html#index-5">[37]</a>, <a href="using/windows.html#index-9">[38]</a>, <a href="whatsnew/3.4.html#index-54">[39]</a>, <a href="whatsnew/3.4.html#index-57">[40]</a>, <a href="whatsnew/3.4.html#index-58">[41]</a>, <a href="whatsnew/3.8.html#index-22">[42]</a>, <a href="whatsnew/changelog.html#index-211">[43]</a>, <a href="whatsnew/changelog.html#index-212">[44]</a>, <a href="whatsnew/changelog.html#index-53">[45]</a>, <a href="whatsnew/changelog.html#index-78">[46]</a>
+        <li><a href="c-api/intro.html#index-41">PATH</a>, <a href="c-api/intro.html#index-42">[1]</a>, <a href="faq/library.html#index-0">[2]</a>, <a href="faq/library.html#index-1">[3]</a>, <a href="library/cgi.html#index-3">[4]</a>, <a href="library/cgi.html#index-6">[5]</a>, <a href="library/os.html#index-33">[6]</a>, <a href="library/os.html#index-34">[7]</a>, <a href="library/os.html#index-35">[8]</a>, <a href="library/os.html#index-36">[9]</a>, <a href="library/os.html#index-39">[10]</a>, <a href="library/os.html#index-40">[11]</a>, <a href="library/os.html#index-41">[12]</a>, <a href="library/os.html#index-42">[13]</a>, <a href="library/os.html#index-52">[14]</a>, <a href="library/site.html#index-3">[15]</a>, <a href="library/subprocess.html#index-2">[16]</a>, <a href="library/venv.html#index-10">[17]</a>, <a href="library/venv.html#index-11">[18]</a>, <a href="library/venv.html#index-12">[19]</a>, <a href="library/webbrowser.html#index-3">[20]</a>, <a href="tutorial/appendix.html#index-12">[21]</a>, <a href="tutorial/modules.html#index-15">[22]</a>, <a href="using/cmdline.html#index-32">[23]</a>, <a href="using/unix.html#index-2">[24]</a>, <a href="using/windows.html#index-10">[25]</a>, <a href="using/windows.html#index-12">[26]</a>, <a href="using/windows.html#index-13">[27]</a>, <a href="using/windows.html#index-14">[28]</a>, <a href="using/windows.html#index-18">[29]</a>, <a href="using/windows.html#index-2">[30]</a>, <a href="using/windows.html#index-20">[31]</a>, <a href="using/windows.html#index-22">[32]</a>, <a href="using/windows.html#index-23">[33]</a>, <a href="using/windows.html#index-25">[34]</a>, <a href="using/windows.html#index-3">[35]</a>, <a href="using/windows.html#index-40">[36]</a>, <a href="using/windows.html#index-5">[37]</a>, <a href="using/windows.html#index-9">[38]</a>, <a href="whatsnew/3.4.html#index-54">[39]</a>, <a href="whatsnew/3.4.html#index-57">[40]</a>, <a href="whatsnew/3.4.html#index-58">[41]</a>, <a href="whatsnew/3.8.html#index-22">[42]</a>, <a href="whatsnew/changelog.html#index-211">[43]</a>, <a href="whatsnew/changelog.html#index-212">[44]</a>, <a href="whatsnew/changelog.html#index-53">[45]</a>, <a href="whatsnew/changelog.html#index-78">[46]</a>
 </li>
         <li><a href="using/windows.html#index-4">PATHEXT</a>, <a href="using/windows.html#index-6">[1]</a>, <a href="whatsnew/3.4.html#index-50">[2]</a>, <a href="whatsnew/changelog.html#index-136">[3]</a>
 </li>
@@ -39163,7 +39217,7 @@
 </li>
         <li><a href="c-api/init.html#index-62">PYTHONDEBUG</a>, <a href="c-api/init_config.html#index-22">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONDEBUG">[2]</a>, <a href="using/cmdline.html#index-2">[3]</a>, <a href="using/configure.html#index-6">[4]</a>
 </li>
-        <li><a href="c-api/init_config.html#index-8">PYTHONDEVMODE</a>, <a href="library/devmode.html#index-0">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONDEVMODE">[2]</a>, <a href="whatsnew/3.7.html#index-26">[3]</a>
+        <li><a href="c-api/init_config.html#index-8">PYTHONDEVMODE</a>, <a href="library/devmode.html#index-0">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONDEVMODE">[2]</a>, <a href="using/cmdline.html#index-24">[3]</a>, <a href="whatsnew/3.7.html#index-26">[4]</a>
 </li>
         <li><a href="library/pydoc.html#index-2">PYTHONDOCS</a>
 </li>
@@ -39177,41 +39231,41 @@
 </li>
         <li><a href="c-api/init_config.html#index-23">PYTHONEXECUTABLE</a>, <a href="using/cmdline.html#envvar-PYTHONEXECUTABLE">[1]</a>
 </li>
-        <li><a href="c-api/init_config.html#index-10">PYTHONFAULTHANDLER</a>, <a href="library/devmode.html#index-4">[1]</a>, <a href="library/faulthandler.html#index-0">[2]</a>, <a href="using/cmdline.html#envvar-PYTHONFAULTHANDLER">[3]</a>, <a href="using/cmdline.html#index-19">[4]</a>, <a href="whatsnew/3.3.html#index-24">[5]</a>
+        <li><a href="c-api/init_config.html#index-10">PYTHONFAULTHANDLER</a>, <a href="library/devmode.html#index-4">[1]</a>, <a href="library/faulthandler.html#index-0">[2]</a>, <a href="using/cmdline.html#envvar-PYTHONFAULTHANDLER">[3]</a>, <a href="using/cmdline.html#index-20">[4]</a>, <a href="whatsnew/3.3.html#index-24">[5]</a>
 </li>
-        <li><a href="c-api/init.html#index-3">PYTHONHASHSEED</a>, <a href="c-api/init.html#index-64">[1]</a>, <a href="c-api/init_config.html#index-11">[2]</a>, <a href="reference/datamodel.html#index-114">[3]</a>, <a href="using/cmdline.html#envvar-PYTHONHASHSEED">[4]</a>, <a href="using/cmdline.html#index-13">[5]</a>, <a href="using/cmdline.html#index-14">[6]</a>, <a href="using/cmdline.html#index-35">[7]</a>, <a href="whatsnew/3.3.html#index-23">[8]</a>, <a href="whatsnew/3.3.html#index-35">[9]</a>, <a href="whatsnew/changelog.html#index-236">[10]</a>
+        <li><a href="c-api/init.html#index-3">PYTHONHASHSEED</a>, <a href="c-api/init.html#index-64">[1]</a>, <a href="c-api/init_config.html#index-11">[2]</a>, <a href="reference/datamodel.html#index-114">[3]</a>, <a href="using/cmdline.html#envvar-PYTHONHASHSEED">[4]</a>, <a href="using/cmdline.html#index-13">[5]</a>, <a href="using/cmdline.html#index-14">[6]</a>, <a href="using/cmdline.html#index-37">[7]</a>, <a href="whatsnew/3.3.html#index-23">[8]</a>, <a href="whatsnew/3.3.html#index-35">[9]</a>, <a href="whatsnew/changelog.html#index-236">[10]</a>
 </li>
-        <li><a href="c-api/init.html#index-30">PYTHONHOME</a>, <a href="c-api/init.html#index-31">[1]</a>, <a href="c-api/init.html#index-66">[2]</a>, <a href="c-api/init_config.html#index-12">[3]</a>, <a href="c-api/intro.html#index-43">[4]</a>, <a href="c-api/intro.html#index-45">[5]</a>, <a href="library/sys_path_init.html#index-2">[6]</a>, <a href="library/sys_path_init.html#index-4">[7]</a>, <a href="library/test.html#index-0">[8]</a>, <a href="using/cmdline.html#envvar-PYTHONHOME">[9]</a>, <a href="using/cmdline.html#index-28">[10]</a>, <a href="using/cmdline.html#index-29">[11]</a>, <a href="using/cmdline.html#index-32">[12]</a>, <a href="using/cmdline.html#index-4">[13]</a>, <a href="using/windows.html#index-33">[14]</a>, <a href="using/windows.html#index-35">[15]</a>, <a href="using/windows.html#index-37">[16]</a>, <a href="whatsnew/3.12.html#index-62">[17]</a>, <a href="whatsnew/3.6.html#index-2">[18]</a>
+        <li><a href="c-api/init.html#index-30">PYTHONHOME</a>, <a href="c-api/init.html#index-31">[1]</a>, <a href="c-api/init.html#index-66">[2]</a>, <a href="c-api/init_config.html#index-12">[3]</a>, <a href="c-api/intro.html#index-43">[4]</a>, <a href="c-api/intro.html#index-45">[5]</a>, <a href="library/sys_path_init.html#index-2">[6]</a>, <a href="library/sys_path_init.html#index-4">[7]</a>, <a href="library/test.html#index-0">[8]</a>, <a href="using/cmdline.html#envvar-PYTHONHOME">[9]</a>, <a href="using/cmdline.html#index-30">[10]</a>, <a href="using/cmdline.html#index-31">[11]</a>, <a href="using/cmdline.html#index-34">[12]</a>, <a href="using/cmdline.html#index-4">[13]</a>, <a href="using/windows.html#index-33">[14]</a>, <a href="using/windows.html#index-35">[15]</a>, <a href="using/windows.html#index-37">[16]</a>, <a href="whatsnew/3.12.html#index-62">[17]</a>, <a href="whatsnew/3.6.html#index-2">[18]</a>
 </li>
         <li><a href="c-api/init.html#index-67">PYTHONINSPECT</a>, <a href="c-api/init_config.html#index-14">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONINSPECT">[2]</a>, <a href="using/cmdline.html#index-6">[3]</a>, <a href="whatsnew/2.3.html#index-28">[4]</a>
 </li>
-        <li><a href="c-api/init_config.html#index-15">PYTHONINTMAXSTRDIGITS</a>, <a href="library/stdtypes.html#index-67">[1]</a>, <a href="library/stdtypes.html#index-68">[2]</a>, <a href="library/sys.html#index-17">[3]</a>, <a href="using/cmdline.html#envvar-PYTHONINTMAXSTRDIGITS">[4]</a>, <a href="using/cmdline.html#index-21">[5]</a>, <a href="whatsnew/changelog.html#index-40">[6]</a>
+        <li><a href="c-api/init_config.html#index-15">PYTHONINTMAXSTRDIGITS</a>, <a href="library/stdtypes.html#index-67">[1]</a>, <a href="library/stdtypes.html#index-68">[2]</a>, <a href="library/sys.html#index-17">[3]</a>, <a href="using/cmdline.html#envvar-PYTHONINTMAXSTRDIGITS">[4]</a>, <a href="using/cmdline.html#index-22">[5]</a>, <a href="whatsnew/changelog.html#index-40">[6]</a>
 </li>
-        <li><a href="c-api/init.html#index-17">PYTHONIOENCODING</a>, <a href="c-api/init.html#index-18">[1]</a>, <a href="c-api/init_config.html#index-26">[2]</a>, <a href="library/os.html#index-1">[3]</a>, <a href="library/sys.html#index-35">[4]</a>, <a href="using/cmdline.html#envvar-PYTHONIOENCODING">[5]</a>, <a href="using/cmdline.html#index-41">[6]</a>, <a href="whatsnew/2.6.html#index-21">[7]</a>, <a href="whatsnew/3.4.html#index-53">[8]</a>
+        <li><a href="c-api/init.html#index-17">PYTHONIOENCODING</a>, <a href="c-api/init.html#index-18">[1]</a>, <a href="c-api/init_config.html#index-26">[2]</a>, <a href="library/os.html#index-1">[3]</a>, <a href="library/sys.html#index-35">[4]</a>, <a href="using/cmdline.html#envvar-PYTHONIOENCODING">[5]</a>, <a href="using/cmdline.html#index-43">[6]</a>, <a href="whatsnew/2.6.html#index-21">[7]</a>, <a href="whatsnew/3.4.html#index-53">[8]</a>
 </li>
         <li><a href="c-api/init.html#index-68">PYTHONLEGACYWINDOWSFSENCODING</a>, <a href="c-api/init_config.html#index-1">[1]</a>, <a href="library/sys.html#index-33">[2]</a>, <a href="using/cmdline.html#envvar-PYTHONLEGACYWINDOWSFSENCODING">[3]</a>, <a href="whatsnew/3.6.html#index-19">[4]</a>
 </li>
-        <li><a href="c-api/init.html#index-9">PYTHONLEGACYWINDOWSSTDIO</a>, <a href="c-api/init_config.html#index-16">[1]</a>, <a href="library/sys.html#index-37">[2]</a>, <a href="using/cmdline.html#envvar-PYTHONLEGACYWINDOWSSTDIO">[3]</a>, <a href="using/cmdline.html#index-36">[4]</a>, <a href="whatsnew/3.6.html#index-21">[5]</a>
+        <li><a href="c-api/init.html#index-9">PYTHONLEGACYWINDOWSSTDIO</a>, <a href="c-api/init_config.html#index-16">[1]</a>, <a href="library/sys.html#index-37">[2]</a>, <a href="using/cmdline.html#envvar-PYTHONLEGACYWINDOWSSTDIO">[3]</a>, <a href="using/cmdline.html#index-38">[4]</a>, <a href="whatsnew/3.6.html#index-21">[5]</a>
 </li>
-        <li><a href="c-api/memory.html#index-1">PYTHONMALLOC</a>, <a href="c-api/memory.html#index-3">[1]</a>, <a href="c-api/memory.html#index-4">[2]</a>, <a href="c-api/memory.html#index-5">[3]</a>, <a href="library/devmode.html#index-2">[4]</a>, <a href="library/devmode.html#index-3">[5]</a>, <a href="using/cmdline.html#envvar-PYTHONMALLOC">[6]</a>, <a href="using/cmdline.html#index-39">[7]</a>, <a href="using/configure.html#index-35">[8]</a>, <a href="whatsnew/3.6.html#index-27">[9]</a>, <a href="whatsnew/3.6.html#index-38">[10]</a>, <a href="whatsnew/changelog.html#index-285">[11]</a>
+        <li><a href="c-api/memory.html#index-1">PYTHONMALLOC</a>, <a href="c-api/memory.html#index-3">[1]</a>, <a href="c-api/memory.html#index-4">[2]</a>, <a href="c-api/memory.html#index-5">[3]</a>, <a href="library/devmode.html#index-2">[4]</a>, <a href="library/devmode.html#index-3">[5]</a>, <a href="using/cmdline.html#envvar-PYTHONMALLOC">[6]</a>, <a href="using/cmdline.html#index-41">[7]</a>, <a href="using/configure.html#index-35">[8]</a>, <a href="whatsnew/3.6.html#index-27">[9]</a>, <a href="whatsnew/3.6.html#index-38">[10]</a>, <a href="whatsnew/changelog.html#index-285">[11]</a>
 </li>
         <li><a href="c-api/init_config.html#index-18">PYTHONMALLOCSTATS</a>, <a href="c-api/memory.html#index-2">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONMALLOCSTATS">[2]</a>, <a href="whatsnew/changelog.html#index-286">[3]</a>
 </li>
-        <li><a href="c-api/init_config.html#index-6">PYTHONNODEBUGRANGES</a>, <a href="reference/datamodel.html#index-61">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONNODEBUGRANGES">[2]</a>, <a href="using/cmdline.html#index-26">[3]</a>, <a href="whatsnew/3.11.html#index-88">[4]</a>
+        <li><a href="c-api/init_config.html#index-6">PYTHONNODEBUGRANGES</a>, <a href="reference/datamodel.html#index-61">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONNODEBUGRANGES">[2]</a>, <a href="using/cmdline.html#index-28">[3]</a>, <a href="whatsnew/3.11.html#index-88">[4]</a>
 </li>
-        <li><a href="c-api/init.html#index-71">PYTHONNOUSERSITE</a>, <a href="c-api/init_config.html#index-29">[1]</a>, <a href="library/site.html#index-6">[2]</a>, <a href="using/cmdline.html#envvar-PYTHONNOUSERSITE">[3]</a>, <a href="whatsnew/2.6.html#index-6">[4]</a>
+        <li><a href="c-api/init.html#index-71">PYTHONNOUSERSITE</a>, <a href="c-api/init_config.html#index-29">[1]</a>, <a href="library/site.html#index-6">[2]</a>, <a href="using/cmdline.html#envvar-PYTHONNOUSERSITE">[3]</a>, <a href="using/cmdline.html#index-15">[4]</a>, <a href="whatsnew/2.6.html#index-6">[5]</a>
 </li>
         <li><a href="c-api/init.html#index-72">PYTHONOPTIMIZE</a>, <a href="c-api/init_config.html#index-21">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONOPTIMIZE">[2]</a>, <a href="using/cmdline.html#index-8">[3]</a>
 </li>
-        <li><a href="c-api/init.html#index-65">PYTHONPATH</a>, <a href="c-api/init_config.html#index-20">[1]</a>, <a href="c-api/intro.html#index-44">[2]</a>, <a href="c-api/intro.html#index-46">[3]</a>, <a href="extending/building.html#index-0">[4]</a>, <a href="library/cgi.html#index-4">[5]</a>, <a href="library/sys.html#index-22">[6]</a>, <a href="library/sys.html#index-23">[7]</a>, <a href="library/sys_path_init.html#index-0">[8]</a>, <a href="library/sys_path_init.html#index-1">[9]</a>, <a href="library/test.html#index-1">[10]</a>, <a href="reference/import.html#index-18">[11]</a>, <a href="tutorial/modules.html#index-14">[12]</a>, <a href="tutorial/modules.html#index-17">[13]</a>, <a href="tutorial/modules.html#index-18">[14]</a>, <a href="using/cmdline.html#envvar-PYTHONPATH">[15]</a>, <a href="using/cmdline.html#index-3">[16]</a>, <a href="using/cmdline.html#index-31">[17]</a>, <a href="using/cmdline.html#index-33">[18]</a>, <a href="using/cmdline.html#index-34">[19]</a>, <a href="using/mac.html#index-0">[20]</a>, <a href="using/windows.html#index-11">[21]</a>, <a href="using/windows.html#index-32">[22]</a>, <a href="using/windows.html#index-34">[23]</a>, <a href="using/windows.html#index-36">[24]</a>, <a href="whatsnew/3.4.html#index-55">[25]</a>, <a href="whatsnew/3.4.html#index-56">[26]</a>
+        <li><a href="c-api/init.html#index-65">PYTHONPATH</a>, <a href="c-api/init_config.html#index-20">[1]</a>, <a href="c-api/intro.html#index-44">[2]</a>, <a href="c-api/intro.html#index-46">[3]</a>, <a href="extending/building.html#index-0">[4]</a>, <a href="library/cgi.html#index-4">[5]</a>, <a href="library/sys.html#index-22">[6]</a>, <a href="library/sys.html#index-23">[7]</a>, <a href="library/sys_path_init.html#index-0">[8]</a>, <a href="library/sys_path_init.html#index-1">[9]</a>, <a href="library/test.html#index-1">[10]</a>, <a href="reference/import.html#index-18">[11]</a>, <a href="tutorial/modules.html#index-14">[12]</a>, <a href="tutorial/modules.html#index-17">[13]</a>, <a href="tutorial/modules.html#index-18">[14]</a>, <a href="using/cmdline.html#envvar-PYTHONPATH">[15]</a>, <a href="using/cmdline.html#index-3">[16]</a>, <a href="using/cmdline.html#index-33">[17]</a>, <a href="using/cmdline.html#index-35">[18]</a>, <a href="using/cmdline.html#index-36">[19]</a>, <a href="using/mac.html#index-2">[20]</a>, <a href="using/windows.html#index-11">[21]</a>, <a href="using/windows.html#index-32">[22]</a>, <a href="using/windows.html#index-34">[23]</a>, <a href="using/windows.html#index-36">[24]</a>, <a href="whatsnew/3.4.html#index-55">[25]</a>, <a href="whatsnew/3.4.html#index-56">[26]</a>
 </li>
-        <li><a href="c-api/init_config.html#index-28">PYTHONPERFSUPPORT</a>, <a href="howto/perf_profiling.html#index-2">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONPERFSUPPORT">[2]</a>, <a href="using/cmdline.html#index-27">[3]</a>, <a href="whatsnew/3.12.html#index-23">[4]</a>
+        <li><a href="c-api/init_config.html#index-28">PYTHONPERFSUPPORT</a>, <a href="howto/perf_profiling.html#index-2">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONPERFSUPPORT">[2]</a>, <a href="using/cmdline.html#index-29">[3]</a>, <a href="whatsnew/3.12.html#index-23">[4]</a>
 </li>
         <li><a href="c-api/init_config.html#index-19">PYTHONPLATLIBDIR</a>, <a href="library/sys_path_init.html#index-3">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONPLATLIBDIR">[2]</a>, <a href="whatsnew/changelog.html#index-152">[3]</a>
 </li>
-        <li><a href="c-api/init_config.html#index-13">PYTHONPROFILEIMPORTTIME</a>, <a href="using/cmdline.html#envvar-PYTHONPROFILEIMPORTTIME">[1]</a>, <a href="using/cmdline.html#index-22">[2]</a>, <a href="whatsnew/3.7.html#index-27">[3]</a>, <a href="whatsnew/changelog.html#index-244">[4]</a>
+        <li><a href="c-api/init_config.html#index-13">PYTHONPROFILEIMPORTTIME</a>, <a href="using/cmdline.html#envvar-PYTHONPROFILEIMPORTTIME">[1]</a>, <a href="using/cmdline.html#index-23">[2]</a>, <a href="whatsnew/3.7.html#index-27">[3]</a>, <a href="whatsnew/changelog.html#index-244">[4]</a>
 </li>
-        <li><a href="c-api/init_config.html#index-25">PYTHONPYCACHEPREFIX</a>, <a href="library/sys.html#index-7">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONPYCACHEPREFIX">[2]</a>, <a href="using/cmdline.html#index-24">[3]</a>, <a href="whatsnew/3.8.html#index-2">[4]</a>, <a href="whatsnew/changelog.html#index-216">[5]</a>
+        <li><a href="c-api/init_config.html#index-25">PYTHONPYCACHEPREFIX</a>, <a href="library/sys.html#index-7">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONPYCACHEPREFIX">[2]</a>, <a href="using/cmdline.html#index-26">[3]</a>, <a href="whatsnew/3.8.html#index-2">[4]</a>, <a href="whatsnew/changelog.html#index-216">[5]</a>
 </li>
         <li><a href="whatsnew/changelog.html#index-63">PYTHONREGRTEST_UNICODE_GUARD</a>
 </li>
@@ -39219,23 +39273,23 @@
 </li>
         <li><a href="library/idle.html#index-6">PYTHONSTARTUP</a>, <a href="library/readline.html#index-0">[1]</a>, <a href="library/site.html#index-5">[2]</a>, <a href="library/sys.html#index-18">[3]</a>, <a href="tutorial/appendix.html#index-13">[4]</a>, <a href="using/cmdline.html#envvar-PYTHONSTARTUP">[5]</a>, <a href="using/cmdline.html#index-5">[6]</a>, <a href="whatsnew/3.4.html#index-40">[7]</a>, <a href="whatsnew/3.4.html#index-41">[8]</a>, <a href="whatsnew/changelog.html#index-226">[9]</a>, <a href="whatsnew/changelog.html#index-231">[10]</a>, <a href="whatsnew/changelog.html#index-256">[11]</a>
 </li>
-        <li><a href="c-api/init_config.html#index-27">PYTHONTRACEMALLOC</a>, <a href="library/tracemalloc.html#index-0">[1]</a>, <a href="library/tracemalloc.html#index-1">[2]</a>, <a href="library/tracemalloc.html#index-2">[3]</a>, <a href="using/cmdline.html#envvar-PYTHONTRACEMALLOC">[4]</a>, <a href="using/cmdline.html#index-20">[5]</a>
+        <li><a href="c-api/init_config.html#index-27">PYTHONTRACEMALLOC</a>, <a href="library/tracemalloc.html#index-0">[1]</a>, <a href="library/tracemalloc.html#index-1">[2]</a>, <a href="library/tracemalloc.html#index-2">[3]</a>, <a href="using/cmdline.html#envvar-PYTHONTRACEMALLOC">[4]</a>, <a href="using/cmdline.html#index-21">[5]</a>
 </li>
         <li><a href="library/zoneinfo.html#envvar-PYTHONTZPATH">PYTHONTZPATH</a>, <a href="library/zoneinfo.html#index-2">[1]</a>
 </li>
-        <li><a href="c-api/init.html#index-73">PYTHONUNBUFFERED</a>, <a href="c-api/init_config.html#index-5">[1]</a>, <a href="library/sys.html#index-38">[2]</a>, <a href="using/cmdline.html#envvar-PYTHONUNBUFFERED">[3]</a>, <a href="using/cmdline.html#index-52">[4]</a>, <a href="whatsnew/changelog.html#index-203">[5]</a>
+        <li><a href="c-api/init.html#index-73">PYTHONUNBUFFERED</a>, <a href="c-api/init_config.html#index-5">[1]</a>, <a href="library/sys.html#index-38">[2]</a>, <a href="using/cmdline.html#envvar-PYTHONUNBUFFERED">[3]</a>, <a href="using/cmdline.html#index-54">[4]</a>, <a href="whatsnew/changelog.html#index-203">[5]</a>
 </li>
         <li><a href="library/site.html#index-7">PYTHONUSERBASE</a>, <a href="library/site.html#index-8">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONUSERBASE">[2]</a>, <a href="whatsnew/2.6.html#index-4">[3]</a>
 </li>
         <li><a href="library/test.html#index-2">PYTHONUSERSITE</a>
 </li>
-        <li><a href="c-api/init_config.html#index-2">PYTHONUTF8</a>, <a href="c-api/init_config.html#index-35">[1]</a>, <a href="library/os.html#index-2">[2]</a>, <a href="library/os.html#index-3">[3]</a>, <a href="library/sys.html#index-36">[4]</a>, <a href="using/cmdline.html#envvar-PYTHONUTF8">[5]</a>, <a href="using/cmdline.html#index-23">[6]</a>, <a href="using/cmdline.html#index-42">[7]</a>, <a href="using/windows.html#index-15">[8]</a>, <a href="whatsnew/3.7.html#index-8">[9]</a>
+        <li><a href="c-api/init_config.html#index-2">PYTHONUTF8</a>, <a href="c-api/init_config.html#index-35">[1]</a>, <a href="library/os.html#index-2">[2]</a>, <a href="library/os.html#index-3">[3]</a>, <a href="library/sys.html#index-36">[4]</a>, <a href="using/cmdline.html#envvar-PYTHONUTF8">[5]</a>, <a href="using/cmdline.html#index-25">[6]</a>, <a href="using/cmdline.html#index-44">[7]</a>, <a href="using/windows.html#index-15">[8]</a>, <a href="whatsnew/3.7.html#index-8">[9]</a>
 </li>
-        <li><a href="c-api/init.html#index-74">PYTHONVERBOSE</a>, <a href="c-api/init_config.html#index-30">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONVERBOSE">[2]</a>, <a href="using/cmdline.html#index-53">[3]</a>
+        <li><a href="c-api/init.html#index-74">PYTHONVERBOSE</a>, <a href="c-api/init_config.html#index-30">[1]</a>, <a href="using/cmdline.html#envvar-PYTHONVERBOSE">[2]</a>, <a href="using/cmdline.html#index-55">[3]</a>
 </li>
-        <li><a href="library/io.html#index-9">PYTHONWARNDEFAULTENCODING</a>, <a href="using/cmdline.html#envvar-PYTHONWARNDEFAULTENCODING">[1]</a>, <a href="using/cmdline.html#index-25">[2]</a>, <a href="whatsnew/3.10.html#index-98">[3]</a>, <a href="whatsnew/changelog.html#index-106">[4]</a>
+        <li><a href="library/io.html#index-9">PYTHONWARNDEFAULTENCODING</a>, <a href="using/cmdline.html#envvar-PYTHONWARNDEFAULTENCODING">[1]</a>, <a href="using/cmdline.html#index-27">[2]</a>, <a href="whatsnew/3.10.html#index-98">[3]</a>, <a href="whatsnew/changelog.html#index-106">[4]</a>
 </li>
-        <li><a href="c-api/init_config.html#index-31">PYTHONWARNINGS</a>, <a href="library/devmode.html#index-1">[1]</a>, <a href="library/warnings.html#index-1">[2]</a>, <a href="library/warnings.html#index-2">[3]</a>, <a href="library/warnings.html#index-3">[4]</a>, <a href="library/warnings.html#index-4">[5]</a>, <a href="library/warnings.html#index-5">[6]</a>, <a href="using/cmdline.html#envvar-PYTHONWARNINGS">[7]</a>, <a href="using/cmdline.html#index-18">[8]</a>, <a href="whatsnew/2.7.html#index-1">[9]</a>, <a href="whatsnew/2.7.html#index-8">[10]</a>, <a href="whatsnew/3.2.html#index-10">[11]</a>, <a href="whatsnew/3.7.html#index-36">[12]</a>, <a href="whatsnew/changelog.html#index-49">[13]</a>
+        <li><a href="c-api/init_config.html#index-31">PYTHONWARNINGS</a>, <a href="library/devmode.html#index-1">[1]</a>, <a href="library/warnings.html#index-1">[2]</a>, <a href="library/warnings.html#index-2">[3]</a>, <a href="library/warnings.html#index-3">[4]</a>, <a href="library/warnings.html#index-4">[5]</a>, <a href="library/warnings.html#index-5">[6]</a>, <a href="using/cmdline.html#envvar-PYTHONWARNINGS">[7]</a>, <a href="using/cmdline.html#index-19">[8]</a>, <a href="whatsnew/2.7.html#index-1">[9]</a>, <a href="whatsnew/2.7.html#index-8">[10]</a>, <a href="whatsnew/3.2.html#index-10">[11]</a>, <a href="whatsnew/3.7.html#index-36">[12]</a>, <a href="whatsnew/changelog.html#index-49">[13]</a>
 </li>
         <li><a href="library/compileall.html#index-1">SOURCE_DATE_EPOCH</a>, <a href="library/py_compile.html#index-3">[1]</a>, <a href="library/py_compile.html#index-6">[2]</a>, <a href="library/py_compile.html#index-7">[3]</a>, <a href="whatsnew/3.7.html#index-31">[4]</a>, <a href="whatsnew/changelog.html#index-218">[5]</a>, <a href="whatsnew/changelog.html#index-235">[6]</a>
 </li>
@@ -39342,7 +39396,7 @@
 <br />
     <br />
 
-    最後更新於 Feb 22, 2024 (06:04 UTC)。
+    最後更新於 Mar 19, 2024 (04:23 UTC)。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

@@ -234,83 +234,95 @@ class was defined</p></td>
 <td><p>name of module in which
 this class was defined</p></td>
 </tr>
-<tr class="row-even"><td><p>method</p></td>
+<tr class="row-even"><td></td>
+<td><p>__type_params__</p></td>
+<td><p>A tuple containing the
+<a class="reference internal" href="../reference/compound_stmts.html#type-params"><span class="std std-ref">type parameters</span></a> of
+a generic class</p></td>
+</tr>
+<tr class="row-odd"><td><p>method</p></td>
 <td><p>__doc__</p></td>
 <td><p>documentation string</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p>__name__</p></td>
 <td><p>name with which this
 method was defined</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p>__qualname__</p></td>
 <td><p>qualified name</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p>__func__</p></td>
 <td><p>function object
 containing implementation
 of method</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p>__self__</p></td>
 <td><p>instance to which this
 method is bound, or
 <code class="docutils literal notranslate"><span class="pre">None</span></code></p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p>__module__</p></td>
 <td><p>name of module in which
 this method was defined</p></td>
 </tr>
-<tr class="row-even"><td><p>函式</p></td>
+<tr class="row-odd"><td><p>函式</p></td>
 <td><p>__doc__</p></td>
 <td><p>documentation string</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p>__name__</p></td>
 <td><p>name with which this
 function was defined</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p>__qualname__</p></td>
 <td><p>qualified name</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p>__code__</p></td>
 <td><p>code object containing
 compiled function
 <a class="reference internal" href="../glossary.html#term-bytecode"><span class="xref std std-term">bytecode</span></a></p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p>__defaults__</p></td>
 <td><p>tuple of any default
 values for positional or
 keyword parameters</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p>__kwdefaults__</p></td>
 <td><p>mapping of any default
 values for keyword-only
 parameters</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p>__globals__</p></td>
 <td><p>global namespace in which
 this function was defined</p></td>
 </tr>
-<tr class="row-odd"><td></td>
+<tr class="row-even"><td></td>
 <td><p>__builtins__</p></td>
 <td><p>builtins namespace</p></td>
 </tr>
-<tr class="row-even"><td></td>
+<tr class="row-odd"><td></td>
 <td><p>__annotations__</p></td>
 <td><p>mapping of parameters
 names to annotations;
 <code class="docutils literal notranslate"><span class="pre">&quot;return&quot;</span></code> key is
 reserved for return
 annotations.</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p>__type_params__</p></td>
+<td><p>A tuple containing the
+<a class="reference internal" href="../reference/compound_stmts.html#type-params"><span class="std std-ref">type parameters</span></a> of
+a generic function</p></td>
 </tr>
 <tr class="row-odd"><td></td>
 <td><p>__module__</p></td>
@@ -978,8 +990,6 @@ function.</p>
 </div>
 <p>Accepts a wide range of Python callables, from plain functions and classes to
 <a class="reference internal" href="functools.html#functools.partial" title="functools.partial"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.partial()</span></code></a> objects.</p>
-<p>If the passed object has a <code class="docutils literal notranslate"><span class="pre">__signature__</span></code> attribute, this function
-returns it without further computations.</p>
 <p>For objects defined in modules using stringized annotations
 (<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">annotations</span></code>), <a class="reference internal" href="#inspect.signature" title="inspect.signature"><code class="xref py py-func docutils literal notranslate"><span class="pre">signature()</span></code></a> will
 attempt to automatically un-stringize the annotations using
@@ -1010,6 +1020,12 @@ unwrap decorated callables.)</p>
 <p>Some callables may not be introspectable in certain implementations of
 Python.  For example, in CPython, some built-in functions defined in
 C provide no metadata about their arguments.</p>
+</div>
+<div class="impl-detail compound">
+<p><strong>CPython 實作細節：</strong> If the passed object has a <code class="xref py py-attr docutils literal notranslate"><span class="pre">__signature__</span></code> attribute,
+we may use it to create the signature.
+The exact semantics are an implementation detail and are subject to
+unannounced changes. Consult the source code for current semantics.</p>
 </div>
 </dd></dl>
 
@@ -2315,7 +2331,7 @@ appended a colon and the qualified name of the target object.</p>
 <br />
     <br />
 
-    最後更新於 Feb 22, 2024 (06:04 UTC)。
+    最後更新於 Mar 19, 2024 (04:23 UTC)。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

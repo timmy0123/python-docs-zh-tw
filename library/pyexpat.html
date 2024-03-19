@@ -212,7 +212,7 @@ parser.  Direct use of the <code class="xref py py-mod docutils literal notransl
 <dl class="py exception">
 <dt class="sig sig-object py" id="xml.parsers.expat.error">
 <em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">xml.parsers.expat.</span></span><span class="sig-name descname"><span class="pre">error</span></span><a class="headerlink" href="#xml.parsers.expat.error" title="Link to this definition">¶</a></dt>
-<dd><p>Alias for <a class="reference internal" href="#xml.parsers.expat.ExpatError" title="xml.parsers.expat.ExpatError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ExpatError</span></code></a>.</p>
+<dd><p><a class="reference internal" href="#xml.parsers.expat.ExpatError" title="xml.parsers.expat.ExpatError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ExpatError</span></code></a> 的別名。</p>
 </dd></dl>
 
 <dl class="py data">
@@ -362,6 +362,46 @@ methods are called; calling it after either of those have been called causes
 <code class="docutils literal notranslate"><span class="pre">errors.codes[errors.XML_ERROR_CANT_CHANGE_FEATURE_ONCE_PARSING]</span></code>.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="xml.parsers.expat.xmlparser.SetReparseDeferralEnabled">
+<span class="sig-prename descclassname"><span class="pre">xmlparser.</span></span><span class="sig-name descname"><span class="pre">SetReparseDeferralEnabled</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">enabled</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#xml.parsers.expat.xmlparser.SetReparseDeferralEnabled" title="Link to this definition">¶</a></dt>
+<dd><div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>Calling <code class="docutils literal notranslate"><span class="pre">SetReparseDeferralEnabled(False)</span></code> has security implications,
+as detailed below; please make sure to understand these consequences
+prior to using the <code class="docutils literal notranslate"><span class="pre">SetReparseDeferralEnabled</span></code> method.</p>
+</div>
+<p>Expat 2.6.0 introduced a security mechanism called &quot;reparse deferral&quot;
+where instead of causing denial of service through quadratic runtime
+from reparsing large tokens, reparsing of unfinished tokens is now delayed
+by default until a sufficient amount of input is reached.
+Due to this delay, registered handlers may — depending of the sizing of
+input chunks pushed to Expat — no longer be called right after pushing new
+input to the parser.  Where immediate feedback and taking over responsiblity
+of protecting against denial of service from large tokens are both wanted,
+calling <code class="docutils literal notranslate"><span class="pre">SetReparseDeferralEnabled(False)</span></code> disables reparse deferral
+for the current Expat parser instance, temporarily or altogether.
+Calling <code class="docutils literal notranslate"><span class="pre">SetReparseDeferralEnabled(True)</span></code> allows re-enabling reparse
+deferral.</p>
+<p>Note that <a class="reference internal" href="#xml.parsers.expat.xmlparser.SetReparseDeferralEnabled" title="xml.parsers.expat.xmlparser.SetReparseDeferralEnabled"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetReparseDeferralEnabled()</span></code></a> has been backported to some
+prior releases of CPython as a security fix.  Check for availability of
+<a class="reference internal" href="#xml.parsers.expat.xmlparser.SetReparseDeferralEnabled" title="xml.parsers.expat.xmlparser.SetReparseDeferralEnabled"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SetReparseDeferralEnabled()</span></code></a> using <a class="reference internal" href="functions.html#hasattr" title="hasattr"><code class="xref py py-func docutils literal notranslate"><span class="pre">hasattr()</span></code></a> if used in code
+running across a variety of Python versions.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">在 3.12.3 版新加入.</span></p>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="xml.parsers.expat.xmlparser.GetReparseDeferralEnabled">
+<span class="sig-prename descclassname"><span class="pre">xmlparser.</span></span><span class="sig-name descname"><span class="pre">GetReparseDeferralEnabled</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#xml.parsers.expat.xmlparser.GetReparseDeferralEnabled" title="Link to this definition">¶</a></dt>
+<dd><p>Returns whether reparse deferral is currently enabled for the given
+Expat parser instance.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">在 3.12.3 版新加入.</span></p>
+</div>
+</dd></dl>
+
 <p><code class="xref py py-class docutils literal notranslate"><span class="pre">xmlparser</span></code> 物件擁有以下屬性：</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="xml.parsers.expat.xmlparser.buffer_size">
@@ -380,7 +420,8 @@ content returned by Expat to avoid multiple calls to the
 <a class="reference internal" href="#xml.parsers.expat.xmlparser.CharacterDataHandler" title="xml.parsers.expat.xmlparser.CharacterDataHandler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CharacterDataHandler()</span></code></a> callback whenever possible.  This can improve
 performance substantially since Expat normally breaks character data into chunks
 at every line ending.  This attribute is false by default, and may be changed at
-any time.</p>
+any time. Note that when it is false, data that does not contain newlines
+may be chunked too.</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -553,7 +594,10 @@ dictionary mapping names to values.</p>
 marked content, and ignorable whitespace.  Applications which must distinguish
 these cases can use the <a class="reference internal" href="#xml.parsers.expat.xmlparser.StartCdataSectionHandler" title="xml.parsers.expat.xmlparser.StartCdataSectionHandler"><code class="xref py py-attr docutils literal notranslate"><span class="pre">StartCdataSectionHandler</span></code></a>,
 <a class="reference internal" href="#xml.parsers.expat.xmlparser.EndCdataSectionHandler" title="xml.parsers.expat.xmlparser.EndCdataSectionHandler"><code class="xref py py-attr docutils literal notranslate"><span class="pre">EndCdataSectionHandler</span></code></a>, and <a class="reference internal" href="#xml.parsers.expat.xmlparser.ElementDeclHandler" title="xml.parsers.expat.xmlparser.ElementDeclHandler"><code class="xref py py-attr docutils literal notranslate"><span class="pre">ElementDeclHandler</span></code></a> callbacks to
-collect the required information.</p>
+collect the required information. Note that the character data may be
+chunked even if it is short and so you may receive more than one call to
+<a class="reference internal" href="#xml.parsers.expat.xmlparser.CharacterDataHandler" title="xml.parsers.expat.xmlparser.CharacterDataHandler"><code class="xref py py-meth docutils literal notranslate"><span class="pre">CharacterDataHandler()</span></code></a>. Set the <a class="reference internal" href="#xml.parsers.expat.xmlparser.buffer_text" title="xml.parsers.expat.xmlparser.buffer_text"><code class="xref py py-attr docutils literal notranslate"><span class="pre">buffer_text</span></code></a> instance attribute
+to <code class="docutils literal notranslate"><span class="pre">True</span></code> to avoid that.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1257,7 +1301,7 @@ and <a class="reference external" href="https://www.iana.org/assignments/charact
 <br />
     <br />
 
-    最後更新於 Feb 22, 2024 (06:04 UTC)。
+    最後更新於 Mar 19, 2024 (04:23 UTC)。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 

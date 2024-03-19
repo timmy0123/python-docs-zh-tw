@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Descriptor Guide &#8212; Python 3.12.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>描述器 (Descriptor) 指南 &#8212; Python 3.12.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=e8a97c27" />
@@ -25,7 +25,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="Enum HOWTO" href="enum.html" />
+    <link rel="next" title="Debugging C API extensions and CPython Internals with GDB" href="gdb_helpers.html" />
     <link rel="prev" title="Curses Programming with Python" href="curses.html" />
     <link rel="canonical" href="https://docs.python.org/3/howto/descriptor.html" />
     
@@ -85,7 +85,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Descriptor Guide</a><ul>
+<li><a class="reference internal" href="#">描述器 (Descriptor) 指南</a><ul>
 <li><a class="reference internal" href="#primer">Primer</a><ul>
 <li><a class="reference internal" href="#simple-example-a-descriptor-that-returns-a-constant">Simple example: A descriptor that returns a constant</a></li>
 <li><a class="reference internal" href="#dynamic-lookups">Dynamic lookups</a></li>
@@ -134,8 +134,8 @@
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="enum.html"
-                          title="下一章">Enum HOWTO</a></p>
+    <p class="topless"><a href="gdb_helpers.html"
+                          title="下一章">Debugging C API extensions and CPython Internals with GDB</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -163,7 +163,7 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="enum.html" title="Enum HOWTO"
+          <a href="gdb_helpers.html" title="Debugging C API extensions and CPython Internals with GDB"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
           <a href="curses.html" title="Curses Programming with Python"
@@ -183,7 +183,7 @@
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 如何達成任務</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Descriptor Guide</a></li>
+        <li class="nav-item nav-item-this"><a href="">描述器 (Descriptor) 指南</a></li>
                 <li class="right">
                     
 
@@ -214,7 +214,7 @@
           <div class="body" role="main">
             
   <section id="descriptor-guide">
-<span id="descriptorhowto"></span><h1><a class="toc-backref" href="#id2" role="doc-backlink">Descriptor Guide</a><a class="headerlink" href="#descriptor-guide" title="Link to this heading">¶</a></h1>
+<span id="descriptorhowto"></span><h1><a class="toc-backref" href="#id2" role="doc-backlink">描述器 (Descriptor) 指南</a><a class="headerlink" href="#descriptor-guide" title="Link to this heading">¶</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">作者<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Raymond Hettinger</p>
@@ -226,7 +226,7 @@
 <nav class="contents" id="id1">
 <p class="topic-title">目錄</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#descriptor-guide" id="id2">Descriptor Guide</a></p>
+<li><p><a class="reference internal" href="#descriptor-guide" id="id2">描述器 (Descriptor) 指南</a></p>
 <ul>
 <li><p><a class="reference internal" href="#primer" id="id3">Primer</a></p>
 <ul>
@@ -1473,7 +1473,7 @@ attributes are stored:</p>
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#">Descriptor Guide</a><ul>
+<li><a class="reference internal" href="#">描述器 (Descriptor) 指南</a><ul>
 <li><a class="reference internal" href="#primer">Primer</a><ul>
 <li><a class="reference internal" href="#simple-example-a-descriptor-that-returns-a-constant">Simple example: A descriptor that returns a constant</a></li>
 <li><a class="reference internal" href="#dynamic-lookups">Dynamic lookups</a></li>
@@ -1522,8 +1522,8 @@ attributes are stored:</p>
   </div>
   <div>
     <h4>下個主題</h4>
-    <p class="topless"><a href="enum.html"
-                          title="下一章">Enum HOWTO</a></p>
+    <p class="topless"><a href="gdb_helpers.html"
+                          title="下一章">Debugging C API extensions and CPython Internals with GDB</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -1554,7 +1554,7 @@ attributes are stored:</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="enum.html" title="Enum HOWTO"
+          <a href="gdb_helpers.html" title="Debugging C API extensions and CPython Internals with GDB"
              >下一頁</a> |</li>
         <li class="right" >
           <a href="curses.html" title="Curses Programming with Python"
@@ -1574,7 +1574,7 @@ attributes are stored:</p>
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 如何達成任務</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Descriptor Guide</a></li>
+        <li class="nav-item nav-item-this"><a href="">描述器 (Descriptor) 指南</a></li>
                 <li class="right">
                     
 
@@ -1614,7 +1614,7 @@ attributes are stored:</p>
 <br />
     <br />
 
-    最後更新於 Feb 22, 2024 (06:04 UTC)。
+    最後更新於 Mar 19, 2024 (04:23 UTC)。
     <a href="/bugs.html">Found a bug</a>?
     <br />
 
