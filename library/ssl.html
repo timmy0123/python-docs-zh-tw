@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ssl --- socket 物件的 TLS/SSL 包裝器 &#8212; Python 3.12.2 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ssl --- socket 物件的 TLS/SSL 包裝器 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=e8a97c27" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=056bc313"></script>
+    <script src="../_static/documentation_options.js?v=17adff09"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=d9a6981e"></script>
@@ -19,7 +19,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.2 說明文件 中搜尋"
+          title="在 Python 3.12.3 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -182,7 +182,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.2 Documentation</a> &#187;
+      <a href="../index.html">3.12.3 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -856,8 +856,7 @@
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_CIPHER_SERVER_PREFERENCE">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">OP_CIPHER_SERVER_PREFERENCE</span></span><a class="headerlink" href="#ssl.OP_CIPHER_SERVER_PREFERENCE" title="Link to this definition">¶</a></dt>
-<dd><p>Use the server's cipher ordering preference, rather than the client's.
-This option has no effect on client sockets and SSLv2 server sockets.</p>
+<dd><p>使用伺服器的密碼排序優先順序，而不是客戶端的。此選項並不會影響到客戶端及 SSLv2 伺服器的 sockets。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版新加入.</span></p>
 </div>
@@ -866,9 +865,7 @@ This option has no effect on client sockets and SSLv2 server sockets.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_SINGLE_DH_USE">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">OP_SINGLE_DH_USE</span></span><a class="headerlink" href="#ssl.OP_SINGLE_DH_USE" title="Link to this definition">¶</a></dt>
-<dd><p>Prevents re-use of the same DH key for distinct SSL sessions.  This
-improves forward secrecy but requires more computational resources.
-This option only applies to server sockets.</p>
+<dd><p>防止對不同的 SSL 會談重複使用相同的 DH 密鑰。這會加強向前保密但需要更多的運算資源。此選項只適用於伺服器 sockets。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版新加入.</span></p>
 </div>
@@ -877,9 +874,7 @@ This option only applies to server sockets.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_SINGLE_ECDH_USE">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">OP_SINGLE_ECDH_USE</span></span><a class="headerlink" href="#ssl.OP_SINGLE_ECDH_USE" title="Link to this definition">¶</a></dt>
-<dd><p>Prevents re-use of the same ECDH key for distinct SSL sessions.  This
-improves forward secrecy but requires more computational resources.
-This option only applies to server sockets.</p>
+<dd><p>防止對不同的 SSL 會談重複使用相同的 ECDH 密鑰。這會加強向前保密但需要更多的運算資源。此選項只適用於伺服器 sockets。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版新加入.</span></p>
 </div>
@@ -888,8 +883,7 @@ This option only applies to server sockets.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_ENABLE_MIDDLEBOX_COMPAT">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">OP_ENABLE_MIDDLEBOX_COMPAT</span></span><a class="headerlink" href="#ssl.OP_ENABLE_MIDDLEBOX_COMPAT" title="Link to this definition">¶</a></dt>
-<dd><p>Send dummy Change Cipher Spec (CCS) messages in TLS 1.3 handshake to make
-a TLS 1.3 connection look more like a TLS 1.2 connection.</p>
+<dd><p>在 TLS 1.3 握手中發送虛擬的變更密碼規範 (CCS) 消息，以使 TLS 1.3 連接看起來更像 TLS 1.2 連線。</p>
 <p>此選項僅適用於 OpenSSL 1.1.1 及更新版本。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.8 版新加入.</span></p>
@@ -899,8 +893,7 @@ a TLS 1.3 connection look more like a TLS 1.2 connection.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_NO_COMPRESSION">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">OP_NO_COMPRESSION</span></span><a class="headerlink" href="#ssl.OP_NO_COMPRESSION" title="Link to this definition">¶</a></dt>
-<dd><p>Disable compression on the SSL channel.  This is useful if the application
-protocol supports its own compression scheme.</p>
+<dd><p>在 SSL 通道上禁用壓縮。如果應用程序協定支援自己的壓縮方案，這會很有用。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.3 版新加入.</span></p>
 </div>
@@ -909,13 +902,13 @@ protocol supports its own compression scheme.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="ssl.Options">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">Options</span></span><a class="headerlink" href="#ssl.Options" title="Link to this definition">¶</a></dt>
-<dd><p><a class="reference internal" href="enum.html#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntFlag</span></code></a> collection of OP_* constants.</p>
+<dd><p><a class="reference internal" href="enum.html#enum.IntFlag" title="enum.IntFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.IntFlag</span></code></a> 為 OP_* 常數中的一個集合。</p>
 </dd></dl>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_NO_TICKET">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">OP_NO_TICKET</span></span><a class="headerlink" href="#ssl.OP_NO_TICKET" title="Link to this definition">¶</a></dt>
-<dd><p>Prevent client side from requesting a session ticket.</p>
+<dd><p>防止客戶端請求會談票據。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.6 版新加入.</span></p>
 </div>
@@ -924,7 +917,7 @@ protocol supports its own compression scheme.</p>
 <dl class="py data">
 <dt class="sig sig-object py" id="ssl.OP_IGNORE_UNEXPECTED_EOF">
 <span class="sig-prename descclassname"><span class="pre">ssl.</span></span><span class="sig-name descname"><span class="pre">OP_IGNORE_UNEXPECTED_EOF</span></span><a class="headerlink" href="#ssl.OP_IGNORE_UNEXPECTED_EOF" title="Link to this definition">¶</a></dt>
-<dd><p>Ignore unexpected shutdown of TLS connections.</p>
+<dd><p>忽略意外關閉的 TLS 連線。</p>
 <p>此選項僅適用於 OpenSSL 3.0.0 及更新版本。</p>
 <div class="versionadded">
 <p><span class="versionmodified added">在 3.10 版新加入.</span></p>
@@ -2093,10 +2086,10 @@ have SNI.</p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.6 版的變更: </span>新增 <em>session</em> 引數。</p>
+</div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7 版的變更: </span>The method returns an instance of <a class="reference internal" href="#ssl.SSLContext.sslsocket_class" title="ssl.SSLContext.sslsocket_class"><code class="xref py py-attr docutils literal notranslate"><span class="pre">SSLContext.sslsocket_class</span></code></a>
 instead of hard-coded <a class="reference internal" href="#ssl.SSLSocket" title="ssl.SSLSocket"><code class="xref py py-class docutils literal notranslate"><span class="pre">SSLSocket</span></code></a>.</p>
-</div>
 </div>
 </dd></dl>
 
@@ -3128,7 +3121,7 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.2 Documentation</a> &#187;
+      <a href="../index.html">3.12.3 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -3158,13 +3151,21 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
       </ul>
     </div>  
     <div class="footer">
-    &copy; <a href="../copyright.html">版權</a> 2001-2024, Python Software Foundation.
+    &copy; 
+      <a href="../copyright.html">
+    
+    版權
+    
+      </a>
+     2001-2024, Python Software Foundation.
     <br />
     This page is licensed under the Python Software Foundation License Version 2.
     <br />
     Examples, recipes, and other code in the documentation are additionally licensed under the Zero Clause BSD License.
     <br />
-    See <a href="/license.html">History and License</a> for more information.<br />
+    
+      See <a href="/license.html">History and License</a> for more information.<br />
+    
     
     <br />
 
@@ -3172,9 +3173,10 @@ signature algorithm configuration, and rekeying are not supported yet.</p></li>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-
-    最後更新於 Mar 19, 2024 (04:23 UTC)。
-    <a href="/bugs.html">Found a bug</a>?
+      最後更新於 Apr 13, 2024 (03:50 UTC)。
+    
+      <a href="/bugs.html">Found a bug</a>?
+    
     <br />
 
     使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6 建立。
