@@ -5,16 +5,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>pydoc --- Documentation generator and online help system &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pydoc --- 文件產生器與線上幫助系統 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
     <script src="../_static/documentation_options.js?v=17adff09"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=d9a6981e"></script>
+    <script src="../_static/translations.js?v=1fe8cbde"></script>
     
     <script src="../_static/sidebar.js"></script>
     
@@ -25,7 +25,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="Python Development Mode" href="devmode.html" />
+    <link rel="next" title="Python 開發模式" href="devmode.html" />
     <link rel="prev" title="typing --- 支援型別提示" href="typing.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/pydoc.html" />
     
@@ -46,6 +46,91 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
+<meta name="readthedocs-addons-api-version" content="1">
+<script type="text/javascript">
+ function onSwitch(event) {
+     const option = event.target.selectedIndex;
+     const item = event.target.options[option];
+     window.location.href = item.dataset.url;
+ }
+
+ document.addEventListener("readthedocs-addons-data-ready", function(event) {
+   const config = event.detail.data()
+
+   // Add some mocked hardcoded versions pointing to the official
+   // documentation while migrating to Read the Docs.
+   // These are only for testing purposes.
+   // TODO: remove them when managing all the versions on Read the Docs,
+   // since all the "active, built and not hidden" versions will be shown automatically.
+   let versions = config.versions.active.concat([
+       {
+           slug: "dev (3.13)",
+           urls: {
+               documentation: "https://docs.python.org/3.13/",
+           }
+       },
+       {
+           slug: "3.12",
+           urls: {
+               documentation: "https://docs.python.org/3.12/",
+           }
+       },
+       {
+           slug: "3.11",
+           urls: {
+               documentation: "https://docs.python.org/3.11/",
+           }
+       },
+   ]);
+
+   const versionSelect = `
+   <select id="version_select">
+   ${ versions.map(
+       (version) => `
+       <option
+           value="${ version.slug }"
+           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
+           data-url="${ version.urls.documentation }">
+           ${ version.slug }
+       </option>`
+   ).join("\n") }
+   </select>
+   `;
+
+   // Prepend the current language to the options on the selector
+   let languages = config.projects.translations.concat(config.projects.current);
+   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
+
+   const languageSelect = `
+   <select id="language_select">
+   ${ languages.map(
+       (translation) => `
+       <option
+           value="${ translation.slug }"
+           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
+           data-url="${ translation.urls.documentation }">
+           ${ translation.language.name }
+       </option>`
+   ).join("\n") }
+   </select>
+   `;
+
+   // Query all the placeholders because there are different ones for Desktop/Mobile
+   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
+   for (placeholder of versionPlaceholders) {
+       placeholder.innerHTML = versionSelect;
+       let selectElement = placeholder.querySelector("select");
+       selectElement.addEventListener("change", onSwitch);
+   }
+
+   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
+   for (placeholder of languagePlaceholders) {
+       placeholder.innerHTML = languageSelect;
+       let selectElement = placeholder.querySelector("select");
+       selectElement.addEventListener("change", onSwitch);
+   }
+ });
+</script>
 
   </head>
 <body>
@@ -90,7 +175,7 @@
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="devmode.html"
-                          title="下一章">Python Development Mode</a></p>
+                          title="下一章">Python 開發模式</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -118,7 +203,7 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="devmode.html" title="Python Development Mode"
+          <a href="devmode.html" title="Python 開發模式"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
           <a href="typing.html" title="typing --- 支援型別提示"
@@ -139,7 +224,7 @@
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="development.html" accesskey="U">開發工具</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydoc</span></code> --- Documentation generator and online help system</a></li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydoc</span></code> --- 文件產生器與線上幫助系統</a></li>
                 <li class="right">
                     
 
@@ -170,7 +255,7 @@
           <div class="body" role="main">
             
   <section id="module-pydoc">
-<span id="pydoc-documentation-generator-and-online-help-system"></span><h1><a class="reference internal" href="#module-pydoc" title="pydoc: Documentation generator and online help system."><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydoc</span></code></a> --- Documentation generator and online help system<a class="headerlink" href="#module-pydoc" title="Link to this heading">¶</a></h1>
+<span id="pydoc-documentation-generator-and-online-help-system"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydoc</span></code> --- 文件產生器與線上幫助系統<a class="headerlink" href="#module-pydoc" title="連結到這個標頭">¶</a></h1>
 <p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.12/Lib/pydoc.py">Lib/pydoc.py</a></p>
 <hr class="docutils" id="index-0" />
 <p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">pydoc</span></code> module automatically generates documentation from Python
@@ -271,7 +356,7 @@ callables.</p>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="devmode.html"
-                          title="下一章">Python Development Mode</a></p>
+                          title="下一章">Python 開發模式</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -302,7 +387,7 @@ callables.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="devmode.html" title="Python Development Mode"
+          <a href="devmode.html" title="Python 開發模式"
              >下一頁</a> |</li>
         <li class="right" >
           <a href="typing.html" title="typing --- 支援型別提示"
@@ -323,7 +408,7 @@ callables.</p>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="development.html" >開發工具</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydoc</span></code> --- Documentation generator and online help system</a></li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydoc</span></code> --- 文件產生器與線上幫助系統</a></li>
                 <li class="right">
                     
 
@@ -370,13 +455,13 @@ callables.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Apr 13, 2024 (03:50 UTC)。
+      最後更新於 Jun 01, 2024 (03:42 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
     </div>
 
   </body>

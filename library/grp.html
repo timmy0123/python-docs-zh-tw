@@ -5,16 +5,16 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>grp --- The group database &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grp --- 群組資料庫 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
     <script src="../_static/documentation_options.js?v=17adff09"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=d9a6981e"></script>
+    <script src="../_static/translations.js?v=1fe8cbde"></script>
     
     <script src="../_static/sidebar.js"></script>
     
@@ -25,7 +25,7 @@
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="termios --- POSIX style tty control" href="termios.html" />
+    <link rel="next" title="termios --- POSIX 風格 tty 控制" href="termios.html" />
     <link rel="prev" title="pwd --- 密碼資料庫" href="pwd.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/grp.html" />
     
@@ -46,6 +46,91 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
+<meta name="readthedocs-addons-api-version" content="1">
+<script type="text/javascript">
+ function onSwitch(event) {
+     const option = event.target.selectedIndex;
+     const item = event.target.options[option];
+     window.location.href = item.dataset.url;
+ }
+
+ document.addEventListener("readthedocs-addons-data-ready", function(event) {
+   const config = event.detail.data()
+
+   // Add some mocked hardcoded versions pointing to the official
+   // documentation while migrating to Read the Docs.
+   // These are only for testing purposes.
+   // TODO: remove them when managing all the versions on Read the Docs,
+   // since all the "active, built and not hidden" versions will be shown automatically.
+   let versions = config.versions.active.concat([
+       {
+           slug: "dev (3.13)",
+           urls: {
+               documentation: "https://docs.python.org/3.13/",
+           }
+       },
+       {
+           slug: "3.12",
+           urls: {
+               documentation: "https://docs.python.org/3.12/",
+           }
+       },
+       {
+           slug: "3.11",
+           urls: {
+               documentation: "https://docs.python.org/3.11/",
+           }
+       },
+   ]);
+
+   const versionSelect = `
+   <select id="version_select">
+   ${ versions.map(
+       (version) => `
+       <option
+           value="${ version.slug }"
+           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
+           data-url="${ version.urls.documentation }">
+           ${ version.slug }
+       </option>`
+   ).join("\n") }
+   </select>
+   `;
+
+   // Prepend the current language to the options on the selector
+   let languages = config.projects.translations.concat(config.projects.current);
+   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
+
+   const languageSelect = `
+   <select id="language_select">
+   ${ languages.map(
+       (translation) => `
+       <option
+           value="${ translation.slug }"
+           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
+           data-url="${ translation.urls.documentation }">
+           ${ translation.language.name }
+       </option>`
+   ).join("\n") }
+   </select>
+   `;
+
+   // Query all the placeholders because there are different ones for Desktop/Mobile
+   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
+   for (placeholder of versionPlaceholders) {
+       placeholder.innerHTML = versionSelect;
+       let selectElement = placeholder.querySelector("select");
+       selectElement.addEventListener("change", onSwitch);
+   }
+
+   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
+   for (placeholder of languagePlaceholders) {
+       placeholder.innerHTML = languageSelect;
+       let selectElement = placeholder.querySelector("select");
+       selectElement.addEventListener("change", onSwitch);
+   }
+ });
+</script>
 
   </head>
 <body>
@@ -90,7 +175,7 @@
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="termios.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">termios</span></code> --- POSIX style tty control</a></p>
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">termios</span></code> --- POSIX 風格 tty 控制</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -118,7 +203,7 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="termios.html" title="termios --- POSIX style tty control"
+          <a href="termios.html" title="termios --- POSIX 風格 tty 控制"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
           <a href="pwd.html" title="pwd --- 密碼資料庫"
@@ -139,7 +224,7 @@
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="unix.html" accesskey="U">Unix 特有服務</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code> --- The group database</a></li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code> --- 群組資料庫</a></li>
                 <li class="right">
                     
 
@@ -170,7 +255,7 @@
           <div class="body" role="main">
             
   <section id="module-grp">
-<span id="grp-the-group-database"></span><h1><a class="reference internal" href="#module-grp" title="grp: The group database (getgrnam() and friends). (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code></a> --- The group database<a class="headerlink" href="#module-grp" title="Link to this heading">¶</a></h1>
+<span id="grp-the-group-database"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code> --- 群組資料庫<a class="headerlink" href="#module-grp" title="連結到這個標頭">¶</a></h1>
 <hr class="docutils" />
 <p>This module provides access to the Unix group database. It is available on all
 Unix versions.</p>
@@ -217,7 +302,7 @@ accessible via <a class="reference internal" href="#grp.getgrnam" title="grp.get
 <p>It defines the following items:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="grp.getgrgid">
-<span class="sig-prename descclassname"><span class="pre">grp.</span></span><span class="sig-name descname"><span class="pre">getgrgid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#grp.getgrgid" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">grp.</span></span><span class="sig-name descname"><span class="pre">getgrgid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#grp.getgrgid" title="連結到這個定義">¶</a></dt>
 <dd><p>Return the group database entry for the given numeric group ID. <a class="reference internal" href="exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a>
 is raised if the entry asked for cannot be found.</p>
 <div class="versionchanged">
@@ -227,14 +312,14 @@ is raised if the entry asked for cannot be found.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="grp.getgrnam">
-<span class="sig-prename descclassname"><span class="pre">grp.</span></span><span class="sig-name descname"><span class="pre">getgrnam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#grp.getgrnam" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">grp.</span></span><span class="sig-name descname"><span class="pre">getgrnam</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#grp.getgrnam" title="連結到這個定義">¶</a></dt>
 <dd><p>Return the group database entry for the given group name. <a class="reference internal" href="exceptions.html#KeyError" title="KeyError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">KeyError</span></code></a> is
 raised if the entry asked for cannot be found.</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="grp.getgrall">
-<span class="sig-prename descclassname"><span class="pre">grp.</span></span><span class="sig-name descname"><span class="pre">getgrall</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#grp.getgrall" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">grp.</span></span><span class="sig-name descname"><span class="pre">getgrall</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#grp.getgrall" title="連結到這個定義">¶</a></dt>
 <dd><p>Return a list of all available group entries, in arbitrary order.</p>
 </dd></dl>
 
@@ -264,7 +349,7 @@ raised if the entry asked for cannot be found.</p>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="termios.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">termios</span></code> --- POSIX style tty control</a></p>
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">termios</span></code> --- POSIX 風格 tty 控制</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -295,7 +380,7 @@ raised if the entry asked for cannot be found.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="termios.html" title="termios --- POSIX style tty control"
+          <a href="termios.html" title="termios --- POSIX 風格 tty 控制"
              >下一頁</a> |</li>
         <li class="right" >
           <a href="pwd.html" title="pwd --- 密碼資料庫"
@@ -316,7 +401,7 @@ raised if the entry asked for cannot be found.</p>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="unix.html" >Unix 特有服務</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code> --- The group database</a></li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">grp</span></code> --- 群組資料庫</a></li>
                 <li class="right">
                     
 
@@ -363,13 +448,13 @@ raised if the entry asked for cannot be found.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Apr 13, 2024 (03:50 UTC)。
+      最後更新於 Jun 01, 2024 (03:42 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
     </div>
 
   </body>

@@ -12,9 +12,9 @@
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
     <script src="../_static/documentation_options.js?v=17adff09"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=d9a6981e"></script>
+    <script src="../_static/translations.js?v=1fe8cbde"></script>
     
     <script src="../_static/sidebar.js"></script>
     
@@ -26,7 +26,7 @@
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="datetime --- 日期與時間的基本型別" href="datetime.html" />
-    <link rel="prev" title="codecs --- Codec registry and base classes" href="codecs.html" />
+    <link rel="prev" title="codecs --- 編解碼器註冊表和基底類別" href="codecs.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/datatypes.html" />
     
       
@@ -46,6 +46,91 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
+<meta name="readthedocs-addons-api-version" content="1">
+<script type="text/javascript">
+ function onSwitch(event) {
+     const option = event.target.selectedIndex;
+     const item = event.target.options[option];
+     window.location.href = item.dataset.url;
+ }
+
+ document.addEventListener("readthedocs-addons-data-ready", function(event) {
+   const config = event.detail.data()
+
+   // Add some mocked hardcoded versions pointing to the official
+   // documentation while migrating to Read the Docs.
+   // These are only for testing purposes.
+   // TODO: remove them when managing all the versions on Read the Docs,
+   // since all the "active, built and not hidden" versions will be shown automatically.
+   let versions = config.versions.active.concat([
+       {
+           slug: "dev (3.13)",
+           urls: {
+               documentation: "https://docs.python.org/3.13/",
+           }
+       },
+       {
+           slug: "3.12",
+           urls: {
+               documentation: "https://docs.python.org/3.12/",
+           }
+       },
+       {
+           slug: "3.11",
+           urls: {
+               documentation: "https://docs.python.org/3.11/",
+           }
+       },
+   ]);
+
+   const versionSelect = `
+   <select id="version_select">
+   ${ versions.map(
+       (version) => `
+       <option
+           value="${ version.slug }"
+           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
+           data-url="${ version.urls.documentation }">
+           ${ version.slug }
+       </option>`
+   ).join("\n") }
+   </select>
+   `;
+
+   // Prepend the current language to the options on the selector
+   let languages = config.projects.translations.concat(config.projects.current);
+   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
+
+   const languageSelect = `
+   <select id="language_select">
+   ${ languages.map(
+       (translation) => `
+       <option
+           value="${ translation.slug }"
+           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
+           data-url="${ translation.urls.documentation }">
+           ${ translation.language.name }
+       </option>`
+   ).join("\n") }
+   </select>
+   `;
+
+   // Query all the placeholders because there are different ones for Desktop/Mobile
+   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
+   for (placeholder of versionPlaceholders) {
+       placeholder.innerHTML = versionSelect;
+       let selectElement = placeholder.querySelector("select");
+       selectElement.addEventListener("change", onSwitch);
+   }
+
+   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
+   for (placeholder of languagePlaceholders) {
+       placeholder.innerHTML = languageSelect;
+       let selectElement = placeholder.querySelector("select");
+       selectElement.addEventListener("change", onSwitch);
+   }
+ });
+</script>
 
   </head>
 <body>
@@ -85,7 +170,7 @@
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="codecs.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">codecs</span></code> --- Codec registry and base classes</a></p>
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">codecs</span></code> --- 編解碼器註冊表和基底類別</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -121,7 +206,7 @@
           <a href="datetime.html" title="datetime --- 日期與時間的基本型別"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="codecs.html" title="codecs --- Codec registry and base classes"
+          <a href="codecs.html" title="codecs --- 編解碼器註冊表和基底類別"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -169,7 +254,7 @@
           <div class="body" role="main">
             
   <section id="data-types">
-<span id="datatypes"></span><h1>資料型別<a class="headerlink" href="#data-types" title="Link to this heading">¶</a></h1>
+<span id="datatypes"></span><h1>資料型別<a class="headerlink" href="#data-types" title="連結到這個標頭">¶</a></h1>
 <p>本章節所描述的模組 (module) 提供了多樣的專門資料型別，例如日期與時間、固定型別陣列 (fixed-type arrays)、堆積佇列 (heap queues)、雙端佇列 (double-ended queues) 與列舉 (enumerations)。</p>
 <p>Python 也有提供一些內建資料型別，特別是 <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>、<a class="reference internal" href="stdtypes.html#list" title="list"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a>、<a class="reference internal" href="stdtypes.html#set" title="set"><code class="xref py py-class docutils literal notranslate"><span class="pre">set</span></code></a> 與 <a class="reference internal" href="stdtypes.html#frozenset" title="frozenset"><code class="xref py py-class docutils literal notranslate"><span class="pre">frozenset</span></code></a> 和 <a class="reference internal" href="stdtypes.html#tuple" title="tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a>。<a class="reference internal" href="stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> 類別是用來儲存 Unicode 字串，<a class="reference internal" href="stdtypes.html#bytes" title="bytes"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytes</span></code></a> 與 <a class="reference internal" href="stdtypes.html#bytearray" title="bytearray"><code class="xref py py-class docutils literal notranslate"><span class="pre">bytearray</span></code></a> 類別則是用來儲存二進位制資料。</p>
 <p>本章節包含下列模組的文件：</p>
@@ -257,7 +342,7 @@
 <li class="toctree-l2"><a class="reference internal" href="collections.html#userstring-objects"><code class="xref py py-class docutils literal notranslate"><span class="pre">UserString</span></code> 物件</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="collections.abc.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections.abc</span></code> --- Abstract Base Classes for Containers</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="collections.abc.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections.abc</span></code> --- 容器的抽象基底類別</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="collections.abc.html#collections-abstract-base-classes">Collections Abstract Base Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collections.abc.html#collections-abstract-base-classes-detailed-descriptions">Collections Abstract Base Classes -- Detailed Descriptions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="collections.abc.html#examples-and-recipes">Examples and Recipes</a></li>
@@ -276,14 +361,14 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="array.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">array</span></code> --- 高效率的數值型陣列</a></li>
-<li class="toctree-l1"><a class="reference internal" href="weakref.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">weakref</span></code> --- Weak references</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="weakref.html#weak-reference-objects">Weak Reference Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weakref.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">weakref</span></code> --- 弱參照</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="weakref.html#weak-reference-objects">弱參照物件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="weakref.html#example">範例</a></li>
-<li class="toctree-l2"><a class="reference internal" href="weakref.html#finalizer-objects">Finalizer Objects</a></li>
-<li class="toctree-l2"><a class="reference internal" href="weakref.html#comparing-finalizers-with-del-methods">Comparing finalizers with <code class="xref py py-meth docutils literal notranslate"><span class="pre">__del__()</span></code> methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="weakref.html#finalizer-objects">最終化器物件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="weakref.html#comparing-finalizers-with-del-methods">最終化器與 <code class="xref py py-meth docutils literal notranslate"><span class="pre">__del__()</span></code> 方法的比較</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="types.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">types</span></code> --- Dynamic type creation and names for built-in types</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="types.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">types</span></code> --- 動態型別建立與內建型別名稱</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="types.html#dynamic-type-creation">Dynamic Type Creation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="types.html#standard-interpreter-types">Standard Interpreter Types</a></li>
 <li class="toctree-l2"><a class="reference internal" href="types.html#additional-utility-classes-and-functions">Additional Utility Classes and Functions</a></li>
@@ -291,13 +376,13 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="copy.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">copy</span></code> --- 淺層 (shallow) 和深層 (deep) 複製操作</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pprint.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pprint</span></code> --- Data pretty printer</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="pprint.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pprint</span></code> --- 資料美化列印器</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pprint.html#functions">Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pprint.html#prettyprinter-objects">PrettyPrinter 物件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pprint.html#example">範例</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="reprlib.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">reprlib</span></code> --- Alternate <code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code> implementation</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="reprlib.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">reprlib</span></code> --- <code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code> 的替代實作</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="reprlib.html#repr-objects">Repr 物件</a></li>
 <li class="toctree-l2"><a class="reference internal" href="reprlib.html#subclassing-repr-objects">Subclassing Repr Objects</a></li>
 </ul>
@@ -331,7 +416,7 @@
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="codecs.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">codecs</span></code> --- Codec registry and base classes</a></p>
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">codecs</span></code> --- 編解碼器註冊表和基底類別</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -370,7 +455,7 @@
           <a href="datetime.html" title="datetime --- 日期與時間的基本型別"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="codecs.html" title="codecs --- Codec registry and base classes"
+          <a href="codecs.html" title="codecs --- 編解碼器註冊表和基底類別"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -434,13 +519,13 @@
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Apr 13, 2024 (03:50 UTC)。
+      最後更新於 Jun 01, 2024 (03:42 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
     </div>
 
   </body>

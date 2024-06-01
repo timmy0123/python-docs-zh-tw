@@ -12,9 +12,9 @@
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
     <script src="../_static/documentation_options.js?v=17adff09"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=d9a6981e"></script>
+    <script src="../_static/translations.js?v=1fe8cbde"></script>
     
     <script src="../_static/sidebar.js"></script>
     
@@ -26,7 +26,7 @@
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="ensurepip --- pip 安裝器的初始建置 (bootstrapping)" href="ensurepip.html" />
-    <link rel="prev" title="tracemalloc --- Trace memory allocations" href="tracemalloc.html" />
+    <link rel="prev" title="tracemalloc --- 追蹤記憶體配置" href="tracemalloc.html" />
     <link rel="canonical" href="https://docs.python.org/3/library/distribution.html" />
     
       
@@ -46,6 +46,91 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
+<meta name="readthedocs-addons-api-version" content="1">
+<script type="text/javascript">
+ function onSwitch(event) {
+     const option = event.target.selectedIndex;
+     const item = event.target.options[option];
+     window.location.href = item.dataset.url;
+ }
+
+ document.addEventListener("readthedocs-addons-data-ready", function(event) {
+   const config = event.detail.data()
+
+   // Add some mocked hardcoded versions pointing to the official
+   // documentation while migrating to Read the Docs.
+   // These are only for testing purposes.
+   // TODO: remove them when managing all the versions on Read the Docs,
+   // since all the "active, built and not hidden" versions will be shown automatically.
+   let versions = config.versions.active.concat([
+       {
+           slug: "dev (3.13)",
+           urls: {
+               documentation: "https://docs.python.org/3.13/",
+           }
+       },
+       {
+           slug: "3.12",
+           urls: {
+               documentation: "https://docs.python.org/3.12/",
+           }
+       },
+       {
+           slug: "3.11",
+           urls: {
+               documentation: "https://docs.python.org/3.11/",
+           }
+       },
+   ]);
+
+   const versionSelect = `
+   <select id="version_select">
+   ${ versions.map(
+       (version) => `
+       <option
+           value="${ version.slug }"
+           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
+           data-url="${ version.urls.documentation }">
+           ${ version.slug }
+       </option>`
+   ).join("\n") }
+   </select>
+   `;
+
+   // Prepend the current language to the options on the selector
+   let languages = config.projects.translations.concat(config.projects.current);
+   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
+
+   const languageSelect = `
+   <select id="language_select">
+   ${ languages.map(
+       (translation) => `
+       <option
+           value="${ translation.slug }"
+           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
+           data-url="${ translation.urls.documentation }">
+           ${ translation.language.name }
+       </option>`
+   ).join("\n") }
+   </select>
+   `;
+
+   // Query all the placeholders because there are different ones for Desktop/Mobile
+   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
+   for (placeholder of versionPlaceholders) {
+       placeholder.innerHTML = versionSelect;
+       let selectElement = placeholder.querySelector("select");
+       selectElement.addEventListener("change", onSwitch);
+   }
+
+   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
+   for (placeholder of languagePlaceholders) {
+       placeholder.innerHTML = languageSelect;
+       let selectElement = placeholder.querySelector("select");
+       selectElement.addEventListener("change", onSwitch);
+   }
+ });
+</script>
 
   </head>
 <body>
@@ -85,7 +170,7 @@
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="tracemalloc.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tracemalloc</span></code> --- Trace memory allocations</a></p>
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tracemalloc</span></code> --- 追蹤記憶體配置</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -121,7 +206,7 @@
           <a href="ensurepip.html" title="ensurepip --- pip 安裝器的初始建置 (bootstrapping)"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
-          <a href="tracemalloc.html" title="tracemalloc --- Trace memory allocations"
+          <a href="tracemalloc.html" title="tracemalloc --- 追蹤記憶體配置"
              accesskey="P">上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -169,7 +254,7 @@
           <div class="body" role="main">
             
   <section id="software-packaging-and-distribution">
-<h1>軟體封裝與發布<a class="headerlink" href="#software-packaging-and-distribution" title="Link to this heading">¶</a></h1>
+<h1>軟體封裝與發布<a class="headerlink" href="#software-packaging-and-distribution" title="連結到這個標頭">¶</a></h1>
 <p>These libraries help you with publishing and installing Python software.
 While these modules are designed to work in conjunction with the
 <a class="reference external" href="https://pypi.org">Python Package Index</a>, they can also be used
@@ -181,14 +266,14 @@ with a local index server, or without any index server at all.</p>
 <li class="toctree-l2"><a class="reference internal" href="ensurepip.html#module-api">模組 API</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="venv.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">venv</span></code> --- Creation of virtual environments</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="venv.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">venv</span></code> --- 建立虛擬環境</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="venv.html#creating-virtual-environments">建立虛擬環境</a></li>
 <li class="toctree-l2"><a class="reference internal" href="venv.html#how-venvs-work">虛擬環境如何運作</a></li>
 <li class="toctree-l2"><a class="reference internal" href="venv.html#api">API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="venv.html#an-example-of-extending-envbuilder">An example of extending <code class="docutils literal notranslate"><span class="pre">EnvBuilder</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="zipapp.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipapp</span></code> — 管理可執行的 Python zip 封存檔案</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="zipapp.html"><code class="xref py py-mod docutils literal notranslate"><span class="pre">zipapp</span></code> —-- 管理可執行的 Python zip 封存檔案</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="zipapp.html#basic-example">基本範例</a></li>
 <li class="toctree-l2"><a class="reference internal" href="zipapp.html#command-line-interface">命令執行列介面</a></li>
 <li class="toctree-l2"><a class="reference internal" href="zipapp.html#python-api">Python API</a></li>
@@ -215,7 +300,7 @@ with a local index server, or without any index server at all.</p>
   <div>
     <h4>上個主題</h4>
     <p class="topless"><a href="tracemalloc.html"
-                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tracemalloc</span></code> --- Trace memory allocations</a></p>
+                          title="上一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tracemalloc</span></code> --- 追蹤記憶體配置</a></p>
   </div>
   <div>
     <h4>下個主題</h4>
@@ -254,7 +339,7 @@ with a local index server, or without any index server at all.</p>
           <a href="ensurepip.html" title="ensurepip --- pip 安裝器的初始建置 (bootstrapping)"
              >下一頁</a> |</li>
         <li class="right" >
-          <a href="tracemalloc.html" title="tracemalloc --- Trace memory allocations"
+          <a href="tracemalloc.html" title="tracemalloc --- 追蹤記憶體配置"
              >上一頁</a> |</li>
 
           <li><img src="../_static/py.svg" alt="Python logo" style="vertical-align: middle; margin-top: -1px"/></li>
@@ -318,13 +403,13 @@ with a local index server, or without any index server at all.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Apr 13, 2024 (03:50 UTC)。
+      最後更新於 Jun 01, 2024 (03:42 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
     </div>
 
   </body>
