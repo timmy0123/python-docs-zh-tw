@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>resource --- 資源使用資訊 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resource --- 資源使用資訊 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="syslog --- Unix syslog 函式庫例程" href="syslog.html" />
     <link rel="prev" title="fcntl --- fcntl 和 ioctl 系統呼叫" href="fcntl.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/resource.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -204,7 +122,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -230,7 +148,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -353,7 +271,7 @@ the process.</p>
 <p><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：Linux 2.6.36 以上且具有 glibc 2.13 以上。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -454,7 +372,7 @@ affects the stack of the main thread in a multi-threaded process.</p>
 <p><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：Linux 2.6.8 以上。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -466,7 +384,7 @@ affects the stack of the main thread in a multi-threaded process.</p>
 <p><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：Linux 2.6.12 以上。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -478,7 +396,7 @@ affects the stack of the main thread in a multi-threaded process.</p>
 <p><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：Linux 2.6.12 以上。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -491,7 +409,7 @@ under real-time scheduling without making a blocking syscall.</p>
 <p><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：Linux 2.6.25 以上。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -503,7 +421,7 @@ under real-time scheduling without making a blocking syscall.</p>
 <p><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：Linux 2.6.8 以上。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -517,7 +435,7 @@ that this user may hold at any time.</p>
 <p><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：FreeBSD。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -534,7 +452,7 @@ for a complete description of this sysctl.</p>
 <p><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：FreeBSD。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -546,7 +464,7 @@ for a complete description of this sysctl.</p>
 <p><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：FreeBSD。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -558,7 +476,7 @@ for a complete description of this sysctl.</p>
 <p><a class="reference internal" href="intro.html#availability"><span class="std std-ref">適用</span></a>：FreeBSD 11 以上。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -594,7 +512,7 @@ clock tick internal, e.g. the amount of memory the process is using.</p>
 <p>For backward compatibility, the return value is also accessible as a tuple of 16
 elements.</p>
 <p>The fields <code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_utime</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">ru_stime</span></code> of the return value are
-floating point values representing the amount of time spent executing in user
+floating-point values representing the amount of time spent executing in user
 mode and the amount of time spent executing in system mode, respectively. The
 remaining values are integers. Consult the <em class="manpage"><a class="manpage reference external" href="https://manpages.debian.org/getrusage(2)">getrusage(2)</a></em> man page for
 detailed information about these values. A brief summary is presented here:</p>
@@ -712,7 +630,7 @@ process and child processes.  May not be available on all systems.</p>
 <dd><p>Pass to <a class="reference internal" href="#resource.getrusage" title="resource.getrusage"><code class="xref py py-func docutils literal notranslate"><span class="pre">getrusage()</span></code></a> to request resources consumed by the current
 thread.  May not be available on all systems.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -724,7 +642,7 @@ thread.  May not be available on all systems.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -766,7 +684,7 @@ thread.  May not be available on all systems.</p>
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -792,7 +710,7 @@ thread.  May not be available on all systems.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -844,13 +762,13 @@ thread.  May not be available on all systems.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

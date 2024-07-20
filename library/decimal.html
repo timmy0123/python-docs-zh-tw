@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>decimal --- 十進位固定點和浮點運算 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>decimal --- Decimal fixed-point and floating-point arithmetic &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="fractions --- 有理數" href="fractions.html" />
     <link rel="prev" title="cmath --- 複數的數學函式" href="cmath.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/decimal.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -170,7 +88,7 @@
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- 十進位固定點和浮點運算</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- Decimal fixed-point and floating-point arithmetic</a><ul>
 <li><a class="reference internal" href="#quick-start-tutorial">Quick-start Tutorial</a></li>
 <li><a class="reference internal" href="#decimal-objects">Decimal objects</a><ul>
 <li><a class="reference internal" href="#logical-operands">Logical operands</a></li>
@@ -180,7 +98,7 @@
 <li><a class="reference internal" href="#constants">常數</a></li>
 <li><a class="reference internal" href="#rounding-modes">Rounding modes</a></li>
 <li><a class="reference internal" href="#signals">Signals</a></li>
-<li><a class="reference internal" href="#floating-point-notes">Floating Point Notes</a><ul>
+<li><a class="reference internal" href="#floating-point-notes">Floating-Point Notes</a><ul>
 <li><a class="reference internal" href="#mitigating-round-off-error-with-increased-precision">Mitigating round-off error with increased precision</a></li>
 <li><a class="reference internal" href="#special-values">Special values</a></li>
 </ul>
@@ -219,7 +137,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -245,12 +163,12 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="numeric.html" accesskey="U">數值與數學模組</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- 十進位固定點和浮點運算</a></li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- Decimal fixed-point and floating-point arithmetic</a></li>
                 <li class="right">
                     
 
@@ -281,11 +199,11 @@
           <div class="body" role="main">
             
   <section id="module-decimal">
-<span id="decimal-decimal-fixed-point-and-floating-point-arithmetic"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- 十進位固定點和浮點運算<a class="headerlink" href="#module-decimal" title="連結到這個標頭">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.12/Lib/decimal.py">Lib/decimal.py</a></p>
+<span id="decimal-decimal-fixed-point-and-floating-point-arithmetic"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- Decimal fixed-point and floating-point arithmetic<a class="headerlink" href="#module-decimal" title="連結到這個標頭">¶</a></h1>
+<p><strong>原始碼：</strong><a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.12/Lib/decimal.py">Lib/decimal.py</a></p>
 <hr class="docutils" />
 <p>The <a class="reference internal" href="#module-decimal" title="decimal: Implementation of the General Decimal Arithmetic  Specification."><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code></a> module provides support for fast correctly rounded
-decimal floating point arithmetic. It offers several advantages over the
+decimal floating-point arithmetic. It offers several advantages over the
 <a class="reference internal" href="functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> datatype:</p>
 <ul>
 <li><p>Decimal &quot;is based on a floating-point model which was designed with people
@@ -418,7 +336,7 @@ an exception:</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 <p>The significance of a new Decimal is determined solely by the number of digits
 input.  Context precision and rounding only come into play during arithmetic
@@ -447,7 +365,7 @@ a decimal raises <a class="reference internal" href="#decimal.InvalidOperation" 
 <p><span class="versionmodified changed">在 3.3 版的變更.</span></p>
 </div>
 <p>Decimals interact well with much of the rest of Python.  Here is a small decimal
-floating point flying circus:</p>
+floating-point flying circus:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">map</span><span class="p">(</span><span class="n">Decimal</span><span class="p">,</span> <span class="s1">&#39;1.34 1.87 3.45 2.35 1.00 0.03 9.25&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">()))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">max</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="go">Decimal(&#39;9.25&#39;)</span>
@@ -593,7 +511,7 @@ with the fullwidth digits <code class="docutils literal notranslate"><span class
 (<code class="docutils literal notranslate"><span class="pre">0</span></code> for positive or <code class="docutils literal notranslate"><span class="pre">1</span></code> for negative), a <a class="reference internal" href="stdtypes.html#tuple" title="tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> of
 digits, and an integer exponent. For example, <code class="docutils literal notranslate"><span class="pre">Decimal((0,</span> <span class="pre">(1,</span> <span class="pre">4,</span> <span class="pre">1,</span> <span class="pre">4),</span> <span class="pre">-3))</span></code>
 returns <code class="docutils literal notranslate"><span class="pre">Decimal('1.414')</span></code>.</p>
-<p>If <em>value</em> is a <a class="reference internal" href="functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, the binary floating point value is losslessly
+<p>If <em>value</em> is a <a class="reference internal" href="functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>, the binary floating-point value is losslessly
 converted to its exact decimal equivalent.  This conversion can often require
 53 or more digits of precision.  For example, <code class="docutils literal notranslate"><span class="pre">Decimal(float('1.1'))</span></code>
 converts to
@@ -619,7 +537,7 @@ trap is set. By default the trap is off.</p>
 <p><span class="versionmodified changed">在 3.6 版的變更: </span>Underscores are allowed for grouping, as with integral and floating-point
 literals in code.</p>
 </div>
-<p>Decimal floating point objects share many properties with the other built-in
+<p>Decimal floating-point objects share many properties with the other built-in
 numeric types such as <a class="reference internal" href="functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> and <a class="reference internal" href="functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>.  All of the usual math
 operations and special methods apply.  Likewise, decimal objects can be
 copied, pickled, printed, used as dictionary keys, used as set elements,
@@ -658,7 +576,7 @@ when doing equality comparisons between numbers of different types.</p>
 <p><span class="versionmodified changed">在 3.2 版的變更: </span>Mixed-type comparisons between <a class="reference internal" href="#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> instances and other
 numeric types are now fully supported.</p>
 </div>
-<p>In addition to the standard numeric properties, decimal floating point
+<p>In addition to the standard numeric properties, decimal floating-point
 objects also have a number of specialized methods:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="decimal.Decimal.adjusted">
@@ -684,7 +602,7 @@ on NaNs.</p>
 </dd></dl>
 
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6.</span></p>
+<p><span class="versionmodified added">在 3.6 版被加入.</span></p>
 </div>
 <dl class="py method">
 <dt class="sig sig-object py" id="decimal.Decimal.as_tuple">
@@ -834,7 +752,7 @@ can also be constructed directly from a <a class="reference internal" href="func
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.1.</span></p>
+<p><span class="versionmodified added">在 3.1 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1206,6 +1124,53 @@ current context is used.</p>
 rounding method in either the supplied <em>context</em> or the current context.</p>
 </dd></dl>
 
+<p>Decimal numbers can be rounded using the <a class="reference internal" href="functions.html#round" title="round"><code class="xref py py-func docutils literal notranslate"><span class="pre">round()</span></code></a> function:</p>
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">round(number)</span></span></dt>
+<dd></dd></dl>
+
+<dl class="describe">
+<dt class="sig sig-object">
+<span class="sig-name descname"><span class="pre">round(number,</span> <span class="pre">ndigits)</span></span></dt>
+<dd><p>If <em>ndigits</em> is not given or <code class="docutils literal notranslate"><span class="pre">None</span></code>,
+returns the nearest <a class="reference internal" href="functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a> to <em>number</em>,
+rounding ties to even, and ignoring the rounding mode of the
+<a class="reference internal" href="#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> context.  Raises <a class="reference internal" href="exceptions.html#OverflowError" title="OverflowError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">OverflowError</span></code></a> if <em>number</em> is an
+infinity or <a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> if it is a (quiet or signaling) NaN.</p>
+<p>If <em>ndigits</em> is an <a class="reference internal" href="functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, the context's rounding mode is respected
+and a <a class="reference internal" href="#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> representing <em>number</em> rounded to the nearest
+multiple of <code class="docutils literal notranslate"><span class="pre">Decimal('1E-ndigits')</span></code> is returned; in this case,
+<code class="docutils literal notranslate"><span class="pre">round(number,</span> <span class="pre">ndigits)</span></code> is equivalent to
+<code class="docutils literal notranslate"><span class="pre">self.quantize(Decimal('1E-ndigits'))</span></code>.  Returns <code class="docutils literal notranslate"><span class="pre">Decimal('NaN')</span></code> if
+<em>number</em> is a quiet NaN.  Raises <a class="reference internal" href="#decimal.InvalidOperation" title="decimal.InvalidOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">InvalidOperation</span></code></a> if <em>number</em>
+is an infinity, a signaling NaN, or if the length of the coefficient after
+the quantize operation would be greater than the current context's
+precision.  In other words, for the non-corner cases:</p>
+<ul class="simple">
+<li><p>if <em>ndigits</em> is positive, return <em>number</em> rounded to <em>ndigits</em> decimal
+places;</p></li>
+<li><p>if <em>ndigits</em> is zero, return <em>number</em> rounded to the nearest integer;</p></li>
+<li><p>if <em>ndigits</em> is negative, return <em>number</em> rounded to the nearest
+multiple of <code class="docutils literal notranslate"><span class="pre">10**abs(ndigits)</span></code>.</p></li>
+</ul>
+<p>For example:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">decimal</span> <span class="kn">import</span> <span class="n">Decimal</span><span class="p">,</span> <span class="n">getcontext</span><span class="p">,</span> <span class="n">ROUND_DOWN</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">getcontext</span><span class="p">()</span><span class="o">.</span><span class="n">rounding</span> <span class="o">=</span> <span class="n">ROUND_DOWN</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3.75&#39;</span><span class="p">))</span>     <span class="c1"># context rounding ignored</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3.5&#39;</span><span class="p">))</span>      <span class="c1"># round-ties-to-even</span>
+<span class="go">4</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3.75&#39;</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># uses the context rounding</span>
+<span class="go">Decimal(&#39;3&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3.75&#39;</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+<span class="go">Decimal(&#39;3.7&#39;)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">round</span><span class="p">(</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;3.75&#39;</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">Decimal(&#39;0E+1&#39;)</span>
+</pre></div>
+</div>
+</dd></dl>
+
 </dd></dl>
 
 <section id="logical-operands">
@@ -1373,7 +1338,7 @@ Decimal instance is accepted.</p>
 <span class="sig-name descname"><span class="pre">clear_traps</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#decimal.Context.clear_traps" title="連結到這個定義">¶</a></dt>
 <dd><p>Resets all of the traps to <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1430,7 +1395,7 @@ the conversion.</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.1.</span></p>
+<p><span class="versionmodified added">在 3.1 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1906,7 +1871,7 @@ are also included in the pure Python version for compatibility.</p>
 the C version uses a thread-local rather than a coroutine-local context and the value
 is <code class="docutils literal notranslate"><span class="pre">False</span></code>.  This is slightly faster in some nested context scenarios.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8.3.</span></p>
+<p><span class="versionmodified added">在 3.8.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2095,7 +2060,7 @@ conversions are silent. All other mixed operations raise <a class="reference int
 </div>
 </section>
 <section id="floating-point-notes">
-<span id="decimal-notes"></span><h2>Floating Point Notes<a class="headerlink" href="#floating-point-notes" title="連結到這個標頭">¶</a></h2>
+<span id="decimal-notes"></span><h2>Floating-Point Notes<a class="headerlink" href="#floating-point-notes" title="連結到這個標頭">¶</a></h2>
 <section id="mitigating-round-off-error-with-increased-precision">
 <h3>Mitigating round-off error with increased precision<a class="headerlink" href="#mitigating-round-off-error-with-increased-precision" title="連結到這個標頭">¶</a></h3>
 <p>The use of decimal floating point eliminates decimal representation error
@@ -2103,7 +2068,7 @@ conversions are silent. All other mixed operations raise <a class="reference int
 can still incur round-off error when non-zero digits exceed the fixed precision.</p>
 <p>The effects of round-off error can be amplified by the addition or subtraction
 of nearly offsetting quantities resulting in loss of significance.  Knuth
-provides two instructive examples where rounded floating point arithmetic with
+provides two instructive examples where rounded floating-point arithmetic with
 insufficient precision causes the breakdown of the associative and distributive
 properties of addition:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="go"># Examples from Seminumerical Algorithms, Section 4.2.2.</span>
@@ -2181,7 +2146,7 @@ treated as equal and their sign is informational.</p>
 <p>In addition to the two signed zeros which are distinct yet equal, there are
 various representations of zero with differing precisions yet equivalent in
 value.  This takes a bit of getting used to.  For an eye accustomed to
-normalized floating point representations, it is not immediately obvious that
+normalized floating-point representations, it is not immediately obvious that
 the following calculation returns a value equal to zero:</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="mi">1</span> <span class="o">/</span> <span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;Infinity&#39;</span><span class="p">)</span>
 <span class="go">Decimal(&#39;0E-1000026&#39;)</span>
@@ -2487,7 +2452,7 @@ value unchanged:</p>
 </pre></div>
 </div>
 <p>Q. Is there a way to convert a regular float to a <a class="reference internal" href="#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a>?</p>
-<p>A. Yes, any binary floating point number can be exactly expressed as a
+<p>A. Yes, any binary floating-point number can be exactly expressed as a
 Decimal though an exact conversion may take more precision than intuition would
 suggest:</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">Decimal</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
@@ -2530,7 +2495,7 @@ using the unary plus operation:</p>
 <p>Q. Is the CPython implementation fast for large numbers?</p>
 <p>A. Yes.  In the CPython and PyPy3 implementations, the C/CFFI versions of
 the decimal module integrate the high speed <a class="reference external" href="https://www.bytereef.org/mpdecimal/doc/libmpdec/index.html">libmpdec</a> library for
-arbitrary precision correctly rounded decimal floating point arithmetic <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
+arbitrary precision correctly rounded decimal floating-point arithmetic <a class="footnote-reference brackets" href="#id4" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>.
 <code class="docutils literal notranslate"><span class="pre">libmpdec</span></code> uses <a class="reference external" href="https://en.wikipedia.org/wiki/Karatsuba_algorithm">Karatsuba multiplication</a>
 for medium-sized numbers and the <a class="reference external" href="https://en.wikipedia.org/wiki/Discrete_Fourier_transform_(general)#Number-theoretic_transform">Number Theoretic Transform</a>
 for very large numbers.</p>
@@ -2584,7 +2549,7 @@ are expected to be exact.</p>
 <aside class="footnote brackets" id="id4" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">1</a><span class="fn-bracket">]</span></span>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </aside>
 <aside class="footnote brackets" id="id5" role="doc-footnote">
@@ -2602,12 +2567,12 @@ are expected to be exact.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
-<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- 十進位固定點和浮點運算</a><ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- Decimal fixed-point and floating-point arithmetic</a><ul>
 <li><a class="reference internal" href="#quick-start-tutorial">Quick-start Tutorial</a></li>
 <li><a class="reference internal" href="#decimal-objects">Decimal objects</a><ul>
 <li><a class="reference internal" href="#logical-operands">Logical operands</a></li>
@@ -2617,7 +2582,7 @@ are expected to be exact.</p>
 <li><a class="reference internal" href="#constants">常數</a></li>
 <li><a class="reference internal" href="#rounding-modes">Rounding modes</a></li>
 <li><a class="reference internal" href="#signals">Signals</a></li>
-<li><a class="reference internal" href="#floating-point-notes">Floating Point Notes</a><ul>
+<li><a class="reference internal" href="#floating-point-notes">Floating-Point Notes</a><ul>
 <li><a class="reference internal" href="#mitigating-round-off-error-with-increased-precision">Mitigating round-off error with increased precision</a></li>
 <li><a class="reference internal" href="#special-values">Special values</a></li>
 </ul>
@@ -2659,7 +2624,7 @@ are expected to be exact.</p>
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -2685,12 +2650,12 @@ are expected to be exact.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
           <li class="nav-item nav-item-2"><a href="numeric.html" >數值與數學模組</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- 十進位固定點和浮點運算</a></li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- Decimal fixed-point and floating-point arithmetic</a></li>
                 <li class="right">
                     
 
@@ -2737,13 +2702,13 @@ are expected to be exact.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

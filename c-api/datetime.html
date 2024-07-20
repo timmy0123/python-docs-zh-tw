@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>DateTime 物件 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DateTime 物件 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="型別提示物件" href="typehints.html" />
     <link rel="prev" title="情境變數物件" href="contextvars.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/c-api/datetime.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -193,7 +111,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -219,7 +137,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API 參考手冊</a> &#187;</li>
@@ -323,7 +241,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyDateTime_TimeZone_UTC</span></span></span><a class="headerlink" href="#c.PyDateTime_TimeZone_UTC" title="連結到這個定義">¶</a><br /></dt>
 <dd><p>回傳表示 UTC 的時區單例，是與 <a class="reference internal" href="../library/datetime.html#datetime.timezone.utc" title="datetime.timezone.utc"><code class="xref py py-attr docutils literal notranslate"><span class="pre">datetime.timezone.utc</span></code></a> 相同的物件。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.7.</span></p>
+<p><span class="versionmodified added">在 3.7 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -406,7 +324,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyDateTime_FromDateAndTimeAndFold</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">year</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">month</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">day</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">hour</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">minute</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">second</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">usecond</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">fold</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDateTime_FromDateAndTimeAndFold" title="連結到這個定義">¶</a><br /></dt>
 <dd><em class="refcount return_new_ref">回傳值：新的參照。</em><p>回傳一個有特定年、月、日、時、分、秒、微秒與 fold（時間折疊）的物件 <a class="reference internal" href="../library/datetime.html#datetime.datetime" title="datetime.datetime"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.datetime</span></code></a>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6.</span></p>
+<p><span class="versionmodified added">在 3.6 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -421,7 +339,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyTime_FromTimeAndFold</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">hour</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">minute</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">second</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">usecond</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n"><span class="pre">fold</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTime_FromTimeAndFold" title="連結到這個定義">¶</a><br /></dt>
 <dd><em class="refcount return_new_ref">回傳值：新的參照。</em><p>回傳一個有特定時、分、秒、微秒與 fold（時間折疊）的物件 <a class="reference internal" href="../library/datetime.html#datetime.time" title="datetime.time"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.time</span></code></a>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6.</span></p>
+<p><span class="versionmodified added">在 3.6 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -436,7 +354,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyTimeZone_FromOffset</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">offset</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTimeZone_FromOffset" title="連結到這個定義">¶</a><br /></dt>
 <dd><em class="refcount return_new_ref">回傳值：新的參照。</em><p>回傳一個 <a class="reference internal" href="../library/datetime.html#datetime.timezone" title="datetime.timezone"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.timezone</span></code></a> 物件，其未命名的固定偏移量由 <em>offset</em> 引數表示。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.7.</span></p>
+<p><span class="versionmodified added">在 3.7 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -445,7 +363,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyTimeZone_FromOffsetAndName</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">offset</span></span>, <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyTimeZone_FromOffsetAndName" title="連結到這個定義">¶</a><br /></dt>
 <dd><em class="refcount return_new_ref">回傳值：新的參照。</em><p>回傳一個 <a class="reference internal" href="../library/datetime.html#datetime.timezone" title="datetime.timezone"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime.timezone</span></code></a> 物件，其固定偏移量由 <em>offset</em> 引數表示，並帶有 tzname <em>name</em>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.7.</span></p>
+<p><span class="versionmodified added">在 3.7 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -498,7 +416,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyDateTime_DATE_GET_FOLD</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyDateTime_DateTime" title="PyDateTime_DateTime"><span class="n"><span class="pre">PyDateTime_DateTime</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDateTime_DATE_GET_FOLD" title="連結到這個定義">¶</a><br /></dt>
 <dd><p>回傳 fold，為 0 或 1 的正整數。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6.</span></p>
+<p><span class="versionmodified added">在 3.6 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -507,7 +425,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyDateTime_DATE_GET_TZINFO</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyDateTime_DateTime" title="PyDateTime_DateTime"><span class="n"><span class="pre">PyDateTime_DateTime</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDateTime_DATE_GET_TZINFO" title="連結到這個定義">¶</a><br /></dt>
 <dd><p>回傳 tzinfo（可能是 <code class="docutils literal notranslate"><span class="pre">None</span></code>）。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -541,7 +459,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyDateTime_TIME_GET_FOLD</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyDateTime_Time" title="PyDateTime_Time"><span class="n"><span class="pre">PyDateTime_Time</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDateTime_TIME_GET_FOLD" title="連結到這個定義">¶</a><br /></dt>
 <dd><p>回傳 fold，為 0 或 1 的正整數。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6.</span></p>
+<p><span class="versionmodified added">在 3.6 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -550,7 +468,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <a class="reference internal" href="structures.html#c.PyObject" title="PyObject"><span class="n"><span class="pre">PyObject</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">PyDateTime_TIME_GET_TZINFO</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyDateTime_Time" title="PyDateTime_Time"><span class="n"><span class="pre">PyDateTime_Time</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDateTime_TIME_GET_TZINFO" title="連結到這個定義">¶</a><br /></dt>
 <dd><p>回傳 tzinfo（可能是 <code class="docutils literal notranslate"><span class="pre">None</span></code>）。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -560,7 +478,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyDateTime_DELTA_GET_DAYS</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyDateTime_Delta" title="PyDateTime_Delta"><span class="n"><span class="pre">PyDateTime_Delta</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDateTime_DELTA_GET_DAYS" title="連結到這個定義">¶</a><br /></dt>
 <dd><p>以 -999999999 到 999999999 之間的整數形式回傳天數。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -569,7 +487,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyDateTime_DELTA_GET_SECONDS</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyDateTime_Delta" title="PyDateTime_Delta"><span class="n"><span class="pre">PyDateTime_Delta</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDateTime_DELTA_GET_SECONDS" title="連結到這個定義">¶</a><br /></dt>
 <dd><p>以 0 到 86399 之間的整數形式回傳秒數。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -578,7 +496,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PyDateTime_DELTA_GET_MICROSECONDS</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#c.PyDateTime_Delta" title="PyDateTime_Delta"><span class="n"><span class="pre">PyDateTime_Delta</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n"><span class="pre">o</span></span><span class="sig-paren">)</span><a class="headerlink" href="#c.PyDateTime_DELTA_GET_MICROSECONDS" title="連結到這個定義">¶</a><br /></dt>
 <dd><p>以 0 到 999999 之間的整數形式回傳微秒數。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -602,7 +520,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h4>上個主題</h4>
@@ -633,7 +551,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -659,7 +577,7 @@ it is the same object as <a class="reference internal" href="../library/datetime
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API 參考手冊</a> &#187;</li>
@@ -711,13 +629,13 @@ it is the same object as <a class="reference internal" href="../library/datetime
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

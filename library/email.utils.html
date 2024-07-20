@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>email.utils：雜項工具 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email.utils：雜項工具 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="email.iterators：疊代器" href="email.iterators.html" />
     <link rel="prev" title="email.encoders：編碼器" href="email.encoders.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/email.utils.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -193,7 +111,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -219,7 +137,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -257,7 +175,7 @@
             
   <section id="module-email.utils">
 <span id="email-utils-miscellaneous-utilities"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.utils</span></code>：雜項工具<a class="headerlink" href="#module-email.utils" title="連結到這個標頭">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.12/Lib/email/utils.py">Lib/email/utils.py</a></p>
+<p><strong>原始碼：</strong><a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.12/Lib/email/utils.py">Lib/email/utils.py</a></p>
 <hr class="docutils" />
 <p>There are a couple of useful utilities provided in the <a class="reference internal" href="#module-email.utils" title="email.utils: Miscellaneous email package utilities."><code class="xref py py-mod docutils literal notranslate"><span class="pre">email.utils</span></code></a>
 module:</p>
@@ -271,10 +189,10 @@ zone according to the system time zone database.  If <em>dt</em> is naive (that
 is, <code class="docutils literal notranslate"><span class="pre">dt.tzinfo</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>), it is assumed to be in local time.  The
 <em>isdst</em> parameter is ignored.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 <div class="deprecated-removed">
-<p><span class="versionmodified">自從版本 3.12 後不推薦使用，將會自版本 3.14 中移除。: </span>The <em>isdst</em> parameter.</p>
+<p><span class="versionmodified deprecated">Deprecated since version 3.12, will be removed in version 3.14: </span>The <em>isdst</em> parameter.</p>
 </div>
 </dd></dl>
 
@@ -392,7 +310,7 @@ message the date comes from.  If the input date has any other valid timezone
 offset, the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> will be an aware <code class="docutils literal notranslate"><span class="pre">datetime</span></code> with the
 corresponding a <a class="reference internal" href="datetime.html#datetime.timezone" title="datetime.timezone"><code class="xref py py-class docutils literal notranslate"><span class="pre">timezone</span></code></a> <a class="reference internal" href="datetime.html#datetime.tzinfo" title="datetime.tzinfo"><code class="xref py py-class docutils literal notranslate"><span class="pre">tzinfo</span></code></a>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -411,7 +329,7 @@ tuple is <code class="docutils literal notranslate"><span class="pre">None</span
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Fri</span><span class="p">,</span> <span class="mi">09</span> <span class="n">Nov</span> <span class="mi">2001</span> <span class="mi">01</span><span class="p">:</span><span class="mi">08</span><span class="p">:</span><span class="mi">47</span> <span class="o">-</span><span class="mi">0000</span>
 </pre></div>
 </div>
-<p>Optional <em>timeval</em> if given is a floating point time value as accepted by
+<p>Optional <em>timeval</em> if given is a floating-point time value as accepted by
 <a class="reference internal" href="time.html#time.gmtime" title="time.gmtime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.gmtime()</span></code></a> and <a class="reference internal" href="time.html#time.localtime" title="time.localtime"><code class="xref py py-func docutils literal notranslate"><span class="pre">time.localtime()</span></code></a>, otherwise the current time is
 used.</p>
 <p>Optional <em>localtime</em> is a flag that when <code class="docutils literal notranslate"><span class="pre">True</span></code>, interprets <em>timeval</em>, and
@@ -436,7 +354,7 @@ If it is an aware timezone with offset zero, then <em>usegmt</em> may be set to
 timezone offset.  This provides a way to generate standards conformant HTTP
 date headers.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -493,7 +411,7 @@ the POSIX standard while this module follows <span class="target" id="index-10">
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h4>上個主題</h4>
@@ -524,7 +442,7 @@ the POSIX standard while this module follows <span class="target" id="index-10">
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -550,7 +468,7 @@ the POSIX standard while this module follows <span class="target" id="index-10">
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -603,13 +521,13 @@ the POSIX standard while this module follows <span class="target" id="index-10">
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

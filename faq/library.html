@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>函式庫和擴充功能的常見問題 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函式庫和擴充功能的常見問題 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="擴充/嵌入常見問題集" href="extending.html" />
     <link rel="prev" title="設計和歷史常見問答集" href="design.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/faq/library.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -209,7 +127,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -235,7 +153,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 常見問題</a> &#187;</li>
@@ -407,7 +325,7 @@ However, you can fix that by adding</p>
 <section id="is-there-a-curses-termcap-package-for-python">
 <h3><a class="toc-backref" href="#id7" role="doc-backlink">是否有適用於 Python 的 curses/termcap 套件？</a><a class="headerlink" href="#is-there-a-curses-termcap-package-for-python" title="連結到這個標頭">¶</a></h3>
 <p>For Unix variants: The standard Python source distribution comes with a curses
-module in the <a class="reference external" href="https://github.com/python/cpython/tree/3.12/Modules">Modules</a> subdirectory, though it's not compiled by default.
+module in the <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.12/Modules">Modules</a> subdirectory, though it's not compiled by default.
 (Note that this is not available in the Windows distribution -- there is no
 curses module for Windows.)</p>
 <p>The <a class="reference internal" href="../library/curses.html#module-curses" title="curses: An interface to the curses library, providing portable terminal handling. (Unix)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">curses</span></code></a> module supports basic curses features as well as many additional
@@ -753,7 +671,7 @@ use <code class="docutils literal notranslate"><span class="pre">p.read(n)</span
 <h3><a class="toc-backref" href="#id25" role="doc-backlink">如何存取序列 (RS232) 連接埠？</a><a class="headerlink" href="#how-do-i-access-the-serial-rs232-port" title="連結到這個標頭">¶</a></h3>
 <p>對於 Win32、OSX、Linux、BSD、Jython、IronPython：</p>
 <blockquote>
-<div><p><a class="reference external" href="https://pypi.org/project/pyserial/">pyserial</a></p>
+<div><p><a class="extlink-pypi reference external" href="https://pypi.org/project/pyserial/">pyserial</a></p>
 </div></blockquote>
 <p>對於 Unix，請參閱 Mitch Chapman 的 Usenet 貼文：</p>
 <blockquote>
@@ -923,11 +841,11 @@ mappings containing arbitrary Python objects.</p>
 <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>這將回傳 [0, 1) 範圍內的隨機浮點數。</p>
+<p>This returns a random floating-point number in the range [0, 1).</p>
 <p>該模組中還有許多其他專用生成器，例如：</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">randrange(a,</span> <span class="pre">b)</span></code> 會選擇 [a, b) 範圍內的一個整數。</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">uniform(a,</span> <span class="pre">b)</span></code> 會選擇 [a, b) 範圍內的浮點數。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uniform(a,</span> <span class="pre">b)</span></code> chooses a floating-point number in the range [a, b).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">normalvariate(mean,</span> <span class="pre">sdev)</span></code> 對常態（高斯）分佈進行採樣 (sample)。</p></li>
 </ul>
 <p>一些更高階的函式會直接對序列進行操作，例如：</p>
@@ -945,7 +863,7 @@ mappings containing arbitrary Python objects.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -992,7 +910,7 @@ mappings containing arbitrary Python objects.</p>
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1018,7 +936,7 @@ mappings containing arbitrary Python objects.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 常見問題</a> &#187;</li>
@@ -1069,13 +987,13 @@ mappings containing arbitrary Python objects.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

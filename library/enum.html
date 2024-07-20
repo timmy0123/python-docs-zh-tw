@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>enum --- 對列舉的支援 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enum --- 對列舉的支援 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="graphlib —-- 使用類圖 (graph-like) 結構進行操作的功能" href="graphlib.html" />
     <link rel="prev" title="reprlib --- repr() 的替代實作" href="reprlib.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/enum.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -210,7 +128,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -236,7 +154,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -274,9 +192,9 @@
   <section id="module-enum">
 <span id="enum-support-for-enumerations"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">enum</span></code> --- 對列舉的支援<a class="headerlink" href="#module-enum" title="連結到這個標頭">¶</a></h1>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.12/Lib/enum.py">Lib/enum.py</a></p>
+<p><strong>原始碼：</strong><a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.12/Lib/enum.py">Lib/enum.py</a></p>
 <aside class="sidebar">
 <p class="sidebar-title">Important</p>
 <p>本頁包含 API 的參考資訊。關於教學資訊及更多進階主題的討論請參考</p>
@@ -391,10 +309,10 @@
 </div></blockquote>
 </div></blockquote>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6: </span><code class="docutils literal notranslate"><span class="pre">Flag</span></code>, <code class="docutils literal notranslate"><span class="pre">IntFlag</span></code>, <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
+<p><span class="versionmodified added">在 3.6 版被加入: </span><code class="docutils literal notranslate"><span class="pre">Flag</span></code>, <code class="docutils literal notranslate"><span class="pre">IntFlag</span></code>, <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11: </span><code class="docutils literal notranslate"><span class="pre">StrEnum</span></code>, <code class="docutils literal notranslate"><span class="pre">EnumCheck</span></code>, <code class="docutils literal notranslate"><span class="pre">ReprEnum</span></code>, <code class="docutils literal notranslate"><span class="pre">FlagBoundary</span></code>, <code class="docutils literal notranslate"><span class="pre">property</span></code>, <code class="docutils literal notranslate"><span class="pre">member</span></code>, <code class="docutils literal notranslate"><span class="pre">nonmember</span></code>, <code class="docutils literal notranslate"><span class="pre">global_enum</span></code>, <code class="docutils literal notranslate"><span class="pre">show_flag_values</span></code></p>
+<p><span class="versionmodified added">在 3.11 版被加入: </span><code class="docutils literal notranslate"><span class="pre">StrEnum</span></code>, <code class="docutils literal notranslate"><span class="pre">EnumCheck</span></code>, <code class="docutils literal notranslate"><span class="pre">ReprEnum</span></code>, <code class="docutils literal notranslate"><span class="pre">FlagBoundary</span></code>, <code class="docutils literal notranslate"><span class="pre">property</span></code>, <code class="docutils literal notranslate"><span class="pre">member</span></code>, <code class="docutils literal notranslate"><span class="pre">nonmember</span></code>, <code class="docutils literal notranslate"><span class="pre">global_enum</span></code>, <code class="docutils literal notranslate"><span class="pre">show_flag_values</span></code></p>
 </div>
 </section>
 <hr class="docutils" />
@@ -528,7 +446,7 @@
 </dd></dl>
 
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11: </span>在 3.11 之前，<code class="docutils literal notranslate"><span class="pre">enum</span></code> 使用 <code class="docutils literal notranslate"><span class="pre">EnumMeta</span></code> 類型，目前保留此類型當作別名。</p>
+<p><span class="versionmodified added">在 3.11 版被加入: </span>在 3.11 之前，<code class="docutils literal notranslate"><span class="pre">enum</span></code> 使用 <code class="docutils literal notranslate"><span class="pre">EnumMeta</span></code> 類型，目前保留此類型當作別名。</p>
 </div>
 </dd></dl>
 
@@ -813,14 +731,14 @@ total number of mutable/unhashable values in the enum.</p>
 <p>為了更好地支援<em>現存常數取代 (replacement of existing constants)</em> 的使用情境，<a class="reference internal" href="../reference/datamodel.html#object.__str__" title="object.__str__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__str__()</span></code></a> 現在會是 <code class="xref py py-meth docutils literal notranslate"><span class="pre">str.__str__()</span></code>。為了同樣的理由，<a class="reference internal" href="../reference/datamodel.html#object.__format__" title="object.__format__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__format__()</span></code></a> 也會是 <code class="xref py py-meth docutils literal notranslate"><span class="pre">str.__format__()</span></code>。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="enum.Flag">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">Flag</span></span><a class="headerlink" href="#enum.Flag" title="連結到這個定義">¶</a></dt>
-<dd><p><code class="docutils literal notranslate"><span class="pre">Flag</span></code> 與 <a class="reference internal" href="#enum.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a> 相同，但其成員支援位元運算子 <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> (<em>AND</em>)、<code class="docutils literal notranslate"><span class="pre">|</span></code> (<em>OR</em>)、<code class="docutils literal notranslate"><span class="pre">^</span></code> (<em>XOR</em>) 和 <code class="docutils literal notranslate"><span class="pre">~</span></code> (<em>INVERT</em>)；這些運算子的結果是列舉的成員。</p>
+<dd><p><code class="docutils literal notranslate"><span class="pre">Flag</span></code> 與 <a class="reference internal" href="#enum.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a> 相同，但其成員支援位元運算子 <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> (<em>AND</em>)、<code class="docutils literal notranslate"><span class="pre">|</span></code> (<em>OR</em>)、<code class="docutils literal notranslate"><span class="pre">^</span></code> (<em>XOR</em>) 和 <code class="docutils literal notranslate"><span class="pre">~</span></code> (<em>INVERT</em>)；這些操作的結果是列舉的成員（的別名）。</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="enum.Flag.__contains__">
 <span class="sig-name descname"><span class="pre">__contains__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enum.Flag.__contains__" title="連結到這個定義">¶</a></dt>
@@ -856,7 +774,7 @@ total number of mutable/unhashable values in the enum.</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1005,7 +923,7 @@ total number of mutable/unhashable values in the enum.</p>
 </ul>
 <p>繼承 <code class="xref py py-class docutils literal notranslate"><span class="pre">ReprEnum</span></code> 來保留混合資料類型的 <a class="reference internal" href="stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str()</span></code></a> / <a class="reference internal" href="functions.html#format" title="format"><code class="xref py py-func docutils literal notranslate"><span class="pre">format()</span></code></a>，而不是使用 <a class="reference internal" href="#enum.Enum" title="enum.Enum"><code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></a> 預設的 <a class="reference internal" href="#enum.Enum.__str__" title="enum.Enum.__str__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">str()</span></code></a>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1072,7 +990,7 @@ total number of mutable/unhashable values in the enum.</p>
 <p>CONTINUOUS 和 NAMED_FLAGS 是設計用來運作在整數值的成員上。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1151,7 +1069,7 @@ total number of mutable/unhashable values in the enum.</p>
 </dd></dl>
 
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 <hr class="docutils" />
 <section id="supported-dunder-names">
@@ -1176,10 +1094,10 @@ total number of mutable/unhashable values in the enum.</p>
 </li>
 </ul>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6: </span><code class="docutils literal notranslate"><span class="pre">_missing_</span></code>、<code class="docutils literal notranslate"><span class="pre">_order_</span></code>、<code class="docutils literal notranslate"><span class="pre">_generate_next_value_</span></code></p>
+<p><span class="versionmodified added">在 3.6 版被加入: </span><code class="docutils literal notranslate"><span class="pre">_missing_</span></code>、<code class="docutils literal notranslate"><span class="pre">_order_</span></code>、<code class="docutils literal notranslate"><span class="pre">_generate_next_value_</span></code></p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.7: </span><code class="docutils literal notranslate"><span class="pre">_ignore_</span></code></p>
+<p><span class="versionmodified added">在 3.7 版被加入: </span><code class="docutils literal notranslate"><span class="pre">_ignore_</span></code></p>
 </div>
 </section>
 </section>
@@ -1215,7 +1133,7 @@ total number of mutable/unhashable values in the enum.</p>
 <p><em>屬性</em>和成員必須定義在分開的類別裡；例如 <em>value</em> 和 <em>name</em> 屬性定義在 <em>Enum</em> 類別而 <em>Enum</em> 子類別可以定義成員名稱為 <code class="docutils literal notranslate"><span class="pre">value</span></code> 和 <code class="docutils literal notranslate"><span class="pre">name</span></code>。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1243,7 +1161,7 @@ total number of mutable/unhashable values in the enum.</p>
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">verify</span></span><a class="headerlink" href="#enum.verify" title="連結到這個定義">¶</a></dt>
 <dd><p>專門針對列舉的 <a class="reference internal" href="../reference/compound_stmts.html#class"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">class</span></code></a> 裝飾器。使用 <a class="reference internal" href="#enum.EnumCheck" title="enum.EnumCheck"><code class="xref py py-class docutils literal notranslate"><span class="pre">EnumCheck</span></code></a> 裡的成員來指定在裝飾的列舉上應該檢查什麼限制。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1252,7 +1170,7 @@ total number of mutable/unhashable values in the enum.</p>
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">member</span></span><a class="headerlink" href="#enum.member" title="連結到這個定義">¶</a></dt>
 <dd><p>列舉所使用的裝飾器：其目標會變成成員。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1261,7 +1179,7 @@ total number of mutable/unhashable values in the enum.</p>
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">nonmember</span></span><a class="headerlink" href="#enum.nonmember" title="連結到這個定義">¶</a></dt>
 <dd><p>列舉所使用的裝飾器：其目標不會變成成員。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1270,7 +1188,7 @@ total number of mutable/unhashable values in the enum.</p>
 <span class="sig-prename descclassname"><span class="pre">&#64;</span></span><span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">global_enum</span></span><a class="headerlink" href="#enum.global_enum" title="連結到這個定義">¶</a></dt>
 <dd><p>修改列舉的 <a class="reference internal" href="stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str()</span></code></a> 及 <a class="reference internal" href="functions.html#repr" title="repr"><code class="xref py py-func docutils literal notranslate"><span class="pre">repr()</span></code></a> 的裝飾器，讓成員顯示為屬於模組而不是其類別。應該只有當列舉成員被匯出到模組的全域命名空間才使用（範例請參考 <a class="reference internal" href="re.html#re.RegexFlag" title="re.RegexFlag"><code class="xref py py-class docutils literal notranslate"><span class="pre">re.RegexFlag</span></code></a>）。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1279,7 +1197,7 @@ total number of mutable/unhashable values in the enum.</p>
 <span class="sig-prename descclassname"><span class="pre">enum.</span></span><span class="sig-name descname"><span class="pre">show_flag_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#enum.show_flag_values" title="連結到這個定義">¶</a></dt>
 <dd><p>回傳在旗標<em>值</em>中包含的所有 2 的次方的整數串列。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1315,7 +1233,7 @@ total number of mutable/unhashable values in the enum.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -1363,7 +1281,7 @@ total number of mutable/unhashable values in the enum.</p>
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1389,7 +1307,7 @@ total number of mutable/unhashable values in the enum.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -1441,13 +1359,13 @@ total number of mutable/unhashable values in the enum.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

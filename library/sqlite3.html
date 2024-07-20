@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>sqlite3 --- SQLite 資料庫的 DB-API 2.0 介面 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sqlite3 --- SQLite 資料庫的 DB-API 2.0 介面 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="資料壓縮與保存" href="archiving.html" />
     <link rel="prev" title="dbm --- Unix &#34;databases&#34; 的介面" href="dbm.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/sqlite3.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -241,7 +159,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -267,7 +185,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -304,7 +222,7 @@
             
   <section id="module-sqlite3">
 <span id="sqlite3-db-api-2-0-interface-for-sqlite-databases"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code> --- SQLite 資料庫的 DB-API 2.0 介面<a class="headerlink" href="#module-sqlite3" title="連結到這個標頭">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.12/Lib/sqlite3/">Lib/sqlite3/</a></p>
+<p><strong>原始碼：</strong><a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.12/Lib/sqlite3/">Lib/sqlite3/</a></p>
 <p id="sqlite3-intro">SQLite is a C library that provides a lightweight disk-based database that
 doesn't require a separate server process and allows accessing the database
 using a nonstandard variant of the SQL query language. Some applications can use
@@ -584,7 +502,7 @@ and the statement is terminated by a semicolon.</p>
 <p>This function may be useful during command-line input
 to determine if the entered text seems to form a complete SQL statement,
 or if additional input is needed before calling <a class="reference internal" href="#sqlite3.Cursor.execute" title="sqlite3.Cursor.execute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">execute()</span></code></a>.</p>
-<p>See <code class="xref py py-func docutils literal notranslate"><span class="pre">runsource()</span></code> in <a class="reference external" href="https://github.com/python/cpython/tree/3.12/Lib/sqlite3/__main__.py">Lib/sqlite3/__main__.py</a>
+<p>See <code class="xref py py-func docutils literal notranslate"><span class="pre">runsource()</span></code> in <a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.12/Lib/sqlite3/__main__.py">Lib/sqlite3/__main__.py</a>
 for real-world use.</p>
 </dd></dl>
 
@@ -783,7 +701,7 @@ connections and cursors</p></td>
 <dd><p>Version number of this module as a <a class="reference internal" href="stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">string</span></code></a>.
 This is not the version of the SQLite library.</p>
 <div class="deprecated-removed">
-<p><span class="versionmodified">自從版本 3.12 後不推薦使用，將會自版本 3.14 中移除。: </span>This constant used to reflect the version number of the <code class="docutils literal notranslate"><span class="pre">pysqlite</span></code>
+<p><span class="versionmodified deprecated">Deprecated since version 3.12, will be removed in version 3.14: </span>This constant used to reflect the version number of the <code class="docutils literal notranslate"><span class="pre">pysqlite</span></code>
 package, a third-party library which used to upstream changes to
 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code>. Today, it carries no meaning or practical value.</p>
 </div>
@@ -795,7 +713,7 @@ package, a third-party library which used to upstream changes to
 <dd><p>Version number of this module as a <a class="reference internal" href="stdtypes.html#tuple" title="tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> of <a class="reference internal" href="functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">integers</span></code></a>.
 This is not the version of the SQLite library.</p>
 <div class="deprecated-removed">
-<p><span class="versionmodified">自從版本 3.12 後不推薦使用，將會自版本 3.14 中移除。: </span>This constant used to reflect the version number of the <code class="docutils literal notranslate"><span class="pre">pysqlite</span></code>
+<p><span class="versionmodified deprecated">Deprecated since version 3.12, will be removed in version 3.14: </span>This constant used to reflect the version number of the <code class="docutils literal notranslate"><span class="pre">pysqlite</span></code>
 package, a third-party library which used to upstream changes to
 <code class="xref py py-mod docutils literal notranslate"><span class="pre">sqlite3</span></code>. Today, it carries no meaning or practical value.</p>
 </div>
@@ -839,7 +757,7 @@ and <a class="reference internal" href="#sqlite3.Connection.getconfig" title="sq
 <p>The availability of these constants varies depending on the version of SQLite
 Python was compiled with.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
@@ -908,7 +826,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;m
 Use the SQL function <code class="docutils literal notranslate"><span class="pre">zeroblob</span></code> to create a blob with a fixed size.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1084,7 +1002,7 @@ which does not support aggregate window functions.</p>
 </dd>
 </dl>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 <p>範例：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Example taken from https://www.sqlite.org/windowfunctions.html#udfwinfunc</span>
@@ -1240,7 +1158,7 @@ development and debugging aid, use
 tracebacks from exceptions raised in the trace callback.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1264,7 +1182,7 @@ to <strong class="program">configure</strong>.</p>
 </div>
 <p class="audit-hook">引發一個附帶引數 <code class="docutils literal notranslate"><span class="pre">connection</span></code>、<code class="docutils literal notranslate"><span class="pre">enabled</span></code> 的<a class="reference internal" href="sys.html#auditing"><span class="std std-ref">稽核事件</span></a> <code class="docutils literal notranslate"><span class="pre">sqlite3.enable_load_extension</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.10 版的變更: </span>加入 <code class="docutils literal notranslate"><span class="pre">sqlite3.enable_load_extension</span></code> 稽核事件。</p>
@@ -1313,7 +1231,7 @@ see the SQLite docs <a class="reference external" href="https://www.sqlite.org/l
 </dl>
 <p class="audit-hook">引發一個附帶引數 <code class="docutils literal notranslate"><span class="pre">connection</span></code>、<code class="docutils literal notranslate"><span class="pre">path</span></code> 的<a class="reference internal" href="sys.html#auditing"><span class="std std-ref">稽核事件</span></a> <code class="docutils literal notranslate"><span class="pre">sqlite3.load_extension</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.10 版的變更: </span>加入 <code class="docutils literal notranslate"><span class="pre">sqlite3.load_extension</span></code> 稽核事件。</p>
@@ -1395,7 +1313,7 @@ to back up remaining pages.</p></li>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.7.</span></p>
+<p><span class="versionmodified added">在 3.7 版被加入.</span></p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
@@ -1425,7 +1343,7 @@ for <a class="reference internal" href="#sqlite3.Connection" title="sqlite3.Conn
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1460,7 +1378,7 @@ for <a class="reference internal" href="#sqlite3.Connection" title="sqlite3.Conn
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1477,7 +1395,7 @@ for <a class="reference internal" href="#sqlite3.Connection" title="sqlite3.Conn
 </dd>
 </dl>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1495,7 +1413,7 @@ for <a class="reference internal" href="#sqlite3.Connection" title="sqlite3.Conn
 </dd>
 </dl>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1522,7 +1440,7 @@ Defaults to <code class="docutils literal notranslate"><span class="pre">&quot;m
 serialize API.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1557,7 +1475,7 @@ transaction or a backup operation.</p></li>
 deserialize API.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1589,7 +1507,7 @@ and changing it to <code class="docutils literal notranslate"><span class="pre">
 <a class="reference internal" href="#sqlite3.Connection.autocommit" title="sqlite3.Connection.autocommit"><code class="xref py py-attr docutils literal notranslate"><span class="pre">autocommit</span></code></a> is <a class="reference internal" href="#sqlite3.LEGACY_TRANSACTION_CONTROL" title="sqlite3.LEGACY_TRANSACTION_CONTROL"><code class="xref py py-data docutils literal notranslate"><span class="pre">LEGACY_TRANSACTION_CONTROL</span></code></a>.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1601,7 +1519,7 @@ and changing it to <code class="docutils literal notranslate"><span class="pre">
 <p><code class="docutils literal notranslate"><span class="pre">True</span></code> if a transaction is active (there are uncommitted changes),
 <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1703,7 +1621,7 @@ See <a class="reference internal" href="#sqlite3-placeholders"><span class="std 
 and there is no open transaction,
 a transaction is implicitly opened before executing <em>sql</em>.</p>
 <div class="deprecated-removed">
-<p><span class="versionmodified">自從版本 3.12 後不推薦使用，將會自版本 3.14 中移除。: </span><a class="reference internal" href="exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> is emitted if
+<p><span class="versionmodified deprecated">Deprecated since version 3.12, will be removed in version 3.14: </span><a class="reference internal" href="exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> is emitted if
 <a class="reference internal" href="#sqlite3-placeholders"><span class="std std-ref">named placeholders</span></a> are used
 and <em>parameters</em> is a sequence instead of a <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>.
 Starting with Python 3.14, <a class="reference internal" href="#sqlite3.ProgrammingError" title="sqlite3.ProgrammingError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ProgrammingError</span></code></a> will
@@ -1748,7 +1666,7 @@ or is not a DML statement.</p>
 including DML statements with <a class="reference external" href="https://www.sqlite.org/lang_returning.html">RETURNING clauses</a>.</p>
 </div>
 <div class="deprecated-removed">
-<p><span class="versionmodified">自從版本 3.12 後不推薦使用，將會自版本 3.14 中移除。: </span><a class="reference internal" href="exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> is emitted if
+<p><span class="versionmodified deprecated">Deprecated since version 3.12, will be removed in version 3.14: </span><a class="reference internal" href="exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a> is emitted if
 <a class="reference internal" href="#sqlite3-placeholders"><span class="std std-ref">named placeholders</span></a> are used
 and the items in <em>parameters</em> are sequences
 instead of <a class="reference internal" href="stdtypes.html#dict" title="dict"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a>s.
@@ -1949,7 +1867,7 @@ it is the first member of each tuple in <a class="reference internal" href="#sql
 <dt class="sig sig-object py" id="sqlite3.Blob">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sqlite3.</span></span><span class="sig-name descname"><span class="pre">Blob</span></span><a class="headerlink" href="#sqlite3.Blob" title="連結到這個定義">¶</a></dt>
 <dd><div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 <p>A <a class="reference internal" href="#sqlite3.Blob" title="sqlite3.Blob"><code class="xref py py-class docutils literal notranslate"><span class="pre">Blob</span></code></a> instance is a <a class="reference internal" href="../glossary.html#term-file-like-object"><span class="xref std std-term">file-like object</span></a>
 that can read and write data in an SQLite <abbr title="Binary Large OBject">BLOB</abbr>.
@@ -2059,7 +1977,7 @@ the following two attributes are added to the exception:</p>
 <dd><p>The numeric error code from the
 <a class="reference external" href="https://sqlite.org/rescode.html">SQLite API</a></p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2069,7 +1987,7 @@ the following two attributes are added to the exception:</p>
 <dd><p>The symbolic name of the numeric error code
 from the <a class="reference external" href="https://sqlite.org/rescode.html">SQLite API</a></p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2262,7 +2180,7 @@ The argument signature is as follows:</p>
 </dd></dl>
 
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </section>
 </section>
@@ -2819,7 +2737,7 @@ statements.  This is no longer the case.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -2898,7 +2816,7 @@ statements.  This is no longer the case.</p>
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -2924,7 +2842,7 @@ statements.  This is no longer the case.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -2976,13 +2894,13 @@ statements.  This is no longer the case.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

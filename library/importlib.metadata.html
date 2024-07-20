@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>importlib.metadata -- 存取套件的元資料 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>importlib.metadata -- 存取套件的元資料 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="The initialization of the sys.path module search path" href="sys_path_init.html" />
     <link rel="prev" title="importlib.resources.abc -- 資源的抽象基底類別" href="importlib.resources.abc.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/importlib.metadata.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -215,7 +133,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -241,7 +159,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -279,12 +197,12 @@
   <section id="module-importlib.metadata">
 <span id="importlib-metadata-accessing-package-metadata"></span><span id="using"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">importlib.metadata</span></code> -- 存取套件的元資料<a class="headerlink" href="#module-importlib.metadata" title="連結到這個標頭">¶</a></h1>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8.</span></p>
+<p><span class="versionmodified added">在 3.8 版被加入.</span></p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.10 版的變更: </span><code class="docutils literal notranslate"><span class="pre">importlib.metadata</span></code> is no longer provisional.</p>
 </div>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.12/Lib/importlib/metadata/__init__.py">Lib/importlib/metadata/__init__.py</a></p>
+<p><strong>原始碼：</strong><a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.12/Lib/importlib/metadata/__init__.py">Lib/importlib/metadata/__init__.py</a></p>
 <p><code class="docutils literal notranslate"><span class="pre">importlib.metadata</span></code> is a library that provides access to
 the metadata of an installed <a class="reference external" href="https://packaging.python.org/en/latest/glossary/#term-Distribution-Package">Distribution Package</a>,
 such as its entry points
@@ -297,7 +215,7 @@ this package can eliminate the need to use the older and less efficient
 <code class="docutils literal notranslate"><span class="pre">pkg_resources</span></code> package.</p>
 <p><code class="docutils literal notranslate"><span class="pre">importlib.metadata</span></code> operates on third-party <em>distribution packages</em>
 installed into Python's <code class="docutils literal notranslate"><span class="pre">site-packages</span></code> directory via tools such as
-<a class="reference external" href="https://pypi.org/project/pip/">pip</a>.
+<a class="extlink-pypi reference external" href="https://pypi.org/project/pip/">pip</a>.
 Specifically, it works with distributions with discoverable
 <code class="docutils literal notranslate"><span class="pre">dist-info</span></code> or <code class="docutils literal notranslate"><span class="pre">egg-info</span></code> directories,
 and metadata defined by the <a class="reference external" href="https://packaging.python.org/en/latest/specifications/core-metadata/#core-metadata">Core metadata specifications</a>.</p>
@@ -428,7 +346,7 @@ for more information on entry points, their definition, and usage.</p>
 no parameters and always returned a dictionary of entry points, keyed
 by group. With <code class="docutils literal notranslate"><span class="pre">importlib_metadata</span></code> 5.0 and Python 3.12,
 <code class="docutils literal notranslate"><span class="pre">entry_points</span></code> always returns an <code class="docutils literal notranslate"><span class="pre">EntryPoints</span></code> object. See
-<a class="reference external" href="https://pypi.org/project/backports.entry_points_selectable/">backports.entry_points_selectable</a>
+<a class="extlink-pypi reference external" href="https://pypi.org/project/backports.entry_points_selectable/">backports.entry_points_selectable</a>
 for compatibility options.</p>
 </section>
 <section id="distribution-metadata">
@@ -541,7 +459,7 @@ Python module or <a class="reference external" href="https://packaging.python.or
 <p>Some editable installs, <a class="reference external" href="https://github.com/pypa/packaging-problems/issues/609">do not supply top-level names</a>, and thus this
 function is not reliable with such installs.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </section>
 </section>
@@ -626,7 +544,7 @@ a custom finder, return instances of this derived <code class="docutils literal 
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -679,7 +597,7 @@ a custom finder, return instances of this derived <code class="docutils literal 
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -705,7 +623,7 @@ a custom finder, return instances of this derived <code class="docutils literal 
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -757,13 +675,13 @@ a custom finder, return instances of this derived <code class="docutils literal 
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

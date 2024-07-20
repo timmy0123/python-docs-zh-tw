@@ -5,28 +5,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cmath --- 複數的數學函式 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cmath --- 複數的數學函式 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜尋" href="../search.html" />
     <link rel="copyright" title="版權" href="../copyright.html" />
-    <link rel="next" title="decimal --- 十進位固定點和浮點運算" href="decimal.html" />
+    <link rel="next" title="decimal --- Decimal fixed-point and floating-point arithmetic" href="decimal.html" />
     <link rel="prev" title="math --- 數學函式" href="math.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/cmath.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -190,7 +108,7 @@
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="decimal.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- 十進位固定點和浮點運算</a></p>
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- Decimal fixed-point and floating-point arithmetic</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -208,7 +126,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -218,7 +136,7 @@
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="decimal.html" title="decimal --- 十進位固定點和浮點運算"
+          <a href="decimal.html" title="decimal --- Decimal fixed-point and floating-point arithmetic"
              accesskey="N">下一頁</a> |</li>
         <li class="right" >
           <a href="math.html" title="math --- 數學函式"
@@ -234,7 +152,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -289,9 +207,7 @@
 </div>
 <section id="conversions-to-and-from-polar-coordinates">
 <h2>轉換到極座標和從極座標做轉換<a class="headerlink" href="#conversions-to-and-from-polar-coordinates" title="連結到這個標頭">¶</a></h2>
-<p>A Python complex number <code class="docutils literal notranslate"><span class="pre">z</span></code> is stored internally using <em>rectangular</em>
-or <em>Cartesian</em> coordinates.  It is completely determined by its <em>real
-part</em> <code class="docutils literal notranslate"><span class="pre">z.real</span></code> and its <em>imaginary part</em> <code class="docutils literal notranslate"><span class="pre">z.imag</span></code>.</p>
+<p>Python 複數 <code class="docutils literal notranslate"><span class="pre">z</span></code> 是用 <em>直角坐標</em> 或 <em>笛卡爾坐標</em> 儲存在內部的。它完全是由其 <em>實部</em> <code class="docutils literal notranslate"><span class="pre">z.real</span></code> 和 <em>虛部</em> <code class="docutils literal notranslate"><span class="pre">z.imag</span></code> 所決定。</p>
 <p><em>極座標</em> 提供了另一種表示複數的方法。在極座標中，複數 <em>z</em> 由絕對值 (modulus) <em>r</em> 和相位角 (phase) <em>phi</em> 定義。絕對值 <em>r</em> 是從 <em>z</em> 到原點的距離，而相位角 <em>phi</em> 是從正 x 軸到連接原點到 <em>z</em> 的線段的逆時針角度（以弧度為單位）。</p>
 <p>以下的函式可用於原始直角座標與極座標之間的相互轉換。</p>
 <dl class="py function">
@@ -319,8 +235,7 @@ part</em> <code class="docutils literal notranslate"><span class="pre">z.real</s
 <dl class="py function">
 <dt class="sig sig-object py" id="cmath.rect">
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">rect</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cmath.rect" title="連結到這個定義">¶</a></dt>
-<dd><p>Return the complex number <em>x</em> with polar coordinates <em>r</em> and <em>phi</em>.
-Equivalent to <code class="docutils literal notranslate"><span class="pre">complex(r</span> <span class="pre">*</span> <span class="pre">math.cos(phi),</span> <span class="pre">r</span> <span class="pre">*</span> <span class="pre">math.sin(phi))</span></code>.</p>
+<dd><p>透過極座標 <em>r</em> 和 <em>phi</em> 回傳複數 <em>x</em>。相當於 <code class="docutils literal notranslate"><span class="pre">complex(r</span> <span class="pre">*</span> <span class="pre">math.cos(phi),</span> <span class="pre">r</span> <span class="pre">*</span> <span class="pre">math.sin(phi))</span></code>。</p>
 </dd></dl>
 
 </section>
@@ -436,7 +351,7 @@ Equivalent to <code class="docutils literal notranslate"><span class="pre">compl
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">isfinite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cmath.isfinite" title="連結到這個定義">¶</a></dt>
 <dd><p>如果 <em>x</em> 的實部和虛部都是有限的，則回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>，否則回傳 <code class="docutils literal notranslate"><span class="pre">False</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -462,7 +377,7 @@ Equivalent to <code class="docutils literal notranslate"><span class="pre">compl
 <p>如果未發生錯誤，結果將為： <code class="docutils literal notranslate"><span class="pre">abs(a-b)</span> <span class="pre">&lt;=</span> <span class="pre">max(rel_tol</span> <span class="pre">*</span> <span class="pre">max(abs(a),</span> <span class="pre">abs(b)),</span> <span class="pre">abs_tol)</span></code>。</p>
 <p>IEEE 754 特殊值 <code class="docutils literal notranslate"><span class="pre">NaN</span></code> 、 <code class="docutils literal notranslate"><span class="pre">inf</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-inf</span></code> 將會根據 IEEE 規則進行處理。具體來說， <code class="docutils literal notranslate"><span class="pre">NaN</span></code> 不被認為接近任何其他值，包括 <code class="docutils literal notranslate"><span class="pre">NaN</span></code>。 <code class="docutils literal notranslate"><span class="pre">inf</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-inf</span></code> 只被認為是接近它們自己的。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.5.</span></p>
+<p><span class="versionmodified added">在 3.5 版被加入.</span></p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
@@ -490,7 +405,7 @@ Equivalent to <code class="docutils literal notranslate"><span class="pre">compl
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">tau</span></span><a class="headerlink" href="#cmath.tau" title="連結到這個定義">¶</a></dt>
 <dd><p>數學常數 <em>τ</em>，作為一個浮點數。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6.</span></p>
+<p><span class="versionmodified added">在 3.6 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -499,7 +414,7 @@ Equivalent to <code class="docutils literal notranslate"><span class="pre">compl
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">inf</span></span><a class="headerlink" href="#cmath.inf" title="連結到這個定義">¶</a></dt>
 <dd><p>正無窮大的浮點數。相當於 <code class="docutils literal notranslate"><span class="pre">float('inf')</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6.</span></p>
+<p><span class="versionmodified added">在 3.6 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -508,7 +423,7 @@ Equivalent to <code class="docutils literal notranslate"><span class="pre">compl
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">infj</span></span><a class="headerlink" href="#cmath.infj" title="連結到這個定義">¶</a></dt>
 <dd><p>實部為零和虛部為正無窮的複數。相當於 <code class="docutils literal notranslate"><span class="pre">complex(0.0,</span> <span class="pre">float('inf'))</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6.</span></p>
+<p><span class="versionmodified added">在 3.6 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -517,7 +432,7 @@ Equivalent to <code class="docutils literal notranslate"><span class="pre">compl
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">nan</span></span><a class="headerlink" href="#cmath.nan" title="連結到這個定義">¶</a></dt>
 <dd><p>浮點「非數字」 (NaN) 值。相當於 <code class="docutils literal notranslate"><span class="pre">float('nan')</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6.</span></p>
+<p><span class="versionmodified added">在 3.6 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -526,7 +441,7 @@ Equivalent to <code class="docutils literal notranslate"><span class="pre">compl
 <span class="sig-prename descclassname"><span class="pre">cmath.</span></span><span class="sig-name descname"><span class="pre">nanj</span></span><a class="headerlink" href="#cmath.nanj" title="連結到這個定義">¶</a></dt>
 <dd><p>實部為零和虛部為 NaN 的複數。相當於 <code class="docutils literal notranslate"><span class="pre">complex(0.0,</span> <span class="pre">float('nan'))</span></code>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6.</span></p>
+<p><span class="versionmodified added">在 3.6 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -546,7 +461,7 @@ in numerical analysis. Clarendon Press (1987) pp165--211.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -571,7 +486,7 @@ in numerical analysis. Clarendon Press (1987) pp165--211.</p>
   <div>
     <h4>下個主題</h4>
     <p class="topless"><a href="decimal.html"
-                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- 十進位固定點和浮點運算</a></p>
+                          title="下一章"><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code> --- Decimal fixed-point and floating-point arithmetic</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>此頁面</h3>
@@ -592,7 +507,7 @@ in numerical analysis. Clarendon Press (1987) pp165--211.</p>
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -602,7 +517,7 @@ in numerical analysis. Clarendon Press (1987) pp165--211.</p>
           <a href="../py-modindex.html" title="Python 模組索引"
              >模組</a> |</li>
         <li class="right" >
-          <a href="decimal.html" title="decimal --- 十進位固定點和浮點運算"
+          <a href="decimal.html" title="decimal --- Decimal fixed-point and floating-point arithmetic"
              >下一頁</a> |</li>
         <li class="right" >
           <a href="math.html" title="math --- 數學函式"
@@ -618,7 +533,7 @@ in numerical analysis. Clarendon Press (1987) pp165--211.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -670,13 +585,13 @@ in numerical analysis. Clarendon Press (1987) pp165--211.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>內建型別 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>內建型別 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="內建的例外" href="exceptions.html" />
     <link rel="prev" title="內建常數" href="constants.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/stdtypes.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -274,7 +192,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -300,7 +218,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -428,8 +346,25 @@
 </section>
 <section id="numeric-types-int-float-complex">
 <span id="typesnumeric"></span><h2>數值型別 --- <a class="reference internal" href="functions.html#int" title="int"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>、<a class="reference internal" href="functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>、<a class="reference internal" href="functions.html#complex" title="complex"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a><a class="headerlink" href="#numeric-types-int-float-complex" title="連結到這個標頭">¶</a></h2>
-<p id="index-11">數值型別共有三種：<em class="dfn">整數</em>、<em class="dfn">浮點數</em> 及 <em class="dfn">複數</em>。此外，Boolean 為整數中的一個子型別。整數有無限的精度。浮點數通常使用 C 裡面的 <span class="c-expr sig sig-inline c"><span class="kt">double</span></span> 實作。關於在你程式所運作的機器上之浮點數的精度及內部表示法可以在 <a class="reference internal" href="sys.html#sys.float_info" title="sys.float_info"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.float_info</span></code></a> 進行查找。複數包含實數及虛數的部分，這兩部分各自是一個浮點數。若要從一個複數 <em>z</em> 提取這兩部分，需使用 <code class="docutils literal notranslate"><span class="pre">z.real</span></code> 及 <code class="docutils literal notranslate"><span class="pre">z.imag</span></code>。（標準函式庫包含額外的數值型別，像是 <a class="reference internal" href="fractions.html#fractions.Fraction" title="fractions.Fraction"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fractions.Fraction</span></code></a> 表示有理數，而 <a class="reference internal" href="decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal.Decimal</span></code></a> 表示可由使用者制定精度的浮點數。）</p>
-<p id="index-12">數字是由字面數值或內建公式及運算子的結果所產生的。未經修飾的字面數值（含十六進位、八進位及二進位數值）會 yield 整數。包含小數點或指數符號的字面數值會 yield 浮點數。在數值後面加上 <code class="docutils literal notranslate"><span class="pre">'j'</span></code> 或是 <code class="docutils literal notranslate"><span class="pre">'J'</span></code> 會 yield 一個虛數（意即一個實數為 0 的複數）。你也可以將整數與浮點數相加以得到一個有實部與虛部的複數。</p>
+<p id="index-11">There are three distinct numeric types: <em class="dfn">integers</em>, <em class="dfn">floating-point
+numbers</em>, and <em class="dfn">complex numbers</em>.  In addition, Booleans are a
+subtype of integers.  Integers have unlimited precision.  Floating-point
+numbers are usually implemented using <span class="c-expr sig sig-inline c"><span class="kt">double</span></span> in C; information
+about the precision and internal representation of floating-point
+numbers for the machine on which your program is running is available
+in <a class="reference internal" href="sys.html#sys.float_info" title="sys.float_info"><code class="xref py py-data docutils literal notranslate"><span class="pre">sys.float_info</span></code></a>.  Complex numbers have a real and imaginary
+part, which are each a floating-point number.  To extract these parts
+from a complex number <em>z</em>, use <code class="docutils literal notranslate"><span class="pre">z.real</span></code> and <code class="docutils literal notranslate"><span class="pre">z.imag</span></code>. (The standard
+library includes the additional numeric types <a class="reference internal" href="fractions.html#fractions.Fraction" title="fractions.Fraction"><code class="xref py py-mod docutils literal notranslate"><span class="pre">fractions.Fraction</span></code></a>, for
+rationals, and <a class="reference internal" href="decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal.Decimal</span></code></a>, for floating-point numbers with
+user-definable precision.)</p>
+<p id="index-12">Numbers are created by numeric literals or as the result of built-in functions
+and operators.  Unadorned integer literals (including hex, octal and binary
+numbers) yield integers.  Numeric literals containing a decimal point or an
+exponent sign yield floating-point numbers.  Appending <code class="docutils literal notranslate"><span class="pre">'j'</span></code> or <code class="docutils literal notranslate"><span class="pre">'J'</span></code> to a
+numeric literal yields an imaginary number (a complex number with a zero real
+part) which you can add to an integer or float to get a complex number with real
+and imaginary parts.</p>
 <p id="index-13">Python 完全支援混和運算：當一個二元運算子的運算元有不同數值型別時，「較窄」型別的運算元會被拓寬到另一個型別的運算元；在此處，整數窄於浮點數，浮點數又窄於複數。不同型別的數字間的比較等同於這些數字的精確值進行比較。<a class="footnote-reference brackets" href="#id13" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
 <p>建構函式： <a class="reference internal" href="functions.html#int" title="int"><code class="xref py py-func docutils literal notranslate"><span class="pre">int()</span></code></a>、<a class="reference internal" href="functions.html#float" title="float"><code class="xref py py-func docutils literal notranslate"><span class="pre">float()</span></code></a> 及 <a class="reference internal" href="functions.html#complex" title="complex"><code class="xref py py-func docutils literal notranslate"><span class="pre">complex()</span></code></a> 可以用來產生特定型別的數字。</p>
 <p>所有數值型別（除複數外）皆支援以下的運算（有關運算的先後順序，詳見 <a class="reference internal" href="../reference/expressions.html#operator-summary"><span class="std std-ref">Operator precedence</span></a>）：</p>
@@ -630,7 +565,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.1.</span></p>
+<p><span class="versionmodified added">在 3.1 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -653,7 +588,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -694,7 +629,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.11 版的變更: </span>為 <code class="docutils literal notranslate"><span class="pre">length</span></code> 和 <code class="docutils literal notranslate"><span class="pre">byteorder</span></code> 添加了預設引數值。</p>
@@ -737,7 +672,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.11 版的變更: </span>為 <code class="docutils literal notranslate"><span class="pre">byteorder</span></code> 添加了預設引數值。</p>
@@ -749,7 +684,7 @@
 <span class="sig-prename descclassname"><span class="pre">int.</span></span><span class="sig-name descname"><span class="pre">as_integer_ratio</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#int.as_integer_ratio" title="連結到這個定義">¶</a></dt>
 <dd><p>回傳一對整數，其比率等於原始整數並且有一個正分母。整數（整個數值）的整數比率總是整數作為分子，並且 <code class="docutils literal notranslate"><span class="pre">1</span></code> 作為分母。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8.</span></p>
+<p><span class="versionmodified added">在 3.8 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -758,7 +693,7 @@
 <span class="sig-prename descclassname"><span class="pre">int.</span></span><span class="sig-name descname"><span class="pre">is_integer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#int.is_integer" title="連結到這個定義">¶</a></dt>
 <dd><p>回傳 <code class="docutils literal notranslate"><span class="pre">True</span></code>。為了與 <a class="reference internal" href="#float.is_integer" title="float.is_integer"><code class="xref py py-meth docutils literal notranslate"><span class="pre">float.is_integer()</span></code></a> 的鴨子型別相容而存在。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1208,7 +1143,7 @@ place</p></td>
 </table>
 <p>註解：</p>
 <ol class="arabic">
-<li><p><em>t</em> must have the same length as the slice it is replacing.</p></li>
+<li><p>If <em>k</em> is not equal to <code class="docutils literal notranslate"><span class="pre">1</span></code>, <em>t</em> must have the same length as the slice it is replacing.</p></li>
 <li><p>The optional argument <em>i</em> defaults to <code class="docutils literal notranslate"><span class="pre">-1</span></code>, so that by default the last
 item is removed and returned.</p></li>
 <li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">remove()</span></code> raises <a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> when <em>x</em> is not found in <em>s</em>.</p></li>
@@ -1221,7 +1156,7 @@ interfaces of mutable containers that don't support slicing operations
 <a class="reference internal" href="collections.abc.html#collections.abc.MutableSequence" title="collections.abc.MutableSequence"><code class="xref py py-class docutils literal notranslate"><span class="pre">collections.abc.MutableSequence</span></code></a> ABC, but most concrete
 mutable sequence classes provide it.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3: </span><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">copy()</span></code> methods.</p>
+<p><span class="versionmodified added">在 3.3 版被加入: </span><code class="xref py py-meth docutils literal notranslate"><span class="pre">clear()</span></code> and <code class="xref py py-meth docutils literal notranslate"><span class="pre">copy()</span></code> methods.</p>
 </div>
 </li>
 <li><p>The value <em>n</em> is an integer, or an object implementing
@@ -1452,8 +1387,8 @@ attributes.</p>
 <p class="admonition-title">也參考</p>
 <ul class="simple">
 <li><p>The <a class="reference external" href="https://code.activestate.com/recipes/579000-equally-spaced-numbers-linspace/">linspace recipe</a>
-shows how to implement a lazy version of range suitable for floating
-point applications.</p></li>
+shows how to implement a lazy version of range suitable for floating-point
+applications.</p></li>
 </ul>
 </div>
 </section>
@@ -1564,7 +1499,7 @@ converts it to <code class="docutils literal notranslate"><span class="pre">&quo
 <p>The casefolding algorithm is
 <a class="reference external" href="https://www.unicode.org/versions/Unicode15.0.0/ch03.pdf">described in section 3.13 'Default Case Folding' of the Unicode Standard</a>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1709,7 +1644,7 @@ if for example <code class="docutils literal notranslate"><span class="pre">mapp
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1747,7 +1682,7 @@ Ideographic' of the Unicode Standard</a>.</p>
 <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.
 ASCII characters have code points in the range U+0000-U+007F.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.7.</span></p>
+<p><span class="versionmodified added">在 3.7 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1942,7 +1877,7 @@ string:</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.9.</span></p>
+<p><span class="versionmodified added">在 3.9 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1959,7 +1894,7 @@ original string:</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.9.</span></p>
+<p><span class="versionmodified added">在 3.9 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2047,8 +1982,9 @@ specified or <code class="docutils literal notranslate"><span class="pre">-1</sp
 <p>If <em>sep</em> is given, consecutive delimiters are not grouped together and are
 deemed to delimit empty strings (for example, <code class="docutils literal notranslate"><span class="pre">'1,,2'.split(',')</span></code> returns
 <code class="docutils literal notranslate"><span class="pre">['1',</span> <span class="pre">'',</span> <span class="pre">'2']</span></code>).  The <em>sep</em> argument may consist of multiple characters
-(for example, <code class="docutils literal notranslate"><span class="pre">'1&lt;&gt;2&lt;&gt;3'.split('&lt;&gt;')</span></code> returns <code class="docutils literal notranslate"><span class="pre">['1',</span> <span class="pre">'2',</span> <span class="pre">'3']</span></code>).
-Splitting an empty string with a specified separator returns <code class="docutils literal notranslate"><span class="pre">['']</span></code>.</p>
+as a single delimiter (to split with multiple delimiters, use
+<a class="reference internal" href="re.html#re.split" title="re.split"><code class="xref py py-func docutils literal notranslate"><span class="pre">re.split()</span></code></a>). Splitting an empty string with a specified separator
+returns <code class="docutils literal notranslate"><span class="pre">['']</span></code>.</p>
 <p>舉例來說：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;1,2,3&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 <span class="go">[&#39;1&#39;, &#39;2&#39;, &#39;3&#39;]</span>
@@ -2056,6 +1992,8 @@ Splitting an empty string with a specified separator returns <code class="docuti
 <span class="go">[&#39;1&#39;, &#39;2,3&#39;]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;1,2,,3,&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 <span class="go">[&#39;1&#39;, &#39;2&#39;, &#39;&#39;, &#39;3&#39;, &#39;&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;1&lt;&gt;2&lt;&gt;3&lt;4&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;&lt;&gt;&#39;</span><span class="p">)</span>
+<span class="go">[&#39;1&#39;, &#39;2&#39;, &#39;3&lt;4&#39;]</span>
 </pre></div>
 </div>
 <p>If <em>sep</em> is not specified or is <code class="docutils literal notranslate"><span class="pre">None</span></code>, a different splitting algorithm is
@@ -2390,29 +2328,29 @@ is not necessary for Python -- so e.g. <code class="docutils literal notranslate
 <td><p>(2)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'e'</span></code></p></td>
-<td><p>Floating point exponential format (lowercase).</p></td>
+<td><p>Floating-point exponential format (lowercase).</p></td>
 <td><p>(3)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'E'</span></code></p></td>
-<td><p>Floating point exponential format (uppercase).</p></td>
+<td><p>Floating-point exponential format (uppercase).</p></td>
 <td><p>(3)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'f'</span></code></p></td>
-<td><p>Floating point decimal format.</p></td>
+<td><p>Floating-point decimal format.</p></td>
 <td><p>(3)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'F'</span></code></p></td>
-<td><p>Floating point decimal format.</p></td>
+<td><p>Floating-point decimal format.</p></td>
 <td><p>(3)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'g'</span></code></p></td>
-<td><p>Floating point format. Uses lowercase exponential
+<td><p>Floating-point format. Uses lowercase exponential
 format if exponent is less than -4 or not less than
 precision, decimal format otherwise.</p></td>
 <td><p>(4)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'G'</span></code></p></td>
-<td><p>Floating point format. Uses uppercase exponential
+<td><p>Floating-point format. Uses uppercase exponential
 format if exponent is less than -4 or not less than
 precision, decimal format otherwise.</p></td>
 <td><p>(4)</p></td>
@@ -2564,7 +2502,7 @@ negative values from the left.</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.5.</span></p>
+<p><span class="versionmodified added">在 3.5 版被加入.</span></p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版的變更: </span><a class="reference internal" href="#bytes.hex" title="bytes.hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bytes.hex()</span></code></a> now supports optional <em>sep</em> and <em>bytes_per_sep</em>
@@ -2632,7 +2570,7 @@ byte in the instance.</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.5.</span></p>
+<p><span class="versionmodified added">在 3.5 版被加入.</span></p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版的變更: </span>Similar to <a class="reference internal" href="#bytes.hex" title="bytes.hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bytes.hex()</span></code></a>, <a class="reference internal" href="#bytearray.hex" title="bytearray.hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bytearray.hex()</span></code></a> now supports
@@ -2722,7 +2660,7 @@ binary data:</p>
 it always produces a new object, even if no changes were made.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.9.</span></p>
+<p><span class="versionmodified added">在 3.9 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2747,7 +2685,7 @@ the original binary data:</p>
 it always produces a new object, even if no changes were made.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.9.</span></p>
+<p><span class="versionmodified added">在 3.9 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2857,7 +2795,7 @@ bytearray object providing this method.</p>
 character at the same position in <em>to</em>; <em>from</em> and <em>to</em> must both be
 <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like objects</span></a> and have the same length.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.1.</span></p>
+<p><span class="versionmodified added">在 3.1 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -3117,10 +3055,9 @@ limit on the number of splits (all possible splits are made).</p>
 <p>If <em>sep</em> is given, consecutive delimiters are not grouped together and are
 deemed to delimit empty subsequences (for example, <code class="docutils literal notranslate"><span class="pre">b'1,,2'.split(b',')</span></code>
 returns <code class="docutils literal notranslate"><span class="pre">[b'1',</span> <span class="pre">b'',</span> <span class="pre">b'2']</span></code>).  The <em>sep</em> argument may consist of a
-multibyte sequence (for example, <code class="docutils literal notranslate"><span class="pre">b'1&lt;&gt;2&lt;&gt;3'.split(b'&lt;&gt;')</span></code> returns
-<code class="docutils literal notranslate"><span class="pre">[b'1',</span> <span class="pre">b'2',</span> <span class="pre">b'3']</span></code>). Splitting an empty sequence with a specified
-separator returns <code class="docutils literal notranslate"><span class="pre">[b'']</span></code> or <code class="docutils literal notranslate"><span class="pre">[bytearray(b'')]</span></code> depending on the type
-of object being split.  The <em>sep</em> argument may be any
+multibyte sequence as a single delimiter. Splitting an empty sequence with
+a specified separator returns <code class="docutils literal notranslate"><span class="pre">[b'']</span></code> or <code class="docutils literal notranslate"><span class="pre">[bytearray(b'')]</span></code> depending
+on the type of object being split.  The <em>sep</em> argument may be any
 <a class="reference internal" href="../glossary.html#term-bytes-like-object"><span class="xref std std-term">bytes-like object</span></a>.</p>
 <p>舉例來說：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="sa">b</span><span class="s1">&#39;1,2,3&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
@@ -3129,6 +3066,8 @@ of object being split.  The <em>sep</em> argument may be any
 <span class="go">[b&#39;1&#39;, b&#39;2,3&#39;]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="sa">b</span><span class="s1">&#39;1,2,,3,&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
 <span class="go">[b&#39;1&#39;, b&#39;2&#39;, b&#39;&#39;, b&#39;3&#39;, b&#39;&#39;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="sa">b</span><span class="s1">&#39;1&lt;&gt;2&lt;&gt;3&lt;4&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;&lt;&gt;&#39;</span><span class="p">)</span>
+<span class="go">[b&#39;1&#39;, b&#39;2&#39;, b&#39;3&lt;4&#39;]</span>
 </pre></div>
 </div>
 <p>If <em>sep</em> is not specified or is <code class="docutils literal notranslate"><span class="pre">None</span></code>, a different splitting algorithm
@@ -3271,7 +3210,7 @@ characters are those byte values in the sequence
 <code class="docutils literal notranslate"><span class="pre">False</span></code> otherwise.
 ASCII bytes are in the range 0-0x7F.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.7.</span></p>
+<p><span class="versionmodified added">在 3.7 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -3637,29 +3576,29 @@ is not necessary for Python -- so e.g. <code class="docutils literal notranslate
 <td><p>(2)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'e'</span></code></p></td>
-<td><p>Floating point exponential format (lowercase).</p></td>
+<td><p>Floating-point exponential format (lowercase).</p></td>
 <td><p>(3)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'E'</span></code></p></td>
-<td><p>Floating point exponential format (uppercase).</p></td>
+<td><p>Floating-point exponential format (uppercase).</p></td>
 <td><p>(3)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'f'</span></code></p></td>
-<td><p>Floating point decimal format.</p></td>
+<td><p>Floating-point decimal format.</p></td>
 <td><p>(3)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'F'</span></code></p></td>
-<td><p>Floating point decimal format.</p></td>
+<td><p>Floating-point decimal format.</p></td>
 <td><p>(3)</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">'g'</span></code></p></td>
-<td><p>Floating point format. Uses lowercase exponential
+<td><p>Floating-point format. Uses lowercase exponential
 format if exponent is less than -4 or not less than
 precision, decimal format otherwise.</p></td>
 <td><p>(4)</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">'G'</span></code></p></td>
-<td><p>Floating point format. Uses uppercase exponential
+<td><p>Floating-point format. Uses uppercase exponential
 format if exponent is less than -4 or not less than
 precision, decimal format otherwise.</p></td>
 <td><p>(4)</p></td>
@@ -3728,7 +3667,7 @@ always produces a new object, even if no changes were made.</p>
 <p><span class="target" id="index-49"></span><a class="pep reference external" href="https://peps.python.org/pep-0461/"><strong>PEP 461</strong></a> - Adding % formatting to bytes and bytearray</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.5.</span></p>
+<p><span class="versionmodified added">在 3.5 版被加入.</span></p>
 </div>
 </section>
 <section id="memory-views">
@@ -3873,7 +3812,7 @@ strings and buffer contents are identical):</p>
 <span class="go">False</span>
 </pre></div>
 </div>
-<p>Note that, as with floating point numbers, <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">is</span> <span class="pre">w</span></code> does <em>not</em> imply
+<p>Note that, as with floating-point numbers, <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">is</span> <span class="pre">w</span></code> does <em>not</em> imply
 <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">==</span> <span class="pre">w</span></code> for memoryview objects.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.3 版的變更: </span>Previous versions compared the raw memory disregarding the item format
@@ -3898,7 +3837,7 @@ representation with all elements converted to bytes. <a class="reference interna
 supports all format strings, including those that are not in
 <a class="reference internal" href="struct.html#module-struct" title="struct: Interpret bytes as packed binary data."><code class="xref py py-mod docutils literal notranslate"><span class="pre">struct</span></code></a> module syntax.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8: </span><em>order</em> can be {'C', 'F', 'A'}.  When <em>order</em> is 'C' or 'F', the data
+<p><span class="versionmodified added">在 3.8 版被加入: </span><em>order</em> can be {'C', 'F', 'A'}.  When <em>order</em> is 'C' or 'F', the data
 of the original array is converted to C or Fortran order. For contiguous
 views, 'A' returns an exact copy of the physical memory. In particular,
 in-memory Fortran order is preserved. For non-contiguous views, the
@@ -3917,7 +3856,7 @@ byte in the buffer.</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.5.</span></p>
+<p><span class="versionmodified added">在 3.5 版被加入.</span></p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版的變更: </span>Similar to <a class="reference internal" href="#bytes.hex" title="bytes.hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">bytes.hex()</span></code></a>, <a class="reference internal" href="#memoryview.hex" title="memoryview.hex"><code class="xref py py-meth docutils literal notranslate"><span class="pre">memoryview.hex()</span></code></a> now supports
@@ -3965,7 +3904,7 @@ memoryview object is unchanged.</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8.</span></p>
+<p><span class="versionmodified added">在 3.8 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -4001,7 +3940,7 @@ using the <code class="docutils literal notranslate"><span class="pre">with</spa
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -4093,7 +4032,7 @@ Note that all byte lengths may depend on the operating system.</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.5 版的變更: </span>The source format is no longer restricted when casting to a byte view.</p>
@@ -4112,7 +4051,7 @@ Note that all byte lengths may depend on the operating system.</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -4152,7 +4091,7 @@ representation. It is not necessarily equal to <code class="docutils literal not
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -4229,7 +4168,7 @@ access each element for each dimension of the array.</p>
 <span class="sig-name descname"><span class="pre">c_contiguous</span></span><a class="headerlink" href="#memoryview.c_contiguous" title="連結到這個定義">¶</a></dt>
 <dd><p>A bool indicating whether the memory is C-<a class="reference internal" href="../glossary.html#term-contiguous"><span class="xref std std-term">contiguous</span></a>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -4238,7 +4177,7 @@ access each element for each dimension of the array.</p>
 <span class="sig-name descname"><span class="pre">f_contiguous</span></span><a class="headerlink" href="#memoryview.f_contiguous" title="連結到這個定義">¶</a></dt>
 <dd><p>A bool indicating whether the memory is Fortran <a class="reference internal" href="../glossary.html#term-contiguous"><span class="xref std std-term">contiguous</span></a>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -4247,7 +4186,7 @@ access each element for each dimension of the array.</p>
 <span class="sig-name descname"><span class="pre">contiguous</span></span><a class="headerlink" href="#memoryview.contiguous" title="連結到這個定義">¶</a></dt>
 <dd><p>A bool indicating whether the memory is <a class="reference internal" href="../glossary.html#term-contiguous"><span class="xref std std-term">contiguous</span></a>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -4637,7 +4576,7 @@ for <code class="docutils literal notranslate"><span class="pre">iter(d.keys())<
 
 <dl class="py method">
 <dt class="sig sig-object py" id="dict.fromkeys">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fromkeys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dict.fromkeys" title="連結到這個定義">¶</a></dt>
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">fromkeys</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#dict.fromkeys" title="連結到這個定義">¶</a></dt>
 <dd><p>Create a new dictionary with keys from <em>iterable</em> and values set to <em>value</em>.</p>
 <p><a class="reference internal" href="#dict.fromkeys" title="dict.fromkeys"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fromkeys()</span></code></a> is a class method that returns a new dictionary. <em>value</em>
 defaults to <code class="docutils literal notranslate"><span class="pre">None</span></code>.  All of the values refer to just a single instance,
@@ -4696,7 +4635,7 @@ return an arbitrary key/value pair.</p>
 <dd><p>Return a reverse iterator over the keys of the dictionary. This is a
 shortcut for <code class="docutils literal notranslate"><span class="pre">reversed(d.keys())</span></code>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8.</span></p>
+<p><span class="versionmodified added">在 3.8 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -4741,7 +4680,7 @@ will always return <code class="docutils literal notranslate"><span class="pre">
 <em>other</em>, which must both be dictionaries. The values of <em>other</em> take
 priority when <em>d</em> and <em>other</em> share keys.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.9.</span></p>
+<p><span class="versionmodified added">在 3.9 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -4752,7 +4691,7 @@ priority when <em>d</em> and <em>other</em> share keys.</p>
 either a <a class="reference internal" href="../glossary.html#term-mapping"><span class="xref std std-term">mapping</span></a> or an <a class="reference internal" href="../glossary.html#term-iterable"><span class="xref std std-term">iterable</span></a> of key/value pairs. The
 values of <em>other</em> take priority when <em>d</em> and <em>other</em> share keys.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.9.</span></p>
+<p><span class="versionmodified added">在 3.9 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -4856,7 +4795,7 @@ The view will be iterated in reverse order of the insertion.</p>
 <dd><p>Return a <a class="reference internal" href="types.html#types.MappingProxyType" title="types.MappingProxyType"><code class="xref py py-class docutils literal notranslate"><span class="pre">types.MappingProxyType</span></code></a> that wraps the original
 dictionary to which the view refers.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -5206,7 +5145,7 @@ have correct <code class="docutils literal notranslate"><span class="pre">__para
 <dd><p>A boolean that is true if the alias has been unpacked using the
 <code class="docutils literal notranslate"><span class="pre">*</span></code> operator (see <a class="reference internal" href="typing.html#typing.TypeVarTuple" title="typing.TypeVarTuple"><code class="xref py py-data docutils literal notranslate"><span class="pre">TypeVarTuple</span></code></a>).</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -5225,7 +5164,7 @@ parameterized at runtime and understood by static type-checkers.</p>
 </dl>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.9.</span></p>
+<p><span class="versionmodified added">在 3.9 版被加入.</span></p>
 </div>
 </section>
 </section>
@@ -5351,7 +5290,7 @@ override it:</p>
 <p><span class="target" id="index-60"></span><a class="pep reference external" href="https://peps.python.org/pep-0604/"><strong>PEP 604</strong></a> -- PEP proposing the <code class="docutils literal notranslate"><span class="pre">X</span> <span class="pre">|</span> <span class="pre">Y</span></code> syntax and the Union type.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </section>
 </section>
@@ -5518,7 +5457,7 @@ generator instance.</p>
 <dd><p>The <a class="reference internal" href="../glossary.html#term-qualified-name"><span class="xref std std-term">qualified name</span></a> of the class, function, method, descriptor,
 or generator instance.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -5528,7 +5467,7 @@ or generator instance.</p>
 <dd><p>The <a class="reference internal" href="../reference/compound_stmts.html#type-params"><span class="std std-ref">type parameters</span></a> of generic classes, functions,
 and <a class="reference internal" href="typing.html#type-aliases"><span class="std std-ref">type aliases</span></a>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -5572,7 +5511,7 @@ a string to a binary integer or a binary integer to a string in linear time,
 <em>unless</em> the base is a power of 2. Even the best known algorithms for base 10
 have sub-quadratic complexity. Converting a large value such as <code class="docutils literal notranslate"><span class="pre">int('1'</span> <span class="pre">*</span>
 <span class="pre">500_000)</span></code> can take over a second on a fast CPU.</p>
-<p>Limiting conversion size offers a practical way to avoid <a class="reference external" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10735">CVE-2020-10735</a>.</p>
+<p>Limiting conversion size offers a practical way to avoid <a class="extlink-cve reference external" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-10735">CVE-2020-10735</a>.</p>
 <p>The limit is applied to the number of digit characters in the input or output
 string when a non-linear conversion algorithm would be involved.  Underscores
 and the sign are not counted towards the limit.</p>
@@ -5611,7 +5550,7 @@ The lowest limit that can be configured is 640 digits as provided in
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 <section id="affected-apis">
 <h3>Affected APIs<a class="headerlink" href="#affected-apis" title="連結到這個標頭">¶</a></h3>
@@ -5666,7 +5605,7 @@ default limit.</p></li>
 accepted value for the limit (other than 0 which disables it).</p></li>
 </ul>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 <div class="admonition caution">
 <p class="admonition-title">警示</p>
@@ -5741,7 +5680,7 @@ element is the tuple to be formatted.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -5853,7 +5792,7 @@ element is the tuple to be formatted.</p>
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -5879,7 +5818,7 @@ element is the tuple to be formatted.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -5930,13 +5869,13 @@ element is the tuple to be formatted.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

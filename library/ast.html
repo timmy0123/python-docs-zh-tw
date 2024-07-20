@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ast --- 抽象語法樹 (Abstract Syntax Trees) &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ast --- 抽象語法樹 (Abstract Syntax Trees) &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="symtable --- 存取編譯器的符號表" href="symtable.html" />
     <link rel="prev" title="Python 語言服務" href="language.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/ast.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -226,7 +144,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -252,7 +170,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -289,7 +207,7 @@
             
   <section id="module-ast">
 <span id="ast-abstract-syntax-trees"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code> --- 抽象語法樹 (Abstract Syntax Trees)<a class="headerlink" href="#module-ast" title="連結到這個標頭">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.12/Lib/ast.py">Lib/ast.py</a></p>
+<p><strong>原始碼：</strong><a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.12/Lib/ast.py">Lib/ast.py</a></p>
 <hr class="docutils" />
 <p><a class="reference internal" href="#module-ast" title="ast: Abstract Syntax Tree classes and manipulation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> 模組可以幫助 Python 應用程式處理 Python 抽象語法文法 (abstract syntax grammar) 樹狀資料結構。抽象語法本身可能會隨著每個 Python 版本發布而改變；此模組有助於以程式化的方式來得知當前文法的面貌。</p>
 <p>要生成抽象語法樹，可以透過將 <a class="reference internal" href="#ast.PyCF_ONLY_AST" title="ast.PyCF_ONLY_AST"><code class="xref py py-data docutils literal notranslate"><span class="pre">ast.PyCF_ONLY_AST</span></code></a> 作為旗標傳遞給內建函式 <a class="reference internal" href="functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> 或使用此模組所提供的 <a class="reference internal" href="#ast.parse" title="ast.parse"><code class="xref py py-func docutils literal notranslate"><span class="pre">parse()</span></code></a> 輔助函式。結果將會是一個物件的樹，其類別都繼承自 <a class="reference internal" href="#ast.AST" title="ast.AST"><code class="xref py py-class docutils literal notranslate"><span class="pre">ast.AST</span></code></a>。可以使用內建的 <a class="reference internal" href="functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> 函式將抽象語法樹編譯成 Python 程式碼物件。</p>
@@ -594,7 +512,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8.</span></p>
+<p><span class="versionmodified added">在 3.8 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1010,7 +928,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8.</span></p>
+<p><span class="versionmodified added">在 3.8 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1216,7 +1134,8 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="ast.AnnAssign">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ast.</span></span><span class="sig-name descname"><span class="pre">AnnAssign</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">annotation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">simple</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ast.AnnAssign" title="連結到這個定義">¶</a></dt>
-<dd><p>帶有型別註釋的賦值。<code class="docutils literal notranslate"><span class="pre">target</span></code> 是單個節點，可以是 <a class="reference internal" href="#ast.Name" title="ast.Name"><code class="xref py py-class docutils literal notranslate"><span class="pre">Name</span></code></a>、<a class="reference internal" href="#ast.Attribute" title="ast.Attribute"><code class="xref py py-class docutils literal notranslate"><span class="pre">Attribute</span></code></a> 或 <a class="reference internal" href="#ast.Subscript" title="ast.Subscript"><code class="xref py py-class docutils literal notranslate"><span class="pre">Subscript</span></code></a>。<code class="docutils literal notranslate"><span class="pre">annotation</span></code> 是註釋，例如 <a class="reference internal" href="#ast.Constant" title="ast.Constant"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constant</span></code></a> 或 <a class="reference internal" href="#ast.Name" title="ast.Name"><code class="xref py py-class docutils literal notranslate"><span class="pre">Name</span></code></a> 節點。<code class="docutils literal notranslate"><span class="pre">value</span></code> 是單個可選節點。<code class="docutils literal notranslate"><span class="pre">simple</span></code> 是一個布林整數，對於 <code class="docutils literal notranslate"><span class="pre">target</span></code> 中的 <a class="reference internal" href="#ast.Name" title="ast.Name"><code class="xref py py-class docutils literal notranslate"><span class="pre">Name</span></code></a> 節點會設定為 True，它不會出現在括號之間，因此是純名稱而不是運算式。</p>
+<dd><p>帶有型別註釋的賦值。<code class="docutils literal notranslate"><span class="pre">target</span></code> 是單個節點，可以是 <a class="reference internal" href="#ast.Name" title="ast.Name"><code class="xref py py-class docutils literal notranslate"><span class="pre">Name</span></code></a>、<a class="reference internal" href="#ast.Attribute" title="ast.Attribute"><code class="xref py py-class docutils literal notranslate"><span class="pre">Attribute</span></code></a> 或 <a class="reference internal" href="#ast.Subscript" title="ast.Subscript"><code class="xref py py-class docutils literal notranslate"><span class="pre">Subscript</span></code></a>。<code class="docutils literal notranslate"><span class="pre">annotation</span></code> 是註釋，例如 <a class="reference internal" href="#ast.Constant" title="ast.Constant"><code class="xref py py-class docutils literal notranslate"><span class="pre">Constant</span></code></a> 或 <a class="reference internal" href="#ast.Name" title="ast.Name"><code class="xref py py-class docutils literal notranslate"><span class="pre">Name</span></code></a> 節點。<code class="docutils literal notranslate"><span class="pre">value</span></code> 是單個可選節點。</p>
+<p><code class="docutils literal notranslate"><span class="pre">simple</span></code> 總會是 0（表示一個「複雜」目標）或 1（表示一個「簡單」目標）。一個「簡單」目標僅包含一個 <a class="reference internal" href="#ast.Name" title="ast.Name"><code class="xref py py-class docutils literal notranslate"><span class="pre">Name</span></code></a> 節點，且不出現在括號之間；所有其他目標都被視為是複雜的。只有簡單目標會出現在模組和類別的 <code class="xref py py-attr docutils literal notranslate"><span class="pre">__annotations__</span></code> 字典中。</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">ast</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;c: int&#39;</span><span class="p">),</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">))</span>
 <span class="go">Module(</span>
 <span class="go">    body=[</span>
@@ -1355,7 +1274,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1625,7 +1544,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1711,7 +1630,7 @@
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ast.</span></span><span class="sig-name descname"><span class="pre">Match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subject</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cases</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ast.Match" title="連結到這個定義">¶</a></dt>
 <dd><p>一個 <code class="docutils literal notranslate"><span class="pre">match</span></code> 陳述式。<code class="docutils literal notranslate"><span class="pre">subject</span></code> 保存匹配的主題（與案例匹配的物件），<code class="docutils literal notranslate"><span class="pre">cases</span></code> 包含具有不同案例的 <a class="reference internal" href="#ast.match_case" title="ast.match_case"><code class="xref py py-class docutils literal notranslate"><span class="pre">match_case</span></code></a> 節點的可疊代物件。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1759,7 +1678,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1787,7 +1706,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1814,7 +1733,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1846,7 +1765,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1888,7 +1807,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1929,7 +1848,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1986,7 +1905,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2025,7 +1944,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2057,7 +1976,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2086,7 +2005,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2113,7 +2032,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2141,7 +2060,7 @@
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2435,15 +2354,7 @@
 <dd><p>將原始碼剖析為 AST 節點。相當於 <code class="docutils literal notranslate"><span class="pre">compile(source,</span> <span class="pre">filename,</span> <span class="pre">mode,</span> <span class="pre">ast.PyCF_ONLY_AST)</span></code>。</p>
 <p>如果給定 <code class="docutils literal notranslate"><span class="pre">type_comments=True</span></code>，剖析器將被修改為檢查並回傳 <span class="target" id="index-15"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a> 和 <span class="target" id="index-16"></span><a class="pep reference external" href="https://peps.python.org/pep-0526/"><strong>PEP 526</strong></a> 指定的型別註釋。這相當於將 <a class="reference internal" href="#ast.PyCF_TYPE_COMMENTS" title="ast.PyCF_TYPE_COMMENTS"><code class="xref py py-data docutils literal notranslate"><span class="pre">ast.PyCF_TYPE_COMMENTS</span></code></a> 新增到傳遞給 <a class="reference internal" href="functions.html#compile" title="compile"><code class="xref py py-func docutils literal notranslate"><span class="pre">compile()</span></code></a> 的旗標中。這將報告錯誤型別註釋的語法錯誤。如果沒有此旗標，型別註釋將被忽略，並且所選 AST 節點上的 <code class="docutils literal notranslate"><span class="pre">type_comment</span></code> 欄位將始終為 <code class="docutils literal notranslate"><span class="pre">None</span></code>。此外，<code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">type:</span> <span class="pre">ignore</span></code> 註釋的位置將作為 <a class="reference internal" href="#ast.Module" title="ast.Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">Module</span></code></a> 的 <code class="docutils literal notranslate"><span class="pre">type_ignores</span></code> 屬性回傳（否則它始終是一個空串列）。</p>
 <p>此外，如果 <code class="docutils literal notranslate"><span class="pre">mode</span></code> 是 <code class="docutils literal notranslate"><span class="pre">'func_type'</span></code>，則輸入語法將會依據 <span class="target" id="index-17"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a>「簽名型別註解 (signature type comments)」而被修改，例如 <code class="docutils literal notranslate"><span class="pre">(str,</span> <span class="pre">int)</span> <span class="pre">-&gt;</span> <span class="pre">List[str]</span></code>。</p>
-<p>Setting <code class="docutils literal notranslate"><span class="pre">feature_version</span></code> to a tuple <code class="docutils literal notranslate"><span class="pre">(major,</span> <span class="pre">minor)</span></code> will result in
-a &quot;best-effort&quot; attempt to parse using that Python version's grammar.
-For example, setting <code class="docutils literal notranslate"><span class="pre">feature_version=(3,</span> <span class="pre">9)</span></code> will attempt to disallow
-parsing of <a class="reference internal" href="../reference/compound_stmts.html#match"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">match</span></code></a> statements.
-Currently <code class="docutils literal notranslate"><span class="pre">major</span></code> must equal to <code class="docutils literal notranslate"><span class="pre">3</span></code>. The lowest supported version is
-<code class="docutils literal notranslate"><span class="pre">(3,</span> <span class="pre">4)</span></code> (and this may increase in future Python versions);
-the highest is <code class="docutils literal notranslate"><span class="pre">sys.version_info[0:2]</span></code>. &quot;Best-effort&quot; attempt means there
-is no guarantee that the parse (or success of the parse) is the same as
-when run on the Python version corresponding to <code class="docutils literal notranslate"><span class="pre">feature_version</span></code>.</p>
+<p>將 <code class="docutils literal notranslate"><span class="pre">feature_version</span></code> 設定為元組 <code class="docutils literal notranslate"><span class="pre">(major,</span> <span class="pre">minor)</span></code> 將「盡可能」嘗試使用該 Python 版本的文法進行剖析。當前 <code class="docutils literal notranslate"><span class="pre">major</span></code> 必須等於 <code class="docutils literal notranslate"><span class="pre">3</span></code>。例如，設定 <code class="docutils literal notranslate"><span class="pre">feature_version=(3,</span> <span class="pre">4)</span></code> 將嘗試禁止剖析 <a class="reference internal" href="../reference/compound_stmts.html#match"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">match</span></code></a> 陳述式。目前 <code class="docutils literal notranslate"><span class="pre">major</span></code> 必須為 <code class="docutils literal notranslate"><span class="pre">3</span></code>、支援的最低版本為 <code class="docutils literal notranslate"><span class="pre">(3,</span> <span class="pre">4)</span></code>（這在未來的 Python 版本中可能會增加）；最高的是 <code class="docutils literal notranslate"><span class="pre">sys.version_info[0:2]</span></code>。「盡可能」嘗試意味著不能保證剖析（或剖析的成功）與在與 <code class="docutils literal notranslate"><span class="pre">feature_version</span></code> 對應的 Python 版本上運行時相同。</p>
 <p>如果來源包含 null 字元 (<code class="docutils literal notranslate"><span class="pre">\0</span></code>)，則會引發 <a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a>。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
@@ -2472,7 +2383,7 @@ when run on the Python version corresponding to <code class="docutils literal no
 <p>嘗試剖析高度複雜的運算式會導致 <a class="reference internal" href="exceptions.html#RecursionError" title="RecursionError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RecursionError</span></code></a>。</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.9.</span></p>
+<p><span class="versionmodified added">在 3.9 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2513,7 +2424,7 @@ when run on the Python version corresponding to <code class="docutils literal no
 <dd><p>獲取生成 <em>node</em> 的 <em>source</em> 的原始碼片段。如果某些位置資訊（<a class="reference internal" href="#ast.AST.lineno" title="ast.AST.lineno"><code class="xref py py-attr docutils literal notranslate"><span class="pre">lineno</span></code></a>、<a class="reference internal" href="#ast.AST.end_lineno" title="ast.AST.end_lineno"><code class="xref py py-attr docutils literal notranslate"><span class="pre">end_lineno</span></code></a>、<a class="reference internal" href="#ast.AST.col_offset" title="ast.AST.col_offset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">col_offset</span></code></a> 或 <a class="reference internal" href="#ast.AST.end_col_offset" title="ast.AST.end_col_offset"><code class="xref py py-attr docutils literal notranslate"><span class="pre">end_col_offset</span></code></a>）遺漏，則回傳 <code class="docutils literal notranslate"><span class="pre">None</span></code>。</p>
 <p>如果 <em>padded</em> 為 <code class="docutils literal notranslate"><span class="pre">True</span></code>，則多列陳述式的第一列將用空格填充 (padded) 以匹配其原始位置。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8.</span></p>
+<p><span class="versionmodified added">在 3.8 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2631,7 +2542,7 @@ when run on the Python version corresponding to <code class="docutils literal no
 <span class="sig-prename descclassname"><span class="pre">ast.</span></span><span class="sig-name descname"><span class="pre">PyCF_ALLOW_TOP_LEVEL_AWAIT</span></span><a class="headerlink" href="#ast.PyCF_ALLOW_TOP_LEVEL_AWAIT" title="連結到這個定義">¶</a></dt>
 <dd><p>啟用對最高階 <code class="docutils literal notranslate"><span class="pre">await</span></code>、<code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">for</span></code>、<code class="docutils literal notranslate"><span class="pre">async</span> <span class="pre">with</span></code> 和非同步綜合運算的支援。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8.</span></p>
+<p><span class="versionmodified added">在 3.8 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2646,7 +2557,7 @@ when run on the Python version corresponding to <code class="docutils literal no
 <span class="sig-prename descclassname"><span class="pre">ast.</span></span><span class="sig-name descname"><span class="pre">PyCF_TYPE_COMMENTS</span></span><a class="headerlink" href="#ast.PyCF_TYPE_COMMENTS" title="連結到這個定義">¶</a></dt>
 <dd><p>啟用對 <span class="target" id="index-18"></span><a class="pep reference external" href="https://peps.python.org/pep-0484/"><strong>PEP 484</strong></a> 和 <span class="target" id="index-19"></span><a class="pep reference external" href="https://peps.python.org/pep-0526/"><strong>PEP 526</strong></a> 樣式型別註釋的支援 (<code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">type:</span> <span class="pre">&lt;type&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">type:</span> <span class="pre">ignore</span> <span class="pre">&lt;stuff&gt;</span></code>)。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8.</span></p>
+<p><span class="versionmodified added">在 3.8 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2654,7 +2565,7 @@ when run on the Python version corresponding to <code class="docutils literal no
 <section id="command-line-usage">
 <span id="ast-cli"></span><h2>命令列用法<a class="headerlink" href="#command-line-usage" title="連結到這個標頭">¶</a></h2>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.9.</span></p>
+<p><span class="versionmodified added">在 3.9 版被加入.</span></p>
 </div>
 <p><a class="reference internal" href="#module-ast" title="ast: Abstract Syntax Tree classes and manipulation."><code class="xref py py-mod docutils literal notranslate"><span class="pre">ast</span></code></a> 模組可以作為腳本從命令列執行，可以像這樣簡單地做到：</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>ast<span class="w"> </span><span class="o">[</span>-m<span class="w"> </span>&lt;mode&gt;<span class="o">]</span><span class="w"> </span><span class="o">[</span>-a<span class="o">]</span><span class="w"> </span><span class="o">[</span>infile<span class="o">]</span>
@@ -2712,7 +2623,7 @@ when run on the Python version corresponding to <code class="docutils literal no
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -2776,7 +2687,7 @@ when run on the Python version corresponding to <code class="docutils literal no
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -2802,7 +2713,7 @@ when run on the Python version corresponding to <code class="docutils literal no
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -2854,13 +2765,13 @@ when run on the Python version corresponding to <code class="docutils literal no
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>wsgiref --- WSGI 工具與參考實作 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wsgiref --- WSGI 工具與參考實作 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="urllib --- URL 處理模組" href="urllib.html" />
     <link rel="prev" title="webbrowser --- 方便的網頁瀏覽器控制器" href="webbrowser.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/wsgiref.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -209,7 +127,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -235,7 +153,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -272,7 +190,7 @@
             
   <section id="module-wsgiref">
 <span id="wsgiref-wsgi-utilities-and-reference-implementation"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">wsgiref</span></code> --- WSGI 工具與參考實作<a class="headerlink" href="#module-wsgiref" title="連結到這個標頭">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.12/Lib/wsgiref">Lib/wsgiref</a></p>
+<p><strong>原始碼：</strong><a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.12/Lib/wsgiref">Lib/wsgiref</a></p>
 <hr class="docutils" />
 <p>網頁伺服器閘道介面 (WSGI) 是一個標準介面，用於連接網頁伺服器軟體與使用 Python 撰寫的網頁應用程式，擁有一個標準介面使得支援 WSGI 的應用程式可以與多個不同的網頁伺服器運行。</p>
 <p>只有網頁伺服器與程式框架的作者需要瞭解 WSGI 設計的每個細節與邊角案例，你並不需要為了安裝 WSGI 應用程式或是使用現有框架撰寫網頁應用程式而必須理解每個細節。</p>
@@ -539,7 +457,7 @@
 <p>IIS 可以配置去傳遞正確的 <code class="docutils literal notranslate"><span class="pre">PATH_INFO</span></code>，但這會導致 <code class="docutils literal notranslate"><span class="pre">PATH_TRANSLATED</span></code> 是錯誤的問題。幸運的是這個變數很少被使用並且不受 WSGI 保證。然而，在 IIS&lt;7 上，這個設置只能在虛擬主機層級進行，影響所有其他腳本的對映，其中許多在暴露 <code class="docutils literal notranslate"><span class="pre">PATH_TRANSLATED</span></code> 問題時會中斷。由於這個原因幾乎從不會使用修復的 IIS&lt;7（即使是 IIS7 也很少使用它，因為它仍然沒有相應的 UI）。</p>
 <p>CGI 程式碼無法知道是否已設置該選項，因此提供了一個獨立的處理程式（handler）類別。它的使用方式與 <a class="reference internal" href="#wsgiref.handlers.CGIHandler" title="wsgiref.handlers.CGIHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGIHandler</span></code></a> 相同，即透過呼叫 <code class="docutils literal notranslate"><span class="pre">IISCGIHandler().run(app)</span></code> 來使用，其中 <code class="docutils literal notranslate"><span class="pre">app</span></code> 是你希望呼叫的 WSGI 應用程式物件。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -723,7 +641,7 @@
 <dd><p>從 <code class="docutils literal notranslate"><span class="pre">os.environ</span></code> 轉碼 CGI 變數到 <span class="target" id="index-54"></span><a class="pep reference external" href="https://peps.python.org/pep-3333/"><strong>PEP 3333</strong></a> 中的 &quot;bytes in unicode&quot; 字串，並回傳一個新字典。這個函式被 <a class="reference internal" href="#wsgiref.handlers.CGIHandler" title="wsgiref.handlers.CGIHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">CGIHandler</span></code></a> 和 <a class="reference internal" href="#wsgiref.handlers.IISCGIHandler" title="wsgiref.handlers.IISCGIHandler"><code class="xref py py-class docutils literal notranslate"><span class="pre">IISCGIHandler</span></code></a> 使用來直接替代 <code class="docutils literal notranslate"><span class="pre">os.environ</span></code>，在所有平台和使用 Python 3 的網頁伺服器上不一定符合 WSGI 標準，具體來說，在 OS 的實際環境是 Unicode（例如 Windows）的情況下，或者在環境是位元組的情況下，但 Python 用於解碼它的系統編碼不是 ISO-8859-1 （例如使用 UTF-8 的 Unix 系統）。</p>
 <p>如果你自己正在實作 CGI-based 處理程式（handler），你可能想要使用這個函式來替換單純直接從 <code class="docutils literal notranslate"><span class="pre">os.environ</span></code> 中複製值。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -732,7 +650,7 @@
 <span id="wsgiref-types-wsgi-types-for-static-type-checking"></span><h2><a class="reference internal" href="#module-wsgiref.types" title="wsgiref.types: WSGI types for static type checking"><code class="xref py py-mod docutils literal notranslate"><span class="pre">wsgiref.types</span></code></a> -- 用於靜態型別檢查的 WSGI 型別<a class="headerlink" href="#module-wsgiref.types" title="連結到這個標頭">¶</a></h2>
 <p>這個模組提供在 <span class="target" id="index-55"></span><a class="pep reference external" href="https://peps.python.org/pep-3333/"><strong>PEP 3333</strong></a> 中所描述的各種用於靜態型別檢查的型別。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 <dl class="py class">
 <dt class="sig sig-object py" id="wsgiref.types.StartResponse">
@@ -852,7 +770,7 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -899,7 +817,7 @@
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -925,7 +843,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -977,13 +895,13 @@
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>11. Python 標準函式庫概覽——第二部份 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11. Python 標準函式庫概覽——第二部份 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="12. 虛擬環境與套件" href="venv.html" />
     <link rel="prev" title="10. Python 標準函式庫概覽" href="stdlib.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/tutorial/stdlib2.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -178,7 +96,7 @@
 <li><a class="reference internal" href="#logging">11.5. 日誌記錄 (Logging)</a></li>
 <li><a class="reference internal" href="#weak-references">11.6. 弱引用 (Weak References)</a></li>
 <li><a class="reference internal" href="#tools-for-working-with-lists">11.7. 使用於 List 的工具</a></li>
-<li><a class="reference internal" href="#decimal-floating-point-arithmetic">11.8. 十進制 (Decimal) 浮點數運算</a></li>
+<li><a class="reference internal" href="#decimal-floating-point-arithmetic">11.8. Decimal Floating-Point Arithmetic</a></li>
 </ul>
 </li>
 </ul>
@@ -210,7 +128,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -236,7 +154,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 教學</a> &#187;</li>
@@ -435,7 +353,7 @@ ERROR:root:Error occurred
 CRITICAL:root:Critical error -- shutting down
 </pre></div>
 </div>
-<p>在預設情況，資訊和除錯訊息不會被顯示，其輸出會被發送到標準錯誤 (standard error)。其他輸出選項包括，將訊息轉發到電子郵件、資料報 (datagram)、網路插座 (socket) 或 HTTP 伺服器。新的過濾器可以根據訊息的優先順序，選擇不同的路由 (routing) 方式：<a class="reference internal" href="../library/logging.html#logging.DEBUG" title="logging.DEBUG"><code class="xref py py-const docutils literal notranslate"><span class="pre">DEBUG</span></code></a>，<a class="reference internal" href="../library/logging.html#logging.INFO" title="logging.INFO"><code class="xref py py-const docutils literal notranslate"><span class="pre">INFO</span></code></a>，<a class="reference internal" href="../library/logging.html#logging.WARNING" title="logging.WARNING"><code class="xref py py-const docutils literal notranslate"><span class="pre">WARNING</span></code></a>，<a class="reference internal" href="../library/logging.html#logging.ERROR" title="logging.ERROR"><code class="xref py py-const docutils literal notranslate"><span class="pre">ERROR</span></code></a>，及 <a class="reference internal" href="../library/logging.html#logging.CRITICAL" title="logging.CRITICAL"><code class="xref py py-const docutils literal notranslate"><span class="pre">CRITICAL</span></code></a>。</p>
+<p>在預設情況，資訊和除錯訊息不會被顯示，其輸出會被發送到標準錯誤 (standard error)。其他輸出選項包括，將訊息轉發到電子郵件、資料報 (datagram)、網路插座 (socket) 或 HTTP 伺服器。新的過濾器可以根據訊息的優先順序，選擇不同的路由 (routing) 方式：<a class="reference internal" href="../library/logging.html#logging.DEBUG" title="logging.DEBUG"><code class="xref py py-const docutils literal notranslate"><span class="pre">DEBUG</span></code></a>、<a class="reference internal" href="../library/logging.html#logging.INFO" title="logging.INFO"><code class="xref py py-const docutils literal notranslate"><span class="pre">INFO</span></code></a>、<a class="reference internal" href="../library/logging.html#logging.WARNING" title="logging.WARNING"><code class="xref py py-const docutils literal notranslate"><span class="pre">WARNING</span></code></a>、<a class="reference internal" href="../library/logging.html#logging.ERROR" title="logging.ERROR"><code class="xref py py-const docutils literal notranslate"><span class="pre">ERROR</span></code></a> 及 <a class="reference internal" href="../library/logging.html#logging.CRITICAL" title="logging.CRITICAL"><code class="xref py py-const docutils literal notranslate"><span class="pre">CRITICAL</span></code></a>。</p>
 <p>日誌記錄系統可以直接從 Python 配置，也可以透過載入使用者可編輯的配置檔案以進行客製化的日誌記錄，而無須對應用程式做出變更。</p>
 </section>
 <section id="weak-references">
@@ -470,7 +388,7 @@ CRITICAL:root:Critical error -- shutting down
 <section id="tools-for-working-with-lists">
 <span id="tut-list-tools"></span><h2><span class="section-number">11.7. </span>使用於 List 的工具<a class="headerlink" href="#tools-for-working-with-lists" title="連結到這個標頭">¶</a></h2>
 <p>許多對於資料結構的需求，可以透過內建的 list（串列）型別來滿足。但是，有時也會根據效能的各種取捨，需要一些替代的實作。</p>
-<p><a class="reference internal" href="../library/array.html#module-array" title="array: Space efficient arrays of uniformly typed numeric values."><code class="xref py py-mod docutils literal notranslate"><span class="pre">array</span></code></a> 模組提供了一個 <a class="reference internal" href="../library/array.html#array.array" title="array.array"><code class="xref py py-class docutils literal notranslate"><span class="pre">array()</span></code></a> 物件，它像是 list，但只能儲存同類的資料且能緊密地儲存。下面的範例展示一個數值陣列 (array)，以兩個位元組的無符號二進數 (unsigned binary numbers) 為儲存單位（類型碼為 <code class="docutils literal notranslate"><span class="pre">&quot;H&quot;</span></code>），而在 Python 整數物件的正規 list 中，每個項目通常使用 16 個位元組：</p>
+<p><a class="reference internal" href="../library/array.html#module-array" title="array: Space efficient arrays of uniformly typed numeric values."><code class="xref py py-mod docutils literal notranslate"><span class="pre">array</span></code></a> 模組提供了一個 <a class="reference internal" href="../library/array.html#array.array" title="array.array"><code class="xref py py-class docutils literal notranslate"><span class="pre">array</span></code></a> 物件，它像是 list，但只能儲存同類的資料且能緊密地儲存。下面的範例展示一個數值陣列 (array)，以兩個位元組的無符號二進數 (unsigned binary numbers) 為儲存單位（類型碼為 <code class="docutils literal notranslate"><span class="pre">&quot;H&quot;</span></code>），而在 Python 整數物件的正規 list 中，每個項目通常使用 16 個位元組：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">array</span> <span class="kn">import</span> <span class="n">array</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="s1">&#39;H&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">4000</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">22222</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">sum</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
@@ -479,7 +397,7 @@ CRITICAL:root:Critical error -- shutting down
 <span class="go">array(&#39;H&#39;, [10, 700])</span>
 </pre></div>
 </div>
-<p><a class="reference internal" href="../library/collections.html#module-collections" title="collections: Container datatypes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code></a> 模組提供了一個 <a class="reference internal" href="../library/collections.html#collections.deque" title="collections.deque"><code class="xref py py-class docutils literal notranslate"><span class="pre">deque()</span></code></a> 物件，它像是 list，但從左側加入 (append) 和彈出 (pop) 的速度較快，而在中間查找的速度則較慢。這種物件適用於實作佇列 (queue) 和廣度優先搜尋法 (breadth first tree search)：</p>
+<p><a class="reference internal" href="../library/collections.html#module-collections" title="collections: Container datatypes"><code class="xref py py-mod docutils literal notranslate"><span class="pre">collections</span></code></a> 模組提供了一個 <a class="reference internal" href="../library/collections.html#collections.deque" title="collections.deque"><code class="xref py py-class docutils literal notranslate"><span class="pre">deque</span></code></a> 物件，它像是 list，但從左側加入 (append) 和彈出 (pop) 的速度較快，而在中間查找的速度則較慢。這種物件適用於實作佇列 (queue) 和廣度優先搜尋法 (breadth first tree search)：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">deque</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span> <span class="o">=</span> <span class="n">deque</span><span class="p">([</span><span class="s2">&quot;task1&quot;</span><span class="p">,</span> <span class="s2">&quot;task2&quot;</span><span class="p">,</span> <span class="s2">&quot;task3&quot;</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">d</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;task4&quot;</span><span class="p">)</span>
@@ -515,8 +433,10 @@ CRITICAL:root:Critical error -- shutting down
 </div>
 </section>
 <section id="decimal-floating-point-arithmetic">
-<span id="tut-decimal-fp"></span><h2><span class="section-number">11.8. </span>十進制 (Decimal) 浮點數運算<a class="headerlink" href="#decimal-floating-point-arithmetic" title="連結到這個標頭">¶</a></h2>
-<p><a class="reference internal" href="../library/decimal.html#module-decimal" title="decimal: Implementation of the General Decimal Arithmetic  Specification."><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code></a> 模組提供了一個 <a class="reference internal" href="../library/decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> 資料類型，用於十進制浮點數運算。相較於內建的二進制浮點數 <a class="reference internal" href="../library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> 實作，該 class 特別適用於下列情境</p>
+<span id="tut-decimal-fp"></span><h2><span class="section-number">11.8. </span>Decimal Floating-Point Arithmetic<a class="headerlink" href="#decimal-floating-point-arithmetic" title="連結到這個標頭">¶</a></h2>
+<p>The <a class="reference internal" href="../library/decimal.html#module-decimal" title="decimal: Implementation of the General Decimal Arithmetic  Specification."><code class="xref py py-mod docutils literal notranslate"><span class="pre">decimal</span></code></a> module offers a <a class="reference internal" href="../library/decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> datatype for
+decimal floating-point arithmetic.  Compared to the built-in <a class="reference internal" href="../library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>
+implementation of binary floating point, the class is especially helpful for</p>
 <ul class="simple">
 <li><p>金融應用程式及其他需要準確十進位制表示法的應用，</p></li>
 <li><p>對於精確度 (precision) 的控制，</p></li>
@@ -559,7 +479,7 @@ CRITICAL:root:Critical error -- shutting down
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -572,7 +492,7 @@ CRITICAL:root:Critical error -- shutting down
 <li><a class="reference internal" href="#logging">11.5. 日誌記錄 (Logging)</a></li>
 <li><a class="reference internal" href="#weak-references">11.6. 弱引用 (Weak References)</a></li>
 <li><a class="reference internal" href="#tools-for-working-with-lists">11.7. 使用於 List 的工具</a></li>
-<li><a class="reference internal" href="#decimal-floating-point-arithmetic">11.8. 十進制 (Decimal) 浮點數運算</a></li>
+<li><a class="reference internal" href="#decimal-floating-point-arithmetic">11.8. Decimal Floating-Point Arithmetic</a></li>
 </ul>
 </li>
 </ul>
@@ -607,7 +527,7 @@ CRITICAL:root:Critical error -- shutting down
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -633,7 +553,7 @@ CRITICAL:root:Critical error -- shutting down
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 教學</a> &#187;</li>
@@ -684,13 +604,13 @@ CRITICAL:root:Critical error -- shutting down
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

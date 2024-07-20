@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>型別物件 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>型別物件 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="循環垃圾回收的支援" href="gcsupport.html" />
     <link rel="prev" title="通用物件結構" href="structures.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/c-api/typeobj.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -221,7 +139,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -247,7 +165,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API 參考手冊</a> &#187;</li>
@@ -1603,7 +1521,7 @@ the subtype's <a class="reference internal" href="#c.PyTypeObject.tp_setattr" ti
 objects which implement <a class="reference internal" href="../glossary.html#term-awaitable"><span class="xref std std-term">awaitable</span></a> and <a class="reference internal" href="../glossary.html#term-asynchronous-iterator"><span class="xref std std-term">asynchronous iterator</span></a>
 protocols at the C-level.  See <a class="reference internal" href="#async-structs"><span class="std std-ref">Async Object Structures</span></a> for details.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.5: </span>Formerly known as <code class="docutils literal notranslate"><span class="pre">tp_compare</span></code> and <code class="docutils literal notranslate"><span class="pre">tp_reserved</span></code>.</p>
+<p><span class="versionmodified added">在 3.5 版被加入: </span>Formerly known as <code class="docutils literal notranslate"><span class="pre">tp_compare</span></code> and <code class="docutils literal notranslate"><span class="pre">tp_reserved</span></code>.</p>
 </div>
 <p><strong>Inheritance:</strong></p>
 <p>The <a class="reference internal" href="#c.PyTypeObject.tp_as_async" title="PyTypeObject.tp_as_async"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_as_async</span></code></a> field is not inherited,
@@ -1898,7 +1816,7 @@ must be equivalent to <code class="docutils literal notranslate"><span class="pr
 <code class="docutils literal notranslate"><span class="pre">obj.meth()</span></code>: it avoids creating a temporary &quot;bound method&quot; object for
 <code class="docutils literal notranslate"><span class="pre">obj.meth</span></code>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8.</span></p>
+<p><span class="versionmodified added">在 3.8 版被加入.</span></p>
 </div>
 <p><strong>Inheritance:</strong></p>
 <p>This flag is never inherited by types without the
@@ -1913,7 +1831,7 @@ inherited whenever <a class="reference internal" href="#c.PyTypeObject.tp_descr_
 attribute, and that the space for the dictionary is managed by the VM.</p>
 <p>If this flag is set, <a class="reference internal" href="#c.Py_TPFLAGS_HAVE_GC" title="Py_TPFLAGS_HAVE_GC"><code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_TPFLAGS_HAVE_GC</span></code></a> should also be set.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 <p><strong>Inheritance:</strong></p>
 <p>This flag is inherited unless the
@@ -1926,7 +1844,7 @@ attribute, and that the space for the dictionary is managed by the VM.</p>
 <dd><p>This bit indicates that instances of the class should be weakly
 referenceable.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 <p><strong>Inheritance:</strong></p>
 <p>This flag is inherited unless the
@@ -1946,7 +1864,7 @@ subclass).</p>
 use this memory layout, or are not variable-sized.
 Python does not check this.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 <p><strong>Inheritance:</strong></p>
 <p>This flag is inherited.</p>
@@ -2005,7 +1923,7 @@ will behave differently depending on what kind of check is used.</p>
 <dd><p>This bit is set when the <a class="reference internal" href="#c.PyTypeObject.tp_finalize" title="PyTypeObject.tp_finalize"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_finalize</span></code></a> slot is present in the
 type structure.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 <div class="deprecated">
 <p><span class="versionmodified deprecated">在 3.8 版之後被棄用: </span>This flag isn't necessary anymore, as the interpreter assumes the
@@ -2024,7 +1942,7 @@ See <a class="reference internal" href="#c.PyTypeObject.tp_vectorcall_offset" ti
 <p>This bit is inherited if <a class="reference internal" href="#c.PyTypeObject.tp_call" title="PyTypeObject.tp_call"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_call</span></code></a> is also
 inherited.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.9.</span></p>
+<p><span class="versionmodified added">在 3.9 版被加入.</span></p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.12 版的變更: </span>This flag is now removed from a class when the class's
@@ -2042,7 +1960,7 @@ inherited.</p>
 <p><strong>Inheritance:</strong></p>
 <p>This flag is not inherited.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2071,7 +1989,7 @@ Instead, make <a class="reference internal" href="#c.PyTypeObject.tp_new" title=
 subclasses.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2095,7 +2013,7 @@ mutually exclusive; it is an error to enable both flags simultaneously.</p>
 <p><span class="target" id="index-3"></span><a class="pep reference external" href="https://peps.python.org/pep-0634/"><strong>PEP 634</strong></a> -- Structural Pattern Matching: Specification</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2119,7 +2037,7 @@ mutually exclusive; it is an error to enable both flags simultaneously.</p>
 <p><span class="target" id="index-4"></span><a class="pep reference external" href="https://peps.python.org/pep-0634/"><strong>PEP 634</strong></a> -- Structural Pattern Matching: Specification</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2359,7 +2277,7 @@ operation, as for <a class="reference internal" href="object.html#c.PyObject_Ric
 <p>The returned value is a new <a class="reference internal" href="../glossary.html#term-strong-reference"><span class="xref std std-term">strong reference</span></a>.</p>
 <p>On error, sets an exception and returns <code class="docutils literal notranslate"><span class="pre">NULL</span></code> from the function.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.7.</span></p>
+<p><span class="versionmodified added">在 3.7 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2391,7 +2309,7 @@ initialized to <code class="docutils literal notranslate"><span class="pre">NULL
 <p>Do not confuse this field with <a class="reference internal" href="#c.PyTypeObject.tp_weaklist" title="PyTypeObject.tp_weaklist"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_weaklist</span></code></a>; that is the list head for
 weak references to the type object itself.</p>
 <p>It is an error to set both the <a class="reference internal" href="#c.Py_TPFLAGS_MANAGED_WEAKREF" title="Py_TPFLAGS_MANAGED_WEAKREF"><code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_TPFLAGS_MANAGED_WEAKREF</span></code></a> bit and
-<a class="reference internal" href="#c.PyTypeObject.tp_weaklist" title="PyTypeObject.tp_weaklist"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_weaklist</span></code></a>.</p>
+<a class="reference internal" href="#c.PyTypeObject.tp_weaklistoffset" title="PyTypeObject.tp_weaklistoffset"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_weaklistoffset</span></code></a>.</p>
 <p><strong>Inheritance:</strong></p>
 <p>This field is inherited by subtypes, but see the rules listed below. A subtype
 may override this offset; this means that the subtype uses a different weak
@@ -2399,7 +2317,7 @@ reference list head than the base type.  Since the list head is always found via
 <a class="reference internal" href="#c.PyTypeObject.tp_weaklistoffset" title="PyTypeObject.tp_weaklistoffset"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_weaklistoffset</span></code></a>, this should not be a problem.</p>
 <p><strong>預設：</strong></p>
 <p>If the <a class="reference internal" href="#c.Py_TPFLAGS_MANAGED_WEAKREF" title="Py_TPFLAGS_MANAGED_WEAKREF"><code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_TPFLAGS_MANAGED_WEAKREF</span></code></a> bit is set in the
-<a class="reference internal" href="#c.PyTypeObject.tp_dict" title="PyTypeObject.tp_dict"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_dict</span></code></a> field, then
+<a class="reference internal" href="#c.PyTypeObject.tp_flags" title="PyTypeObject.tp_flags"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_flags</span></code></a> field, then
 <a class="reference internal" href="#c.PyTypeObject.tp_weaklistoffset" title="PyTypeObject.tp_weaklistoffset"><code class="xref c c-member docutils literal notranslate"><span class="pre">tp_weaklistoffset</span></code></a> will be set to a negative value,
 to indicate that it is unsafe to use this field.</p>
 </dd></dl>
@@ -2842,7 +2760,7 @@ of the library.</p>
 <p><strong>Inheritance:</strong></p>
 <p>This field is inherited by subtypes.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.8 版的變更: </span>Before version 3.8 it was necessary to set the
@@ -2866,7 +2784,7 @@ using <a class="reference internal" href="../reference/datamodel.html#object.__n
 <p><strong>Inheritance:</strong></p>
 <p>This field is never inherited.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.9: </span>(the field exists since 3.8 but it's only used since 3.9)</p>
+<p><span class="versionmodified added">在 3.9 版被加入: </span>(the field exists since 3.8 but it's only used since 3.9)</p>
 </div>
 </dd></dl>
 
@@ -2875,7 +2793,7 @@ using <a class="reference internal" href="../reference/datamodel.html#object.__n
 <span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="sig-prename descclassname"><a class="reference internal" href="type.html#c.PyTypeObject" title="PyTypeObject"><span class="n"><span class="pre">PyTypeObject</span></span></a><span class="p"><span class="pre">.</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">tp_watched</span></span></span><a class="headerlink" href="#c.PyTypeObject.tp_watched" title="連結到這個定義">¶</a><br /></dt>
 <dd><p>Internal. Do not use.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -3373,7 +3291,7 @@ wraps this function.</p>
 <section id="async-object-structures">
 <span id="async-structs"></span><h1>Async Object Structures<a class="headerlink" href="#async-object-structures" title="連結到這個標頭">¶</a></h1>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.5.</span></p>
+<p><span class="versionmodified added">在 3.5 版被加入.</span></p>
 </div>
 <dl class="c type">
 <dt class="sig sig-object c" id="c.PyAsyncMethods">
@@ -3438,7 +3356,7 @@ This slot may be set to <code class="docutils literal notranslate"><span class="
 <p>See <a class="reference internal" href="iter.html#c.PyIter_Send" title="PyIter_Send"><code class="xref c c-func docutils literal notranslate"><span class="pre">PyIter_Send()</span></code></a> for details.
 This slot may be set to <code class="docutils literal notranslate"><span class="pre">NULL</span></code>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -3754,7 +3672,7 @@ to create instances (e.g. uses a separate factory func) using
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -3813,7 +3731,7 @@ to create instances (e.g. uses a separate factory func) using
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -3839,7 +3757,7 @@ to create instances (e.g. uses a separate factory func) using
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API 參考手冊</a> &#187;</li>
@@ -3891,13 +3809,13 @@ to create instances (e.g. uses a separate factory func) using
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

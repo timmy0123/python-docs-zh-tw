@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>string --- 常見的字串操作 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string --- 常見的字串操作 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="re --- 正規表示式 (regular expression) 操作" href="re.html" />
     <link rel="prev" title="文本處理 (Text Processing) 服務" href="text.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/string.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -211,7 +129,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -237,7 +155,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -274,7 +192,7 @@
             
   <section id="module-string">
 <span id="string-common-string-operations"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">string</span></code> --- 常見的字串操作<a class="headerlink" href="#module-string" title="連結到這個標頭">¶</a></h1>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.12/Lib/string.py">Lib/string.py</a></p>
+<p><strong>原始碼：</strong><a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.12/Lib/string.py">Lib/string.py</a></p>
 <hr class="docutils" />
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
@@ -606,7 +524,12 @@ instead.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.1 版的變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">','</span></code> 選項（請見 <span class="target" id="index-21"></span><a class="pep reference external" href="https://peps.python.org/pep-0378/"><strong>PEP 378</strong></a>）。</p>
 </div>
-<p id="index-10"><code class="docutils literal notranslate"><span class="pre">'_'</span></code> 選項表示對於浮點表示型別和整數表示型別 <code class="docutils literal notranslate"><span class="pre">'d'</span></code> 使用底線作為千位分隔符號。對於整數表示型別 <code class="docutils literal notranslate"><span class="pre">'b'</span></code>，<code class="docutils literal notranslate"><span class="pre">'o'</span></code>，<code class="docutils literal notranslate"><span class="pre">'x'</span></code> 和 <code class="docutils literal notranslate"><span class="pre">'X'</span></code>，每 4 位數字會插入底線。對於其他表示型別，指定此選項會出錯。</p>
+<p id="index-10">The <code class="docutils literal notranslate"><span class="pre">'_'</span></code> option signals the use of an underscore for a thousands
+separator for floating-point presentation types and for integer
+presentation type <code class="docutils literal notranslate"><span class="pre">'d'</span></code>.  For integer presentation types <code class="docutils literal notranslate"><span class="pre">'b'</span></code>,
+<code class="docutils literal notranslate"><span class="pre">'o'</span></code>, <code class="docutils literal notranslate"><span class="pre">'x'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'X'</span></code>, underscores will be inserted every 4
+digits.  For other presentation types, specifying this option is an
+error.</p>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.6 版的變更: </span>新增 <code class="docutils literal notranslate"><span class="pre">'_'</span></code> 選項（請見 <span class="target" id="index-22"></span><a class="pep reference external" href="https://peps.python.org/pep-0515/"><strong>PEP 515</strong></a>）。</p>
 </div>
@@ -676,9 +599,9 @@ number separator characters.</p></td>
 </table>
 </div></blockquote>
 <p>In addition to the above presentation types, integers can be formatted
-with the floating point presentation types listed below (except
+with the floating-point presentation types listed below (except
 <code class="docutils literal notranslate"><span class="pre">'n'</span></code> and <code class="docutils literal notranslate"><span class="pre">None</span></code>). When doing so, <a class="reference internal" href="functions.html#float" title="float"><code class="xref py py-func docutils literal notranslate"><span class="pre">float()</span></code></a> is used to convert the
-integer to a floating point number before formatting.</p>
+integer to a floating-point number before formatting.</p>
 <p>The available presentation types for <a class="reference internal" href="functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a> and
 <a class="reference internal" href="decimal.html#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a> values are:</p>
 <blockquote>
@@ -958,7 +881,7 @@ these rules.  The methods of <a class="reference internal" href="#string.Templat
 <span class="sig-name descname"><span class="pre">is_valid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#string.Template.is_valid" title="連結到這個定義">¶</a></dt>
 <dd><p>如果模板有將導致 <a class="reference internal" href="#string.Template.substitute" title="string.Template.substitute"><code class="xref py py-meth docutils literal notranslate"><span class="pre">substitute()</span></code></a> 引發 <a class="reference internal" href="exceptions.html#ValueError" title="ValueError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">ValueError</span></code></a> 的無效佔位符號，就會回傳 false。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -967,7 +890,7 @@ these rules.  The methods of <a class="reference internal" href="#string.Templat
 <span class="sig-name descname"><span class="pre">get_identifiers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#string.Template.get_identifiers" title="連結到這個定義">¶</a></dt>
 <dd><p>回傳模板中有效識別字的串列，按照它們首次出現的順序，並忽略任何無效的識別字。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1022,7 +945,7 @@ braced placeholders.  Defaults to <code class="docutils literal notranslate"><sp
 If given, this allows you to define different patterns for braced and
 unbraced placeholders.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.7.</span></p>
+<p><span class="versionmodified added">在 3.7 版被加入.</span></p>
 </div>
 </li>
 <li><p><em>flags</em> -- The regular expression flags that will be applied when compiling
@@ -1031,7 +954,7 @@ is <code class="docutils literal notranslate"><span class="pre">re.IGNORECASE</s
 flags, so custom <em>idpattern</em>s must follow conventions for verbose regular
 expressions.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 </li>
 </ul>
@@ -1064,7 +987,7 @@ rule:</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -1113,7 +1036,7 @@ rule:</p>
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1139,7 +1062,7 @@ rule:</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -1191,13 +1114,13 @@ rule:</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

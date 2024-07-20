@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Python 3.4 有什麼新功能 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 3.4 有什麼新功能 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="Python 3.4 有什麼新功能" href="3.4.html" />
     <link rel="prev" title="Python 3.6 有什麼新功能" href="3.6.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/whatsnew/3.5.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -332,7 +250,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -358,7 +276,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 有什麼新功能？</a> &#187;</li>
@@ -1185,7 +1103,7 @@ by Stefan Behnel in <a class="reference external" href="https://bugs.python.org/
 <a class="reference internal" href="../library/collections.abc.html#collections.abc.AsyncIterable" title="collections.abc.AsyncIterable"><code class="xref py py-class docutils literal notranslate"><span class="pre">AsyncIterable</span></code></a> abstract base classes.
 (Contributed by Yury Selivanov in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=24184">bpo-24184</a>.)</p>
 <p>For earlier Python versions, a backport of the new ABCs is available in an
-external <a class="reference external" href="https://pypi.org/project/backports_abc/">PyPI package</a>.</p>
+external <a class="extlink-pypi reference external" href="https://pypi.org/project/backports_abc/">PyPI package</a>.</p>
 </section>
 <section id="compileall">
 <h3>compileall<a class="headerlink" href="#compileall" title="連結到這個標頭">¶</a></h3>
@@ -1982,7 +1900,7 @@ specifying the namespace in which the code will be running.
 <section id="tkinter">
 <h3>tkinter<a class="headerlink" href="#tkinter" title="連結到這個標頭">¶</a></h3>
 <p>The <code class="xref py py-mod docutils literal notranslate"><span class="pre">tkinter._fix</span></code> module used for setting up the Tcl/Tk environment
-on Windows has been replaced by a private function in the <a class="reference internal" href="../library/tkinter.html#module-_tkinter" title="_tkinter: A binary module that contains the low-level interface to Tcl/Tk."><code class="xref py py-mod docutils literal notranslate"><span class="pre">_tkinter</span></code></a>
+on Windows has been replaced by a private function in the <code class="xref py py-mod docutils literal notranslate"><span class="pre">_tkinter</span></code>
 module which makes no permanent changes to environment variables.
 (Contributed by Zachary Ware in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=20035">bpo-20035</a>.)</p>
 </section>
@@ -2481,10 +2399,10 @@ recompile generated files based on file modification times.</p>
 of these files when desired (e.g. after an initial version of Python has
 already been built based on the pregenerated versions).</p>
 <p>More selective regeneration targets are also defined - see
-<a class="reference external" href="https://github.com/python/cpython/tree/3.12/Makefile.pre.in">Makefile.pre.in</a> for details.</p>
+<a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.12/Makefile.pre.in">Makefile.pre.in</a> for details.</p>
 <p>（由 Victor Stinner 在 <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=23404">bpo-23404</a> 中貢獻。）</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.5.4.</span></p>
+<p><span class="versionmodified added">在 3.5.4 版被加入.</span></p>
 </div>
 </section>
 <section id="removal-of-make-touch-build-target">
@@ -2505,7 +2423,7 @@ of generated files by updating their modification times has been removed.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -2675,7 +2593,7 @@ of generated files by updating their modification times has been removed.</p>
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -2701,7 +2619,7 @@ of generated files by updating their modification times has been removed.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 有什麼新功能？</a> &#187;</li>
@@ -2752,13 +2670,13 @@ of generated files by updating their modification times has been removed.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

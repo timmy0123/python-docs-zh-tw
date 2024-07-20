@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3. 資料模型 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. 資料模型 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="4. 執行模型" href="executionmodel.html" />
     <link rel="prev" title="2. 詞法分析" href="lexical_analysis.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/reference/datamodel.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -304,7 +222,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -330,7 +248,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 語言參考手冊</a> &#187;</li>
@@ -496,7 +414,7 @@ decimal point, are not shown.</p></li>
 decimal point, are not shown.</p></li>
 <li><p>A sign is shown only when the number is negative.</p></li>
 </ul>
-<p>Python distinguishes between integers, floating point numbers, and complex
+<p>Python distinguishes between integers, floating-point numbers, and complex
 numbers:</p>
 <section id="numbers-integral">
 <h4><span class="section-number">3.2.4.1. </span><a class="reference internal" href="../library/numbers.html#numbers.Integral" title="numbers.Integral"><code class="xref py py-class docutils literal notranslate"><span class="pre">numbers.Integral</span></code></a><a class="headerlink" href="#numbers-integral" title="連結到這個標頭">¶</a></h4>
@@ -525,18 +443,18 @@ a string, the strings <code class="docutils literal notranslate"><span class="pr
 </section>
 <section id="numbers-real-float">
 <h4><span class="section-number">3.2.4.2. </span><a class="reference internal" href="../library/numbers.html#numbers.Real" title="numbers.Real"><code class="xref py py-class docutils literal notranslate"><span class="pre">numbers.Real</span></code></a> (<a class="reference internal" href="../library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>)<a class="headerlink" href="#numbers-real-float" title="連結到這個標頭">¶</a></h4>
-<p id="index-13">These represent machine-level double precision floating point numbers. You are
+<p id="index-13">These represent machine-level double precision floating-point numbers. You are
 at the mercy of the underlying machine architecture (and C or Java
 implementation) for the accepted range and handling of overflow. Python does not
-support single-precision floating point numbers; the savings in processor and
+support single-precision floating-point numbers; the savings in processor and
 memory usage that are usually the reason for using these are dwarfed by the
 overhead of using objects in Python, so there is no reason to complicate the
-language with two kinds of floating point numbers.</p>
+language with two kinds of floating-point numbers.</p>
 </section>
 <section id="numbers-complex-complex">
 <h4><span class="section-number">3.2.4.3. </span><a class="reference internal" href="../library/numbers.html#numbers.Complex" title="numbers.Complex"><code class="xref py py-class docutils literal notranslate"><span class="pre">numbers.Complex</span></code></a> (<a class="reference internal" href="../library/functions.html#complex" title="complex"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a>)<a class="headerlink" href="#numbers-complex-complex" title="連結到這個標頭">¶</a></h4>
 <p id="index-14">These represent complex numbers as a pair of machine-level double precision
-floating point numbers.  The same caveats apply as for floating point numbers.
+floating-point numbers.  The same caveats apply as for floating-point numbers.
 The real and imaginary parts of a complex number <code class="docutils literal notranslate"><span class="pre">z</span></code> can be retrieved through
 the read-only attributes <code class="docutils literal notranslate"><span class="pre">z.real</span></code> and <code class="docutils literal notranslate"><span class="pre">z.imag</span></code>.</p>
 </section>
@@ -757,7 +675,7 @@ See also: <a class="reference internal" href="../library/stdtypes.html#definitio
 <td><p>The function's <a class="reference internal" href="../glossary.html#term-qualified-name"><span class="xref std std-term">qualified name</span></a>.
 See also: <a class="reference internal" href="../library/stdtypes.html#definition.__qualname__" title="definition.__qualname__"><code class="xref py py-attr docutils literal notranslate"><span class="pre">__qualname__</span> <span class="pre">attributes</span></code></a>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.3.</span></p>
+<p><span class="versionmodified added">在 3.3 版被加入.</span></p>
 </div>
 </td>
 </tr>
@@ -827,7 +745,7 @@ See also: <a class="reference internal" href="../howto/annotations.html#annotati
 <td><p>A <a class="reference internal" href="../library/stdtypes.html#tuple" title="tuple"><code class="xref py py-class docutils literal notranslate"><span class="pre">tuple</span></code></a> containing the <a class="reference internal" href="compound_stmts.html#type-params"><span class="std std-ref">type parameters</span></a> of
 a <a class="reference internal" href="compound_stmts.html#generic-functions"><span class="std std-ref">generic function</span></a>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </td>
 </tr>
@@ -1183,7 +1101,7 @@ indirectly) to mutable objects.</p>
 </td>
 <td><p>The fully qualified function name</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 </td>
 </tr>
@@ -1367,7 +1285,7 @@ implementation specific limitations.</p></li>
 <p>When this occurs, some or all of the tuple elements can be
 <a class="reference internal" href="../library/constants.html#None" title="None"><code class="xref py py-const docutils literal notranslate"><span class="pre">None</span></code></a>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.11.</span></p>
+<p><span class="versionmodified added">在 3.11 版被加入.</span></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
@@ -1409,7 +1327,7 @@ equal to the <code class="docutils literal notranslate"><span class="pre">end</s
 are used for lines that are present in the source code, but have been
 eliminated by the <a class="reference internal" href="../glossary.html#term-bytecode"><span class="xref std std-term">bytecode</span></a> compiler.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
@@ -1425,7 +1343,7 @@ eliminated by the <a class="reference internal" href="../glossary.html#term-byte
 <span class="sig-prename descclassname"><span class="pre">codeobject.</span></span><span class="sig-name descname"><span class="pre">replace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#codeobject.replace" title="連結到這個定義">¶</a></dt>
 <dd><p>Return a copy of the code object with new values for the specified fields.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.8.</span></p>
+<p><span class="versionmodified added">在 3.8 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1558,7 +1476,7 @@ objects (for example when catching an <a class="reference internal" href="../lib
 and storing its <a class="reference internal" href="#traceback-objects"><span class="std std-ref">traceback</span></a> for later use).</p>
 <p><a class="reference internal" href="../library/exceptions.html#RuntimeError" title="RuntimeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">RuntimeError</span></code></a> is raised if the frame is currently executing.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1757,7 +1675,9 @@ whether <a class="reference internal" href="#object.__del__" title="object.__del
 is about to be destroyed; the current <a class="reference internal" href="../glossary.html#term-CPython"><span class="xref std std-term">CPython</span></a> implementation
 only calls it once.</p>
 <p>It is not guaranteed that <a class="reference internal" href="#object.__del__" title="object.__del__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__del__()</span></code></a> methods are called for objects
-that still exist when the interpreter exits.</p>
+that still exist when the interpreter exits.
+<a class="reference internal" href="../library/weakref.html#weakref.finalize" title="weakref.finalize"><code class="xref py py-class docutils literal notranslate"><span class="pre">weakref.finalize</span></code></a> provides a straightforward way to register
+a cleanup function to be called when an object is garbage collected.</p>
 <div class="admonition note">
 <p class="admonition-title">備註</p>
 <p><code class="docutils literal notranslate"><span class="pre">del</span> <span class="pre">x</span></code> doesn't directly call <code class="docutils literal notranslate"><span class="pre">x.__del__()</span></code> --- the former decrements
@@ -2103,7 +2023,7 @@ to the module's globals dictionary) is unaffected.</p>
 <p><span class="versionmodified changed">在 3.5 版的變更: </span><code class="docutils literal notranslate"><span class="pre">__class__</span></code> module attribute is now writable.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.7: </span><code class="docutils literal notranslate"><span class="pre">__getattr__</span></code> and <code class="docutils literal notranslate"><span class="pre">__dir__</span></code> module attributes.</p>
+<p><span class="versionmodified added">在 3.7 版被加入: </span><code class="docutils literal notranslate"><span class="pre">__getattr__</span></code> and <code class="docutils literal notranslate"><span class="pre">__dir__</span></code> module attributes.</p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
@@ -2332,7 +2252,7 @@ The actual metaclass (rather than the explicit hint) can be accessed as
 <code class="docutils literal notranslate"><span class="pre">type(cls)</span></code>.</p>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6.</span></p>
+<p><span class="versionmodified added">在 3.6 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2360,7 +2280,7 @@ If needed, <a class="reference internal" href="#object.__set_name__" title="obje
 </div>
 <p>更多細節請見 <a class="reference internal" href="#class-object-creation"><span class="std std-ref">Creating the class object</span></a>。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.6.</span></p>
+<p><span class="versionmodified added">在 3.6 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -2769,7 +2689,7 @@ The length must be an integer <code class="docutils literal notranslate"><span c
 <code class="docutils literal notranslate"><span class="pre">__length_hint__</span></code> method didn't exist at all. This method is purely an
 optimization and is never required for correctness.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.4.</span></p>
+<p><span class="versionmodified added">在 3.4 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -3142,7 +3062,7 @@ that the number of arguments in the pattern must be smaller than or equal to the
 of elements in <em>__match_args__</em>; if it is larger, the pattern match attempt will raise
 a <a class="reference internal" href="../library/exceptions.html#TypeError" title="TypeError"><code class="xref py py-exc docutils literal notranslate"><span class="pre">TypeError</span></code></a>.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
@@ -3183,7 +3103,7 @@ to implement this method.</p>
 </dd></dl>
 
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
@@ -3297,7 +3217,7 @@ specific to the implementation of the asynchronous execution framework
 </dd></dl>
 
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.5.</span></p>
+<p><span class="versionmodified added">在 3.5 版被加入.</span></p>
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">也參考</p>
@@ -3399,7 +3319,7 @@ raise a <a class="reference internal" href="../library/exceptions.html#StopAsync
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.5.</span></p>
+<p><span class="versionmodified added">在 3.5 版被加入.</span></p>
 </div>
 <div class="versionchanged">
 <p><span class="versionmodified changed">在 3.7 版的變更: </span>Prior to Python 3.7, <a class="reference internal" href="#object.__aiter__" title="object.__aiter__"><code class="xref py py-meth docutils literal notranslate"><span class="pre">__aiter__()</span></code></a> could return an <em>awaitable</em>
@@ -3439,7 +3359,7 @@ difference being that it must return an <em>awaitable</em>.</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.5.</span></p>
+<p><span class="versionmodified added">在 3.5 版被加入.</span></p>
 </div>
 <p class="rubric">註解</p>
 <aside class="footnote-list brackets">
@@ -3482,7 +3402,7 @@ supported, which is why the reflected method is not called.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -3624,7 +3544,7 @@ supported, which is why the reflected method is not called.</p>
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -3650,7 +3570,7 @@ supported, which is why the reflected method is not called.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 語言參考手冊</a> &#187;</li>
@@ -3701,13 +3621,13 @@ supported, which is why the reflected method is not called.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

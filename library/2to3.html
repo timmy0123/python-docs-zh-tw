@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>2to3 --- 自動將 Python 2的程式碼轉成 Python 3 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2to3 --- 自動將 Python 2的程式碼轉成 Python 3 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="test --- Python 的回歸測試 (regression tests) 套件" href="test.html" />
     <link rel="prev" title="unittest.mock --- 入門指南" href="unittest.mock-examples.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/2to3.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -205,7 +123,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -231,7 +149,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -274,7 +192,7 @@ contains a rich set of fixers that will handle almost all code.  2to3 supporting
 library <a class="reference internal" href="#module-lib2to3" title="lib2to3: The 2to3 library"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lib2to3</span></code></a> is, however, a flexible and generic library, so it is
 possible to write your own fixers for 2to3.</p>
 <div class="deprecated-removed">
-<p><span class="versionmodified">自從版本 3.11 後不推薦使用，將會自版本 3.13 中移除。: </span>The <code class="docutils literal notranslate"><span class="pre">lib2to3</span></code> module was marked pending for deprecation in Python 3.9
+<p><span class="versionmodified deprecated">Deprecated since version 3.11, will be removed in version 3.13: </span>The <code class="docutils literal notranslate"><span class="pre">lib2to3</span></code> module was marked pending for deprecation in Python 3.9
 (raising <a class="reference internal" href="exceptions.html#PendingDeprecationWarning" title="PendingDeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">PendingDeprecationWarning</span></code></a> on import) and fully deprecated
 in Python 3.11 (raising <a class="reference internal" href="exceptions.html#DeprecationWarning" title="DeprecationWarning"><code class="xref py py-exc docutils literal notranslate"><span class="pre">DeprecationWarning</span></code></a>).  The <code class="docutils literal notranslate"><span class="pre">2to3</span></code> tool is
 part of that.  It will be removed in Python 3.13.</p>
@@ -353,7 +271,7 @@ alternate directory for processed output files to be written to.  The
 <code class="xref std std-option docutils literal notranslate"><span class="pre">-n</span></code> flag is required when using this as backup files do not make sense
 when not overwriting the input files.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.3: </span>新增 <code class="xref std std-option docutils literal notranslate"><span class="pre">-o</span></code> 選項。</p>
+<p><span class="versionmodified added">在 3.2.3 版被加入: </span>新增 <code class="xref std std-option docutils literal notranslate"><span class="pre">-o</span></code> 選項。</p>
 </div>
 <p>The <code class="xref std std-option docutils literal notranslate"><span class="pre">-W</span></code> or <code class="xref std std-option docutils literal notranslate"><span class="pre">--write-unchanged-files</span></code> flag tells 2to3 to always
 write output files even if no changes were required to the file.  This is most
@@ -361,7 +279,7 @@ useful with <code class="xref std std-option docutils literal notranslate"><span
 translation from one directory to another.
 This option implies the <code class="xref std std-option docutils literal notranslate"><span class="pre">-w</span></code> flag as it would not make sense otherwise.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.3: </span>The <code class="xref std std-option docutils literal notranslate"><span class="pre">-W</span></code> flag was added.</p>
+<p><span class="versionmodified added">在 3.2.3 版被加入: </span>The <code class="xref std std-option docutils literal notranslate"><span class="pre">-W</span></code> flag was added.</p>
 </div>
 <p>The <code class="xref std std-option docutils literal notranslate"><span class="pre">--add-suffix</span></code> option specifies a string to append to all output
 filenames.  The <code class="xref std std-option docutils literal notranslate"><span class="pre">-n</span></code> flag is required when specifying this as backups
@@ -371,7 +289,7 @@ are not necessary when writing to different filenames.  Example:</p>
 </div>
 <p>Will cause a converted file named <code class="docutils literal notranslate"><span class="pre">example.py3</span></code> to be written.</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.3: </span>The <code class="xref std std-option docutils literal notranslate"><span class="pre">--add-suffix</span></code> option was added.</p>
+<p><span class="versionmodified added">在 3.2.3 版被加入: </span>The <code class="xref std std-option docutils literal notranslate"><span class="pre">--add-suffix</span></code> option was added.</p>
 </div>
 <p>To translate an entire project from one directory tree to another use:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>2to3<span class="w"> </span>--output-dir<span class="o">=</span>python3-version/mycode<span class="w"> </span>-W<span class="w"> </span>-n<span class="w"> </span>python2-version/mycode
@@ -826,10 +744,10 @@ calls with <a class="reference internal" href="stdtypes.html#list" title="list">
 </section>
 <section id="module-lib2to3">
 <span id="lib2to3-2to3-s-library"></span><h2><a class="reference internal" href="#module-lib2to3" title="lib2to3: The 2to3 library"><code class="xref py py-mod docutils literal notranslate"><span class="pre">lib2to3</span></code></a> --- 2to3's library<a class="headerlink" href="#module-lib2to3" title="連結到這個標頭">¶</a></h2>
-<p><strong>原始碼：</strong><a class="reference external" href="https://github.com/python/cpython/tree/3.12/Lib/lib2to3/">Lib/lib2to3/</a></p>
+<p><strong>原始碼：</strong><a class="extlink-source reference external" href="https://github.com/python/cpython/tree/3.12/Lib/lib2to3/">Lib/lib2to3/</a></p>
 <hr class="docutils" />
 <div class="deprecated-removed">
-<p><span class="versionmodified">自從版本 3.11 後不推薦使用，將會自版本 3.13 中移除。: </span>Python 3.9 switched to a PEG parser (see <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0617/"><strong>PEP 617</strong></a>) while lib2to3 is
+<p><span class="versionmodified deprecated">Deprecated since version 3.11, will be removed in version 3.13: </span>Python 3.9 switched to a PEG parser (see <span class="target" id="index-0"></span><a class="pep reference external" href="https://peps.python.org/pep-0617/"><strong>PEP 617</strong></a>) while lib2to3 is
 using a less flexible LL(1) parser.  Python 3.10 includes new language
 syntax that is not parsable by lib2to3's LL(1) parser (see <span class="target" id="index-1"></span><a class="pep reference external" href="https://peps.python.org/pep-0634/"><strong>PEP 634</strong></a>).
 The <code class="docutils literal notranslate"><span class="pre">lib2to3</span></code> module was marked pending for deprecation in Python 3.9
@@ -851,7 +769,7 @@ drastically in the future.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -894,7 +812,7 @@ drastically in the future.</p>
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -920,7 +838,7 @@ drastically in the future.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -972,13 +890,13 @@ drastically in the future.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

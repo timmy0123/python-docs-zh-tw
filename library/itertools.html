@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>itertools --- 建立產生高效率迴圈之疊代器的函式 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>itertools --- 建立產生高效率迴圈之疊代器的函式 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="functools --- Higher-order functions and operations on callable objects" href="functools.html" />
     <link rel="prev" title="函式編程模組" href="functional.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/library/itertools.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -171,7 +89,7 @@
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code> --- 建立產生高效率迴圈之疊代器的函式</a><ul>
-<li><a class="reference internal" href="#itertool-functions">Itertool Functions</a></li>
+<li><a class="reference internal" href="#itertool-functions">Itertool 函式</a></li>
 <li><a class="reference internal" href="#itertools-recipes">Itertools Recipes</a></li>
 </ul>
 </li>
@@ -204,7 +122,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -230,7 +148,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -268,24 +186,14 @@
   <section id="module-itertools">
 <span id="itertools-functions-creating-iterators-for-efficient-looping"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code> --- 建立產生高效率迴圈之疊代器的函式<a class="headerlink" href="#module-itertools" title="連結到這個標頭">¶</a></h1>
 <hr class="docutils" />
-<p>This module implements a number of <a class="reference internal" href="../glossary.html#term-iterator"><span class="xref std std-term">iterator</span></a> building blocks inspired
-by constructs from APL, Haskell, and SML.  Each has been recast in a form
-suitable for Python.</p>
-<p>The module standardizes a core set of fast, memory efficient tools that are
-useful by themselves or in combination.  Together, they form an &quot;iterator
-algebra&quot; making it possible to construct specialized tools succinctly and
-efficiently in pure Python.</p>
-<p>For instance, SML provides a tabulation tool: <code class="docutils literal notranslate"><span class="pre">tabulate(f)</span></code> which produces a
-sequence <code class="docutils literal notranslate"><span class="pre">f(0),</span> <span class="pre">f(1),</span> <span class="pre">...</span></code>.  The same effect can be achieved in Python
-by combining <a class="reference internal" href="functions.html#map" title="map"><code class="xref py py-func docutils literal notranslate"><span class="pre">map()</span></code></a> and <a class="reference internal" href="#itertools.count" title="itertools.count"><code class="xref py py-func docutils literal notranslate"><span class="pre">count()</span></code></a> to form <code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">count())</span></code>.</p>
-<p>These tools and their built-in counterparts also work well with the high-speed
-functions in the <a class="reference internal" href="operator.html#module-operator" title="operator: Functions corresponding to the standard operators."><code class="xref py py-mod docutils literal notranslate"><span class="pre">operator</span></code></a> module.  For example, the multiplication
-operator can be mapped across two vectors to form an efficient dot-product:
-<code class="docutils literal notranslate"><span class="pre">sum(starmap(operator.mul,</span> <span class="pre">zip(vec1,</span> <span class="pre">vec2,</span> <span class="pre">strict=True)))</span></code>.</p>
-<p><strong>Infinite iterators:</strong></p>
+<p>這個模組實作了許多 <a class="reference internal" href="../glossary.html#term-iterator"><span class="xref std std-term">疊代器 (iterator)</span></a> 構建塊 (building block)，其靈感來自 APL、Haskell 和 SML 的結構。每個構建塊都以適合 Python 的形式來重新設計。</p>
+<p>這個模組標準化了快速且高效率利用記憶體的核心工具集，這些工具本身或組合使用都很有用。它們共同構成了一個「疊代器代數 (iterator algebra)」，使得在純 Python 中簡潔且高效地建構專用工具成為可能。</p>
+<p>例如，SML 提供了一個造表工具：<code class="docutils literal notranslate"><span class="pre">tabulate(f)</span></code>，它產生一個序列 <code class="docutils literal notranslate"><span class="pre">f(0),</span> <span class="pre">f(1),</span> <span class="pre">...</span></code>。在 Python 中，可以透過結合 <a class="reference internal" href="functions.html#map" title="map"><code class="xref py py-func docutils literal notranslate"><span class="pre">map()</span></code></a> 和 <a class="reference internal" href="#itertools.count" title="itertools.count"><code class="xref py py-func docutils literal notranslate"><span class="pre">count()</span></code></a> 組成 <code class="docutils literal notranslate"><span class="pre">map(f,</span> <span class="pre">count())</span></code> 以達到同樣的效果。</p>
+<p>這些工具及其內建的對等部分 (counterpart) 也可以很好地與 <a class="reference internal" href="operator.html#module-operator" title="operator: Functions corresponding to the standard operators."><code class="xref py py-mod docutils literal notranslate"><span class="pre">operator</span></code></a> 模組中的高速函式配合使用。例如，乘法運算子可以對映到兩個向量上以組成高效率的內積：<code class="docutils literal notranslate"><span class="pre">sum(starmap(operator.mul,</span> <span class="pre">zip(vec1,</span> <span class="pre">vec2,</span> <span class="pre">strict=True)))</span></code>。</p>
+<p><strong>無限疊代器：</strong></p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Iterator</p></th>
+<tr class="row-odd"><th class="head"><p>疊代器</p></th>
 <th class="head"><p>引數</p></th>
 <th class="head"><p>結果</p></th>
 <th class="head"><p>範例</p></th>
@@ -304,15 +212,15 @@ operator can be mapped across two vectors to form an efficient dot-product:
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#itertools.repeat" title="itertools.repeat"><code class="xref py py-func docutils literal notranslate"><span class="pre">repeat()</span></code></a></p></td>
 <td><p>elem [,n]</p></td>
-<td><p>elem, elem, elem, ... endlessly or up to n times</p></td>
+<td><p>elem, elem, elem，... 重複無限次或 n 次</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">repeat(10,</span> <span class="pre">3)</span> <span class="pre">→</span> <span class="pre">10</span> <span class="pre">10</span> <span class="pre">10</span></code></p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>Iterators terminating on the shortest input sequence:</strong></p>
+<p><strong>在最短輸入序列 (shortest input sequence) 處終止的疊代器：</strong></p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Iterator</p></th>
+<tr class="row-odd"><th class="head"><p>疊代器</p></th>
 <th class="head"><p>引數</p></th>
 <th class="head"><p>結果</p></th>
 <th class="head"><p>範例</p></th>
@@ -335,7 +243,7 @@ operator can be mapped across two vectors to form an efficient dot-product:
 <td><p><code class="docutils literal notranslate"><span class="pre">chain('ABC',</span> <span class="pre">'DEF')</span> <span class="pre">→</span> <span class="pre">A</span> <span class="pre">B</span> <span class="pre">C</span> <span class="pre">D</span> <span class="pre">E</span> <span class="pre">F</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#itertools.chain.from_iterable" title="itertools.chain.from_iterable"><code class="xref py py-func docutils literal notranslate"><span class="pre">chain.from_iterable()</span></code></a></p></td>
-<td><p>iterable</p></td>
+<td><p>可疊代物件</p></td>
 <td><p>p0, p1, ... plast, q0, q1, ...</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">chain.from_iterable(['ABC',</span> <span class="pre">'DEF'])</span> <span class="pre">→</span> <span class="pre">A</span> <span class="pre">B</span> <span class="pre">C</span> <span class="pre">D</span> <span class="pre">E</span> <span class="pre">F</span></code></p></td>
 </tr>
@@ -346,26 +254,26 @@ operator can be mapped across two vectors to form an efficient dot-product:
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#itertools.dropwhile" title="itertools.dropwhile"><code class="xref py py-func docutils literal notranslate"><span class="pre">dropwhile()</span></code></a></p></td>
 <td><p>predicate, seq</p></td>
-<td><p>seq[n], seq[n+1], starting when predicate fails</p></td>
+<td><p>seq[n], seq[n+1]，當 predicate 失敗時開始</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">dropwhile(lambda</span> <span class="pre">x:</span> <span class="pre">x&lt;5,</span> <span class="pre">[1,4,6,3,8])</span> <span class="pre">→</span> <span class="pre">6</span> <span class="pre">3</span> <span class="pre">8</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#itertools.filterfalse" title="itertools.filterfalse"><code class="xref py py-func docutils literal notranslate"><span class="pre">filterfalse()</span></code></a></p></td>
 <td><p>predicate, seq</p></td>
-<td><p>elements of seq where predicate(elem) fails</p></td>
+<td><p>當 predicate(elem) 失敗時 seq 的元素</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">filterfalse(lambda</span> <span class="pre">x:</span> <span class="pre">x&lt;5,</span> <span class="pre">[1,4,6,3,8])</span> <span class="pre">→</span> <span class="pre">6</span> <span class="pre">8</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a></p></td>
 <td><p>iterable[, key]</p></td>
-<td><p>sub-iterators grouped by value of key(v)</p></td>
+<td><p>根據 key(v) 的值分組的子疊代器</p></td>
 <td></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#itertools.islice" title="itertools.islice"><code class="xref py py-func docutils literal notranslate"><span class="pre">islice()</span></code></a></p></td>
 <td><p>seq, [start,] stop [, step]</p></td>
-<td><p>elements from seq[start:stop:step]</p></td>
+<td><p>seq[start:stop:step] 的元素</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">islice('ABCDEFG',</span> <span class="pre">2,</span> <span class="pre">None)</span> <span class="pre">→</span> <span class="pre">C</span> <span class="pre">D</span> <span class="pre">E</span> <span class="pre">F</span> <span class="pre">G</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#itertools.pairwise" title="itertools.pairwise"><code class="xref py py-func docutils literal notranslate"><span class="pre">pairwise()</span></code></a></p></td>
-<td><p>iterable</p></td>
+<td><p>可疊代物件</p></td>
 <td><p>(p[0], p[1]), (p[1], p[2])</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">pairwise('ABCDEFG')</span> <span class="pre">→</span> <span class="pre">AB</span> <span class="pre">BC</span> <span class="pre">CD</span> <span class="pre">DE</span> <span class="pre">EF</span> <span class="pre">FG</span></code></p></td>
 </tr>
@@ -376,12 +284,12 @@ operator can be mapped across two vectors to form an efficient dot-product:
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#itertools.takewhile" title="itertools.takewhile"><code class="xref py py-func docutils literal notranslate"><span class="pre">takewhile()</span></code></a></p></td>
 <td><p>predicate, seq</p></td>
-<td><p>seq[0], seq[1], until predicate fails</p></td>
+<td><p>seq[0], seq[1]，直到 predicate 失敗</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">takewhile(lambda</span> <span class="pre">x:</span> <span class="pre">x&lt;5,</span> <span class="pre">[1,4,6,3,8])</span> <span class="pre">→</span> <span class="pre">1</span> <span class="pre">4</span></code></p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#itertools.tee" title="itertools.tee"><code class="xref py py-func docutils literal notranslate"><span class="pre">tee()</span></code></a></p></td>
 <td><p>it, n</p></td>
-<td><p>it1, it2, ... itn  splits one iterator into n</p></td>
+<td><p>it1, it2, ... itn，將一個疊代器分成 n 個</p></td>
 <td></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#itertools.zip_longest" title="itertools.zip_longest"><code class="xref py py-func docutils literal notranslate"><span class="pre">zip_longest()</span></code></a></p></td>
@@ -391,10 +299,10 @@ operator can be mapped across two vectors to form an efficient dot-product:
 </tr>
 </tbody>
 </table>
-<p><strong>Combinatoric iterators:</strong></p>
+<p><strong>組合疊代器：</strong></p>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Iterator</p></th>
+<tr class="row-odd"><th class="head"><p>疊代器</p></th>
 <th class="head"><p>引數</p></th>
 <th class="head"><p>結果</p></th>
 </tr>
@@ -402,25 +310,25 @@ operator can be mapped across two vectors to form an efficient dot-product:
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="#itertools.product" title="itertools.product"><code class="xref py py-func docutils literal notranslate"><span class="pre">product()</span></code></a></p></td>
 <td><p>p, q, ... [repeat=1]</p></td>
-<td><p>cartesian product, equivalent to a nested for-loop</p></td>
+<td><p>笛卡爾乘積 (cartesian product)，相當於巢狀的 for 迴圈</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#itertools.permutations" title="itertools.permutations"><code class="xref py py-func docutils literal notranslate"><span class="pre">permutations()</span></code></a></p></td>
 <td><p>p[, r]</p></td>
-<td><p>r-length tuples, all possible orderings, no repeated elements</p></td>
+<td><p>長度為 r 的元組，所有可能的定序，無重複元素</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#itertools.combinations" title="itertools.combinations"><code class="xref py py-func docutils literal notranslate"><span class="pre">combinations()</span></code></a></p></td>
 <td><p>p, r</p></td>
-<td><p>r-length tuples, in sorted order, no repeated elements</p></td>
+<td><p>長度為 r 的元組，按照排序過後的定序，無重複元素</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#itertools.combinations_with_replacement" title="itertools.combinations_with_replacement"><code class="xref py py-func docutils literal notranslate"><span class="pre">combinations_with_replacement()</span></code></a></p></td>
 <td><p>p, r</p></td>
-<td><p>r-length tuples, in sorted order, with repeated elements</p></td>
+<td><p>長度為 r 的元組，按照排序過後的定序，有重複元素</p></td>
 </tr>
 </tbody>
 </table>
 <table class="docutils align-default">
 <thead>
-<tr class="row-odd"><th class="head"><p>Examples</p></th>
+<tr class="row-odd"><th class="head"><p>範例</p></th>
 <th class="head"><p>結果</p></th>
 </tr>
 </thead>
@@ -440,20 +348,14 @@ operator can be mapped across two vectors to form an efficient dot-product:
 </tbody>
 </table>
 <section id="itertool-functions">
-<span id="itertools-functions"></span><h2>Itertool Functions<a class="headerlink" href="#itertool-functions" title="連結到這個標頭">¶</a></h2>
-<p>The following module functions all construct and return iterators. Some provide
-streams of infinite length, so they should only be accessed by functions or
-loops that truncate the stream.</p>
+<span id="itertools-functions"></span><h2>Itertool 函式<a class="headerlink" href="#itertool-functions" title="連結到這個標頭">¶</a></h2>
+<p>以下的模組函式都會建構並回傳疊代器。一些函式提供無限長度的串流 (stream)，因此應僅由截斷串流的函式或迴圈來存取它們。</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="itertools.accumulate">
 <span class="sig-prename descclassname"><span class="pre">itertools.</span></span><span class="sig-name descname"><span class="pre">accumulate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">function</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial=None</span></span></em><span class="optional">]</span><span class="sig-paren">)</span><a class="headerlink" href="#itertools.accumulate" title="連結到這個定義">¶</a></dt>
-<dd><p>Make an iterator that returns accumulated sums or accumulated
-results from other binary functions.</p>
-<p>The <em>function</em> defaults to addition.  The <em>function</em> should accept
-two arguments, an accumulated total and a value from the <em>iterable</em>.</p>
-<p>If an <em>initial</em> value is provided, the accumulation will start with
-that value and the output will have one more element than the input
-iterable.</p>
+<dd><p>建立一個回傳累積和的疊代器，或其他二進位函式的累積結果。</p>
+<p><em>function</em> 預設為加法。<em>function</em> 應接受兩個引數，即累積總和和來自 <em>iterable</em> 的值。</p>
+<p>如果提供了 <em>initial</em> 值，則累積將從該值開始，並且輸出的元素數將比輸入的可疊代物件多一個。</p>
 <p>大致等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">accumulate</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">function</span><span class="o">=</span><span class="n">operator</span><span class="o">.</span><span class="n">add</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">initial</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="s1">&#39;Return running totals&#39;</span>
@@ -475,10 +377,7 @@ iterable.</p>
         <span class="k">yield</span> <span class="n">total</span>
 </pre></div>
 </div>
-<p>The <em>function</em> argument can be set to <a class="reference internal" href="functions.html#min" title="min"><code class="xref py py-func docutils literal notranslate"><span class="pre">min()</span></code></a> for a running
-minimum, <a class="reference internal" href="functions.html#max" title="max"><code class="xref py py-func docutils literal notranslate"><span class="pre">max()</span></code></a> for a running maximum, or <a class="reference internal" href="operator.html#operator.mul" title="operator.mul"><code class="xref py py-func docutils literal notranslate"><span class="pre">operator.mul()</span></code></a>
-for a running product.  <a class="reference external" href="https://www.ramseysolutions.com/real-estate/amortization-schedule">Amortization tables</a>
-can be built by accumulating interest and applying payments:</p>
+<p><em>function</em> 引數可以被設定為 <a class="reference internal" href="functions.html#min" title="min"><code class="xref py py-func docutils literal notranslate"><span class="pre">min()</span></code></a> 以得到連續的最小值，設定為 <a class="reference internal" href="functions.html#max" title="max"><code class="xref py py-func docutils literal notranslate"><span class="pre">max()</span></code></a> 以得到連續的最大值，或者設定為 <a class="reference internal" href="operator.html#operator.mul" title="operator.mul"><code class="xref py py-func docutils literal notranslate"><span class="pre">operator.mul()</span></code></a> 以得到連續的乘積。也可以透過累積利息和付款來建立<a class="reference external" href="https://www.ramseysolutions.com/real-estate/amortization-schedule">攤銷表 (Amortization tables)</a> ：</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">list</span><span class="p">(</span><span class="n">accumulate</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">max</span><span class="p">))</span>              <span class="c1"># running maximum</span>
 <span class="go">[3, 4, 6, 6, 6, 9, 9, 9, 9, 9]</span>
@@ -491,28 +390,23 @@ can be built by accumulating interest and applying payments:</p>
 <span class="go">[1000, 960, 918, 874, 828, 779, 728, 674, 618, 559, 497]</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="functools.html#functools.reduce" title="functools.reduce"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.reduce()</span></code></a> for a similar function that returns only the
-final accumulated value.</p>
+<p>可參見 <a class="reference internal" href="functools.html#functools.reduce" title="functools.reduce"><code class="xref py py-func docutils literal notranslate"><span class="pre">functools.reduce()</span></code></a>，其是個類似的函式，但僅回傳最終的累積值。</p>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.2.</span></p>
+<p><span class="versionmodified added">在 3.2 版被加入.</span></p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.3 版的變更: </span>Added the optional <em>function</em> parameter.</p>
+<p><span class="versionmodified changed">在 3.3 版的變更: </span>新增可選的 <em>function</em> 參數。</p>
 </div>
 <div class="versionchanged">
-<p><span class="versionmodified changed">在 3.8 版的變更: </span>新增選用的 <em>initial</em> 參數。</p>
+<p><span class="versionmodified changed">在 3.8 版的變更: </span>新增可選的 <em>initial</em> 參數。</p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="itertools.batched">
 <span class="sig-prename descclassname"><span class="pre">itertools.</span></span><span class="sig-name descname"><span class="pre">batched</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#itertools.batched" title="連結到這個定義">¶</a></dt>
-<dd><p>Batch data from the <em>iterable</em> into tuples of length <em>n</em>. The last
-batch may be shorter than <em>n</em>.</p>
-<p>Loops over the input iterable and accumulates data into tuples up to
-size <em>n</em>.  The input is consumed lazily, just enough to fill a batch.
-The result is yielded as soon as the batch is full or when the input
-iterable is exhausted:</p>
+<dd><p>將來自 <em>iterable</em> 的資料分批為長度為 <em>n</em> 的元組。最後一個批次可能比 <em>n</em> 短。</p>
+<p>對輸入的可疊代物件進行迴圈，並將資料累積到大小為 <em>n</em> 的元組中。輸入是惰性地被消耗 (consumed lazily) 的，會剛好足夠填充一批的資料。一旦批次填滿或輸入的可疊代物件耗盡，就會 yield 出結果：</p>
 <div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">flattened_data</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;roses&#39;</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="s1">&#39;violets&#39;</span><span class="p">,</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="s1">&#39;sugar&#39;</span><span class="p">,</span> <span class="s1">&#39;sweet&#39;</span><span class="p">]</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">unflattened</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">batched</span><span class="p">(</span><span class="n">flattened_data</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">unflattened</span>
@@ -530,17 +424,14 @@ iterable is exhausted:</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="itertools.chain">
 <span class="sig-prename descclassname"><span class="pre">itertools.</span></span><span class="sig-name descname"><span class="pre">chain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">iterables</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#itertools.chain" title="連結到這個定義">¶</a></dt>
-<dd><p>Make an iterator that returns elements from the first iterable until it is
-exhausted, then proceeds to the next iterable, until all of the iterables are
-exhausted.  Used for treating consecutive sequences as a single sequence.
-Roughly equivalent to:</p>
+<dd><p>建立一個疊代器，從第一個可疊代物件回傳元素直到其耗盡，然後繼續處理下一個可疊代物件，直到所有可疊代物件都耗盡。用於將連續的序列做為單一序列處理。大致等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">chain</span><span class="p">(</span><span class="o">*</span><span class="n">iterables</span><span class="p">):</span>
     <span class="c1"># chain(&#39;ABC&#39;, &#39;DEF&#39;) → A B C D E F</span>
     <span class="k">for</span> <span class="n">iterable</span> <span class="ow">in</span> <span class="n">iterables</span><span class="p">:</span>
@@ -552,8 +443,7 @@ Roughly equivalent to:</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="itertools.chain.from_iterable">
 <em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">chain.</span></span><span class="sig-name descname"><span class="pre">from_iterable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#itertools.chain.from_iterable" title="連結到這個定義">¶</a></dt>
-<dd><p>Alternate constructor for <a class="reference internal" href="#itertools.chain" title="itertools.chain"><code class="xref py py-func docutils literal notranslate"><span class="pre">chain()</span></code></a>.  Gets chained inputs from a
-single iterable argument that is evaluated lazily.  Roughly equivalent to:</p>
+<dd><p><a class="reference internal" href="#itertools.chain" title="itertools.chain"><code class="xref py py-func docutils literal notranslate"><span class="pre">chain()</span></code></a> 的另一個建構函式。從單個可疊代的引數中得到鏈接的輸入，該引數是惰性計算的。大致等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">from_iterable</span><span class="p">(</span><span class="n">iterables</span><span class="p">):</span>
     <span class="c1"># chain.from_iterable([&#39;ABC&#39;, &#39;DEF&#39;]) → A B C D E F</span>
     <span class="k">for</span> <span class="n">iterable</span> <span class="ow">in</span> <span class="n">iterables</span><span class="p">:</span>
@@ -565,17 +455,10 @@ single iterable argument that is evaluated lazily.  Roughly equivalent to:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="itertools.combinations">
 <span class="sig-prename descclassname"><span class="pre">itertools.</span></span><span class="sig-name descname"><span class="pre">combinations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#itertools.combinations" title="連結到這個定義">¶</a></dt>
-<dd><p>Return <em>r</em> length subsequences of elements from the input <em>iterable</em>.</p>
-<p>The output is a subsequence of <a class="reference internal" href="#itertools.product" title="itertools.product"><code class="xref py py-func docutils literal notranslate"><span class="pre">product()</span></code></a> keeping only entries that
-are subsequences of the <em>iterable</em>.  The length of the output is given
-by <a class="reference internal" href="math.html#math.comb" title="math.comb"><code class="xref py py-func docutils literal notranslate"><span class="pre">math.comb()</span></code></a> which computes <code class="docutils literal notranslate"><span class="pre">n!</span> <span class="pre">/</span> <span class="pre">r!</span> <span class="pre">/</span> <span class="pre">(n</span> <span class="pre">-</span> <span class="pre">r)!</span></code> when <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">≤</span> <span class="pre">r</span>
-<span class="pre">≤</span> <span class="pre">n</span></code> or zero when <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">&gt;</span> <span class="pre">n</span></code>.</p>
-<p>The combination tuples are emitted in lexicographic order according to
-the order of the input <em>iterable</em>. If the input <em>iterable</em> is sorted,
-the output tuples will be produced in sorted order.</p>
-<p>Elements are treated as unique based on their position, not on their
-value.  If the input elements are unique, there will be no repeated
-values within each combination.</p>
+<dd><p>從輸入 <em>iterable</em> 中回傳長度為 <em>r</em> 的元素的子序列。</p>
+<p>輸出是 <a class="reference internal" href="#itertools.product" title="itertools.product"><code class="xref py py-func docutils literal notranslate"><span class="pre">product()</span></code></a> 的子序列，僅保留作為 <em>iterable</em> 子序列的條目。輸出的長度由 <a class="reference internal" href="math.html#math.comb" title="math.comb"><code class="xref py py-func docutils literal notranslate"><span class="pre">math.comb()</span></code></a> 給定，當 <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">≤</span> <span class="pre">r</span> <span class="pre">≤</span> <span class="pre">n</span></code> 時，計算 <code class="docutils literal notranslate"><span class="pre">n!</span> <span class="pre">/</span> <span class="pre">r!</span> <span class="pre">/</span> <span class="pre">(n</span> <span class="pre">-</span> <span class="pre">r)!</span></code>，當 <code class="docutils literal notranslate"><span class="pre">r</span> <span class="pre">&gt;</span> <span class="pre">n</span></code> 時為零。</p>
+<p>根據輸入值 <em>iterable</em> 的順序，組合的元組會按照字典順序輸出。如果輸入的 <em>iterable</em> 已經排序，則輸出的元組也將按排序的順序產生。</p>
+<p>元素是根據它們的位置（而非值）來決定其唯一性。如果輸入的元素都是獨特的，則每個組合內將不會有重複的值。</p>
 <p>大致等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">combinations</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
     <span class="c1"># combinations(&#39;ABCD&#39;, 2) → AB AC AD BC BD CD</span>
@@ -605,18 +488,10 @@ values within each combination.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="itertools.combinations_with_replacement">
 <span class="sig-prename descclassname"><span class="pre">itertools.</span></span><span class="sig-name descname"><span class="pre">combinations_with_replacement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#itertools.combinations_with_replacement" title="連結到這個定義">¶</a></dt>
-<dd><p>Return <em>r</em> length subsequences of elements from the input <em>iterable</em>
-allowing individual elements to be repeated more than once.</p>
-<p>The output is a subsequence of <a class="reference internal" href="#itertools.product" title="itertools.product"><code class="xref py py-func docutils literal notranslate"><span class="pre">product()</span></code></a> that keeps only entries
-that are subsequences (with possible repeated elements) of the
-<em>iterable</em>.  The number of subsequence returned is <code class="docutils literal notranslate"><span class="pre">(n</span> <span class="pre">+</span> <span class="pre">r</span> <span class="pre">-</span> <span class="pre">1)!</span> <span class="pre">/</span> <span class="pre">r!</span> <span class="pre">/</span>
-<span class="pre">(n</span> <span class="pre">-</span> <span class="pre">1)!</span></code> when <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>.</p>
-<p>The combination tuples are emitted in lexicographic order according to
-the order of the input <em>iterable</em>. if the input <em>iterable</em> is sorted,
-the output tuples will be produced in sorted order.</p>
-<p>Elements are treated as unique based on their position, not on their
-value.  If the input elements are unique, the generated combinations
-will also be unique.</p>
+<dd><p>回傳來自輸入 <em>iterable</em> 的長度為 <em>r</em> 的子序列，且允許個別元素重複多次。</p>
+<p>其輸出是一個 <a class="reference internal" href="#itertools.product" title="itertools.product"><code class="xref py py-func docutils literal notranslate"><span class="pre">product()</span></code></a> 的子序列，僅保留作為 <em>iterable</em> 子序列（可能有重複元素）的條目。當 <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> 時，回傳的子序列數量為 <code class="docutils literal notranslate"><span class="pre">(n</span> <span class="pre">+</span> <span class="pre">r</span> <span class="pre">-</span> <span class="pre">1)!</span> <span class="pre">/</span> <span class="pre">r!</span> <span class="pre">/</span> <span class="pre">(n</span> <span class="pre">-</span> <span class="pre">1)!</span></code>。</p>
+<p>根據輸入值 <em>iterable</em> 的順序，組合的元組會按照字典順序輸出。如果輸入的 <em>iterable</em> 已經排序，則輸出的元組也將按排序的順序產生。</p>
+<p>元素是根據它們的位置（而非值）來決定其唯一性。如果輸入的元素都是獨特的，生成的組合也將是獨特的。</p>
 <p>大致等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">combinations_with_replacement</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">r</span><span class="p">):</span>
     <span class="c1"># combinations_with_replacement(&#39;ABC&#39;, 2) → AA AB AC BB BC CC</span>
@@ -639,34 +514,28 @@ will also be unique.</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.1.</span></p>
+<p><span class="versionmodified added">在 3.1 版被加入.</span></p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="itertools.compress">
 <span class="sig-prename descclassname"><span class="pre">itertools.</span></span><span class="sig-name descname"><span class="pre">compress</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selectors</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#itertools.compress" title="連結到這個定義">¶</a></dt>
-<dd><p>Make an iterator that returns elements from <em>data</em> where the
-corresponding element in <em>selectors</em> is true.  Stops when either the
-<em>data</em> or <em>selectors</em> iterables have been exhausted.  Roughly
-equivalent to:</p>
+<dd><p>建立一個疊代器，回傳 <em>data</em> 中對應 <em>selectors</em> 的元素為真的元素。當 <em>data</em> 或 <em>selectors</em> 可疊代物件耗盡時停止。大致等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">compress</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">selectors</span><span class="p">):</span>
     <span class="c1"># compress(&#39;ABCDEF&#39;, [1,0,1,0,1,1]) → A C E F</span>
     <span class="k">return</span> <span class="p">(</span><span class="n">datum</span> <span class="k">for</span> <span class="n">datum</span><span class="p">,</span> <span class="n">selector</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">selectors</span><span class="p">)</span> <span class="k">if</span> <span class="n">selector</span><span class="p">)</span>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.1.</span></p>
+<p><span class="versionmodified added">在 3.1 版被加入.</span></p>
 </div>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="itertools.count">
 <span class="sig-prename descclassname"><span class="pre">itertools.</span></span><span class="sig-name descname"><span class="pre">count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#itertools.count" title="連結到這個定義">¶</a></dt>
-<dd><p>Make an iterator that returns evenly spaced values beginning with
-<em>start</em>. Can be used with <a class="reference internal" href="functions.html#map" title="map"><code class="xref py py-func docutils literal notranslate"><span class="pre">map()</span></code></a> to generate consecutive data
-points or with <a class="reference internal" href="functions.html#zip" title="zip"><code class="xref py py-func docutils literal notranslate"><span class="pre">zip()</span></code></a> to add sequence numbers.  Roughly
-equivalent to:</p>
+<dd><p>建立一個疊代器，回傳從 <em>start</em> 開始的等差的值。可以與 <a class="reference internal" href="functions.html#map" title="map"><code class="xref py py-func docutils literal notranslate"><span class="pre">map()</span></code></a> 一起使用來產生連續的資料點，或與 <a class="reference internal" href="functions.html#zip" title="zip"><code class="xref py py-func docutils literal notranslate"><span class="pre">zip()</span></code></a> 一起使用來增加序列號。大致等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">count</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="c1"># count(10) → 10 11 12 13 14 ...</span>
     <span class="c1"># count(2.5, 0.5) → 2.5 3.0 3.5 ...</span>
@@ -676,7 +545,7 @@ equivalent to:</p>
         <span class="n">n</span> <span class="o">+=</span> <span class="n">step</span>
 </pre></div>
 </div>
-<p>When counting with floating point numbers, better accuracy can sometimes be
+<p>When counting with floating-point numbers, better accuracy can sometimes be
 achieved by substituting multiplicative code such as: <code class="docutils literal notranslate"><span class="pre">(start</span> <span class="pre">+</span> <span class="pre">step</span> <span class="pre">*</span> <span class="pre">i</span>
 <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">count())</span></code>.</p>
 <div class="versionchanged">
@@ -687,9 +556,7 @@ achieved by substituting multiplicative code such as: <code class="docutils lite
 <dl class="py function">
 <dt class="sig sig-object py" id="itertools.cycle">
 <span class="sig-prename descclassname"><span class="pre">itertools.</span></span><span class="sig-name descname"><span class="pre">cycle</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#itertools.cycle" title="連結到這個定義">¶</a></dt>
-<dd><p>Make an iterator returning elements from the <em>iterable</em> and saving a
-copy of each.  When the iterable is exhausted, return elements from
-the saved copy.  Repeats indefinitely.  Roughly equivalent to:</p>
+<dd><p>建立一個疊代器，回傳 <em>iterable</em> 中的元素並保存每個元素的副本。當可疊代物件耗盡時，從保存的副本中回傳元素。會無限次的重複。大致等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">cycle</span><span class="p">(</span><span class="n">iterable</span><span class="p">):</span>
     <span class="c1"># cycle(&#39;ABCD&#39;) → A B C D A B C D A B C D ...</span>
     <span class="n">saved</span> <span class="o">=</span> <span class="p">[]</span>
@@ -701,16 +568,13 @@ the saved copy.  Repeats indefinitely.  Roughly equivalent to:</p>
             <span class="k">yield</span> <span class="n">element</span>
 </pre></div>
 </div>
-<p>This itertool may require significant auxiliary storage (depending on
-the length of the iterable).</p>
+<p>此 itertool 可能需要大量的輔助儲存空間（取決於可疊代物件的長度）。</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="itertools.dropwhile">
 <span class="sig-prename descclassname"><span class="pre">itertools.</span></span><span class="sig-name descname"><span class="pre">dropwhile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#itertools.dropwhile" title="連結到這個定義">¶</a></dt>
-<dd><p>Make an iterator that drops elements from the <em>iterable</em> while the
-<em>predicate</em> is true and afterwards returns every element.  Roughly
-equivalent to:</p>
+<dd><p>建立一個疊代器，在 <em>predicate</em> 為真時丟棄 <em>iterable</em> 中的元素，之後回傳每個元素。大致等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dropwhile</span><span class="p">(</span><span class="n">predicate</span><span class="p">,</span> <span class="n">iterable</span><span class="p">):</span>
     <span class="c1"># dropwhile(lambda x: x&lt;5, [1,4,6,3,8]) → 6 3 8</span>
 
@@ -724,17 +588,13 @@ equivalent to:</p>
         <span class="k">yield</span> <span class="n">x</span>
 </pre></div>
 </div>
-<p>Note this does not produce <em>any</em> output until the predicate first
-becomes false, so this itertool may have a lengthy start-up time.</p>
+<p>注意，在 predicate 首次變為 False 之前，這不會產生<em>任何</em>輸出，所以此 itertool 可能會有較長的啟動時間。</p>
 </dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="itertools.filterfalse">
 <span class="sig-prename descclassname"><span class="pre">itertools.</span></span><span class="sig-name descname"><span class="pre">filterfalse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">predicate</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#itertools.filterfalse" title="連結到這個定義">¶</a></dt>
-<dd><p>Make an iterator that filters elements from the <em>iterable</em> returning
-only those for which the <em>predicate</em> returns a false value.  If
-<em>predicate</em> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, returns the items that are false.  Roughly
-equivalent to:</p>
+<dd><p>建立一個疊代器，過濾 <em>iterable</em> 中的元素，僅回傳 <em>predicate</em> 為 False 值的元素。如果 <em>predicate</em> 是 <code class="docutils literal notranslate"><span class="pre">None</span></code>，則回傳為 False 的項目。大致等價於：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">filterfalse</span><span class="p">(</span><span class="n">predicate</span><span class="p">,</span> <span class="n">iterable</span><span class="p">):</span>
     <span class="c1"># filterfalse(lambda x: x&lt;5, [1,4,6,3,8]) → 6 8</span>
     <span class="k">if</span> <span class="n">predicate</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -749,20 +609,9 @@ equivalent to:</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="itertools.groupby">
 <span class="sig-prename descclassname"><span class="pre">itertools.</span></span><span class="sig-name descname"><span class="pre">groupby</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#itertools.groupby" title="連結到這個定義">¶</a></dt>
-<dd><p>Make an iterator that returns consecutive keys and groups from the <em>iterable</em>.
-The <em>key</em> is a function computing a key value for each element.  If not
-specified or is <code class="docutils literal notranslate"><span class="pre">None</span></code>, <em>key</em> defaults to an identity function and returns
-the element unchanged.  Generally, the iterable needs to already be sorted on
-the same key function.</p>
-<p>The operation of <a class="reference internal" href="#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a> is similar to the <code class="docutils literal notranslate"><span class="pre">uniq</span></code> filter in Unix.  It
-generates a break or new group every time the value of the key function changes
-(which is why it is usually necessary to have sorted the data using the same key
-function).  That behavior differs from SQL's GROUP BY which aggregates common
-elements regardless of their input order.</p>
-<p>The returned group is itself an iterator that shares the underlying iterable
-with <a class="reference internal" href="#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a>.  Because the source is shared, when the <a class="reference internal" href="#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a>
-object is advanced, the previous group is no longer visible.  So, if that data
-is needed later, it should be stored as a list:</p>
+<dd><p>建立一個疊代器，回傳 <em>iterable</em> 中連續的鍵和群組。<em>key</em> 是一個為每個元素計算鍵值的函式。如果其未指定或為 <code class="docutils literal notranslate"><span class="pre">None</span></code>，則 <em>key</em> 預設為一個識別性函式 (identity function)，並回傳未被更改的元素。一般來說，可疊代物件需要已經用相同的鍵函式進行排序。</p>
+<p><a class="reference internal" href="#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a> 的操作類似於 Unix 中的 <code class="docutils literal notranslate"><span class="pre">uniq</span></code> 過濾器。每當鍵函式的值發生變化時，它會產生一個 break 或新的群組（這就是為什麼通常需要使用相同的鍵函式對資料進行排序）。這種行為不同於 SQL 的 GROUP BY，其無論輸入順序如何都會聚合相同的元素。</p>
+<p>回傳的群組本身是一個與 <a class="reference internal" href="#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a> 共享底層可疊代物件的疊代器。由於來源是共享的，當 <a class="reference internal" href="#itertools.groupby" title="itertools.groupby"><code class="xref py py-func docutils literal notranslate"><span class="pre">groupby()</span></code></a> 物件前進時，前一個群組將不再可見。因此，如果之後需要該資料，應將其儲存為串列：</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">groups</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">uniquekeys</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">data</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">keyfunc</span><span class="p">)</span>
@@ -864,7 +713,7 @@ two values.</p>
 </pre></div>
 </div>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 </dd></dl>
 
@@ -1102,7 +951,7 @@ well as with the built-in itertools such as <code class="docutils literal notran
 recipes.  Currently, the <code class="docutils literal notranslate"><span class="pre">sliding_window()</span></code>, <code class="docutils literal notranslate"><span class="pre">iter_index()</span></code>, and <code class="docutils literal notranslate"><span class="pre">sieve()</span></code>
 recipes are being tested to see whether they prove their worth.</p>
 <p>Substantially all of these recipes and many, many others can be installed from
-the <a class="reference external" href="https://pypi.org/project/more-itertools/">more-itertools</a> project found
+the <a class="extlink-pypi reference external" href="https://pypi.org/project/more-itertools/">more-itertools</a> project found
 on the Python Package Index:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">more</span><span class="o">-</span><span class="n">itertools</span>
 </pre></div>
@@ -1180,7 +1029,7 @@ and <a class="reference internal" href="../glossary.html#term-generator"><span c
     <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">take</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">groupby</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">key</span><span class="p">)))</span> <span class="o">&lt;=</span> <span class="mi">1</span>
 
 <span class="k">def</span> <span class="nf">unique_justseen</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="s2">&quot;List unique elements, preserving order. Remember only the element just seen.&quot;</span>
+    <span class="s2">&quot;Yield unique elements, preserving order. Remember only the element just seen.&quot;</span>
     <span class="c1"># unique_justseen(&#39;AAAABBBCCDAABBB&#39;) → A B C D A B</span>
     <span class="c1"># unique_justseen(&#39;ABBcCAD&#39;, str.casefold) → A B c A D</span>
     <span class="k">if</span> <span class="n">key</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -1188,7 +1037,7 @@ and <a class="reference internal" href="../glossary.html#term-generator"><span c
     <span class="k">return</span> <span class="nb">map</span><span class="p">(</span><span class="nb">next</span><span class="p">,</span> <span class="nb">map</span><span class="p">(</span><span class="n">operator</span><span class="o">.</span><span class="n">itemgetter</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">groupby</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">key</span><span class="p">)))</span>
 
 <span class="k">def</span> <span class="nf">unique_everseen</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-    <span class="s2">&quot;List unique elements, preserving order. Remember all elements ever seen.&quot;</span>
+    <span class="s2">&quot;Yield unique elements, preserving order. Remember all elements ever seen.&quot;</span>
     <span class="c1"># unique_everseen(&#39;AAAABBBCCDAABBB&#39;) → A B C D</span>
     <span class="c1"># unique_everseen(&#39;ABBcCAD&#39;, str.casefold) → A B c D</span>
     <span class="n">seen</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
@@ -1202,6 +1051,11 @@ and <a class="reference internal" href="../glossary.html#term-generator"><span c
             <span class="k">if</span> <span class="n">k</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">seen</span><span class="p">:</span>
                 <span class="n">seen</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
                 <span class="k">yield</span> <span class="n">element</span>
+
+<span class="k">def</span> <span class="nf">unique</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+   <span class="s2">&quot;Yield unique elements in sorted order. Supports unhashable inputs.&quot;</span>
+   <span class="c1"># unique([[1, 2], [3, 4], [1, 2]]) → [1, 2] [3, 4]</span>
+   <span class="k">return</span> <span class="n">unique_justseen</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">,</span> <span class="n">reverse</span><span class="o">=</span><span class="n">reverse</span><span class="p">),</span> <span class="n">key</span><span class="o">=</span><span class="n">key</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">sliding_window</span><span class="p">(</span><span class="n">iterable</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
     <span class="s2">&quot;Collect data into overlapping fixed-length chunks or blocks.&quot;</span>
@@ -1401,13 +1255,13 @@ and <a class="reference internal" href="../glossary.html#term-generator"><span c
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
     <ul>
 <li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">itertools</span></code> --- 建立產生高效率迴圈之疊代器的函式</a><ul>
-<li><a class="reference internal" href="#itertool-functions">Itertool Functions</a></li>
+<li><a class="reference internal" href="#itertool-functions">Itertool 函式</a></li>
 <li><a class="reference internal" href="#itertools-recipes">Itertools Recipes</a></li>
 </ul>
 </li>
@@ -1443,7 +1297,7 @@ and <a class="reference internal" href="../glossary.html#term-generator"><span c
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1469,7 +1323,7 @@ and <a class="reference internal" href="../glossary.html#term-generator"><span c
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -1521,13 +1375,13 @@ and <a class="reference internal" href="../glossary.html#term-generator"><span c
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>

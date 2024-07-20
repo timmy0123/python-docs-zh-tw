@@ -5,21 +5,21 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>8. 複合陳述式 &#8212; Python 3.12.3 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8. 複合陳述式 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
-    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=bb723527" />
+    <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=17adff09"></script>
+    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="../_static/translations.js?v=1fe8cbde"></script>
+    <script src="../_static/translations.js?v=f1e884e3"></script>
     
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.3 說明文件 中搜尋"
+          title="在 Python 3.12.4 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -27,6 +27,7 @@
     <link rel="copyright" title="版權" href="../copyright.html" />
     <link rel="next" title="9. 最高層級元件" href="toplevel_components.html" />
     <link rel="prev" title="7. 簡單陳述式" href="simple_stmts.html" />
+    
     <link rel="canonical" href="https://docs.python.org/3/reference/compound_stmts.html" />
     
       
@@ -46,91 +47,8 @@
             <script type="text/javascript" src="../_static/menu.js"></script>
             <script type="text/javascript" src="../_static/search-focus.js"></script>
             <script type="text/javascript" src="../_static/themetoggle.js"></script> 
-<meta name="readthedocs-addons-api-version" content="1">
-<script type="text/javascript">
- function onSwitch(event) {
-     const option = event.target.selectedIndex;
-     const item = event.target.options[option];
-     window.location.href = item.dataset.url;
- }
-
- document.addEventListener("readthedocs-addons-data-ready", function(event) {
-   const config = event.detail.data()
-
-   // Add some mocked hardcoded versions pointing to the official
-   // documentation while migrating to Read the Docs.
-   // These are only for testing purposes.
-   // TODO: remove them when managing all the versions on Read the Docs,
-   // since all the "active, built and not hidden" versions will be shown automatically.
-   let versions = config.versions.active.concat([
-       {
-           slug: "dev (3.13)",
-           urls: {
-               documentation: "https://docs.python.org/3.13/",
-           }
-       },
-       {
-           slug: "3.12",
-           urls: {
-               documentation: "https://docs.python.org/3.12/",
-           }
-       },
-       {
-           slug: "3.11",
-           urls: {
-               documentation: "https://docs.python.org/3.11/",
-           }
-       },
-   ]);
-
-   const versionSelect = `
-   <select id="version_select">
-   ${ versions.map(
-       (version) => `
-       <option
-           value="${ version.slug }"
-           ${ config.versions.current.slug === version.slug ? 'selected="selected"' : '' }
-           data-url="${ version.urls.documentation }">
-           ${ version.slug }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Prepend the current language to the options on the selector
-   let languages = config.projects.translations.concat(config.projects.current);
-   languages = languages.sort((a, b) => a.language.name.localeCompare(b.language.name));
-
-   const languageSelect = `
-   <select id="language_select">
-   ${ languages.map(
-       (translation) => `
-       <option
-           value="${ translation.slug }"
-           ${ config.projects.current.slug === translation.slug ? 'selected="selected"' : '' }
-           data-url="${ translation.urls.documentation }">
-           ${ translation.language.name }
-       </option>`
-   ).join("\n") }
-   </select>
-   `;
-
-   // Query all the placeholders because there are different ones for Desktop/Mobile
-   const versionPlaceholders = document.querySelectorAll(".version_switcher_placeholder");
-   for (placeholder of versionPlaceholders) {
-       placeholder.innerHTML = versionSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
-
-   const languagePlaceholders = document.querySelectorAll(".language_switcher_placeholder");
-   for (placeholder of languagePlaceholders) {
-       placeholder.innerHTML = languageSelect;
-       let selectElement = placeholder.querySelector("select");
-       selectElement.addEventListener("change", onSwitch);
-   }
- });
-</script>
+            <script type="text/javascript" src="../_static/rtd_switcher.js"></script>
+            <meta name="readthedocs-addons-api-version" content="1">
 
   </head>
 <body>
@@ -246,7 +164,7 @@
 </div>
 
   
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -272,7 +190,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 語言參考手冊</a> &#187;</li>
@@ -459,14 +377,12 @@ When an exception occurs in the <code class="xref std std-keyword docutils liter
 handler is started. This search inspects the <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code> clauses in turn
 until one is found that matches the exception.
 An expression-less <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code> clause, if present, must be last;
-it matches any exception.
-For an <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code> clause with an expression,
-that expression is evaluated, and the clause matches the exception
-if the resulting object is &quot;compatible&quot; with the exception.  An object is
-compatible with an exception if the object is the class or a
-<a class="reference internal" href="../glossary.html#term-abstract-base-class"><span class="xref std std-term">non-virtual base class</span></a> of the exception object,
-or a tuple containing an item that is the class or a non-virtual base class
-of the exception object.</p>
+it matches any exception.</p>
+<p>For an <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code> clause with an expression, the
+expression must evaluate to an exception type or a tuple of exception types.
+The raised exception matches an <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code> clause whose expression evaluates
+to the class or a <a class="reference internal" href="../glossary.html#term-abstract-base-class"><span class="xref std std-term">non-virtual base class</span></a> of the exception object,
+or to a tuple that contains such a class.</p>
 <p>If no <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code> clause matches the exception,
 the search for an exception handler
 continues in the surrounding code and on the invocation stack.  <a class="footnote-reference brackets" href="#id20" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
@@ -574,9 +490,10 @@ exception group with an empty message string.</p>
 <span class="go">ExceptionGroup(&#39;&#39;, (BlockingIOError()))</span>
 </pre></div>
 </div>
-<p>An <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except*</span></code> clause must have a matching type,
-and this type cannot be a subclass of <a class="reference internal" href="../library/exceptions.html#BaseExceptionGroup" title="BaseExceptionGroup"><code class="xref py py-exc docutils literal notranslate"><span class="pre">BaseExceptionGroup</span></code></a>.
-It is not possible to mix <a class="reference internal" href="#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a> and <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except*</span></code>
+<p>An <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except*</span></code> clause must have a matching expression; it cannot be <code class="docutils literal notranslate"><span class="pre">except*:</span></code>.
+Furthermore, this expression cannot contain exception group types, because that would
+have ambiguous semantics.</p>
+<p>It is not possible to mix <a class="reference internal" href="#except"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">except</span></code></a> and <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except*</span></code>
 in the same <a class="reference internal" href="#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a>.
 <a class="reference internal" href="simple_stmts.html#break"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">break</span></code></a>, <a class="reference internal" href="simple_stmts.html#continue"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">continue</span></code></a> and <a class="reference internal" href="simple_stmts.html#return"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">return</span></code></a>
 cannot appear in an <code class="xref std std-keyword docutils literal notranslate"><span class="pre">except*</span></code> clause.</p>
@@ -741,7 +658,7 @@ statement.</p>
 <section id="the-match-statement">
 <span id="match"></span><h2><span class="section-number">8.6. </span>The <code class="xref std std-keyword docutils literal notranslate"><span class="pre">match</span></code> statement<a class="headerlink" href="#the-match-statement" title="連結到這個標頭">¶</a></h2>
 <div class="versionadded" id="index-18">
-<p><span class="versionmodified added">Added in version 3.10.</span></p>
+<p><span class="versionmodified added">在 3.10 版被加入.</span></p>
 </div>
 <p>The match statement is used for pattern matching.  Syntax:</p>
 <pre>
@@ -1463,7 +1380,7 @@ were introduced in <span class="target" id="index-47"></span><a class="pep refer
 <section id="coroutines">
 <span id="async"></span><h2><span class="section-number">8.9. </span>協程<a class="headerlink" href="#coroutines" title="連結到這個標頭">¶</a></h2>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.5.</span></p>
+<p><span class="versionmodified added">在 3.5 版被加入.</span></p>
 </div>
 <section id="coroutine-function-definition">
 <span id="async-def"></span><span id="index-48"></span><h3><span class="section-number">8.9.1. </span>Coroutine function definition<a class="headerlink" href="#coroutine-function-definition" title="連結到這個標頭">¶</a></h3>
@@ -1573,7 +1490,7 @@ and added supporting syntax.</p>
 <section id="type-parameter-lists">
 <span id="type-params"></span><h2><span class="section-number">8.10. </span>Type parameter lists<a class="headerlink" href="#type-parameter-lists" title="連結到這個標頭">¶</a></h2>
 <div class="versionadded">
-<p><span class="versionmodified added">Added in version 3.12.</span></p>
+<p><span class="versionmodified added">在 3.12 版被加入.</span></p>
 </div>
 <pre id="index-53">
 <strong id="grammar-token-python-grammar-type_params">type_params </strong> ::=  &quot;[&quot; <a class="reference internal" href="#grammar-token-python-grammar-type_param"><code class="xref docutils literal notranslate"><span class="pre">type_param</span></code></a> (&quot;,&quot; <a class="reference internal" href="#grammar-token-python-grammar-type_param"><code class="xref docutils literal notranslate"><span class="pre">type_param</span></code></a>)* &quot;]&quot;
@@ -1836,7 +1753,7 @@ transformed into the namespace's <code class="docutils literal notranslate"><spa
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
         <div class="sphinxsidebarwrapper">
   <div>
     <h3><a href="../contents.html">目錄</a></h3>
@@ -1920,7 +1837,7 @@ transformed into the namespace's <code class="docutils literal notranslate"><spa
       </div>
       <div class="clearer"></div>
     </div>  
-    <div class="related" role="navigation" aria-label="related navigation">
+    <div class="related" role="navigation" aria-label="Related">
       <h3>瀏覽</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -1946,7 +1863,7 @@ transformed into the namespace's <code class="docutils literal notranslate"><spa
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.3 Documentation</a> &#187;
+      <a href="../index.html">3.12.4 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 語言參考手冊</a> &#187;</li>
@@ -1997,13 +1914,13 @@ transformed into the namespace's <code class="docutils literal notranslate"><spa
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jun 01, 2024 (08:12 UTC)。
+      最後更新於 Jul 20, 2024 (03:43 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
     </div>
 
   </body>
