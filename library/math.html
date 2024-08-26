@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>math --- 數學函式 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>math --- 數學函式 &#8212; Python 3.12.5 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
+    <script src="../_static/documentation_options.js?v=79397755"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=f1e884e3"></script>
@@ -19,7 +19,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.4 說明文件 中搜尋"
+          title="在 Python 3.12.5 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -153,7 +153,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.4 Documentation</a> &#187;
+      <a href="../index.html">3.12.5 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -192,7 +192,7 @@
 <span id="math-mathematical-functions"></span><h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">math</span></code> --- 數學函式<a class="headerlink" href="#module-math" title="連結到這個標頭">¶</a></h1>
 <hr class="docutils" />
 <p>此模組提供對 C 標準中定義的數學相關函式的存取。</p>
-<p>這些函式不支援複數；若您需要計算複數，請使用 <a class="reference internal" href="cmath.html#module-cmath" title="cmath: Mathematical functions for complex numbers."><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code></a> 模組的同名函式。這是因為大多數的使用者並不想學習那麼多理解複數所需的數學概念，所以根據支援複數與否分為兩種函式。收到一個例外而非複數回傳值，有助於程式設計師提早察覺參數中包含非預期的複數，進而從源頭查出導致此情況的原因。</p>
+<p>這些函式不支援複數；若你需要計算複數，請使用 <a class="reference internal" href="cmath.html#module-cmath" title="cmath: Mathematical functions for complex numbers."><code class="xref py py-mod docutils literal notranslate"><span class="pre">cmath</span></code></a> 模組的同名函式。這是因為大多數的使用者並不想學習那麼多理解複數所需的數學概念，所以根據支援複數與否分為兩種函式。收到一個例外而非複數回傳值，有助於程式設計師提早察覺參數中包含非預期的複數，進而從源頭查出導致此情況的原因。</p>
 <p>此模組提供下列函式。除非特意註明，否則回傳值皆為浮點數。</p>
 <section id="number-theoretic-and-representation-functions">
 <h2>數論與表現函式<a class="headerlink" href="#number-theoretic-and-representation-functions" title="連結到這個標頭">¶</a></h2>
@@ -256,11 +256,9 @@
 <dl class="py function">
 <dt class="sig sig-object py" id="math.fsum">
 <span class="sig-prename descclassname"><span class="pre">math.</span></span><span class="sig-name descname"><span class="pre">fsum</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#math.fsum" title="連結到這個定義">¶</a></dt>
-<dd><p>Return an accurate floating-point sum of values in the iterable.  Avoids
-loss of precision by tracking multiple intermediate partial sums.</p>
+<dd><p>回傳可疊代物件（iterable）中所有值的精確浮點數和。透過追蹤過程中多個部分和（partial sum）以避免精確度損失。</p>
 <p>此演算法準確性奠基於保證 IEEE-754 浮點標準及典型奇進偶捨（half-even）模式。於有些非 Windows 平台建置時，底層 C 函式庫使用延伸精度加法運算，而可能導致對過程中同一部分和重複捨入，並使其最低有效位不如預期。</p>
-<p>For further discussion and two alternative approaches, see the <a class="reference external" href="https://code.activestate.com/recipes/393090-binary-floating-point-summation-accurate-to-full-p/">ASPN cookbook
-recipes for accurate floating-point summation</a>.</p>
+<p>更深入的討論及兩種替代做法請參閱 <a class="reference external" href="https://code.activestate.com/recipes/393090/">ASPN cookbook recipes 精準的浮點數總和</a>。</p>
 </dd></dl>
 
 <dl class="py function">
@@ -952,7 +950,7 @@ Typical behavior is to treat all NaNs as though they were quiet.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.4 Documentation</a> &#187;
+      <a href="../index.html">3.12.5 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 標準函式庫 (Standard Library)</a> &#187;</li>
@@ -1004,13 +1002,13 @@ Typical behavior is to treat all NaNs as though they were quiet.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jul 20, 2024 (06:32 UTC)。
+      最後更新於 Aug 26, 2024 (16:45 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2 建立。
     </div>
 
   </body>

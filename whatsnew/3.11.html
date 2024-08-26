@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Python 3.11 有什麼新功能 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python 3.11 有什麼新功能 &#8212; Python 3.12.5 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
+    <script src="../_static/documentation_options.js?v=79397755"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=f1e884e3"></script>
@@ -19,7 +19,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.4 說明文件 中搜尋"
+          title="在 Python 3.12.5 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -260,7 +260,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.4 Documentation</a> &#187;
+      <a href="../index.html">3.12.5 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Python 有什麼新功能？</a> &#187;</li>
@@ -1044,7 +1044,7 @@ Mark Shannon</p></td>
 <li><p>物件現在因為使用了惰性建立的物件命名空間所以需要更少的記憶體。它們的命名空間字典現在也更自由地共享鍵。（由 Mark Shannon 於 <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=45340">bpo-45340</a> 和 <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=40116">bpo-40116</a> 貢獻。 ）</p></li>
 <li><p>實作了「無代價 (Zero-cost)」的例外，消除了在沒有例外被引發時的 <a class="reference internal" href="../reference/compound_stmts.html#try"><code class="xref std std-keyword docutils literal notranslate"><span class="pre">try</span></code></a> 陳述式開銷。（由 Mark Shannon 於 <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=40222">bpo-40222</a> 貢獻。）</p></li>
 <li><p>在直譯器內使用更簡潔的例外表示法將捕獲一個例外所需的時間減少了大約 10%。 由 Irit Katriel 在 <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=45711">bpo-45711</a> 中貢獻。）</p></li>
-<li><p><a class="reference internal" href="../library/re.html#module-re" title="re: Regular expression operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code></a> 的正則表達式比對引擎部分被重構，且現在會有支援的平台上使用 computed gotos（或者「執行緒程式碼 (threaded code)」），因此 Python 3.11 在執行 <a class="reference external" href="https://pyperformance.readthedocs.io/benchmarks.html#regex-dna">pyperformance 正則表達式基準量測</a>的表現上比起 Python 3.10 快了 10%。（由 Brandt Bucher 於 <a class="reference external" href="https://github.com/python/cpython/issues/91404">gh-91404</a> 中貢獻。）</p></li>
+<li><p><a class="reference internal" href="../library/re.html#module-re" title="re: Regular expression operations."><code class="xref py py-mod docutils literal notranslate"><span class="pre">re</span></code></a> 的正規表示式比對引擎部分被重構，且現在會有支援的平台上使用 computed gotos（或者「執行緒程式碼 (threaded code)」），因此 Python 3.11 在執行 <a class="reference external" href="https://pyperformance.readthedocs.io/benchmarks.html#regex-dna">pyperformance 正規表示式基準量測</a>的表現上比起 Python 3.10 快了 10%。（由 Brandt Bucher 於 <a class="reference external" href="https://github.com/python/cpython/issues/91404">gh-91404</a> 中貢獻。）</p></li>
 </ul>
 </section>
 <section id="faq">
@@ -1458,9 +1458,7 @@ Mark Shannon</p></td>
 <li><p>建置 CPython 現在必須要有：</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://en.cppreference.com/w/c/11">C11</a> 編譯器與標準函式庫。<a class="reference external" href="https://en.wikipedia.org/wiki/C11_(C_standard_revision)#Optional_features">可選的 C11 特性</a> 並非必要。（由 Victor Stinner 於 <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=46656">bpo-46656</a>、<a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=45440">bpo-45440</a> 和 <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=46640">bpo-46640</a> 中貢獻。）</p></li>
-<li><p>Support for <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a>
-floating-point numbers.
-(Contributed by Victor Stinner in <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=46917">bpo-46917</a>.)</p></li>
+<li><p>對 <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_754">IEEE 754</a> 浮點數的支援（由 Victor Stinner 於 <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=46917">bpo-46917</a> 中所貢獻。）</p></li>
 </ul>
 </li>
 <li><p><code class="xref c c-macro docutils literal notranslate"><span class="pre">Py_NO_NAN</span></code> 巨集已被移除。因為 CPython 現在需要 IEEE 754 浮點數，NaN 數值皆為可得的。（由 Victor Stinner 在 <a class="reference external" href="https://bugs.python.org/issue?&#64;action=redirect&amp;bpo=46656">bpo-46656</a> 中貢獻。）</p></li>
@@ -2012,7 +2010,7 @@ In Python 3.14, the default will switch to <code class="docutils literal notrans
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.4 Documentation</a> &#187;
+      <a href="../index.html">3.12.5 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python 有什麼新功能？</a> &#187;</li>
@@ -2063,13 +2061,13 @@ In Python 3.14, the default will switch to <code class="docutils literal notrans
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jul 20, 2024 (06:32 UTC)。
+      最後更新於 Aug 26, 2024 (16:45 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2 建立。
     </div>
 
   </body>

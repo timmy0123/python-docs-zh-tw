@@ -5,13 +5,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>剖析引數與建置數值 &#8212; Python 3.12.4 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>剖析引數與建置數值 &#8212; Python 3.12.5 說明文件</title><meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
     <link rel="stylesheet" type="text/css" href="../_static/pydoctheme.css?v=41b4f12d" />
     <link id="pygments_dark_css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css" href="../_static/pygments_dark.css?v=b20cc3f5" />
     
-    <script src="../_static/documentation_options.js?v=6bff4b4f"></script>
+    <script src="../_static/documentation_options.js?v=79397755"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/translations.js?v=f1e884e3"></script>
@@ -19,7 +19,7 @@
     <script src="../_static/sidebar.js"></script>
     
     <link rel="search" type="application/opensearchdescription+xml"
-          title="在 Python 3.12.4 說明文件 中搜尋"
+          title="在 Python 3.12.5 說明文件 中搜尋"
           href="../_static/opensearch.xml"/>
     <link rel="author" title="關於這些文件" href="../about.html" />
     <link rel="index" title="索引" href="../genindex.html" />
@@ -154,7 +154,7 @@
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.4 Documentation</a> &#187;
+      <a href="../index.html">3.12.5 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API 參考手冊</a> &#187;</li>
@@ -412,9 +412,9 @@ encoding passed in as parameter.</p>
 <dt><code class="docutils literal notranslate"><span class="pre">C</span></code>（長度為 1 的 <a class="reference internal" href="../library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>）[int]</dt><dd><p>Convert a Python character, represented as a <a class="reference internal" href="../library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a> object of
 length 1, to a C <span class="c-expr sig sig-inline c"><span class="kt">int</span></span>.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">f</span></code> (<a class="reference internal" href="../library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) [float]</dt><dd><p>Convert a Python floating-point number to a C <span class="c-expr sig sig-inline c"><span class="kt">float</span></span>.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">f</span></code> (<a class="reference internal" href="../library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) [float]</dt><dd><p>將一個 Python 浮點數轉換成 C 的 :c:type:<span class="c-expr sig sig-inline c"><span class="kt">float</span></span>。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">d</span></code> (<a class="reference internal" href="../library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) [double]</dt><dd><p>Convert a Python floating-point number to a C <span class="c-expr sig sig-inline c"><span class="kt">double</span></span>.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">d</span></code> (<a class="reference internal" href="../library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) [double]</dt><dd><p>將一個 Python 浮點數轉換成 C 的 :c:type:<span class="c-expr sig sig-inline c"><span class="kt">double</span></span>。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">D</span></code> (<a class="reference internal" href="../library/functions.html#complex" title="complex"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a>) [Py_complex]</dt><dd><p>將一個 Python 複數轉換成 C 的 <a class="reference internal" href="complex.html#c.Py_complex" title="Py_complex"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_complex</span></code></a> 結構。</p>
 </dd>
@@ -706,9 +706,9 @@ and <code class="docutils literal notranslate"><span class="pre">None</span></co
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">C</span></code>（長度為 1 的 <a class="reference internal" href="../library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>）[int]</dt><dd><p>將一個 C 中代表一個字元的 <span class="c-expr sig sig-inline c"><span class="kt">int</span></span> 轉換成 Python 中長度為一的 <a class="reference internal" href="../library/stdtypes.html#str" title="str"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">d</span></code> (<a class="reference internal" href="../library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) [double]</dt><dd><p>Convert a C <span class="c-expr sig sig-inline c"><span class="kt">double</span></span> to a Python floating-point number.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">d</span></code> (<a class="reference internal" href="../library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) [double]</dt><dd><p>將一個 C 的 <span class="c-expr sig sig-inline c"><span class="kt">double</span></span> 轉換成 Python 浮點數。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">f</span></code> (<a class="reference internal" href="../library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) [float]</dt><dd><p>Convert a C <span class="c-expr sig sig-inline c"><span class="kt">float</span></span> to a Python floating-point number.</p>
+<dt><code class="docutils literal notranslate"><span class="pre">f</span></code> (<a class="reference internal" href="../library/functions.html#float" title="float"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>) [float]</dt><dd><p>將一個 C 的 <span class="c-expr sig sig-inline c"><span class="kt">float</span></span> 轉換成 Python 浮點數。</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">D</span></code> (<a class="reference internal" href="../library/functions.html#complex" title="complex"><code class="xref py py-class docutils literal notranslate"><span class="pre">complex</span></code></a>) [Py_complex *]</dt><dd><p>將一個 C 的 <a class="reference internal" href="complex.html#c.Py_complex" title="Py_complex"><code class="xref c c-type docutils literal notranslate"><span class="pre">Py_complex</span></code></a> 結構轉換成 Python 複數。</p>
 </dd>
@@ -834,7 +834,7 @@ rather than a variable number of arguments.</p>
               
           </li>
     <li id="cpython-language-and-version">
-      <a href="../index.html">3.12.4 Documentation</a> &#187;
+      <a href="../index.html">3.12.5 Documentation</a> &#187;
     </li>
 
           <li class="nav-item nav-item-1"><a href="index.html" >Python/C API 參考手冊</a> &#187;</li>
@@ -886,13 +886,13 @@ rather than a variable number of arguments.</p>
 <a href="https://www.python.org/psf/donations/">Please donate.</a>
 <br />
     <br />
-      最後更新於 Jul 20, 2024 (06:32 UTC)。
+      最後更新於 Aug 26, 2024 (16:45 UTC)。
     
       <a href="/bugs.html">Found a bug</a>?
     
     <br />
 
-    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.4.6 建立。
+    使用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.0.2 建立。
     </div>
 
   </body>
